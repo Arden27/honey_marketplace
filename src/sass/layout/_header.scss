@@ -1,0 +1,23 @@
+.header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		"nav logo nav2"
+		"shop-menu shop-menu shop-menu";
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.nav2 {
+	grid-area: nav2;
+}
+.shop-menu {
+	grid-area: shop-menu;
+}

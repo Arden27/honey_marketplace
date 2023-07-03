@@ -1,0 +1,19 @@
+_pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.bak
+*.swp
+*.DS_Store
+
+/node_modules
+/dist
+/staticfiles
+staticfiles/staticfiles_backup/
+
+# Ignore SQLite database file
+*.sqlite3
+
+# Ignore environment files
+.env
