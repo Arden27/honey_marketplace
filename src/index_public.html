@@ -1,0 +1,54 @@
+In a React application, the structure of the initial HTML file is typically defined in the public/index.html file, and the React application is injected into a div with a root id. So, many of the elements in the <head> section are typically placed there. The react-helmet package allows you to change these on a per-component basis, but some elements are typically static and don't need to change.
+
+Here's how you might modify the public/index.html file:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kurpiowski Bartnik" />
+    <meta name="keywords" content="TAGI" />
+    <meta name="description" content="OPIS STRONY" />
+
+    <title>TYTUŁ STRONY</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/style.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/1fcccd6048.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="%PUBLIC_URL%/js/main.min.js"></script>
+  </body>
+</html>
+Note the use of %PUBLIC_URL% in the href for the stylesheet and the src for the script. This is a placeholder that create-react-app uses to refer to the public URL of the app, so that these assets can be found correctly whether the app is being served locally or from a build folder.
+
+In your React components, you could then use react-helmet to modify the title, meta description, and other elements on a per-component basis, if you wish.
+
+The react-helmet in App.js could then look something like this:
+
+jsx
+Copy code
+<Helmet>
+  <meta charSet="utf-8" />
+  <title>Your Page Title</title>
+  <meta name="description" content="Your Page Description" />
+  <meta name="keywords" content="Your, Page, Keywords" />
+  <meta name="author" content="Your Name" />
+</Helmet>
+In this way, you're setting defaults in your index.html, but can override them on a per-component basis using react-helmet if you wish.
