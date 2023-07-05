@@ -1,6 +1,6 @@
 import React from "react";
 
-function ArticlesBar() {
+function Articles() {
 	return (
 		<section className="articles">
 			<article className="articles article-1">ARTYKUŁ1</article>

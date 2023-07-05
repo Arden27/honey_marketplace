@@ -33,8 +33,6 @@ export default function RootLayout({ children }) {
 					crossorigin="anonymous"
 				/>
 
-				<link rel="stylesheet" href="/css/style.min.css" />
-
 				<script
 					src="https://kit.fontawesome.com/1fcccd6048.js"
 					crossorigin="anonymous"
