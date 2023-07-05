@@ -1,8 +1,7 @@
 import React from 'react';
 
-// Import the corresponding components for the includes
-import Slider from './components/Slider';
-import HowTo from './components/HowTo';
+import Slider from './components/slider';
+import HowTo from './components/how-to';
 import Description from './components/Description';
 import Register from './components/Register';
 import Favourites from './components/Favourites';
