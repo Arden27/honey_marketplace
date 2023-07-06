@@ -1,9 +1,9 @@
-@use "../index";
+@use "./colors" as *;
 
-@font-face {
-	font-family: "Veteran Typewriter";
-	src: url("../fonts/veterantypewriter.ttf") format("truetype");
-}
+// @font-face {
+// 	font-family: "Veteran Typewriter";
+// 	src: url("../fonts/veterantypewriter.ttf") format("truetype");
+// }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400;700&display=swap");
 
@@ -16,6 +16,8 @@ $fs-800: clamp(2.8rem, calc(1.32rem + 7.42vw), 7.07rem);
 
 $ff-base: "Open Sans", sans-serif;
 $ff-accent: "Montserrat", sans-serif;
+
+$text-flow: 1em;
 
 body {
 	font-size: $fs-400;
@@ -69,9 +71,9 @@ a:focus {
 	margin-top: $text-flow, 1em;
 }
 
-html {
-	color-scheme: light dark;
-}
+// html {
+// 	color-scheme: light dark;
+// }
 
 img,
 svg,
