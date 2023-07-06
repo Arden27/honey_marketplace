@@ -3,8 +3,8 @@ import Head from "next/head";
 
 import "./sass/style.scss";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function RootLayout({ children }) {
 	return (
