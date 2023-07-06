@@ -1,9 +1,19 @@
-$main-color: #ffffff;
-$secondary-color: #ffffff;
-$bg-color: #ffffff;
-$white: #ffffff;
-$dark-white: #ffffff;
-$grey: #d8d8d8;
-$dark-gray: #c0c0c0;
-$black: #000;
-$light-black: #111;
+$clr-primary: #000000;
+$clr-secondary: #940000;
+$clr-accent: #339a57;
+$clr-bg: #ffffff;
+
+
+$clr-text: #111;
+
+
+$clr-white: #ffffff;
+$clr-grey: #d8d8d8;
+$clr-darkgray: #c0c0c0;
+$clr-lightblack: #111;
+$clr-black: #000;
+
+
+@media (prefers-color-scheme: dark) {
+    
+}
