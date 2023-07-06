@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
 	return (
 		<>
 			<Head>
-				<meta charSet="UTF-8" />
+				{/* <meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 				<script
 					src="https://kit.fontawesome.com/1fcccd6048.js"
 					crossOrigin="anonymous"
-				></script>
+				></script> */}
 			</Head>
 
 			<Header />
