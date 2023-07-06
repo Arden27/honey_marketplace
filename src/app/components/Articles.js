@@ -1,6 +1,6 @@
 import React from "react";
 
-function Articles() {
+export default function Articles() {
 	return (
 		<section className="articles">
 			<article className="articles article-1">ARTYKUŁ1</article>
@@ -10,5 +10,3 @@ function Articles() {
 		</section>
 	);
 }
-
-export default Articles;

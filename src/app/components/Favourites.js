@@ -1,7 +1,5 @@
 import React from "react";
 
-function Favourites() {
+export default function Favourites() {
 	return <section className="favourites">ULUBIONE</section>;
 }
-
-export default Favourites;

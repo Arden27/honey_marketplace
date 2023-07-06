@@ -7,7 +7,7 @@ import Register from './components/Register';
 import Favourites from './components/Favourites';
 import Articles from './components/Articles';
 
-function Home() {
+export default function Home() {
   return (
     <main className="home">
       <Slider />
@@ -19,5 +19,3 @@ function Home() {
     </main>
   );
 }
-
-export default Home;

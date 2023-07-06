@@ -1,9 +1,7 @@
 import React from "react";
 
-function Description() {
+export default function Description() {
 	return (
   <article className="description">Miód z Kurpiów</article>
   );
 }
-
-export default Description;
