@@ -7,7 +7,7 @@ import HowTo from "../components/how-to";
 import Description from "../components/description";
 import Register from "../components/register";
 import Favourites from "../components/favourites";
-import Articles from "../components/articles";
+import Articles from "../components/articles-bar";
 
 // export const metadata = {
 // 	title: "Strona Główna",
@@ -23,7 +23,7 @@ export default function Home() {
 			<Description />
 			<Register />
 			<Favourites />
-			<Articles />
+			<ArticlesBar />
 		</main>
 	);
 }
