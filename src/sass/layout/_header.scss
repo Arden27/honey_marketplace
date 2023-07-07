@@ -1,36 +1,67 @@
 
 .header {
 	display: grid;
-	grid-template-columns: auto 1fr auto 1fr;
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: 1fr auto 1fr;
+	
 
-
-	.burger-btn {
+	.nav-bar1 {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
-	}
 
-	
-	.nav {
-		grid-column: 2 / 3;
-		grid-row: 1 / 2;
+		display: grid;
+		grid-template-columns: auto 1fr;
 
+		.burger-btn {
 
-		ul {
-			list-style: none;
-			li {
-				float: left;
+			&__input {
+				display: none;
 			}
-				
+
+			&__input:checked ~ nav {
+				display: block;
+	
+			}
 		}
+
+		nav {
+			position: absolute;
+			display: none;
+
+
+
+			ul {
+				list-style: none;
+				li {
+					
+				}
+					
+			}
+		}
+
+
+
+		&__items {
+			
+
+			&__item {
+			
+			}
+
+			&__shop {
+			
+			}
+
+		}
+
+
 	}
 
 	.logo {
-		grid-column: 3 / 4;
+		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 	}
 	.nav2 {
-		grid-column: 4 / 5;
+		grid-column: 3 / 4;
 		grid-row: 1 / 2;
 	}
 	.shop-menu {
@@ -43,16 +74,30 @@
 		.shop-menu__item {
 
 		}
-
 	}
 }
 
 .header > * {
-	
 	border: 1px solid red;
-
-	
 }
 
 
 
+
+@media (min-width: 768px) {
+
+	.header {
+		.nav {
+			.burger-btn {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
