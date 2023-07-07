@@ -5,6 +5,8 @@ video {
 	display: block;
 }
 
+
+
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -12,7 +14,8 @@ video {
 	height: 100vh;
 	height: 100svh;
 	
-
+	overflow: hidden;
+	
 	.header {
 		grid-column: 1 / -1;
 		grid-row: 1 / 2;

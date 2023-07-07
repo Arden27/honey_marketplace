@@ -3,6 +3,15 @@ import React from "react";
 export default function Header() {
 	return (
 		<header className="header">
+
+
+			<button class="burger-btn">
+				<div class="burger-btn__box">
+					<div class="burger-btn__bars"></div>
+				</div>
+				sdsd
+			</button>
+
 			<nav className="nav">
 				<ul className="nav__items">
 					<li className="nav__item">
@@ -22,6 +31,16 @@ export default function Header() {
 					</li>
 				</ul>
 			</nav>
+
+			
+
+
+
+
+
+
+
+
 
 			<div className="logo">LOGO</div>
 
