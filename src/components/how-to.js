@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function HowTo() {
-	return <p>Jak rozpoznać dobry miód?</p>;
+	return <section className="how-to" ><p>Jak rozpoznać dobry miód?</p></section>;
 }

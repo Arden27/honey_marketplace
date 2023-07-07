@@ -1,23 +1,43 @@
+.header > * {
+	
+	border: 1px solid red;
+	width: 100%;
+	
+}
+
+
 .header {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 100px 1fr;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-areas:
 		"nav logo nav2"
 		"shop-menu shop-menu shop-menu";
+	
+	.nav {
+		grid-area: nav;
+		overflow: hidden;
+		
+		
+		ul {
+			list-style: none;
+			li {
+				float: left;
+			}
+				
+		}
+	}
+		
+	.logo {
+		grid-area: logo;
+	}
+	.nav2 {
+		grid-area: nav2;
+	}
+	.shop-menu {
+		grid-area: shop-menu;
+	}
 }
 
-.nav {
-	grid-area: nav;
-}
 
-.logo {
-	grid-area: logo;
-}
 
-.nav2 {
-	grid-area: nav2;
-}
-.shop-menu {
-	grid-area: shop-menu;
-}

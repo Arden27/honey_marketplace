@@ -1,3 +1,5 @@
+// Kolory na stronie:
+
 $clr-primary: #000000;
 $clr-secondary: #940000;
 $clr-accent: #339a57;
@@ -11,5 +13,11 @@ $clr-darkgray: #c0c0c0;
 $clr-lightblack: #111;
 $clr-black: #000;
 
+// html {
+// 	color-scheme: light dark;
+// }
+
 @media (prefers-color-scheme: dark) {
 }
+
+

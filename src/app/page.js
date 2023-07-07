@@ -17,7 +17,7 @@ import Articles from "../components/articles";
 
 export default function Home() {
 	return (
-		<main className="home">
+		<main className="main home">
 			<Slider />
 			<HowTo />
 			<Description />

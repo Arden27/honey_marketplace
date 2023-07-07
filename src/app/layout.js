@@ -35,9 +35,13 @@ export default function RootLayout({ children }) {
 				></script> */}
 			</Head>
 
-			<Header />
-			{children}
-			<Footer />
+			<body className="body">
+				<div className="grid">
+					<Header />
+						{children}
+					<Footer />
+				</div>
+			</body>
 		</>
 	);
 }

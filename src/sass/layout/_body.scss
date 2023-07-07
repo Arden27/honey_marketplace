@@ -1,0 +1,34 @@
+img,
+svg,
+video {
+	max-width: 100%;
+	display: block;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	height: 100vh;
+	height: 100svh;
+
+	.header {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
+
+	.main {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+	}
+
+	.footer {
+		grid-column: 1 / -1;
+		grid-row: 3 / 4;
+	}
+}
+
+.text-wrapper {
+	width: min(100% - 3rem, 60ch);
+	margin-inline: auto;
+}

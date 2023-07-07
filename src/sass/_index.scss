@@ -18,8 +18,10 @@
 @forward "components/slider";
 
 // Layout
+@forward "layout/body";
 @forward "layout/header";
 @forward "layout/footer";
+
 
 // Pages
 @forward "pages/home";

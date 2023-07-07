@@ -6,19 +6,19 @@ export default function Header() {
 			<nav className="nav">
 				<ul className="nav__items">
 					<li className="nav__item">
-						<a href="shop.html">SKLEP</a>
+						<a href="">SKLEP</a>
 					</li>
 					<li className="nav__item">
-						<a href="about.html">O NAS</a>
+						<a href="">O NAS</a>
 					</li>
 					<li className="nav__item">
-						<a href="articles.html">ARTYKUŁY</a>
+						<a href="">ARTYKUŁY</a>
 					</li>
 					<li className="nav__item">
-						<a href="faq.html">FAQ</a>
+						<a href="">FAQ</a>
 					</li>
 					<li className="nav__item">
-						<a href="contact.html">KONTAKT</a>
+						<a href="">KONTAKT</a>
 					</li>
 				</ul>
 			</nav>
