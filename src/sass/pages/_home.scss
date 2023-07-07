@@ -5,7 +5,7 @@
 	grid-template-areas:
 		"slider slider slider slider how-to"
 		"description description description description description"
-		"register favourites favourites favourites favourites"
+		"register recomended recomended recomended recomended"
 		"articles articles articles articles articles";
 	background-color: grey;
 }
@@ -24,8 +24,8 @@
 .register {
 	grid-area: register;
 }
-.favourites {
-	grid-area: favourites;
+.recomended {
+	grid-area: recomended;
 }
 
 .articles {
