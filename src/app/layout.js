@@ -9,7 +9,9 @@ import Footer from "../components/footer";
 
 export default function RootLayout({ children }) {
 	return (
-		<>
+    <html lang="en">
+        
+      
 			<Head>
 				{/* <meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
