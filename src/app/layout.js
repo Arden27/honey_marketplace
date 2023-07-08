@@ -9,7 +9,11 @@ import Footer from "../components/footer";
 
 export default function RootLayout({ children }) {
 	return (
+<<<<<<< HEAD
 		<>
+=======
+    	<html lang="en">
+>>>>>>> 010b4c2 (bug z brakiem html w layout.js naprawiony, header naprawiony (for => htmlFor, class => className)
 			<Head>
 				{/* <meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -43,6 +47,6 @@ export default function RootLayout({ children }) {
 					<Footer />
 				</div>
 			</body>
-		</>
+		</html>
 	);
 }

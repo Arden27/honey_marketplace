@@ -12,9 +12,9 @@ export default function Header() {
 
 				<input type="checkbox" id="burger-btn__input" className="burger-btn__input nav__item" />
 
-				<label for="burger-btn__input" className="burger-btn">
-					<div class="burger-btn__box">
-						<div class="burger-btn__bars"></div>
+				<label htmlFor="burger-btn__input" className="burger-btn">
+					<div className="burger-btn__box">
+						<div className="burger-btn__bars"></div>
 					</div>
 				</label>
 
