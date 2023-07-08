@@ -49,9 +49,9 @@ export default function Header() {
 			<div className="logo">
 				<Image
         			src="/img/test.png"
-        			width={100}
-        			height={100}
-        			alt="Picture of the author"
+        			width={90}
+        			height={90}
+        			alt="Logo pasieki Kurpiowski Bartnik"
      			 />
 			</div>
 
