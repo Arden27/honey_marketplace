@@ -1,17 +1,25 @@
 import React from "react";
 
+import Image from "next/image";
+
+
 
 export default function Header() {
 	return (
 		<header className="header">
 
-			<div className="nav-bar1">
+			<div className="nav-bar-1">
 
 				<input type="checkbox" id="burger-btn__input" className="burger-btn__input nav__item" />
 
 				<label for="burger-btn__input" className="burger-btn">
-					<span>BRG</span>
+					<div class="burger-btn__box">
+						<div class="burger-btn__bars"></div>
+					</div>
 				</label>
+
+
+
 
 				<nav className="nav">					
 					<ul className="nav__items">
@@ -38,9 +46,16 @@ export default function Header() {
 
 			</div>
 
-			<div className="logo">LOGO</div>
+			<div className="logo">
+				<Image
+        			src="/img/test.png"
+        			width={100}
+        			height={100}
+        			alt="Picture of the author"
+     			 />
+			</div>
 
-			<div className="nav-bar2">
+			<div className="nav-bar-2">
 				<button className="search-btn">SZUKAJ</button>
 				<button className="user-btn">USER</button>
 				<button className="cart-btn">KOSZYK</button>

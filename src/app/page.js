@@ -1,6 +1,6 @@
 
 
-import Image from "next/image";
+
 
 import Slider from "../components/slider";
 import HowTo from "../components/how-to";

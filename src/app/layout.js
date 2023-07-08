@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import "../sass/style.scss";
+import Image from 'next/image'
 
 import Header from "../components/header";
 import Footer from "../components/footer";
