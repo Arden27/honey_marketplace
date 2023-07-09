@@ -9,17 +9,19 @@
 		position: fixed;
 		width: 100%;
 
+		background: #d7b690;
+
 		&__1 {
 			.nav {
 				display: none;
-				height: 100vh;
-	
-				min-width: 40vw;
+
+				position: fixed;
+				min-height: 100svh;
+				min-width: 40svw;
 				background: rgb(173, 146, 119);
 				
 				&__items {
 					list-style: none;
-
 				}
 
 				&__item {
@@ -62,22 +64,30 @@
 
 	.header {
 		.nav-bar {
+
 			&__1 {
 				.burger-btn {
 					display: none;
 				}
 				.nav {
 					all: unset;
-					position: fixed;
 
 					&__items {
+						
+
 						all: unset;
-						list-style-type: none;	
+						list-style-type: none;
+						display:flex;
+
+					
+
 					}
 
 					&__item {
-						
 						float: left;
+						
+
+					
 					}
 				}
 			}
