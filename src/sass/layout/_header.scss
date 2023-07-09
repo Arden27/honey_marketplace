@@ -50,7 +50,7 @@
 					border-radius: 50%;
 				}
 
-				&__shadow {
+				&--shadow {
 					position: absolute;
 					top: -1rem;
 
@@ -119,7 +119,7 @@
 						width: 12rem;
 					}
 
-					&__shadow {
+					&--shadow {
 						top: -1rem;
 						height: 14rem;
 						width: 14rem;
@@ -130,13 +130,25 @@
 			}
 
 			.shop-menu {
-
 				margin-top: 14rem;
 	
+
+
 				background: $clr-shop-menu-bg;
 	
 				&__item {
+					height: 100%;
+					align-items: center;
 					text-align: center;
+					justify-content: center;
+					
+
+					&__box {
+						height: 10rem;
+						width: 100%;
+
+						border: solid 1px red;
+					}
 				}
 			}
 		}

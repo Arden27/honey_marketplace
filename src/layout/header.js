@@ -1,18 +1,13 @@
 import React from "react";
-
 import Image from "next/image";
-
-
 
 export default function Header() {
 	return (
 		<header className="header">
-
-
 			<div className="nav-bar">
 				<div className="nav-bar__1">
-
 					<input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
+
 					<label htmlFor="burger-btn__input" className="burger-btn">
 						<div className="burger-btn__box">
 							<div className="burger-btn__bars"></div>
@@ -56,9 +51,8 @@ export default function Header() {
 				</div>
 
 				<div className="logo">
-					<div className="logo__shadow">
-					
-					</div>
+					<div className="logo--shadow"></div>
+
 					<Image
         				src="/img/test.png"
         				width={80}
@@ -72,15 +66,34 @@ export default function Header() {
 					<button className="user-btn">USER</button>
 					<button className="cart-btn">KOSZYK</button>
 				</div>
-
 			</div>
 
 			<div className="shop-menu">
-				<div className="shop-menu__item">PROMOCJE</div>
-				<div className="shop-menu__item">MIODY</div>
-				<div className="shop-menu__item">PRODUKTY PSZCZELE</div>
-				<div className="shop-menu__item">ŚWIECE</div>
-				<div className="shop-menu__item">ZESTAWY</div>
+				<div className="shop-menu__item">
+					
+					Promocje
+					
+				</div>
+				<div className="shop-menu__item">
+					
+					Miody
+					
+				</div>
+				<div className="shop-menu__item">
+					
+					Produkty Pszczele
+					
+				</div>
+				<div className="shop-menu__item">
+					
+					Świece
+					
+				</div>
+				<div className="shop-menu__item">
+					
+					Zestawy
+					
+				</div>
 			</div>
 		</header>
 	);
