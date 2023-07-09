@@ -24,7 +24,8 @@
 				.nav {
 					&__items {
 						display: grid;
-						place-items: center;
+						place-content: center;
+
 					}
 				}
             }
@@ -37,6 +38,9 @@
             &__2 {
                 grid-column: 3 / 4;
                 grid-row: 1 / 2;
+
+				display: flex;
+				justify-content: flex-end;
             }
         }
 
@@ -63,24 +67,25 @@
 
 @media (min-width: 768px) {
 
+.grid {
 	.header {
 
 		.nav-bar {
 
 			&__1 {
+				
 
-				.nav {
+				 .nav {
+					all: unset;
 
 					&__items {
-						display: grid;
-						grid-template-columns: repeat(5, 1fr);
-					}
-
-					&__item {
-						grid-row: 1 / 2;
+						display: flex;
+						flex-direction: row;
 					}
 				}
 			}
 		}
 	}
+}
+
 }

@@ -5,6 +5,9 @@ video {
 	display: block;
 }
 
+li {
+	list-style: none;
+}
 
 .text-wrapper {
 	width: min(100% - 3rem, 60ch);

@@ -1,98 +1,113 @@
 @use "../base/colors" as *;
 @use "../components/burger-btn" as *;
 
-.header {
+.grid {
+	.header {
 
-	@include burger-btn;
-
-	.nav-bar {
-		position: fixed;
-		width: 100%;
-
-		background: #d7b690;
-
-		&__1 {
-			.nav {
-				display: none;
-
-				position: fixed;
-				min-height: 100svh;
-				min-width: 40svw;
-				background: rgb(173, 146, 119);
-				
-				&__items {
-					list-style: none;
-				}
-
-				&__item {
-					&__shop {
+		@include burger-btn;
+	
+		.nav-bar {
+			position: fixed;
+			width: 100%;
+	
+			background: #d7b690;
+	
+			&__1 {
+				.nav {
+					display: none;
+	
+					position: fixed;
+					min-height: 100svh;
+					min-width: 40svw;
+					background: rgb(173, 146, 119);
+					
+					&__items {
+						
+					}
+	
+					&__item {
+						&__shop {
+						}
 					}
 				}
 			}
-		}
+	
+			.logo {
 
-		.logo {
-			
-		}
-
-		&__2 {
-			.search-btn {
-
-			}
-			.user-btn {
-
-			}
-			.cart-btn {
+				img {
+					height: 100px;
+				}
 				
 			}
+	
+			&__2 {
+				.search-btn {
+	
+				}
+				.user-btn {
+	
+				}
+				.cart-btn {
+					
+				}
+				
+				
 			
-			
-		
+			}
 		}
-	}
-
-	.shop-menu {
-		margin-top: 10rem;
-		
-		.shop-menu__item {
-
+	
+		.shop-menu {
+			margin-top: 10rem;
+			
+			.shop-menu__item {
+	
+			}
 		}
 	}
 }
 
+
 @media (min-width: 768px) {
-
-	.header {
-		.nav-bar {
-
-			&__1 {
-				.burger-btn {
-					display: none;
-				}
-				.nav {
-					all: unset;
-
-					&__items {
-						
-
-						all: unset;
-						list-style-type: none;
-						display:flex;
-
-					
-
+	
+	.grid {
+		.header {
+			.nav-bar {
+	
+				&__1 {
+					.burger-btn {
+						display: none;
 					}
-
-					&__item {
-						float: left;
+					.nav {
+	
+	
+						&__items {
+	
+	
+							
+							
+	
 						
+	
+						}
+	
+						&__item {
+							
+							&__shop {
+								&__item {
+									display: none;
 
-					
+								}
+							}
+	
+	
+						
+						}
 					}
 				}
 			}
 		}
 	}
+
 }
 
 @media (min-width: 992px) {
