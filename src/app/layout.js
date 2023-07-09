@@ -4,8 +4,8 @@ import Head from "next/head";
 import "../sass/style.scss";
 import Image from 'next/image'
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../layout/header";
+import Footer from "../layout/footer";
 
 export default function RootLayout({ children }) {
 	return (
