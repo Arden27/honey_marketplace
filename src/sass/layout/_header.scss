@@ -4,37 +4,29 @@
 .grid {
 	.header {
 		@include burger-btn;
-		
-	
+
 		.nav-bar {
 			position: fixed;
 			height: 6rem;
 			width: 100%;
 
-	
 			background: $clr-nav-bar-bg;
 
 			&__1 {
 				.nav {
 					display: none;
-	
+
 					position: fixed;
 					min-height: 100svh;
 					min-width: 40svw;
-
-
-
 
 					background: $clr-nav-bg;
 					
 					&__items {
 						margin-top: 6rem;
-						
-
 					}
 	
 					&__item {
-						
 						&__shop {
 						}
 					}
@@ -94,14 +86,11 @@
 					.nav {
 						all: unset;
 
-						
-
 						&__items {
 							all: unset;
 
 						}
 
-	
 						&__item {
 
 							&__shop {
@@ -124,15 +113,11 @@
 						height: 14rem;
 						width: 14rem;
 					}
-				}
-				
-				
+				}				
 			}
 
 			.shop-menu {
 				margin-top: 14rem;
-	
-
 
 				background: $clr-shop-menu-bg;
 	
@@ -142,7 +127,6 @@
 					text-align: center;
 					justify-content: center;
 					
-
 					&__box {
 						height: 10rem;
 						width: 100%;
