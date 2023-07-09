@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
 			</Head>
 
 			<body className="body">
+				
 				<div className="grid">
 					<Header />
 						{children}

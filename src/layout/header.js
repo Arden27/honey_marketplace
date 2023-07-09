@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Header() {
 	return (
-		<header className="header">
+		<header className="header " >
 			<div className="nav-bar">
-				<div className="nav-bar__1">
+				<div className="nav-bar__1 ">
 					<input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
 
 					<label htmlFor="burger-btn__input" className="burger-btn">

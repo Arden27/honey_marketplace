@@ -21,6 +21,8 @@
 				.nav {				
 					&__items {
 					}
+					&__item {
+					}
 				}
             }
 
@@ -62,11 +64,15 @@
 		.header {
 			.nav-bar {
 				&__1 {
+					display: flex;
+					align-items: center;
+					justify-content: left;
+					
 					 .nav {
 						&__items {
-							display: flex;
-							align-items: center;
-							justify-content: center;
+						}
+						&__item {
+							float: left;
 						}
 					}
 				}

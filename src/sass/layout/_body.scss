@@ -9,6 +9,12 @@ li {
 	list-style: none;
 }
 
+.page-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+}
+
 .text-wrapper {
 	width: min(100% - 3rem, 60ch);
 	margin-inline: auto;
