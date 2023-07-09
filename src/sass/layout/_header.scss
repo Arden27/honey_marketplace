@@ -8,7 +8,9 @@
 	
 		.nav-bar {
 			position: fixed;
+			height: 6rem;
 			width: 100%;
+
 	
 			background: $clr-nav-bar-bg;
 
@@ -21,11 +23,12 @@
 					min-width: 40svw;
 
 
-					text-align: center;
+
 
 					background: $clr-nav-bg;
 					
 					&__items {
+						margin-top: 6rem;
 						
 
 					}
@@ -39,17 +42,27 @@
 			}
 	
 			.logo {
-
-
 				img {
-					height: 6rem;
-					width: 6rem;
+					position: absolute;
+					height: 8rem;
+					width: 8rem;
+
 					border-radius: 50%;
+				}
+
+				&__shadow {
+					position: absolute;
+					top: -1rem;
+
+					height: 10rem;
+					width: 10rem;
+
+					border-radius: 50%;
+					background: $clr-nav-bar-bg;
 				}
 			}
 	
 			&__2 {
-
 				.search-btn {
 	
 				}
@@ -63,21 +76,16 @@
 		}
 	
 		.shop-menu {
-			margin-top: 10rem;
-			
-			&__item {
-				text-align: center;
-			}
+			display: none;
 		}
 	}
 }
 
-
 @media (min-width: 768px) {
-	
 	.grid {
 		.header {
 			.nav-bar {
+				height: 8rem;
 	
 				&__1 {
 					.burger-btn {
@@ -85,10 +93,12 @@
 					}
 					.nav {
 						all: unset;
+
 						
 
 						&__items {
-							height: 6rem;
+							all: unset;
+
 						}
 
 	
@@ -105,14 +115,29 @@
 				}
 				.logo {
 					img {
-						position: absolute;
-						height: 10rem;
-						width: 10rem;
-						border-radius: 50%;
+						height: 12rem;
+						width: 12rem;
+					}
+
+					&__shadow {
+						top: -1rem;
+						height: 14rem;
+						width: 14rem;
 					}
 				}
 				
 				
+			}
+
+			.shop-menu {
+
+				margin-top: 14rem;
+	
+				background: $clr-shop-menu-bg;
+	
+				&__item {
+					text-align: center;
+				}
 			}
 		}
 	}

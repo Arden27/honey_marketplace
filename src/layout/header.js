@@ -56,6 +56,9 @@ export default function Header() {
 				</div>
 
 				<div className="logo">
+					<div className="logo__shadow">
+					
+					</div>
 					<Image
         				src="/img/test.png"
         				width={80}
