@@ -21,21 +21,21 @@ export default function Header() {
 
 					<nav className="nav">					
 						<ul className="nav__items">
-							<ul className="nav__item nav__item__shop__item">
+							<ul className="nav__item nav__item__shop">
 								<a href="">SKLEP</a>
-								<li>
+								<li className="nav__item__shop__item">
 									<a href="">Promocje</a>
 								</li>
-								<li>
+								<li className="nav__item__shop__item">
 									<a href="">Miody</a>
 								</li>
-								<li>
+								<li className="nav__item__shop__item">
 									<a href="">Produkty pszczele</a>
 								</li>
-								<li>
+								<li className="nav__item__shop__item">
 									<a href="">Świece</a>
 								</li>
-								<li>
+								<li className="nav__item__shop__item">
 									<a href="">Zestawy</a>
 								</li>
 							</ul>

@@ -3,15 +3,15 @@
 
 .grid {
 	.header {
-
 		@include burger-btn;
+		
 	
 		.nav-bar {
 			position: fixed;
 			width: 100%;
 	
-			background: #d7b690;
-	
+			background: $clr-nav-bar-bg;
+
 			&__1 {
 				.nav {
 					display: none;
@@ -19,13 +19,19 @@
 					position: fixed;
 					min-height: 100svh;
 					min-width: 40svw;
-					background: rgb(173, 146, 119);
+
+
+					text-align: center;
+
+					background: $clr-nav-bg;
 					
 					&__items {
 						
+
 					}
 	
 					&__item {
+						
 						&__shop {
 						}
 					}
@@ -34,13 +40,16 @@
 	
 			.logo {
 
+
 				img {
-					height: 100px;
+					height: 6rem;
+					width: 6rem;
+					border-radius: 50%;
 				}
-				
 			}
 	
 			&__2 {
+
 				.search-btn {
 	
 				}
@@ -50,17 +59,14 @@
 				.cart-btn {
 					
 				}
-				
-				
-			
 			}
 		}
 	
 		.shop-menu {
 			margin-top: 10rem;
 			
-			.shop-menu__item {
-	
+			&__item {
+				text-align: center;
 			}
 		}
 	}
@@ -78,32 +84,35 @@
 						display: none;
 					}
 					.nav {
-	
-	
-						&__items {
-	
-	
-							
-							
-	
+						all: unset;
 						
-	
+
+						&__items {
+							height: 6rem;
 						}
+
 	
 						&__item {
-							
+
 							&__shop {
+
 								&__item {
 									display: none;
-
 								}
 							}
-	
-	
-						
 						}
 					}
 				}
+				.logo {
+					img {
+						position: absolute;
+						height: 10rem;
+						width: 10rem;
+						border-radius: 50%;
+					}
+				}
+				
+				
 			}
 		}
 	}

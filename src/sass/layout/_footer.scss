@@ -1,5 +1,5 @@
-
+@use "../base/colors" as *;
 
 .footer {
-    background: #452818;
+    background: $clr-footer-bg;
 }
