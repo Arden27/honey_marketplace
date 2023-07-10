@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Header() {
 	return (
 		<header className="header " >
+			
 			<div className="nav-bar">
 				<div className="nav-bar__1 ">
 					<input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
@@ -66,6 +67,7 @@ export default function Header() {
 					<button className="user-btn">USER</button>
 					<button className="cart-btn">KOSZYK</button>
 				</div>
+			
 			</div>
 
 			<div className="shop-menu">
