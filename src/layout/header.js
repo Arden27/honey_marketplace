@@ -15,35 +15,35 @@ export default function Header() {
 					</label>
 
 					<nav className="nav">					
-						<ul className="nav__items">
-							<ul className="nav__item nav__item__shop">
+						<ul className="nav__list">
+							<ul className="nav__list__item nav__list__item--shop">
 								<a href="">SKLEP</a>
-								<li className="nav__item__shop__item">
+								<li className="nav__list__item--shop__item">
 									<a href="">Promocje</a>
 								</li>
-								<li className="nav__item__shop__item">
+								<li className="nav__list__item--shop__item">
 									<a href="">Miody</a>
 								</li>
-								<li className="nav__item__shop__item">
+								<li className="nav__list__item--shop__item">
 									<a href="">Produkty pszczele</a>
 								</li>
-								<li className="nav__item__shop__item">
+								<li className="nav__list__item--shop__item">
 									<a href="">Świece</a>
 								</li>
-								<li className="nav__item__shop__item">
+								<li className="nav__list__item--shop__item">
 									<a href="">Zestawy</a>
 								</li>
 							</ul>
-							<li className="nav__item">
+							<li className="nav__list__item">
 								<a href="">O NAS</a>
 							</li>
-							<li className="nav__item">
+							<li className="nav__list__item">
 								<a href="">ARTYKUŁY</a>
 							</li>
-							<li className="nav__item">
+							<li className="nav__list__item">
 								<a href="">FAQ</a>
 							</li>
-							<li className="nav__item">
+							<li className="nav__list__item">
 								<a href="">KONTAKT</a>
 							</li>
 						</ul>

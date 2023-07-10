@@ -19,9 +19,9 @@
                 grid-row: 1 / 2;
 
 				.nav {				
-					&__items {
-					}
-					&__item {
+					&__list {
+						&__item {
+						}
 					}
 				}
             }
@@ -69,10 +69,10 @@
 					justify-content: left;
 					
 					 .nav {
-						&__items {
-						}
-						&__item {
-							float: left;
+						&__list {
+							&__item {
+								float: left;
+							}
 						}
 					}
 				}

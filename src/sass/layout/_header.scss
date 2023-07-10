@@ -22,12 +22,14 @@
 
 					background: $clr-nav-bg;
 					
-					&__items {
+					&__list {
 						margin-top: 6rem;
-					}
-	
-					&__item {
-						&__shop {
+
+						&__item {
+							&--shop {
+								&__item {
+								}
+							}
 						}
 					}
 				}
@@ -83,17 +85,13 @@
 					.nav {
 						all: unset;
 
-						&__items {
+						&__list {
 							all: unset;
-
-						}
-
-						&__item {
-
-							&__shop {
-
-								&__item {
-									display: none;
+							&__item {
+								&--shop {
+									&__item {
+										display: none;
+									}
 								}
 							}
 						}
