@@ -11,6 +11,7 @@
 
 // Components
 @forward "components/articles-bar";
+@forward "components/burger-btn";
 @forward "components/description";
 @forward "components/how-to";
 @forward "components/recomended";
@@ -19,8 +20,12 @@
 
 // Layout
 @forward "layout/body";
+
+
 @forward "layout/header";
+@forward "layout/grid";
 @forward "layout/footer";
+
 
 
 // Pages
