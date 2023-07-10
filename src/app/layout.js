@@ -15,13 +15,13 @@ export default function RootLayout({ children }) {
 			</Head>
 
 			<body className="body">
-				<div className="page-wrapper">
+				
 					<div className="grid">
 						<Header />
 						{children}
 						<Footer />
 					</div>
-				</div>
+				
 			</body>
 		</html>
 	);

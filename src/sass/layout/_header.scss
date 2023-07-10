@@ -1,19 +1,36 @@
 @use "../base/colors" as *;
+@use "../abstracts/mixins" as *;
 @use "../components/burger-btn" as *;
 
 .grid {
+	position: relative;
+
+	min-height: 100vh;
+	min-height: 100svh;
+
+	min-width: 100sw;
+	min-width: 100svw;
+
 	.header {
 		@include burger-btn;
+
+		
 
 		.nav-bar {
 			position: fixed;
 			height: 6rem;
 			width: 100%;
-			max-width: 1200px;
 
-			padding:  0 3rem;
+			
+			
+			
 
 			background: $clr-nav-bar-bg;
+
+			&-wrapper {
+				height: 100%;
+				padding: 0 1rem;
+			}
 
 			&__1 {
 				.nav {
@@ -39,6 +56,9 @@
 			}
 	
 			.logo {
+				display: flex;
+				justify-content: center;
+
 				img {
 					position: absolute;
 					height: 8rem;
@@ -60,6 +80,10 @@
 			}
 	
 			&__2 {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+
 				.search-btn {	
 				}
 				.user-btn {	
@@ -77,9 +101,13 @@
 
 @media (min-width: 768px) {
 	.grid {
-		.header {
+		.header {			
 			.nav-bar {
 				height: 8rem;
+				
+				&-wrapper {
+					@include page-wrapper
+				}
 	
 				&__1 {
 					.burger-btn {
@@ -87,7 +115,6 @@
 					}
 					.nav {
 						all: unset;
-
 						&__list {
 							all: unset;
 							&__item {
@@ -118,18 +145,19 @@
 				margin-top: 14rem;
 
 				background: $clr-shop-menu-bg;
+
+				&-wrapper {
+					@include page-wrapper
+				}
 	
-				&__items {
-					height: 100%;
+				&__item {
 					align-items: center;
-					text-align: center;
 					justify-content: center;
+
+					text-align: center;
 					
 					&__box {
-						height: 10rem;
-						width: 100%;
-
-						border: solid 1px red;
+						
 					}
 				}
 			}

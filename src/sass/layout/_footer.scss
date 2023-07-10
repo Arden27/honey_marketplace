@@ -1,5 +1,18 @@
 @use "../base/colors" as *;
+@use "../abstracts/mixins" as *;
+
 
 .footer {
     background: $clr-footer-bg;
+
+    padding: 0 1rem;
+
+
+    &-wrapper {
+        @include page-wrapper;
+                
+    }
+
+
+   
 }
