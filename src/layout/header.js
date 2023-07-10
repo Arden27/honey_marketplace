@@ -15,6 +15,17 @@ export default function Header() {
 						</div>
 					</label>
 
+					{/* Burger button do dodania: */}
+
+					{/* <button className="burger-btn">
+						<Image
+        					src="/icons/menu.svg"
+        					width={30}
+        					height={30}
+      		  				alt="Menu"
+     					 />
+					</button> */}
+
 					<nav className="nav">					
 						<ul className="nav__list">
 							<ul className="nav__list__item nav__list__item--shop">
@@ -63,9 +74,30 @@ export default function Header() {
 				</div>
 
 				<div className="nav-bar__2">
-					<button className="search-btn">SZUKAJ</button>
-					<button className="user-btn">USER</button>
-					<button className="cart-btn">KOSZYK</button>
+					<button className="search-btn">
+						<Image
+        					src="/icons/search.svg"
+        					width={30}
+        					height={30}
+      		  				alt="Szukaj"
+     					 />
+					</button>
+					<button className="user-btn">
+						<Image
+        					src="/icons/user.svg"
+        					width={30}
+        					height={30}
+      		  				alt="Konto"
+     					 />
+					</button>
+					<button className="cart-btn">
+						<Image
+        					src="/icons/shopping-cart.svg"
+        					width={30}
+        					height={30}
+      		  				alt="Koszyk"
+     					 />
+					</button>
 				</div>
 			
 			</div>

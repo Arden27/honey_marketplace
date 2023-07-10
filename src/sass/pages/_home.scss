@@ -3,7 +3,11 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 
-	gap: 1em;
+	gap: 2rem;
+
+	padding:  0 3rem;
+
+	
 	background-color: rgb(114, 87, 87);
 }
 
