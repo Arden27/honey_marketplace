@@ -36,7 +36,7 @@ export default function Header() {
 						<div className="logo--shadow"></div>
 						
 						<Image
-        					src="/img/logo.png"
+        					src="/img/test.png"
         					width={80}
         					height={80}
       		  				alt="Logo pasieki Kurpiowski Bartnik"
