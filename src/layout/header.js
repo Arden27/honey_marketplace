@@ -11,6 +11,8 @@ export default function Header() {
 
 			<NavBar />
 
+			
+
 
 			<div className="header-bar">
 				<div className="header-bar-wrapper">
@@ -34,7 +36,7 @@ export default function Header() {
 						<div className="logo--shadow"></div>
 						
 						<Image
-        					src="/img/test.png"
+        					src="/img/logo.png"
         					width={80}
         					height={80}
       		  				alt="Logo pasieki Kurpiowski Bartnik"

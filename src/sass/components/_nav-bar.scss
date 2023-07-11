@@ -1,28 +1,52 @@
 @use "../abstracts/mixins" as *;
 @use "../base/colors" as *;
+@use "../base/fonts" as *;
 
 @mixin nav-bar {
     .nav-bar {
-        position: fixed;
-        z-index: 3;
 
         .burger-btn {
             &-wrapper {
             @include page-wrapper;
 
-            height: 7rem;
+            position: fixed;
+            z-index: 3;
 
             display: flex;
             align-items: center;
             justify-content: flex-start;
+
+            height: 7rem;
+            }
+        }
+
+        .shop-btn {
+            &-wrapper {
+                position: fixed;
+                z-index: 3;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                height: 7rem;
+                padding: 0 4em;
+
+                font-family: $ff-accent;
+
+
             }
         }
     
         .nav {
-            min-height: 100svh;
-            width: 50vw;
+            position: fixed;
+            z-index: 1;
+            min-height: 100%;
+            width: 70%;
 
             background: $clr-nav-bg;
+
+            
 
             &__list {  
                 &__item {                  
@@ -46,9 +70,10 @@
         }
 
         .burger-btn {
-            &-wrapper {
-                display: none;
-            }
+            display: none;
+        }
+        .shop-btn {
+            display: none;
         }
     
         .nav {
@@ -60,6 +85,7 @@
             display: flex;
             align-items: right;
             justify-content: left;
+            
     
             &-wrapper {
                 

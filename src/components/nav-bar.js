@@ -55,6 +55,10 @@ const Nav = () => {
                     </button>
                 </div>
 
+                <div className="shop-btn-wrapper">
+                    <div className="shop-btn">Sklep</div>
+                </div>
+
                 {(open || isLargeScreen) && (
                     <nav className="nav">
                         <ul className="nav__list">
@@ -95,6 +99,8 @@ const Nav = () => {
                 )}
             </div>
         </div>
+
+        
     );
 };
 
