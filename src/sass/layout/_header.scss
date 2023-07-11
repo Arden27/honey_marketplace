@@ -3,49 +3,70 @@
 @use "../components/burger-btn" as *;
 
 .grid {
-	position: relative;
-
-	min-height: 100vh;
-	min-height: 100svh;
-
-	min-width: 100sw;
-	min-width: 100svw;
-
 	.header {
-		@include burger-btn;
 
-		
 
-		.nav-bar {
+		.header-bar {
 			position: fixed;
+			
 			height: 6rem;
 			width: 100%;
-
-			
-			
-			
 
 			background: $clr-nav-bar-bg;
 
 			&-wrapper {
+				@include page-wrapper;
+
 				height: 100%;
-				padding: 0 1rem;
+
+				
+
+
 			}
 
 			&__1 {
-				.nav {
-					display: none;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				
+				.burger-btn {
+					
+					@include burger-btn;
 
 					position: fixed;
-					min-height: 100svh;
-					min-width: 40svw;
+					
+					&__input {
+						display: none;
+					}
+				
+					&__input:checked ~ .nav {
+						display: block;
 
+				
+					}
+				}
+
+				.nav {
+					display: none;
+					
+					min-height: 100svh;
+					max-width: 40svw;
+		
 					background: $clr-nav-bg;
+
+			
+		
+					&-wrapper {
+						@include page-wrapper;
+					}
 					
 					&__list {
-						margin-top: 6rem;
-
+						
+						
+		
 						&__item {
+							
 							&--shop {
 								&__item {
 								}
@@ -53,6 +74,10 @@
 						}
 					}
 				}
+
+
+
+				
 			}
 	
 			.logo {
@@ -95,6 +120,10 @@
 	
 		.shop-menu {
 			display: none;
+
+			@include page-wrapper;
+
+			
 		}
 	}
 }
@@ -102,30 +131,72 @@
 @media (min-width: 768px) {
 	.grid {
 		.header {			
-			.nav-bar {
+			
+			.header-bar {
 				height: 8rem;
 				
 				&-wrapper {
+					height: 100%;
+					
 					@include page-wrapper
 				}
 	
 				&__1 {
-					.burger-btn {
-						display: none;
-					}
+					display: flex;
+					align-items: center;
+					justify-content: left;
+
 					.nav {
-						all: unset;
+						all:unset;
+		
+						position: fixed;
+		
+						
+						
+						height: 8rem;
+		
+		
+						&-wrapper {
+							height: 8rem;
+							
+						}
+		
+		
+		
 						&__list {
-							all: unset;
+							height: 8rem;
+		
+							all:unset;
+		
+							display: flex;
+							align-items: right;
+							justify-content: left;
+						
+							margin: 1rem;
+							
+		
+		
 							&__item {
+								
+		
+		
+		
 								&--shop {
 									&__item {
 										display: none;
+										
 									}
 								}
 							}
 						}
 					}
+		
+
+
+					.burger-btn {
+						display: none;
+					}
+
 				}
 				.logo {
 					img {
@@ -144,18 +215,16 @@
 			.shop-menu {
 				margin-top: 14rem;
 
-				background: $clr-shop-menu-bg;
+				gap: 1em;
 
-				&-wrapper {
-					@include page-wrapper
-				}
+				background: $clr-shop-menu-bg;
 	
 				&__item {
 					align-items: center;
 					justify-content: center;
 
 					text-align: center;
-					
+
 					&__box {
 						
 					}

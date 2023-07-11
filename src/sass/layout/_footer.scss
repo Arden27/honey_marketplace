@@ -5,11 +5,13 @@
 .footer {
     background: $clr-footer-bg;
 
-    padding: 0 1rem;
+    
 
 
     &-wrapper {
         @include page-wrapper;
+
+        
                 
     }
 

@@ -4,9 +4,12 @@ import Image from "next/image";
 export default function Header() {
 	return (
 		<header className="header">
-			<div className="nav-bar">
-				<div className="nav-bar-wrapper">
-					<div className="nav-bar__1 ">
+
+
+			<div className="header-bar">
+				<div className="header-bar-wrapper">
+					<div className="header-bar__1 ">
+						
 						<input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
 
 						<label htmlFor="burger-btn__input" className="burger-btn">
@@ -14,21 +17,21 @@ export default function Header() {
 							<div className="burger-btn__bars"></div>
 						</div>
 						</label>
-
-						{/* Burger button do dodania: */}
+						
 						{/* <button className="burger-btn">
 							<Image
         						src="/icons/menu.svg"
-        						width={30}
-        						height={30}
+        						width={40}
+        						height={40}
       		  					alt="Menu"
-     						 />
+     						 /> 							 					 
 						</button> */}
 
 						<nav className="nav">					
 							<ul className="nav__list">
 								<ul className="nav__list__item nav__list__item--shop">
 									<a href="">SKLEP</a>
+
 									<li className="nav__list__item--shop__item">
 										<a href="">Promocje</a>
 									</li>
@@ -61,6 +64,7 @@ export default function Header() {
 						</nav>
 					</div>
 
+
 					<div className="logo">
 						<div className="logo--shadow"></div>
 						<Image
@@ -71,7 +75,7 @@ export default function Header() {
      					 />
 					</div>
 
-					<div className="nav-bar__2">
+					<div className="header-bar__2">
 						<button className="search-btn">
 							<Image
         						src="/icons/search.svg"

@@ -2,6 +2,7 @@
 
 
 @mixin burger-btn {
+    
     .burger-btn {
         position: absolute;
         background: none;
@@ -55,14 +56,7 @@
             }
         }
     
-        &__input {
-            display: none;
-        }
-    
-        &__input:checked ~ nav {
-            display: block;
-    
-        }
+
     }
 
 }

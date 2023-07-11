@@ -1,7 +1,4 @@
 
-
-
-
 import Slider from "../components/slider";
 import HowTo from "../components/how-to";
 import Description from "../components/description";
@@ -19,12 +16,14 @@ import ArticlesBar from "../components/articles-bar";
 export default function Home() {
 	return (
 		<main className="main home">
-			<Slider />
-			<HowTo />
-			<Description />
-			<Register />
-			<Recomended />
-			<ArticlesBar />
+			<div className="main-wrapper">
+				<Slider />
+				<HowTo />
+				<Description />
+				<Register />
+				<Recomended />
+				<ArticlesBar />
+			</div>
 		</main>
 	);
 }

@@ -1,68 +1,65 @@
 @use "../abstracts/mixins" as *;
 
 
-.main {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-
-	gap: 1rem;
-
-	@include page-wrapper;
-
-	padding: 0 1rem;
-	
-}
-
-.slider {
-	grid-column: 1 / 4;
-	grid-row: 1 / 2;
-
-	background-color: rgb(114, 87, 87);
-
-	
-}
-
-.how-to {
-	grid-column: 4 / -1;
-	grid-row: 1 / 2;
-
-	background-color: rgb(114, 87, 87);
-}
-
-.description {
-	grid-column: 1 / -1;
-	grid-row: 2 / 3;
-
-	background-color: rgb(114, 87, 87);
-}
-.register {
-	grid-column: 1 / 3;
-	grid-row: 3 / 4;
-
-	background-color: rgb(114, 87, 87);
-}
-.recomended {
-	grid-column: 3 / -1;
-	grid-row: 3 / 4;
-
-	background-color: rgb(114, 87, 87);
-}
-
-.articles-bar {
-	grid-column: 1 / -1;
-	grid-row: 4 / 5;
-
-	background-color: rgb(114, 87, 87);
-}
-
-@media (min-width: 768px) {
+.home {
 
 	.slider {
 		grid-column: 1 / 4;
 		grid-row: 1 / 2;
 	
+		background-color: rgb(114, 87, 87);
+	
 		
+	}
+	
+	.how-to {
+		grid-column: 4 / -1;
+		grid-row: 1 / 2;
+	
+		background-color: rgb(114, 87, 87);
+	}
+	
+	.description {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+	
+		background-color: rgb(114, 87, 87);
+	}
+	.register {
+		grid-column: 1 / 3;
+		grid-row: 3 / 4;
+	
+		background-color: rgb(114, 87, 87);
+	}
+	.recomended {
+		grid-column: 3 / -1;
+		grid-row: 3 / 4;
+	
+		background-color: rgb(114, 87, 87);
+	}
+	
+	.articles-bar {
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+	
+		background-color: rgb(114, 87, 87);
+	}
+
+
+}
+
+
+
+
+
+@media (min-width: 768px) {
+	.home {
+		.slider {
+			grid-column: 1 / 4;
+			grid-row: 1 / 2;
+		
+			
+		}
 	}
 }
 

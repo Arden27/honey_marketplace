@@ -1,3 +1,30 @@
+@use "../abstracts/mixins" as *;
 
+
+.grid {
+	position: relative;
+
+	min-height: 100vh;
+	min-height: 100svh;
+
+	min-width: 100sw;
+	min-width: 100svw;
+
+    gap: 1rem;
+
+}
+
+
+.main {
+
+	&-wrapper {
+		@include page-wrapper;
+
+		gap: 1rem;
+
+	}
+    
+	
+}
 
 
