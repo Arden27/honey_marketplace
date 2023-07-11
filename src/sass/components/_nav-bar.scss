@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../base/colors" as *;
 @use "../base/fonts" as *;
+@use "../base/spaces" as *;
 
 @mixin nav-bar {
     .nav-bar {
@@ -21,6 +22,7 @@
         }
 
         .shop-btn {
+           
             &-wrapper {
                 position: fixed;
                 z-index: 3;
@@ -30,9 +32,9 @@
                 justify-content: flex-start;
 
                 height: 7rem;
-                padding: 0 4em;
+                margin: 0 4em;
 
-                font-family: $ff-accent;
+                
 
 
             }
@@ -85,6 +87,8 @@
             display: flex;
             align-items: right;
             justify-content: left;
+
+            font-family:$ff-accent;
             
     
             &-wrapper {
@@ -103,6 +107,7 @@
                 
     
                 &__item {
+                    padding: $space-2xs;
                     &--shop {
                         &__item {
                             display: none;

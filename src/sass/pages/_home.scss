@@ -1,13 +1,14 @@
 @use "../abstracts/mixins" as *;
+@use "../base/spaces" as *;
 
 .home {
 	&-wrapper {
 		display: grid;
-		grid-template-rows: 50vh 35vh repeat(4, auto);
+		grid-template-rows: calc(70vh - 15rem) 30vh repeat(4, auto);
 
 		@include page-wrapper;
 
-		gap: 2rem;
+		gap: $space-s;
 	}
 
 	.slider {

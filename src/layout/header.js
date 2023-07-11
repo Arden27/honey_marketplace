@@ -17,20 +17,8 @@ export default function Header() {
 			<div className="header-bar">
 				<div className="header-bar-wrapper">
 					<div className="header-bar__1 ">
-						
-						{/* <input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
 
-						<label htmlFor="burger-btn__input" className="burger-btn">
-						<div className="burger-btn__box">
-							<div className="burger-btn__bars"></div>
-						</div>
-						</label> */}
-						
-
-
-						
 					</div>
-
 
 					<div className="logo">
 						<div className="logo--shadow"></div>
@@ -76,23 +64,23 @@ export default function Header() {
 			<div className="shop-menu-wrapper">
 				<div className="shop-menu">
 					<div className="shop-menu__item">
-						Promocje
+						<h2>Promocje</h2>
 					</div>
 
 					<div className="shop-menu__item">
-						Miody					
+						<h2>Miody</h2>					
 					</div>
 
 					<div className="shop-menu__item">					
-						Produkty Pszczele					
+						<h2>Produkty Pszczele</h2>					
 					</div>
 
 					<div className="shop-menu__item">					
-						Świece			
+						<h2>Świece</h2>			
 					</div>
 
 					<div className="shop-menu__item">					
-						Zestawy					
+						<h2>Zestawy</h2>					
 					</div>
 				</div>				
 			</div>

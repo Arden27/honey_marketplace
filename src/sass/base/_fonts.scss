@@ -1,27 +1,35 @@
 @use "./colors" as *;
+@use "./spaces" as *;
 
-// @font-face {
-// 	font-family: "Veteran Typewriter";
-// 	src: url("../fonts/veterantypewriter.ttf") format("truetype");
-// }
+@font-face {
+	font-family: "Satoshi";
+	src: url("../../fonts/Satoshi-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Satoshi Bold";
+	src: url("../../fonts/Satoshi-Bold.ttf") format("truetype");
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap');
 
 
 // Typ czcionki:
 
-$ff-base: "Open Sans", sans-serif;
+$ff-base: "Satoshi", sans-serif;
+$ff-buttons: "Satoshi Bold", sans-serif;
 $ff-accent: "Montserrat", sans-serif;
 
 
 // Wielkość czcionki:
 
-$fs-300: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-$fs-400: clamp(1.35rem, calc(1.2rem + 0.73vw), 1.77rem);
-$fs-500: clamp(1.62rem, calc(1.31rem + 1.53vw), 2.5rem);
-$fs-600: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
-$fs-700: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
-$fs-800: clamp(2.8rem, calc(1.32rem + 7.42vw), 7.07rem);
+$fs-300: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+$fs-400: clamp(1.35rem, calc(1.25rem + 0.60vw), 1.77rem);
+$fs-500: clamp(1.62rem, calc(1.40rem + 1.26vw), 2.50rem);
+$fs-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
+$fs-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5.00rem);
+$fs-800: clamp(2.80rem, calc(1.73rem + 6.09vw), 7.07rem);
 
 
 // Odstępy pomiędzy wierszami:
@@ -33,6 +41,7 @@ $text-flow: 1em;
 body {
 	font-size: $fs-400;
 	font-family: $ff-base;
+	font-weight: 300;
 	line-height: 1.6;
 	color: $clr-text;
 }
@@ -46,7 +55,7 @@ h3 {
 }
 
 h1 {
-	font-size: $fs-700;
+	font-size: $fs-600;
 	$text-flow: 2em;
 }
 
@@ -79,4 +88,25 @@ a:focus {
 .text-flow > * + * {
 	margin-top: $text-flow, 1em;
 }
+
+.shop-btn {
+	font-family: $ff-accent;
+}
+
+.nav__list__item {
+	font-family: $ff-buttons;
+	font-size: $fs-300;
+	font-weight: 500;
+
+
+}
+
+.shop-menu__item h2 {
+	
+	font-family: $ff-accent;
+	font-size: $fs-500;
+	font-weight: 400;
+
+}
+
 

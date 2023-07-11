@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Description() {
-	return <article className="description">Miód z Kurpiów</article>;
+	return (
+		<section className="description" >
+			<h1>Miód z Kurpiów</h1>
+		</section>
+	);
 }

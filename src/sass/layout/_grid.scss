@@ -3,7 +3,7 @@
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;	
-	grid-template-rows: minmax(6rem, 10vh) auto auto;
+	grid-template-rows: 9rem auto auto;
 
 	.header {
 		grid-column: 1 / -1;
