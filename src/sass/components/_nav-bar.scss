@@ -1,0 +1,85 @@
+@use "../base/colors" as *;
+@use "../abstracts/mixins" as *;
+
+@mixin nav-bar {
+    .nav-bar {
+        .burger-btn {
+            position: fixed;
+            z-index: 101;
+        }
+    
+        .nav {
+            position: fixed;
+            z-index: 100;
+            min-height: 100svh;
+            max-width: 40svw;
+            
+    
+            background: $clr-nav-bg;
+    
+            &-wrapper {
+                @include page-wrapper;
+            }
+            
+            &__list {
+    
+                &__item {
+                    
+                    &--shop {
+                        &__item {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@mixin nav-bar-big {
+    .nav-bar {
+        .burger-btn {
+            display: none;
+        }
+    
+        .nav {
+            all:unset;	
+            position: fixed;
+            z-index: 100;
+    
+            height: 8rem;
+            display: flex;
+            align-items: right;
+            justify-content: left;
+    
+            &-wrapper {
+                
+            }
+    
+            &__list {
+                height: 8rem;
+    
+                all:unset;
+    
+                display: flex;
+                align-items: center;
+                justify-content: left;
+        
+                margin-left: 2rem;
+    
+                &__item {
+
+                    &--shop {
+                        &__item {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+

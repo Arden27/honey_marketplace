@@ -2,12 +2,20 @@
 
 
 .home {
+	&-wrapper {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 70vh repeat(3, 1fr);
+
+	}
 
 	.slider {
 		grid-column: 1 / 4;
 		grid-row: 1 / 2;
 	
 		background-color: rgb(114, 87, 87);
+
+		
 	
 		
 	}

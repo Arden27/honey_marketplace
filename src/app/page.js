@@ -16,7 +16,7 @@ import ArticlesBar from "../components/articles-bar";
 export default function Home() {
 	return (
 		<main className="main home">
-			<div className="main-wrapper">
+			<div className="main-wrapper home-wrapper">
 				<Slider />
 				<HowTo />
 				<Description />

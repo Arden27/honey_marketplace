@@ -12,21 +12,24 @@
 // Components
 @forward "components/articles-bar";
 @forward "components/burger-btn";
+@forward "components/cart-bar";
 @forward "components/description";
 @forward "components/how-to";
+@forward "components/nav-bar";
 @forward "components/recomended";
 @forward "components/register";
+@forward "components/search-bar";
 @forward "components/slider";
+@forward "components/user-bar";
 
 // Layout
-@forward "layout/body";
 
 
 @forward "layout/header";
-@forward "layout/grid";
 @forward "layout/footer";
 
-
+@forward "layout/grid";
+@forward "layout/body";
 
 // Pages
 @forward "pages/home";

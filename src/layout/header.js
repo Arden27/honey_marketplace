@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Nav from "../components/nav";
+import NavBar from "../components/nav-bar";
 
 export default function Header() {
 	return (
@@ -9,7 +9,7 @@ export default function Header() {
 		<header className="header">
 
 
-			<Nav />
+			<NavBar />
 
 
 			<div className="header-bar">
@@ -32,12 +32,14 @@ export default function Header() {
 
 					<div className="logo">
 						<div className="logo--shadow"></div>
+						
 						<Image
         					src="/img/test.png"
         					width={80}
         					height={80}
       		  				alt="Logo pasieki Kurpiowski Bartnik"
      					 />
+						 
 					</div>
 
 					<div className="header-bar__2">

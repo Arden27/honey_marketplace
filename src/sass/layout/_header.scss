@@ -1,37 +1,13 @@
 @use "../base/colors" as *;
 @use "../abstracts/mixins" as *;
-@use "../components/burger-btn" as *;
+@use "../components/nav-bar" as *;
+
 
 .grid {
-	.header {
-		.nav-bar {
-			.burger-btn {
-				position: fixed;
-				z-index: 100;
-			}
-
-			.nav {
-				min-height: 100svh;
-				max-width: 40svw;
+	display: grid;
 	
-				background: $clr-nav-bg;
-
-				&-wrapper {
-					@include page-wrapper;
-				}
-				
-				&__list {
-
-					&__item {
-						
-						&--shop {
-							&__item {
-							}
-						}
-					}
-				}
-			}
-		}
+	.header {
+		@include nav-bar;
 
 		.header-bar {
 			position: fixed;
@@ -45,29 +21,17 @@
 				@include page-wrapper;
 
 				height: 100%;
-
 			}
 
 			&__1 {
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
-
-
-				
 			}
 	
 			.logo {
 				display: flex;
 				justify-content: center;
-
-				img {
-					position: absolute;
-					height: 8rem;
-					width: 8rem;
-
-					border-radius: 50%;
-				}
 
 				&--shadow {
 					position: absolute;
@@ -78,6 +42,14 @@
 
 					border-radius: 50%;
 					background: $clr-nav-bar-bg;
+				}
+
+				img {
+					position: absolute;
+					height: 8rem;
+					width: 8rem;
+
+					border-radius: 50%;
 				}
 			}
 	
@@ -97,10 +69,6 @@
 	
 		.shop-menu {
 			display: none;
-
-			@include page-wrapper;
-
-			
 		}
 	}
 }
@@ -108,46 +76,7 @@
 @media (min-width: 768px) {
 	.grid {
 		.header {			
-			.nav-bar {
-				.nav {
-					all:unset;	
-					position: fixed;
-
-					height: 8rem;
-
-					&-wrapper {
-						height: 8rem;
-					}
-	
-					&__list {
-						height: 8rem;
-	
-						all:unset;
-	
-						display: flex;
-						align-items: right;
-						justify-content: left;
-					
-						margin: 1rem;
-
-						&__item {
-							&--shop {
-								&__item {
-									display: none;
-									
-								}
-							}
-						}
-					}
-				}
-	
-
-
-				.burger-btn {
-					display: none;
-				}
-
-			}
+			@include nav-bar-big;
 			
 			.header-bar {
 				height: 8rem;
@@ -162,8 +91,6 @@
 					display: flex;
 					align-items: center;
 					justify-content: left;
-
-
 				}
 				.logo {
 					img {
@@ -179,12 +106,16 @@
 				}				
 			}
 
-			.shop-menu {
-				margin-top: 14rem;
+			.shop-menu {			
+				margin-top: 10rem;
 
 				gap: 1em;
 
 				background: $clr-shop-menu-bg;
+
+				&-wrapper {
+					@include page-wrapper;
+				}
 	
 				&__item {
 					align-items: center;
