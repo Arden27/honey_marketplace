@@ -1,3 +1,4 @@
+@use "../base/colors" as *;
 @use "../base/spaces" as *;
 
 $media-query-1: 1000px;
@@ -16,6 +17,33 @@ $media-query-3: 1400px;
 @mixin text-wrapper {
 	width: min(100% - 3rem, 60ch);
 	margin-inline: auto;
+}
+
+@mixin round-corners{
+	border: 2px solid transparent;
+	border-radius: 30px;
+	
+}
+
+@mixin button { 
+	@include round-corners;
+
+	height: $space-xl;
+
+	margin: 0 $space-3xs;
+	padding: 0 $space-s;
+
+	background: transparent;
+	color: $clr-text;
+
+	
+
+	&:hover {
+		border: 2px solid $clr-text;
+		background: $clr-text;
+		color: $clr-nav-bg;
+
+	}
 }
 
 

@@ -9,6 +9,7 @@
         .burger-btn {
             &-wrapper {
             @include page-wrapper;
+            width: fit-content;
 
             position: fixed;
             z-index: 3;
@@ -85,7 +86,7 @@
     
             height: 8rem;
             display: flex;
-            align-items: right;
+            align-items: center;
             justify-content: left;
 
             font-family:$ff-accent;
@@ -102,11 +103,17 @@
     
                 display: flex;
                 align-items: center;
-                justify-content: left;
-        
-                
-    
+                justify-content: center;
+
                 &__item {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
+
+                    
                     &--shop {
                         &__item {
                             display: none;

@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @use "./spaces" as *;
+@use "../abstracts/mixins" as *;
 
 @font-face {
 	font-family: "Satoshi";
@@ -96,6 +97,10 @@ a:focus {
 	margin-top: $text-flow, 1em;
 }
 
+.burger-btn {
+	@include button;
+}
+
 .shop-btn {
 	font-family: $ff-accent;
 }
@@ -107,40 +112,24 @@ a:focus {
 
 	margin: auto $space-3xs;
 
-	border: 2px solid transparent;
-	border-radius: 30px;
-	
-	
-	padding: $space-xs $space-s;
-	
-	&:hover {
-
-		border: 2px solid $clr-text;
-
-		background: $clr-text;
-
-		color: $clr-bg;
-	}
+	@include button;
 }
 
 .nav__list__item--shop a {
 	border: 2px solid $clr-text;
 	
-
+	
 }
 
 .search-btn {	
-	border: 2px solid $clr-text;
-	border-radius: 30px;
-
-	height: $space-xl;
-
-	margin: auto $space-3xs;
-	padding: 0 $space-s;
+	@include button;
 }
-.user-btn {	
+.user-btn {
+	@include button;
+	
 }
-.cart-btn {					
+.cart-btn {
+	@include button;
 }
 
 .shop-menu__item h2 {
@@ -148,6 +137,7 @@ a:focus {
 	font-family: $ff-accent;
 	font-size: $fs-500;
 	font-weight: 500;
+	
 
 }
 
