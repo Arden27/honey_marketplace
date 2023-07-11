@@ -3,16 +3,19 @@
 @use "../components/nav-bar" as *;
 
 
+
+
 .grid {
 	display: grid;
-	
+
 	.header {
 		@include nav-bar;
 
 		.header-bar {
 			position: fixed;
+			z-index: 1;
 			
-			height: 6rem;
+			height: 7rem;
 			width: 100%;
 
 			background: $clr-nav-bar-bg;
@@ -93,15 +96,13 @@
 					justify-content: left;
 				}
 				.logo {
-					img {
+					&--shadow {
 						height: 12rem;
 						width: 12rem;
 					}
-
-					&--shadow {
-						top: -1rem;
-						height: 14rem;
-						width: 14rem;
+					img {
+						height: 10rem;
+						width: 10rem;
 					}
 				}				
 			}

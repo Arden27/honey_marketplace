@@ -1,60 +1,57 @@
 @use "../abstracts/mixins" as *;
 
-
 .home {
 	&-wrapper {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: 70vh repeat(3, 1fr);
+		grid-template-rows: 50vh 35vh repeat(4, auto);
 
+		@include page-wrapper;
+
+		gap: 2rem;
 	}
 
 	.slider {
-		grid-column: 1 / 4;
 		grid-row: 1 / 2;
-	
-		background-color: rgb(114, 87, 87);
 
 		
 	
-		
+		background-color: rgb(114, 87, 87);
 	}
 	
 	.how-to {
-		grid-column: 4 / -1;
-		grid-row: 1 / 2;
+
+		grid-row: 2 / 3;
 	
 		background-color: rgb(114, 87, 87);
 	}
 	
 	.description {
-		grid-column: 1 / -1;
-		grid-row: 2 / 3;
+
+		grid-row: 3 / 4;
 	
 		background-color: rgb(114, 87, 87);
 	}
 	.register {
-		grid-column: 1 / 3;
-		grid-row: 3 / 4;
+
+		grid-row: 4 / 5;
 	
 		background-color: rgb(114, 87, 87);
 	}
 	.recomended {
-		grid-column: 3 / -1;
-		grid-row: 3 / 4;
+
+		grid-row: 5 / 6;
 	
 		background-color: rgb(114, 87, 87);
 	}
 	
 	.articles-bar {
-		grid-column: 1 / -1;
-		grid-row: 4 / 5;
+
+		grid-row: 6 / 7;
 	
 		background-color: rgb(114, 87, 87);
 	}
-
-
 }
+
 
 
 
@@ -62,11 +59,51 @@
 
 @media (min-width: 768px) {
 	.home {
+		&-wrapper {
+			
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: 70vh repeat(3, 1fr);
+	
+		}
+	
 		.slider {
 			grid-column: 1 / 4;
 			grid-row: 1 / 2;
 		
-			
+			background-color: rgb(114, 87, 87);
+		}
+		
+		.how-to {
+			grid-column: 4 / -1;
+			grid-row: 1 / 2;
+		
+			background-color: rgb(114, 87, 87);
+		}
+		
+		.description {
+			grid-column: 1 / -1;
+			grid-row: 2 / 3;
+		
+			background-color: rgb(114, 87, 87);
+		}
+		.register {
+			grid-column: 1 / 3;
+			grid-row: 3 / 4;
+		
+			background-color: rgb(114, 87, 87);
+		}
+		.recomended {
+			grid-column: 3 / -1;
+			grid-row: 3 / 4;
+		
+			background-color: rgb(114, 87, 87);
+		}
+		
+		.articles-bar {
+			grid-column: 1 / -1;
+			grid-row: 4 / 5;
+		
+			background-color: rgb(114, 87, 87);
 		}
 	}
 }

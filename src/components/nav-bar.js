@@ -42,54 +42,58 @@ const Nav = () => {
     }, []);
 
     return (
-        <div className="nav-bar" ref={node}>
-            <button className="burger-btn" onClick={() => setOpen(!open)}>
-                <Image
-                    src="/icons/menu.svg"
-                    width={30}
-                    height={30}
-                    alt="Menu"
-                />
-            </button>
+        <div className="nav-bar-wrapper">
+            <div className="nav-bar" ref={node}>
+                <div className="burger-btn-wrapper">
+                    <button className="burger-btn" onClick={() => setOpen(!open)}>
+                        <Image
+                            src="/icons/menu.svg"
+                            width={30}
+                            height={30}
+                            alt="Menu"
+                        />
+                    </button>
+                </div>
 
-            {(open || isLargeScreen) && (
-                <nav className="nav">
-                    <ul className="nav__list">
-                        <li className="nav__list__item nav__list__item--shop">
-                            <a href="">SKLEP</a>
-                            <ul>
-                                <li className="nav__list__item--shop__item">
-                                    <a href="">Promocje</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a href="">Miody</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a href="">Produkty pszczele</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a href="">Świece</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a href="">Zestawy</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="nav__list__item">
-                            <a href="">O NAS</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a href="">ARTYKUŁY</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a href="">FAQ</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a href="">KONTAKT</a>
-                        </li>
-                    </ul>
-                </nav>
-            )}
+                {(open || isLargeScreen) && (
+                    <nav className="nav">
+                        <ul className="nav__list">
+                            <li className="nav__list__item nav__list__item--shop">
+                                <a href="">SKLEP</a>
+                                <ul>
+                                    <li className="nav__list__item--shop__item">
+                                        <a href="">Promocje</a>
+                                    </li>
+                                    <li className="nav__list__item--shop__item">
+                                        <a href="">Miody</a>
+                                    </li>
+                                    <li className="nav__list__item--shop__item">
+                                        <a href="">Produkty pszczele</a>
+                                    </li>
+                                    <li className="nav__list__item--shop__item">
+                                        <a href="">Świece</a>
+                                    </li>
+                                    <li className="nav__list__item--shop__item">
+                                        <a href="">Zestawy</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="nav__list__item">
+                                <a href="">O NAS</a>
+                            </li>
+                            <li className="nav__list__item">
+                                <a href="">ARTYKUŁY</a>
+                            </li>
+                            <li className="nav__list__item">
+                                <a href="">FAQ</a>
+                            </li>
+                            <li className="nav__list__item">
+                                <a href="">KONTAKT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                )}
+            </div>
         </div>
     );
 };

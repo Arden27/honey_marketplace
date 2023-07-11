@@ -1,26 +1,42 @@
-@use "../base/colors" as *;
 @use "../abstracts/mixins" as *;
+@use "../base/colors" as *;
 
 @mixin nav-bar {
     .nav-bar {
+        position: fixed;
+        z-index: 3;
+        
+
         .burger-btn {
-            position: fixed;
-            z-index: 101;
+
+            
+            &-wrapper {
+
+            @include page-wrapper;
+
+            height: 7rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            }
+         
+          
+
+            
+            
         }
     
         .nav {
-            position: fixed;
-            z-index: 100;
+
             min-height: 100svh;
-            max-width: 40svw;
-            
-    
+            width: 50vw;
+
             background: $clr-nav-bg;
     
-            &-wrapper {
-                @include page-wrapper;
-            }
             
+              
             &__list {
     
                 &__item {
@@ -38,6 +54,12 @@
 
 @mixin nav-bar-big {
     .nav-bar {
+        all:unset;
+
+        &-wrapper {
+            @include page-wrapper;
+        }
+
         .burger-btn {
             display: none;
         }
@@ -65,7 +87,7 @@
                 align-items: center;
                 justify-content: left;
         
-                margin-left: 2rem;
+                
     
                 &__item {
 
