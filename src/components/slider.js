@@ -1,13 +1,5 @@
 import React from "react";
 
 export default function Slider() {
-	return (
-	<section className="slider">
-		<h2>
-			SLIDER
-		</h2>
-	
-	
-	</section>
-	);
+	return <section className="slider">SLIDER</section>;
 }
