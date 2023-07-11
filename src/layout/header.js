@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import BurgerMenu from "./burgerMenu";
 
 export default function Header() {
 	return (
@@ -7,59 +8,7 @@ export default function Header() {
 			
 			<div className="nav-bar">
 				<div className="nav-bar__1 ">
-					<input type="checkbox" id="burger-btn__input" className="burger-btn__input" />
-
-					<label htmlFor="burger-btn__input" className="burger-btn">
-						<div className="burger-btn__box">
-							<div className="burger-btn__bars"></div>
-						</div>
-					</label>
-
-					{/* Burger button do dodania: */}
-
-					{/* <button className="burger-btn">
-						<Image
-        					src="/icons/menu.svg"
-        					width={30}
-        					height={30}
-      		  				alt="Menu"
-     					 />
-					</button> */}
-
-					<nav className="nav">					
-						<ul className="nav__list">
-							<ul className="nav__list__item nav__list__item--shop">
-								<a href="">SKLEP</a>
-								<li className="nav__list__item--shop__item">
-									<a href="">Promocje</a>
-								</li>
-								<li className="nav__list__item--shop__item">
-									<a href="">Miody</a>
-								</li>
-								<li className="nav__list__item--shop__item">
-									<a href="">Produkty pszczele</a>
-								</li>
-								<li className="nav__list__item--shop__item">
-									<a href="">Świece</a>
-								</li>
-								<li className="nav__list__item--shop__item">
-									<a href="">Zestawy</a>
-								</li>
-							</ul>
-							<li className="nav__list__item">
-								<a href="">O NAS</a>
-							</li>
-							<li className="nav__list__item">
-								<a href="">ARTYKUŁY</a>
-							</li>
-							<li className="nav__list__item">
-								<a href="">FAQ</a>
-							</li>
-							<li className="nav__list__item">
-								<a href="">KONTAKT</a>
-							</li>
-						</ul>
-					</nav>
+					<BurgerMenu />
 				</div>
 
 				<div className="logo">
