@@ -2,9 +2,6 @@
 @use "../abstracts/mixins" as *;
 @use "../components/nav-bar" as *;
 
-
-
-
 .grid {
 	display: grid;
 
@@ -125,7 +122,6 @@
 					text-align: center;
 
 					&__box {
-						
 					}
 				}
 			}

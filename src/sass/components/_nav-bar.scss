@@ -5,13 +5,9 @@
     .nav-bar {
         position: fixed;
         z-index: 3;
-        
 
         .burger-btn {
-
-            
             &-wrapper {
-
             @include page-wrapper;
 
             height: 7rem;
@@ -19,28 +15,17 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-
             }
-         
-          
-
-            
-            
         }
     
         .nav {
-
             min-height: 100svh;
             width: 50vw;
 
             background: $clr-nav-bg;
-    
-            
-              
-            &__list {
-    
-                &__item {
-                    
+
+            &__list {  
+                &__item {                  
                     &--shop {
                         &__item {
                         }
@@ -61,7 +46,9 @@
         }
 
         .burger-btn {
-            display: none;
+            &-wrapper {
+                display: none;
+            }
         }
     
         .nav {
@@ -90,7 +77,6 @@
                 
     
                 &__item {
-
                     &--shop {
                         &__item {
                             display: none;
@@ -100,8 +86,6 @@
             }
         }
     }
-
-
 }
 
 
