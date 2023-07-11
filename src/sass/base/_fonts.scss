@@ -12,14 +12,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 
 // Typ czcionki:
 
 $ff-base: "Satoshi", sans-serif;
-$ff-buttons: "Satoshi Bold", sans-serif;
-$ff-accent: "Montserrat", sans-serif;
+
+$ff-accent: "Open Sans", sans-serif;
 
 
 // Wielkość czcionki:
@@ -30,6 +30,13 @@ $fs-500: clamp(1.62rem, calc(1.40rem + 1.26vw), 2.50rem);
 $fs-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
 $fs-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5.00rem);
 $fs-800: clamp(2.80rem, calc(1.73rem + 6.09vw), 7.07rem);
+
+$fs-300: clamp(1.00rem, calc(1.16rem + -0.18vw), 1.13rem);
+$fs-400: clamp(1.20rem, calc(1.16rem + 0.19vw), 1.33rem);
+$fs-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
+$fs-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
+$fs-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
+$fs-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
 
 
 // Odstępy pomiędzy wierszami:
@@ -93,19 +100,54 @@ a:focus {
 	font-family: $ff-accent;
 }
 
-.nav__list__item {
-	font-family: $ff-buttons;
-	font-size: $fs-300;
+.nav__list__item a {
+	font-family: $ff-base;
+	font-size: $fs-400;
 	font-weight: 500;
 
+	margin: auto $space-3xs;
 
+	border: 2px solid transparent;
+	border-radius: 30px;
+	
+	
+	padding: $space-xs $space-s;
+	
+	&:hover {
+
+		border: 2px solid $clr-text;
+
+		background: $clr-text;
+
+		color: $clr-bg;
+	}
+}
+
+.nav__list__item--shop a {
+	border: 2px solid $clr-text;
+	
+
+}
+
+.search-btn {	
+	border: 2px solid $clr-text;
+	border-radius: 30px;
+
+	height: $space-xl;
+
+	margin: auto $space-3xs;
+	padding: 0 $space-s;
+}
+.user-btn {	
+}
+.cart-btn {					
 }
 
 .shop-menu__item h2 {
 	
 	font-family: $ff-accent;
 	font-size: $fs-500;
-	font-weight: 400;
+	font-weight: 500;
 
 }
 

@@ -42,7 +42,7 @@
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: $media-query-1) {
 
 	.grid {
 		grid-template-rows: minmax(30rem, 10vh) auto auto;
