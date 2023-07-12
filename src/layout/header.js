@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import NavBar from "../components/nav-bar";
+import NavBar from "../components/header/nav-bar";
 
 export default function Header() {
 	return (

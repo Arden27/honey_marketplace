@@ -1,10 +1,10 @@
 
-import Slider from "../components/slider";
-import HowTo from "../components/how-to";
-import Description from "../components/description";
-import Register from "../components/register";
-import Recomended from "../components/recomended.js";
-import ArticlesBar from "../components/articles-bar";
+import Slider from "../components/home/slider";
+import HowTo from "../components/home/how-to";
+import Description from "../components/home/description";
+import Register from "../components/home/register";
+import Recomended from "../components/home/recomended.js";
+import ArticlesBar from "../components/home/articles-bar";
 
 
 // export const metadata = {

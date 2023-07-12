@@ -1,9 +1,15 @@
 @use "../abstracts/mixins" as *;
+@use "../base/spaces" as *;
 
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;	
 	grid-template-rows: 10rem auto auto;
+
+	min-height: 100vh;
+	min-height: 100svh;
+
+    gap: $space-s;
 
 	.header {
 		grid-column: 1 / -1;

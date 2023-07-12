@@ -2,18 +2,22 @@
 @use "./spaces" as *;
 @use "../abstracts/mixins" as *;
 
+
+// Zaciąganie czcionki:
+
 @font-face {
 	font-family: "Satoshi";
-	src: url("../../fonts/Satoshi-Regular.ttf") format("truetype");
+	src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Satoshi Bold";
-	src: url("../../fonts/Satoshi-Bold.ttf") format("truetype");
+	src: url("/fonts/Satoshi-Bold.ttf") format("truetype");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 
 
 // Typ czcionki:
@@ -38,6 +42,7 @@ $fs-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
 $fs-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
 $fs-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
 $fs-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
+
 
 // Odstępy pomiędzy wierszami:
 
@@ -96,4 +101,5 @@ a:focus {
 	margin-top: $text-flow, 1em;
 }
 
+//
 
