@@ -4,7 +4,7 @@
 .home {
 	&-wrapper {
 		display: grid;
-		grid-template-rows: calc(70vh - 9rem - 3*$space-s) 30vh repeat(4, auto);
+		grid-template-rows: minmax(17rem, calc(70vh - 9rem - 3*$space-s)) 30vh repeat(4, auto);
 
 		@include page-wrapper;
 

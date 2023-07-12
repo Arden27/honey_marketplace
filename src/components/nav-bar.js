@@ -10,7 +10,7 @@ const Nav = () => {
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsLargeScreen(window.innerWidth > 768);
+            setIsLargeScreen(window.innerWidth > 1000);
         };
     
         // Call this function initially and whenever the window size changes.
@@ -42,9 +42,9 @@ const Nav = () => {
     }, []);
 
     return (
-        <div className="nav-bar-wrapper">
+        <div className="nav-bar-wrapper" >
             <div className="nav-bar" ref={node}>
-                {/* <div className="burger-btn-wrapper"> */}
+                <div className="burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>
                         <Image
                             src="/icons/menu.svg"
@@ -53,11 +53,11 @@ const Nav = () => {
                             alt="Menu"
                         />
                     </button>
-                {/* </div> */}
+                </div>
 
-                {/* <div className="shop-btn-wrapper">
+                <div className="shop-btn-wrapper">
                     <div className="button shop-btn">Sklep</div>
-                </div> */}
+                </div>
 
                 {(open || isLargeScreen) && (
                     <nav className="nav">

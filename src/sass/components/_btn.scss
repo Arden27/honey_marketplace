@@ -3,14 +3,36 @@
 @use "../base/spaces" as *;
 @use "../abstracts/mixins" as *;
 
+.button { 
+	@include round-corners;
+
+	height: $space-xl;
+
+	margin: auto $space-3xs;
+	padding: 0 $space-s;
+
+	background: transparent;
+	color: $clr-text;
+
+    font-family: $ff-base;
+    font-size: $fs-400;
+    font-weight: 500;
+	text-transform: uppercase;
+	border: 2px solid $clr-text;
+
+	&:hover {
+		border: 2px solid $clr-text;
+		background: $clr-text;
+		color: $clr-nav-bg;
+
+	}
+}
 
 .burger-btn {
 	
 }
 
 .shop-btn {
-	font-family: $ff-accent;
-
     border: 2px solid $clr-text;
 }
 
@@ -31,33 +53,6 @@
 	font-weight: 500;
 	
 
-}
-
-.button { 
-	@include round-corners;
-
-	height: $space-xl;
-
-	margin: auto $space-3xs;
-	padding: 0 $space-s;
-
-	background: transparent;
-	color: $clr-text;
-
-    font-family: $ff-base;
-    font-size: $fs-400;
-    font-weight: 500;
-
-
-
-	
-
-	&:hover {
-		border: 2px solid $clr-text;
-		background: $clr-text;
-		color: $clr-nav-bg;
-
-	}
 }
 
 @media (min-width: $media-query-1) {

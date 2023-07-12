@@ -36,24 +36,24 @@ export default function Header() {
 						<button className="button search-btn">
 							<Image
         						src="/icons/search.svg"
-        						width={30}
-        						height={30}
+        						width={25}
+        						height={25}
       		  					alt="Szukaj"
      					 	/>
 						</button>
 						<button className="button user-btn">
 							<Image
         						src="/icons/user.svg"
-        						width={30}
-        						height={30}
+        						width={25}
+        						height={25}
       		  					alt="Konto"
      					 	/>
 						</button>
 						<button className="button cart-btn">
 							<Image
         						src="/icons/shopping-cart.svg"
-        						width={30}
-        						height={30}
+        						width={25}
+        						height={25}
       		  					alt="Koszyk"
      						 />
 						</button>
