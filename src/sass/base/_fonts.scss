@@ -97,48 +97,4 @@ a:focus {
 	margin-top: $text-flow, 1em;
 }
 
-.burger-btn {
-	@include button;
-}
-
-.shop-btn {
-	font-family: $ff-accent;
-}
-
-.nav__list__item a {
-	font-family: $ff-base;
-	font-size: $fs-400;
-	font-weight: 500;
-
-	margin: auto $space-3xs;
-
-	@include button;
-}
-
-.nav__list__item--shop a {
-	border: 2px solid $clr-text;
-	
-	
-}
-
-.search-btn {	
-	@include button;
-}
-.user-btn {
-	@include button;
-	
-}
-.cart-btn {
-	@include button;
-}
-
-.shop-menu__item h2 {
-	
-	font-family: $ff-accent;
-	font-size: $fs-500;
-	font-weight: 500;
-	
-
-}
-
 

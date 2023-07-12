@@ -44,8 +44,8 @@ const Nav = () => {
     return (
         <div className="nav-bar-wrapper">
             <div className="nav-bar" ref={node}>
-                <div className="burger-btn-wrapper">
-                    <button className="burger-btn" onClick={() => setOpen(!open)}>
+                {/* <div className="burger-btn-wrapper"> */}
+                    <button className="button burger-btn" onClick={() => setOpen(!open)}>
                         <Image
                             src="/icons/menu.svg"
                             width={30}
@@ -53,17 +53,17 @@ const Nav = () => {
                             alt="Menu"
                         />
                     </button>
-                </div>
+                {/* </div> */}
 
-                <div className="shop-btn-wrapper">
-                    <div className="shop-btn">Sklep</div>
-                </div>
+                {/* <div className="shop-btn-wrapper">
+                    <div className="button shop-btn">Sklep</div>
+                </div> */}
 
                 {(open || isLargeScreen) && (
                     <nav className="nav">
                         <ul className="nav__list">
                             <li className="nav__list__item nav__list__item--shop">
-                                <a href="">SKLEP</a>
+                                <a className="button" href="">SKLEP</a>
                                 <ul>
                                     <li className="nav__list__item--shop__item">
                                         <a href="">Promocje</a>
@@ -83,16 +83,16 @@ const Nav = () => {
                                 </ul>
                             </li>
                             <li className="nav__list__item">
-                                <a href="">O NAS</a>
+                                <a className="button" href="">O NAS</a>
                             </li>
                             <li className="nav__list__item">
-                                <a href="">ARTYKUŁY</a>
+                                <a className="button" href="">ARTYKUŁY</a>
                             </li>
                             <li className="nav__list__item">
-                                <a href="">FAQ</a>
+                                <a className="button" href="">FAQ</a>
                             </li>
                             <li className="nav__list__item">
-                                <a href="">KONTAKT</a>
+                                <a className="button" href="">KONTAKT</a>
                             </li>
                         </ul>
                     </nav>

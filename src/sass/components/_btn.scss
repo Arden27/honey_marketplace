@@ -1,0 +1,82 @@
+@use "../base/colors" as *;
+@use "../base/fonts" as *;
+@use "../base/spaces" as *;
+@use "../abstracts/mixins" as *;
+
+
+.burger-btn {
+	
+}
+
+.shop-btn {
+	font-family: $ff-accent;
+
+    border: 2px solid $clr-text;
+}
+
+.search-btn {	
+
+}
+.user-btn {
+
+}
+.cart-btn {
+
+}
+
+.shop-menu__item h2 {
+	
+	font-family: $ff-accent;
+	font-size: $fs-500;
+	font-weight: 500;
+	
+
+}
+
+.button { 
+	@include round-corners;
+
+	height: $space-xl;
+
+	margin: auto $space-3xs;
+	padding: 0 $space-s;
+
+	background: transparent;
+	color: $clr-text;
+
+    font-family: $ff-base;
+    font-size: $fs-400;
+    font-weight: 500;
+
+
+
+	
+
+	&:hover {
+		border: 2px solid $clr-text;
+		background: $clr-text;
+		color: $clr-nav-bg;
+
+	}
+}
+
+@media (min-width: $media-query-1) {
+
+	.nav__list__item a {
+		font-family: $ff-base;
+		font-size: $fs-400;
+		font-weight: 500;
+	
+		margin: auto $space-3xs;
+	
+		
+	}
+	
+	.nav__list__item--shop a {
+		border: 2px solid $clr-text;
+	}
+
+	
+
+
+}

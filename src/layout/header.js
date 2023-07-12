@@ -33,7 +33,7 @@ export default function Header() {
 					</div>
 
 					<div className="header-bar__2">
-						<button className="search-btn">
+						<button className="button search-btn">
 							<Image
         						src="/icons/search.svg"
         						width={30}
@@ -41,7 +41,7 @@ export default function Header() {
       		  					alt="Szukaj"
      					 	/>
 						</button>
-						<button className="user-btn">
+						<button className="button user-btn">
 							<Image
         						src="/icons/user.svg"
         						width={30}
@@ -49,7 +49,7 @@ export default function Header() {
       		  					alt="Konto"
      					 	/>
 						</button>
-						<button className="cart-btn">
+						<button className="button cart-btn">
 							<Image
         						src="/icons/shopping-cart.svg"
         						width={30}
