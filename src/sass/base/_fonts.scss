@@ -25,26 +25,25 @@ $ff-accent: "Open Sans", sans-serif;
 
 // Wielkość czcionki:
 
-$fs-300: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
-$fs-400: clamp(1.35rem, calc(1.25rem + 0.60vw), 1.77rem);
-$fs-500: clamp(1.62rem, calc(1.40rem + 1.26vw), 2.50rem);
-$fs-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
-$fs-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5.00rem);
-$fs-800: clamp(2.80rem, calc(1.73rem + 6.09vw), 7.07rem);
+$fs-base-300: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+$fs-base-400: clamp(1.35rem, calc(1.25rem + 0.60vw), 1.77rem);
+$fs-base-500: clamp(1.62rem, calc(1.40rem + 1.26vw), 2.50rem);
+$fs-base-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
+$fs-base-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5.00rem);
+$fs-base-800: clamp(2.80rem, calc(1.73rem + 6.09vw), 7.07rem);
 
-$fs-300: clamp(1.00rem, calc(1.16rem + -0.18vw), 1.13rem);
+$fs-300: clamp(1.00rem, calc(1.16rem + 0.18vw), 1.13rem);
 $fs-400: clamp(1.20rem, calc(1.16rem + 0.19vw), 1.33rem);
 $fs-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
 $fs-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
 $fs-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
 $fs-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
 
-
 // Odstępy pomiędzy wierszami:
 
 $text-flow: 1em;
 
-
+//
 
 body {
 	font-size: $fs-400;

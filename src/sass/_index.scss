@@ -11,26 +11,29 @@
 @forward "base/spaces";
 
 // Components
-@forward "components/articles-bar";
+
 @forward "components/btn";
-@forward "components/cart-bar";
-@forward "components/description";
-@forward "components/how-to";
-@forward "components/nav-bar";
 @forward "components/recomended";
-@forward "components/register";
-@forward "components/search-bar";
-@forward "components/slider";
-@forward "components/user-bar";
+
+@forward "components/header/cart-bar";
+@forward "components/header/nav-bar";
+@forward "components/header/search-bar";
+@forward "components/header/shop-menu";
+@forward "components/header/user-bar";
+
+@forward "components/home/articles-bar";
+@forward "components/home/description";
+@forward "components/home/how-to";
+@forward "components/home/register";
+@forward "components/home/slider";
 
 // Layout
 
+@forward "layout/grid";
+@forward "layout/body";
 
 @forward "layout/header";
 @forward "layout/footer";
-
-@forward "layout/grid";
-@forward "layout/body";
 
 // Pages
 @forward "pages/home";

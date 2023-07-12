@@ -55,23 +55,3 @@
 
 }
 
-@media (min-width: $media-query-1) {
-
-	.nav__list__item a {
-		font-family: $ff-base;
-		font-size: $fs-400;
-		font-weight: 500;
-	
-		margin: auto $space-3xs;
-	
-		
-	}
-	
-	.nav__list__item--shop a {
-		border: 2px solid $clr-text;
-	}
-
-	
-
-
-}

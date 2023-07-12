@@ -1,13 +1,11 @@
 @use "../base/colors" as *;
 @use "../abstracts/mixins" as *;
-@use "../components/nav-bar" as *;
+@use "../components/header/nav-bar" as *;
 
 .grid {
 	display: grid;
 
 	.header {
-		@include nav-bar;
-
 		.header-bar {
 			position: fixed;
 			z-index: 1;
@@ -67,18 +65,12 @@
 				}
 			}
 		}
-	
-		.shop-menu {
-			display: none;
-		}
 	}
 }
 
 @media (min-width: $media-query-1) {
 	.grid {
 		.header {			
-			@include nav-bar-big;
-			
 			.header-bar {
 				height: 8rem;
 				
@@ -104,36 +96,7 @@
 					}
 				}				
 			}
-
-			.shop-menu {			
-				margin-top: 10rem;
-
-				gap: 1em;
-
-				background: $clr-shop-menu-bg;
-
-				&-wrapper {
-					@include page-wrapper;
-				}
-	
-				&__item {
-					align-items: center;
-					justify-content: center;
-
-					text-align: center;
-
-					&__box {
-					}
-				}
-			}
 		}
 	}
-
 }
 
-@media (min-width: $media-query-2) {
-
-}
-@media (min-width: $media-query-3) {
-
-}

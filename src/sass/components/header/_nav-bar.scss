@@ -1,78 +1,74 @@
-@use "../abstracts/mixins" as *;
-@use "../base/colors" as *;
-@use "../base/fonts" as *;
-@use "../base/spaces" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../base/colors" as *;
+@use "../../base/fonts" as *;
+@use "../../base/spaces" as *;
 
-@mixin nav-bar {
-    .nav-bar {
+.nav-bar {
+    .burger-btn {
+        &-wrapper {
+        @include page-wrapper;
+        width: fit-content;
+        
 
-        .burger-btn {
-            &-wrapper {
+        position: fixed;
+        z-index: 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 7rem;
+        }
+    }
+
+    .shop-btn {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: auto $space-3xs;
+        padding: 0 $space-s;
+
+        
+        &-wrapper {
             @include page-wrapper;
             width: fit-content;
-            
 
             position: fixed;
             z-index: 3;
 
+            left: calc($space-s + 30px + $space-s + $space-3xs  + $space-3xs + $space-3xs);
+
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            
             height: 7rem;
-            }
         }
+    }
 
-        .shop-btn {
+    .nav {
+        position: fixed;
+        z-index: 1;
+        min-height: 100%;
+        width: 70%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        background: $clr-nav-bg;
 
-            margin: auto $space-3xs;
-            padding: 0 $space-s;
+        
 
-            
-            &-wrapper {
-                @include page-wrapper;
-                width: fit-content;
-
-                position: fixed;
-                z-index: 3;
-
-                left: calc($space-s + 30px + $space-s + $space-3xs  + $space-3xs + $space-3xs);
-
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                
-                height: 7rem;
-            }
-        }
-    
-        .nav {
-            position: fixed;
-            z-index: 1;
-            min-height: 100%;
-            width: 70%;
-
-            background: $clr-nav-bg;
-
-            
-
-            &__list {  
-                &__item {                  
-                    &--shop {
-                        &__item {
-                        }
+        &__list {  
+            &__item {                  
+                &--shop {
+                    &__item {
                     }
                 }
             }
         }
     }
-    
 }
 
-@mixin nav-bar-big {
+@media (min-width: $media-query-1) {
     .nav-bar {
         all:unset;
 
@@ -119,12 +115,20 @@
                         align-items: center;
                         justify-content: center;
 
+                        font-family: $ff-base;
+                        font-size: $fs-400;
+                        font-weight: 500;
+                    
+                        margin: auto $space-3xs;
                     }
 
-                    
                     &--shop {
-                        &__item {
-                            display: none;
+                        a {
+                            border: 2px solid $clr-text;
+                        }
+
+                        &__item { 
+                           display: none;
                         }
                     }
                 }

@@ -1,0 +1,65 @@
+
+@use "../../abstracts/mixins" as *;
+@use "../../base/colors" as *;
+@use "../../base/spaces" as *;
+
+
+.shop-menu {
+    display: none;
+}
+
+@media (min-width: $media-query-1) {
+    .shop-menu {			
+        margin-top: 10rem;
+
+        min-height: 20rem;
+
+        gap: $space-s;
+
+        &-wrapper {
+            @include page-wrapper;
+        }
+    
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    
+            text-align: center;
+            background: $clr-bg;
+    
+            &__img {
+                width: 10rem;
+                height: 10rem;
+
+                border-radius: 50%;
+
+                
+                &--sale {
+                    background-image: url('/img/header/promocje.png');
+                    
+                    
+                }
+                &--honey {
+                    background-image: url('/img/header/miody.png');
+                }
+                &--bee-products {
+                    background-image: url('/img/header/produkty-pszczele.png');
+                }
+                &--candles {
+                    background-image: url('/img/header/swiece.png');
+                }
+
+                &--sets {
+                    background-image: url('/img/header/zestawy.png');
+                }
+            }
+
+            &__text {
+
+            }
+        }
+    }
+
+}
