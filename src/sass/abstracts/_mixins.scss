@@ -16,7 +16,7 @@ $media-query-3: 1400px;
 }
 
 @mixin text-wrapper {
-	width: min(100% - 3rem, 60ch);
+	width: min(100% - $space-m, 60ch);
 	margin-inline: auto;
 }
 
