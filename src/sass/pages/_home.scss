@@ -45,22 +45,15 @@
 }
 
 
+
+
+
+
 @media (min-width: $media-query-shop-menu) {
 	.home {
 		&-wrapper {
-			grid-template-rows: calc(70vh - 3*$space-3xl - $space-2xl - 3*$space-s) 30vh repeat(4, auto);
-		}
-	}
-
-}
-
-
-
-@media (min-width: $media-query-1) {
-	.home {
-		&-wrapper {
-			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: calc(100vh - 3*$space-3xl - $space-2xl - 4*$space-s) repeat(3, auto);
+			grid-template-columns: repeat(7, 1fr);
+			grid-template-rows: calc(100vh - $space-3xl - 3*$space-3xl - $space-2xl - 1*$space-s) repeat(3, auto);
 		}
 	
 		.slider {
@@ -93,4 +86,13 @@
 			grid-row: 4 / 5;
 		}
 	}
+}
+
+@media (min-width: $media-query-1) {
+	.home {
+		&-wrapper {
+			grid-template-rows: calc(100vh - $space-3xl - 3*$space-3xl - $space-2xl - 4*$space-s) repeat(3, auto);
+		}
+	}
+
 }

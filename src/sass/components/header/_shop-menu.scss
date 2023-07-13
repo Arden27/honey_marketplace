@@ -1,8 +1,7 @@
-
 @use "../../abstracts/mixins" as *;
 @use "../../base/colors" as *;
+@use "../../base/fonts" as *;
 @use "../../base/spaces" as *;
-
 
 .shop-menu {
     display: none;
@@ -15,7 +14,7 @@
 
         height: calc($space-3xl + $space-2xl);
 
-       
+
 
         &-wrapper {
             @include page-wrapper;
@@ -25,15 +24,9 @@
             display: grid;
             align-items: top;
             justify-items: center;
-            
-
-            
-            
-
             background: $clr-bg;
     
             &__img {              
-               
                 width: 6rem;
                 height: 6rem;
 
@@ -63,11 +56,17 @@
 
             &__text {
                 
+
+                font-size: $fs-500;
+ 
+                
                 text-align: center;
                 text-transform: uppercase;
 
             }
         }
     }
+
+
 
 }
