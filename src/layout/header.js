@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import NavBar from "../components/header/nav-bar";
+import ShopMenu from "../components/header/shop-menu";
 
 export default function Header() {
 	return (
@@ -34,62 +35,66 @@ export default function Header() {
 
 					<div className="header-bar__2">
 						<button className="button search-btn">
-							<Image
+							{/* <Image
         						src="/icons/search.svg"
         						width={25}
         						height={25}
       		  					alt="Szukaj"
-     					 	/>
+     					 	/> */}
+							<svg 
+								width="25"
+								height="25"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="11" cy="11" r="8"></circle>
+								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+							</svg>
+							
 						</button>
+						
 						<button className="button user-btn">
-							<Image
-        						src="/icons/user.svg"
-        						width={25}
-        						height={25}
-      		  					alt="Konto"
-     					 	/>
+							<svg
+								width="25"
+								height="25"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								
+								<circle cx="12" cy="7" r="4"></circle>
+								<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+							</svg>
 						</button>
 						<button className="button cart-btn">
-							<Image
-        						src="/icons/shopping-cart.svg"
-        						width={25}
-        						height={25}
-      		  					alt="Koszyk"
-     						 />
+							<svg 
+								width="25"
+								height="25"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="9" cy="21" r="1"></circle>
+								<circle cx="20" cy="21" r="1"></circle>
+								<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+							</svg>
 						</button>
 					</div>			
 				</div>
 			</div>
 
-			<div className="shop-menu-wrapper">
-				<div className="shop-menu">
+			<ShopMenu />
 
-					<div className="shop-menu__item">
-						<div className="shop-menu__item__img shop-menu__item__img--sale"></div>
-						<h2 className="shop-menu__item__text">Promocje</h2>
-					</div>
-
-					<div className="shop-menu__item">
-						<div className="shop-menu__item__img shop-menu__item__img--honey"></div>
-						<h2 className="shop-menu__item__text">Miody</h2>					
-					</div>
-
-					<div className="shop-menu__item">	
-						<div className="shop-menu__item__img shop-menu__item__img--bee-products"></div>				
-						<h2 className="shop-menu__item__text">Produkty Pszczele</h2>					
-					</div>
-
-					<div className="shop-menu__item">	
-						<div className="shop-menu__item__img shop-menu__item__img--candles"></div>				
-						<h2 className="shop-menu__item__text">Świece</h2>			
-					</div>
-
-					<div className="shop-menu__item">
-						<div className="shop-menu__item__img shop-menu__item__img--sets"></div>				
-						<h2 className="shop-menu__item__text">Zestawy</h2>					
-					</div>
-				</div>				
-			</div>
 		</header>
 	);
 }

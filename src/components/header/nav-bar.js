@@ -46,12 +46,20 @@ const Nav = () => {
             <div className="nav-bar" ref={node}>
                 <div className="burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>
-                        <Image
-                            src="/icons/menu.svg"
-                            width={30}
-                            height={30}
-                            alt="Menu"
-                        />
+                        <svg
+                            width="25"
+                            height="25"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
                     </button>
                 </div>
 
