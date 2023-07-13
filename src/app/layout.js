@@ -2,9 +2,6 @@ import React from "react";
 import Head from "next/head";
 
 import "../sass/style.scss";
-import Image from 'next/image'
-
-
 
 import Header from "../layout/header";
 import Footer from "../layout/footer";

@@ -4,7 +4,7 @@
 .home {
 	&-wrapper {
 		display: grid;
-		grid-template-rows: minmax(17rem, calc(70vh - 9rem - 3*$space-s)) 30vh repeat(4, auto);
+		grid-template-rows: calc(70vh - 2*$space-3xl - 2*$space-s) 30vh repeat(4, auto);
 
 		@include page-wrapper;
 
@@ -54,7 +54,14 @@
 }
 
 
+@media (min-width: $media-query-shop-menu) {
+	.home {
+		&-wrapper {
+			grid-template-rows: calc(70vh - 3*$space-3xl - $space-2xl - 3*$space-s) 30vh repeat(4, auto);
+		}
+	}
 
+}
 
 
 
@@ -63,7 +70,7 @@
 		&-wrapper {
 			
 			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: calc(70vh - 9rem - 3*$space-s) repeat(3, 1fr);
+			grid-template-rows: calc(100vh - 3*$space-3xl - $space-2xl - 4*$space-s) repeat(3, auto);
 	
 		}
 	
