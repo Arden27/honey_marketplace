@@ -8,25 +8,30 @@
 @forward "base/reset";
 @forward "base/colors";
 @forward "base/fonts";
+@forward "base/spaces";
 
 // Components
-@forward "components/articles-bar";
-@forward "components/burger-btn";
-@forward "components/description";
-@forward "components/how-to";
+
+@forward "components/btn";
 @forward "components/recomended";
-@forward "components/register";
-@forward "components/slider";
+
+@forward "components/header/cart-bar";
+@forward "components/header/nav-bar";
+@forward "components/header/search-bar";
+@forward "components/header/shop-menu";
+@forward "components/header/user-bar";
+
+@forward "components/home/articles-bar";
+@forward "components/home/description";
+@forward "components/home/how-to";
+@forward "components/home/register";
+@forward "components/home/slider";
 
 // Layout
-@forward "layout/body";
 
-
-@forward "layout/header";
 @forward "layout/grid";
+@forward "layout/header";
 @forward "layout/footer";
-
-
 
 // Pages
 @forward "pages/home";
