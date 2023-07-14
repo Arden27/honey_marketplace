@@ -10,10 +10,12 @@
 @media (min-width: $media-query-shop-menu) {
     .shop-menu {
         
-        gap: $space-s;
+        
 
-        height: calc($space-3xl + $space-2xl);
 
+        height: calc(2*$fs-accent-500 + $space-3xl + $space-s);
+
+        
 
 
         &-wrapper {
@@ -24,13 +26,14 @@
             display: grid;
             align-items: top;
             justify-items: center;
-            background: $clr-bg;
+            
     
             &__img {              
-                width: 6rem;
-                height: 6rem;
+                width: $space-3xl;
+                height: $space-3xl;
 
                 border-radius: 50%;
+                align-items: flex-end;
 
                 
                 &--sale {
@@ -55,13 +58,18 @@
             }
 
             &__text {
-                
 
-                font-size: $fs-500;
+                margin-top: $space-s;
+
+
+
+                font-size: $fs-accent-500;
  
                 
                 text-align: center;
                 text-transform: uppercase;
+
+                
 
             }
         }

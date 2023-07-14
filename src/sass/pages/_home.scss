@@ -1,14 +1,15 @@
 @use "../abstracts/mixins" as *;
+@use "../base/fonts" as *;
 @use "../base/spaces" as *;
 
 .home {
 	&-wrapper {
 		display: grid;
-		grid-template-rows: calc(60vh - 2*$space-3xl - 2*$space-s) 40vh repeat(4, auto);
+		grid-template-rows: calc(60vh - 2*$space-3xl - 2*$space-m) 40vh repeat(4, auto);
 
 		@include page-wrapper;
 
-		gap: $space-s;
+		gap: $space-m;
 	}
 
 	.hero {
@@ -23,8 +24,6 @@
 	
 	.description {
 		grid-row: 3 / 4;
-	
-		background-color: rgb(114, 87, 87);
 	}
 	.register {
 		grid-row: 4 / 5;
@@ -53,9 +52,9 @@
 	.home {
 		&-wrapper {
 			grid-template-columns: repeat(7, 1fr);
-			grid-template-rows: calc(100vh - $space-3xl - 3*$space-3xl - $space-2xl - 1*$space-s) repeat(3, auto);
+			grid-template-rows: calc(100vh - 4*$space-3xl - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
 		}
-	
+	// calc($fs-accent-500 + $space-3xl + $space-s)
 		.hero {
 			grid-column: 1 / 5;
 			grid-row: 1 / 2;
@@ -93,7 +92,7 @@
 @media (min-width: $media-query-1) {
 	.home {
 		&-wrapper {
-			grid-template-rows: calc(100vh - $space-3xl - 3*$space-3xl - $space-2xl - 4*$space-s) repeat(3, auto);
+			grid-template-rows: calc(100vh - 4*$space-3xl - 3*$space-s - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
 		}
 
 		.description {

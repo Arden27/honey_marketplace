@@ -1,0 +1,27 @@
+@use "../../base/spaces" as *;
+
+.description {
+    margin: calc($space-3xl - $space-m) auto;
+    &--header {
+
+    }
+    &--text {
+        
+    }
+    &--btn {
+        
+        &-wrapper {
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+
+            
+            left: $space-l;
+
+            
+        }
+
+        
+
+    }
+}

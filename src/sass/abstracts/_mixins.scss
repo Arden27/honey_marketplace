@@ -12,12 +12,12 @@ $media-query-3: 1400px;
 	width: 100%;
 	max-width: 1200px;
 
-	padding: 0 $space-s;
+	padding: 0 $space-m;
     
 }
 
-@mixin text-wrapper {
-	width: min(100% - $space-m, 60ch);
+.text-wrapper {
+	width: min(100% - $space-m, 70ch);
 	margin-inline: auto;
 }
 
