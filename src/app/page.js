@@ -1,4 +1,4 @@
-import Slider from "../components/home/slider";
+import Hero from "../components/home/hero";
 import HowTo from "../components/home/how-to";
 import Description from "../components/home/description";
 import Register from "../components/home/register";
@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<main className="main home">
 			<div className="main-wrapper home-wrapper">
-				<Slider />
+				<Hero />
 				<HowTo />
 				<Description />
 				<Register />
