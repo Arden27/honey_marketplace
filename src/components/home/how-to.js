@@ -7,7 +7,7 @@ export default function HowTo() {
 
 			<div className="how-to__img">
 				<Image
-        			src="/img/home/jak-rozpoznac.jpeg"
+        			src="/img/home/jak-rozpoznacz.jpeg"
         			width={1000}
         			height={1000}
       		  		alt="Koszyk"
