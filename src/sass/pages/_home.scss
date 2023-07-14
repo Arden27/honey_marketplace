@@ -69,6 +69,8 @@
 		.description {
 			grid-column: 1 / -1;
 			grid-row: 2 / 3;
+
+			margin-top: calc($space-3xl - $space-s);
 		}
 
 		.register {
@@ -92,6 +94,10 @@
 	.home {
 		&-wrapper {
 			grid-template-rows: calc(100vh - $space-3xl - 3*$space-3xl - $space-2xl - 4*$space-s) repeat(3, auto);
+		}
+
+		.description {
+			margin-top: calc($space-3xl);
 		}
 	}
 

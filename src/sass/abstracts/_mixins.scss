@@ -20,8 +20,7 @@ $media-query-3: 1400px;
 	margin-inline: auto;
 }
 
-@mixin round-corners{
-	border: 2px solid transparent;
+@mixin round-corners {
 	border-radius: 30px;
 	
 }
