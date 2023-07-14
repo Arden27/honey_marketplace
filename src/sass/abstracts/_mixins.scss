@@ -1,3 +1,4 @@
+@use "../base/colors" as *;
 @use "../base/spaces" as *;
 
 
@@ -23,6 +24,40 @@ $media-query-3: 1400px;
 @mixin round-corners {
 	border-radius: 30px;
 	
+}
+
+@mixin box-image {
+	position: relative;
+
+    overflow: hidden;
+
+    @include round-corners;
+
+    &--img { 
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: bottom left;
+    }
+
+    &--text {
+        
+        margin: $space-m;
+        background: $clr-bg;
+
+        &-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
 }
 
 

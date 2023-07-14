@@ -3,38 +3,5 @@
 @use "../../base/spaces" as *;
 
 .how-to {
-
-    position: relative;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    
-
-    
-    overflow: hidden;
-
-    @include round-corners;
-
-
-
-    &__img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    &__text {
-
-        &-wrapper {
-            position: absolute;
-            margin: $space-m;
-            
-        }
-
-
-        
-
-        background: $clr-bg;
-
-    }
+    @include box-image;
 }

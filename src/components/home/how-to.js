@@ -5,18 +5,19 @@ export default function HowTo() {
 	return (
 		<section className="how-to">
 
-			<div className="how-to__img">
+			<div >
 				<Image
         			src="/img/home/jak-rozpoznacz.jpeg"
-        			width={1000}
-        			height={1000}
+        			width={700}
+        			height={700}
       		  		alt="Koszyk"
+					className="how-to--img"
      			/>
 			</div>
-			<div className="how-to__text-wrapper">
-			<div className="how-to__text button-big">
+			<div className="how-to--text-wrapper">
+				<button className="how-to--text button-big">
 				Sprawdź już dziś!
-				</div>
+				</button>
 			</div>
 
 		
