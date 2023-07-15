@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Providers from "@/redux/provider";
 
 import "../sass/style.scss";
 
@@ -10,18 +11,17 @@ export default function RootLayout({ children }) {
 	return (
     	<html lang="pl">
 			<Head>
-			<script src="https://unpkg.com/feather-icons"></script>
-
+				<script src="https://unpkg.com/feather-icons"></script>
 			</Head>
 
 			<body className="body">
-				
-					<div className="grid">
+				<div className="grid">
+					<Providers>
 						<Header />
 						{children}
 						<Footer />
-					</div>
-				
+					</Providers>
+				</div>
 			</body>
 		</html>
 	);

@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from "react";
+import Link from 'next/link'
 import Image from "next/image";
+import LoginButton from "@/loginButton";
 
 const Nav = () => {
     const node = useRef();
@@ -91,7 +93,13 @@ const Nav = () => {
                                 </ul>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">O NAS</a>
+                                <Link 
+                                    className="button" 
+                                    href="/"
+                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                >
+                                    O NAS
+                                </Link>
                             </li>
                             <li className="nav__list__item">
                                 <a className="button" href="">ARTYKUŁY</a>
@@ -101,6 +109,9 @@ const Nav = () => {
                             </li>
                             <li className="nav__list__item">
                                 <a className="button" href="">KONTAKT</a>
+                            </li>
+                            <li>
+                                <LoginButton />
                             </li>
                         </ul>
                     </nav>
