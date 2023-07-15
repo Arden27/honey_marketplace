@@ -42,7 +42,7 @@ const Nav = () => {
     }, []);
 
     return (
-        <div className="nav-bar-wrapper" >
+        <div className="page-wrapper nav-bar-wrapper" >
             <div className="nav-bar" ref={node}>
                 <div className="burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>

@@ -9,14 +9,8 @@
 
 @media (min-width: $media-query-shop-menu) {
     .shop-menu {
-        
-        background: blueviolet;
-
         height: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
 
-        
-
-    
         &__item {
             display: grid;
             align-items: top;
@@ -53,19 +47,12 @@
             }
 
             &__text {
-
                 margin-top: $space-s;
 
-
-
                 font-size: $fs-accent-500;
- 
-                
+
                 text-align: center;
                 text-transform: uppercase;
-
-                
-
             }
         }
     }

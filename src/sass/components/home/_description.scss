@@ -3,8 +3,18 @@
 @use "../../base/spaces" as *;
 
 .description {
+    &-wrapper {
+        width: 100%;
+        background: $clr-secondary;
 
-    background: $clr-secondary;
+        margin: $space-header-bar-s auto;
+        padding: calc($space-header-bar-s + $space-xl + 2rem) calc(2*$space-gap) $space-header-bar-s;
+
+    }
+
+    
+
+
 
     &--header {
 
@@ -27,6 +37,10 @@
 
 @media (min-width: $media-query-1) {
     .description {
-        
+        &-wrapper {
+
+            margin: $space-header-bar-l auto;
+
+        }
     }
 }

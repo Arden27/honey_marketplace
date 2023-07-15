@@ -35,7 +35,7 @@ $space-shop-menu-img: $space-3xl;;
 	width: 100%;
 	max-width: 1400px;
 
-	padding: 0 $space-m;
+	padding: 0 $space-gap;
     
 }
 
@@ -43,6 +43,6 @@ $space-shop-menu-img: $space-3xl;;
 // Maksymalna szerokość tekstu:
 
 .text-wrapper {
-	width: min(100% - $space-xl, 70ch);
+	width: min(100% - $space-gap, 70ch);
 	margin-inline: auto;
 }
