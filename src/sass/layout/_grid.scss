@@ -9,7 +9,7 @@
 	min-height: 100vh;
 	min-height: 100svh;
 
-    gap: $space-3xl;
+    gap: $space-header-bar-s;
 
 	background-color: $clr-bg;
 
@@ -82,6 +82,7 @@
 
 @media (min-width: $media-query-1) {
 	.grid {
+		gap: $space-header-bar-l;
 		.header {
 			grid-template-rows: calc(2*$space-3xl + 2*$space-s);
 			.shop-menu {

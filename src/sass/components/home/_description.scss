@@ -3,7 +3,6 @@
 @use "../../base/spaces" as *;
 
 .description {
-    margin: calc($space-3xl - $space-m) auto;
 
     background: $clr-secondary;
 
@@ -28,6 +27,6 @@
 
 @media (min-width: $media-query-1) {
     .description {
-        margin: calc($space-3xl - $space-m) auto;
+        
     }
 }

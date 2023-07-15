@@ -10,9 +10,9 @@
 @media (min-width: $media-query-shop-menu) {
     .shop-menu {
         
-        
+        background: blueviolet;
 
-        height: calc(2*$fs-accent-500 + $space-3xl + $space-s);
+        height: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
 
         
 
@@ -24,8 +24,8 @@
             
     
             &__img {              
-                width: $space-3xl;
-                height: $space-3xl;
+                width: $space-shop-menu-img;
+                height: $space-shop-menu-img;
 
                 border-radius: 50%;
                 align-items: flex-end;

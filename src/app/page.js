@@ -14,13 +14,19 @@ export const metadata = {
 
 export default function Home() {
 	return (
-		<main className="page-wrapper main home">
+		<main className="main home">
+			<div className="page-wrapper home__1">
 				<Hero />
 				<HowTo />
-				<Description />
+			</div>
+
+			<Description />
+				
+			<div className="page-wrapper home__2">
 				<Register />
 				<Recomended />
 				<ArticlesBar />
+			</div>
 			
 		</main>
 	);

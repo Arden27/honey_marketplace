@@ -11,6 +11,23 @@ $space-2xl: clamp(4.50rem, calc(4.38rem + 0.71vw), 5.00rem);
 $space-3xl: clamp(6.75rem, calc(6.56rem + 1.07vw), 7.50rem);
 
 
+$space-gap: $space-m;
+$space-header-bar-s: $space-3xl;
+$space-header-bar-l: calc($space-3xl + $space-s);
+
+$space-btn-height-s: $space-xl;
+$space-btn-height-l: $space-m;
+
+$space-shop-menu-img: $space-3xl;;
+
+
+
+
+
+
+
+
+
 // Maksymalna szerokość strony:
 
 .page-wrapper {
