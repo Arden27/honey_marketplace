@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as *;
+
+.register {
+    @include box-image;
+
+    background-color: tomato;
+
+    &--text {
+        &-wrapper {
+            & span {
+
+
+            }
+        }
+    }
+}

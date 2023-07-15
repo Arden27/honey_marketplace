@@ -12,19 +12,20 @@
 
 // Components
 
+
+@forward "components/articles-bar";
 @forward "components/btn";
-@forward "components/recomended";
+@forward "components/recomended-bar";
+@forward "components/register";
+
 
 @forward "components/header/cart-bar";
 @forward "components/header/nav-bar";
 @forward "components/header/search-bar";
 @forward "components/header/shop-menu";
 @forward "components/header/user-bar";
-
-@forward "components/home/articles-bar";
 @forward "components/home/description";
 @forward "components/home/how-to";
-@forward "components/home/register";
 @forward "components/home/hero";
 
 // Layout

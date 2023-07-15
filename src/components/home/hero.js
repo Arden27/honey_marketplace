@@ -13,8 +13,8 @@ export default function Hero() {
 					className="how-to--img"
      			/>
 			</div>
-			<div className="how-to--text-wrapper">
-				<a className="how-to--text button-big">Przejdź do sklepu</a>
+			<div className="how-to--btn-wrapper">
+				<a className="how-to--btn button-big">Przejdź do sklepu</a>
 			</div>
 		</section>
 	);

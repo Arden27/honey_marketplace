@@ -30,19 +30,18 @@
 	}
 	.register {
 		grid-row: 1 / 2;
-	
-		background-color: rgb(114, 87, 87);
 	}
-	.recomended {
+	.recomended-bar {
 		grid-row: 2 / 3;
 	
-		background-color: rgb(114, 87, 87);
+	
 	}
 	
 	.articles-bar {
 		grid-row: 3 / 4;
 	
-		background-color: rgb(114, 87, 87);
+		
+		
 	}
 }
 
@@ -87,7 +86,7 @@
 			grid-column: 1 / 2;
 			grid-row: 1 / 2;
 		}
-		.recomended {
+		.recomended-bar {
 			grid-column: 2 / -1;
 			grid-row: 1 / 2;
 		}
@@ -110,7 +109,7 @@
 
 		&__2 {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 }

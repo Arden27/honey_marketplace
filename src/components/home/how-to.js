@@ -13,8 +13,8 @@ export default function HowTo() {
 					className="how-to--img"
      			/>
 			
-			<div className="how-to--text-wrapper">
-				<a className="how-to--text button-big">Sprawdź już dziś!</a>
+			<div className="how-to--btn-wrapper">
+				<a className="how-to--btn button-big">Sprawdź już dziś!</a>
 			</div>
 		</section>
 	);

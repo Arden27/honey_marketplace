@@ -1,28 +1,26 @@
 import Hero from "../components/home/hero";
 import HowTo from "../components/home/how-to";
 import Description from "../components/home/description";
-import Register from "../components/register";
+import Register from "../components/home/register";
 import RecomendedBar from "../components/home/recomended-bar.js";
-import ArticlesBar from "../components/articles-bar";
+import ArticlesBar from "../components/home/articles-bar";
 
 
 export const metadata = {
-	title: "Kurpiowski Bartnik",
+	title: "Sklep - Kurpiowski Bartnik",
 	description: "OPIS",
 	keywords: "TAGI",
 };
 
-export default function Home() {
+export default function Shop() {
 	return (
-		<main className="main home">
-			<div className="page-wrapper home__1">
-				<Hero />
-				<HowTo />
+		<main className="main shop">
+			<div className="page-wrapper shop__1">
+
 			</div>
 
-			<Description />
 				
-			<div className="page-wrapper home__2">
+			<div className="page-wrapper shop__2">
 				<Register />
 				<RecomendedBar />
 				<ArticlesBar />
