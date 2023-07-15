@@ -14,7 +14,7 @@ export default function Hero() {
      			/>
 			</div>
 			<div className="how-to--text-wrapper">
-				<button className="how-to--text button-big">Przejdź do sklepu</button>
+				<a className="how-to--text button-big">Przejdź do sklepu</a>
 			</div>
 		</section>
 	);

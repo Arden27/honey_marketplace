@@ -7,19 +7,10 @@ $media-query-1: 1000px;
 $media-query-2: 1200px;
 $media-query-3: 1400px;
 
-@mixin page-wrapper {
-    margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
 
-	padding: 0 $space-m;
-    
-}
 
-.text-wrapper {
-	width: min(100% - $space-m, 70ch);
-	margin-inline: auto;
-}
+
+
 
 @mixin round-corners {
 	border-radius: 30px;

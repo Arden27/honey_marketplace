@@ -1,7 +1,12 @@
+@use "../../abstracts/mixins" as *;
+@use "../../base/colors" as *;
 @use "../../base/spaces" as *;
 
 .description {
     margin: calc($space-3xl - $space-m) auto;
+
+    background: $clr-secondary;
+
     &--header {
 
     }
@@ -9,19 +14,20 @@
         
     }
     &--btn {
-        
         &-wrapper {
             display: flex;
             justify-content: right;
             align-items: flex-end;
-
-            
-            left: $space-l;
-
-            
         }
 
-        
 
+
+        border: 2px solid;
+    }
+}
+
+@media (min-width: $media-query-1) {
+    .description {
+        margin: calc($space-3xl - $space-m) auto;
     }
 }

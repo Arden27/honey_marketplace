@@ -42,9 +42,9 @@ const Nav = () => {
     }, []);
 
     return (
-        <div className="nav-bar-wrapper" >
+        <div className="page-wrapper nav-bar-wrapper" >
             <div className="nav-bar" ref={node}>
-                <div className="burger-btn-wrapper">
+                <div className="page-wrapper burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>
                         <svg
                             width="25"
@@ -63,7 +63,7 @@ const Nav = () => {
                     </button>
                 </div>
 
-                <div className="shop-btn-wrapper">
+                <div className="page-wrapper shop-btn-wrapper">
                     <div className="button shop-btn">Sklep</div>
                 </div>
 
@@ -71,7 +71,7 @@ const Nav = () => {
                     <nav className="nav">
                         <ul className="nav__list">
                             <li className="nav__list__item nav__list__item--shop">
-                                <a className="button" href="">SKLEP</a>
+                                <a className="button" href="">Sklep</a>
                                 <ul>
                                     <li className="nav__list__item--shop__item">
                                         <a href="">Promocje</a>
@@ -91,16 +91,16 @@ const Nav = () => {
                                 </ul>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">O NAS</a>
+                                <a className="button" href="">O nas</a>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">ARTYKUŁY</a>
+                                <a className="button" href="">Artykuły</a>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">FAQ</a>
+                                <a className="button" href="">Matki</a>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">KONTAKT</a>
+                                <a className="button" href="">Kontakt</a>
                             </li>
                         </ul>
                     </nav>

@@ -12,15 +12,10 @@
         
         
 
-
         height: calc(2*$fs-accent-500 + $space-3xl + $space-s);
 
         
 
-
-        &-wrapper {
-            @include page-wrapper;
-        }
     
         &__item {
             display: grid;

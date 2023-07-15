@@ -9,3 +9,23 @@ $space-l: clamp(2.25rem, calc(2.19rem + 0.36vw), 2.50rem);
 $space-xl: clamp(3.38rem, calc(3.28rem + 0.54vw), 3.75rem);
 $space-2xl: clamp(4.50rem, calc(4.38rem + 0.71vw), 5.00rem);
 $space-3xl: clamp(6.75rem, calc(6.56rem + 1.07vw), 7.50rem);
+
+
+// Maksymalna szerokość strony:
+
+.page-wrapper {
+    margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+
+	padding: 0 $space-m;
+    
+}
+
+
+// Maksymalna szerokość tekstu:
+
+.text-wrapper {
+	width: min(100% - $space-xl, 70ch);
+	margin-inline: auto;
+}

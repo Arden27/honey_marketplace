@@ -9,10 +9,14 @@ export default function Header() {
 		
 		<header className="header">
 
+
 			<NavBar />
 
+			
+
+
 			<div className="header-bar">
-				<div className="header-bar-wrapper">
+				<div className="page-wrapper header-bar-wrapper">
 					<div className="header-bar__1 ">
 
 					</div>

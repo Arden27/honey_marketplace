@@ -3,15 +3,11 @@
 @use "../base/spaces" as *;
 
 .home {
-	&-wrapper {
 		display: grid;
 		grid-template-rows: calc(60vh - 2*$space-3xl - 2*$space-m) 40vh repeat(4, auto);
 
-		@include page-wrapper;
-
 		gap: $space-m;
-	}
-
+	
 	.hero {
 		grid-row: 1 / 2;
 	}
@@ -50,11 +46,10 @@
 
 @media (min-width: $media-query-shop-menu) {
 	.home {
-		&-wrapper {
-			grid-template-columns: repeat(7, 1fr);
-			grid-template-rows: calc(100vh - 4*$space-3xl - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
-		}
-	// calc($fs-accent-500 + $space-3xl + $space-s)
+		
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: calc(100vh - 4*$space-3xl - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
+		
 		.hero {
 			grid-column: 1 / 5;
 			grid-row: 1 / 2;
@@ -91,9 +86,8 @@
 
 @media (min-width: $media-query-1) {
 	.home {
-		&-wrapper {
-			grid-template-rows: calc(100vh - 4*$space-3xl - 3*$space-s - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
-		}
+		grid-template-rows: calc(100vh - 4*$space-3xl - 3*$space-s - (2*$fs-accent-500 + $space-3xl + $space-s)) repeat(3, auto);
+		
 
 		.description {
 			margin-top: calc($space-3xl);

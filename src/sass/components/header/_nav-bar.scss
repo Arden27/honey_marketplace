@@ -6,7 +6,6 @@
 .nav-bar {
     .burger-btn {
         &-wrapper {
-        @include page-wrapper;
         width: fit-content;
         
 
@@ -37,7 +36,6 @@
 
         
         &-wrapper {
-            @include page-wrapper;
             width: fit-content;
 
             position: fixed;
@@ -78,9 +76,6 @@
     .nav-bar {
         all:unset;
 
-        &-wrapper {
-            @include page-wrapper;
-        }
 
         .burger-btn {
             display: none;

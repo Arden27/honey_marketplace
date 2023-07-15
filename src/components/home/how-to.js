@@ -14,7 +14,7 @@ export default function HowTo() {
      			/>
 			</div>
 			<div className="how-to--text-wrapper">
-				<button className="how-to--text button-big">Sprawdź już dziś!</button>
+				<a className="how-to--text button-big">Sprawdź już dziś!</a>
 			</div>
 		</section>
 	);
