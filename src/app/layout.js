@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Providers from "@/redux/provider";
 
-import "../sass/style.scss";
+import "./style.scss";
 
 import Header from "../layout/header";
 import Footer from "../layout/footer";

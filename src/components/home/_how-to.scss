@@ -1,7 +1,5 @@
 @use "../../abstracts/mixins" as *;
 
-.hero {
-
-@include box-image;
-
+.how-to {
+    @include box-image;
 }
