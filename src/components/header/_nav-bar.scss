@@ -41,17 +41,12 @@
         position: fixed;
         left: 0;
         z-index: 1;
-<<<<<<< HEAD:src/sass/components/header/_nav-bar.scss
-        width: 60%;
-        min-height: 100%;
-=======
 
         width: 80%;
         height: 100%;
 
         margin-top: $space-header-bar-s;
 
->>>>>>> Brydak:src/components/header/_nav-bar.scss
         background: $clr-nav-bg;
         display: none;
 
@@ -91,11 +86,6 @@
             position: fixed;
             z-index: 100;
             height: $space-header-bar-l;
-<<<<<<< HEAD:src/sass/components/header/_nav-bar.scss
-            padding: 0 $space-m;
-=======
-
->>>>>>> Brydak:src/components/header/_nav-bar.scss
             display: flex;
             align-items: center;
             justify-content: left;

@@ -62,156 +62,106 @@ const Nav = () => {
                     </Link>
                 </div>
 
-<<<<<<< HEAD
                 
                 <nav className="nav">
-                    <ul className="nav__list">
-                        <li className="nav__list__item nav__list__item--shop">
-                            <a className="button nav__list__item--shop--btn" href="">Sklep</a>
-                            <ul>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="nav__list__item">
-                            <Link 
-                                className="button" 
-                                href="/"
-                                onClick={() => setOpen(false)}
-                            >
-                                O NAS
-                            </Link>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Artykuły</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Matki</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Kontakt</a>
-                        </li>
-                        <li>
-                            <LoginButton />
-                        </li>
-                    </ul>
-                </nav>
-=======
-                {(open || isLargeScreen) && (
-                    <nav className="nav">
-                        <ul className="nav__list">
+                <ul className="nav__list">
 
 
-                            <li className="nav__list__item nav__list__item--shop">
-                                <Link 
-                                    className="button nav__list__item--shop__btn" 
-                                    href="/sklep" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
-                                >
-                                    Sklep
-                                </Link>
+                    <li className="nav__list__item nav__list__item--shop">
+                        <Link 
+                            className="button nav__list__item--shop__btn" 
+                            href="/sklep" 
+                            onClick={() => !isLargeScreen && setOpen(false)}
+                        >
+                            Sklep
+                        </Link>
 
-                                <ul>
-                                    <li className="nav__list__item--shop__item">
-                                        <Link 
-                                            className="button nav__list__item--shop__item--btn" 
-                                            href="/sklep/promocje" 
-                                            onClick={() => !isLargeScreen && setOpen(false)}
-                                        >
-                                            Promocje
-                                        </Link>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <Link 
-                                            className="button nav__list__item--shop__item--btn" 
-                                            href="/sklep/miody" 
-                                            onClick={() => !isLargeScreen && setOpen(false)}
-                                        >
-                                            Miody
-                                        </Link>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <Link 
-                                            className="button nav__list__item--shop__item--btn" 
-                                            href="/sklep/produkty-pszczele" 
-                                            onClick={() => !isLargeScreen && setOpen(false)}
-                                        >
-                                            Produkty pszczele
-                                        </Link>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <Link 
-                                            className="button nav__list__item--shop__item--btn" 
-                                            href="/sklep/swiece" 
-                                            onClick={() => !isLargeScreen && setOpen(false)}
-                                        >
-                                            Świece
-                                        </Link>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <Link 
-                                            className="button nav__list__item--shop__item--btn" 
-                                            href="/sklep/zestawy" 
-                                            onClick={() => !isLargeScreen && setOpen(false)}
-                                        >
-                                            Zestawy
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="nav__list__item">
+                        <ul>
+                            <li className="nav__list__item--shop__item">
                                 <Link 
-                                    className="button nav__list__item--btn" 
-                                    href="/o-nas" 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/promocje" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
                                 >
-                                    O nas
+                                    Promocje
                                 </Link>
                             </li>
-                            <li className="nav__list__item">
+                            <li className="nav__list__item--shop__item">
                                 <Link 
-                                    className="button nav__list__item--btn" 
-                                    href="/artykuly" 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/miody" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
                                 >
-                                    Artykuły
+                                    Miody
                                 </Link>
                             </li>
-                            <li className="nav__list__item">
+                            <li className="nav__list__item--shop__item">
                                 <Link 
-                                    className="button nav__list__item--btn" 
-                                    href="/matki" 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/produkty-pszczele" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
                                 >
-                                    Matki
+                                    Produkty pszczele
                                 </Link>
                             </li>
-                            <li className="nav__list__item">
+                            <li className="nav__list__item--shop__item">
                                 <Link 
-                                    className="button nav__list__item--btn" 
-                                    href="/kontakt" 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/swiece" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
                                 >
-                                    Kontakt
+                                    Świece
+                                </Link>
+                            </li>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/zestawy" 
+                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                >
+                                    Zestawy
                                 </Link>
                             </li>
                         </ul>
-                    </nav>
-                )}
->>>>>>> Brydak
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/o-nas" 
+                            onClick={() => !isLargeScreen && setOpen(false)}
+                        >
+                            O nas
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/artykuly" 
+                            onClick={() => !isLargeScreen && setOpen(false)}
+                        >
+                            Artykuły
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/matki" 
+                            onClick={() => !isLargeScreen && setOpen(false)}
+                        >
+                            Matki
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/kontakt" 
+                            onClick={() => !isLargeScreen && setOpen(false)}
+                        >
+                            Kontakt
+                        </Link>
+                    </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     );
