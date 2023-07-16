@@ -2,8 +2,6 @@
 
 @forward "./mixins";
 
-// Vendors
-
 // Base
 @forward "../base/reset";
 @forward "../base/colors";
@@ -12,10 +10,11 @@
 
 // Layout
 
-@forward "../layout/btn";
 @forward "../layout/grid";
 @forward "../layout/header";
 @forward "../layout/footer";
+
+@forward "../layout/btn";
 
 // Pages
 @forward "../app/home";
@@ -38,6 +37,3 @@
 @forward "../components/home/how-to";
 @forward "../components/home/hero";
 
-
-
-// Themes
