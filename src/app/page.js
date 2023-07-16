@@ -20,7 +20,6 @@ export default function Home() {
 			<div className="main-wrapper home-wrapper">
 				<Link href="/login">Login</Link>
 				<LoginButton />
-				<Slider />
 			</div>
 			<div className="page-wrapper home__1">
 				<Hero />
