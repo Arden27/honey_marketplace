@@ -1,9 +1,9 @@
-import Hero from "../components/home/hero";
-import HowTo from "../components/home/how-to";
-import Description from "../components/home/description";
-import Register from "../components/home/register";
-import RecomendedBar from "../components/home/recomended-bar.js";
-import ArticlesBar from "../components/home/articles-bar";
+
+
+
+import Register from "../../components/register.js";
+import RecomendedBar from "../../components/recomended-bar.js";
+import ArticlesBar from "../../components/articles-bar.js";
 
 
 export const metadata = {
