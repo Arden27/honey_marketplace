@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-
 import Link from 'next/link'
 
 const Nav = () => {
@@ -66,7 +65,13 @@ const Nav = () => {
                 </div>
 
                 <div className="shop-btn-wrapper">
-                    <div className="button shop-btn">Sklep</div>
+                    <Link 
+                        className="button shop-btn" 
+                        href="/sklep" 
+                        onClick={() => !isLargeScreen && setOpen(false)}
+                    >
+                        Sklep
+                    </Link>
                 </div>
 
                 {(open || isLargeScreen) && (
@@ -83,19 +88,49 @@ const Nav = () => {
 
                                 <ul>
                                     <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
+                                        <Link 
+                                            className="button nav__list__item--shop__item--btn" 
+                                            href="/sklep/promocje" 
+                                            onClick={() => !isLargeScreen && setOpen(false)}
+                                        >
+                                            Promocje
+                                        </Link>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
+                                        <Link 
+                                            className="button nav__list__item--shop__item--btn" 
+                                            href="/sklep/miody" 
+                                            onClick={() => !isLargeScreen && setOpen(false)}
+                                        >
+                                            Miody
+                                        </Link>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
+                                        <Link 
+                                            className="button nav__list__item--shop__item--btn" 
+                                            href="/sklep/produkty-pszczele" 
+                                            onClick={() => !isLargeScreen && setOpen(false)}
+                                        >
+                                            Produkty pszczele
+                                        </Link>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
+                                        <Link 
+                                            className="button nav__list__item--shop__item--btn" 
+                                            href="/sklep/swiece" 
+                                            onClick={() => !isLargeScreen && setOpen(false)}
+                                        >
+                                            Świece
+                                        </Link>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
+                                        <Link 
+                                            className="button nav__list__item--shop__item--btn" 
+                                            href="/sklep/zestawy" 
+                                            onClick={() => !isLargeScreen && setOpen(false)}
+                                        >
+                                            Zestawy
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
@@ -109,7 +144,7 @@ const Nav = () => {
                                 </Link>
                             </li>
                             <li className="nav__list__item">
-                                                                <Link 
+                                <Link 
                                     className="button nav__list__item--btn" 
                                     href="/artykuly" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
@@ -118,7 +153,7 @@ const Nav = () => {
                                 </Link>
                             </li>
                             <li className="nav__list__item">
-                                                                <Link 
+                                <Link 
                                     className="button nav__list__item--btn" 
                                     href="/matki" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
@@ -127,7 +162,7 @@ const Nav = () => {
                                 </Link>
                             </li>
                             <li className="nav__list__item">
-                                                                <Link 
+                                <Link 
                                     className="button nav__list__item--btn" 
                                     href="/kontakt" 
                                     onClick={() => !isLargeScreen && setOpen(false)}

@@ -29,7 +29,7 @@
 			justify-content: center;
 
 
-			&--shadow {
+			&__shadow {
 				position: absolute;
 				top: -1rem;
 
@@ -40,7 +40,13 @@
 				background: $clr-header-bar-bg;
 			}
 
-			img {
+			&__link {
+				display: flex;
+				justify-content: center;
+			}
+
+			&__img {
+				
 				position: absolute;
 				height: calc($space-header-bar-s + 1rem);
 				width: calc($space-header-bar-s + 1rem);
