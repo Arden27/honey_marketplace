@@ -10,11 +10,11 @@ export default function Hero() {
         			width={500}
         			height={500}
       		  		alt="Koszyk"
-					className="how-to--img"
+					className="how-to__img"
      			/>
 			</div>
-			<div className="how-to--btn-wrapper">
-				<a className="how-to--btn button-big">Przejdź do sklepu</a>
+			<div className="how-to__btn-wrapper">
+				<a className="how-to__btn button-big">Przejdź do sklepu</a>
 			</div>
 		</section>
 	);

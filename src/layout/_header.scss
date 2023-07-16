@@ -85,7 +85,7 @@
 				justify-content: left;
 			}
 			.logo {
-				&--shadow {
+				&__shadow {
 					height: calc($space-header-bar-l + 3rem);
 					width: calc($space-header-bar-l + 3rem);
 				}

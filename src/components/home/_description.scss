@@ -11,11 +11,12 @@
         padding: calc($space-header-bar-s + $space-xl) calc(2*$space-gap) $space-header-bar-s;
     }
 
-    &--btn {
+    &__btn {
         &-wrapper {
             display: flex;
             justify-content: right;
             align-items: flex-end;
+            
         }
 
         border: 2px solid;

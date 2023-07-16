@@ -77,9 +77,11 @@ const Nav = () => {
                 {(open || isLargeScreen) && (
                     <nav className="nav">
                         <ul className="nav__list">
+
+
                             <li className="nav__list__item nav__list__item--shop">
                                 <Link 
-                                    className="button nav__list__item--shop--btn" 
+                                    className="button nav__list__item--shop__btn" 
                                     href="/sklep" 
                                     onClick={() => !isLargeScreen && setOpen(false)}
                                 >

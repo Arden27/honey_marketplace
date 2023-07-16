@@ -86,8 +86,6 @@
 
             height: $space-header-bar-l;
 
-            padding: 0 $space-m;
-
             display: flex;
             align-items: center;
             justify-content: left;
@@ -105,7 +103,7 @@
                     margin-right: $space-3xs;
 
                     &--shop {
-                        &--btn {
+                        &__btn {
                             border: 2px solid $clr-text;
                         }
 

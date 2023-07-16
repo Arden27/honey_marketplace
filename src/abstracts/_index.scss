@@ -10,24 +10,6 @@
 @forward "../base/fonts";
 @forward "../base/spaces";
 
-// Components
-
-
-@forward "../components/articles-bar";
-
-@forward "../components/recomended-bar";
-@forward "../components/register";
-
-
-@forward "../components/header/cart-bar";
-@forward "../components/header/nav-bar";
-@forward "../components/header/search-bar";
-@forward "../components/header/shop-menu";
-@forward "../components/header/user-bar";
-@forward "../components/home/description";
-@forward "../components/home/how-to";
-@forward "../components/home/hero";
-
 // Layout
 
 @forward "../layout/btn";
@@ -37,5 +19,25 @@
 
 // Pages
 @forward "../app/home";
+
+// Components
+
+
+@forward "../components/articles-bar";
+@forward "../components/recomended-bar";
+@forward "../components/register-bar";
+
+
+@forward "../components/header/cart-bar";
+@forward "../components/header/nav-bar";
+@forward "../components/header/search-bar";
+@forward "../components/header/shop-menu";
+@forward "../components/header/user-bar";
+
+@forward "../components/home/description";
+@forward "../components/home/how-to";
+@forward "../components/home/hero";
+
+
 
 // Themes

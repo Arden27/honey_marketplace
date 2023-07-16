@@ -1,8 +1,8 @@
 @use "../abstracts/mixins" as *;
 
-.register {
+.register-bar {
     @include box-image;
-
+    min-height: 300px;
     background-color: rgb(186, 79, 61);
 
     &--text {

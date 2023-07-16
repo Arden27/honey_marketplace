@@ -1,7 +1,7 @@
 
 
 
-import Register from "../../components/register.js";
+import Register from "../../components/register-bar.js";
 import RecomendedBar from "../../components/recomended-bar.js";
 import ArticlesBar from "../../components/articles-bar.js";
 
