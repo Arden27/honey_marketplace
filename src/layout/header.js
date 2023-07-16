@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import BurgerMenu from "./burgerMenu";
 
 import NavBar from "../components/header/nav-bar";
 import ShopMenu from "../components/header/shop-menu";
