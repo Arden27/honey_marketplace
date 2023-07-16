@@ -4,19 +4,21 @@
 @use "../../base/spaces" as *;
 
 .nav-bar {
+    &.open {
+        .nav {
+            display: block;
+        }
+    }
+
     .burger-btn {
         &-wrapper {
-        position: fixed;
-        z-index: 3;
-
-        width: fit-content;
-        height: $space-header-bar-s;
-
-        
-
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+            position: fixed;
+            z-index: 3;
+            width: fit-content;
+            height: $space-header-bar-s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
     }
 
@@ -27,25 +29,21 @@
             position: fixed;
             z-index: 3;
             left: calc($space-s + 30px + 3*$space-s);
-
             width: fit-content;
             height: $space-header-bar-s;
-
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            
         }
     }
 
     .nav {
         position: fixed;
         z-index: 1;
-
         width: 60%;
         min-height: 100%;
-
         background: $clr-nav-bg;
+        display: none;
 
         &__list {  
             &__item {                  
@@ -60,7 +58,7 @@
 
 @media (min-width: $media-query-1) {
     .nav-bar {
-        all:unset;
+        all: unset;
 
         .burger-btn {
             display: none;
@@ -68,25 +66,26 @@
         .shop-btn {
             display: none;
         }
-    
+        
+        &.open {
+            .nav {
+                display: flex; // Override the display property of the .nav inside .nav-bar.open
+                // Add other styles that should be applied when the screen size is larger
+            }
+        }
+
         .nav {
-            all:unset;	
+            all: unset;  
             position: fixed;
             z-index: 100;
-
             height: $space-header-bar-l;
-
             padding: 0 $space-m;
-
             display: flex;
             align-items: center;
             justify-content: left;
 
             &__list {
-
-    
-                all:unset;
-    
+                all: unset;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -108,5 +107,3 @@
         }
     }
 }
-
-

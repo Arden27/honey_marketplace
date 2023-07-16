@@ -8,20 +8,9 @@ import LoginButton from "@/loginButton";
 const Nav = () => {
     const node = useRef();
     const [open, setOpen] = useState(false);
-    const [isLargeScreen, setIsLargeScreen] = useState(false);
+    
 
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsLargeScreen(window.innerWidth > 1000);
-        };
     
-        // Call this function initially and whenever the window size changes.
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-    
-        // Cleanup event listener on unmount
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
 
     const handleClickOutside = e => {
         if (node.current.contains(e.target)) {
@@ -29,9 +18,7 @@ const Nav = () => {
             return;
         }
         // outside click
-        if (!isLargeScreen) {
-            setOpen(false);
-        }
+        setOpen(false);
     };
 
     useEffect(() => {
@@ -45,7 +32,7 @@ const Nav = () => {
 
     return (
         <div className="page-wrapper nav-bar-wrapper" >
-            <div className="nav-bar" ref={node}>
+            <div className={`nav-bar ${open ? 'open' : ''}`} ref={node}>
                 <div className="burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>
                         <svg
@@ -69,53 +56,52 @@ const Nav = () => {
                     <div className="button shop-btn">Sklep</div>
                 </div>
 
-                {(open || isLargeScreen) && (
-                    <nav className="nav">
-                        <ul className="nav__list">
-                            <li className="nav__list__item nav__list__item--shop">
-                                <a className="button nav__list__item--shop--btn" href="">Sklep</a>
-                                <ul>
-                                    <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
-                                    </li>
-                                    <li className="nav__list__item--shop__item">
-                                        <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="nav__list__item">
-                                <Link 
-                                    className="button" 
-                                    href="/"
-                                    onClick={() => !isLargeScreen && setOpen(false)}
-                                >
-                                    O NAS
-                                </Link>
-                            </li>
-                            <li className="nav__list__item">
-                                <a className="button nav__list__item--btn" href="">Artykuły</a>
-                            </li>
-                            <li className="nav__list__item">
-                                <a className="button nav__list__item--btn" href="">Matki</a>
-                            </li>
-                            <li className="nav__list__item">
-                                <a className="button nav__list__item--btn" href="">Kontakt</a>
-                            </li>
-                            <li>
-                                <LoginButton />
-                            </li>
-                        </ul>
-                    </nav>
-                )}
+                
+                <nav className="nav">
+                    <ul className="nav__list">
+                        <li className="nav__list__item nav__list__item--shop">
+                            <a className="button nav__list__item--shop--btn" href="">Sklep</a>
+                            <ul>
+                                <li className="nav__list__item--shop__item">
+                                    <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
+                                </li>
+                                <li className="nav__list__item--shop__item">
+                                    <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
+                                </li>
+                                <li className="nav__list__item--shop__item">
+                                    <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
+                                </li>
+                                <li className="nav__list__item--shop__item">
+                                    <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
+                                </li>
+                                <li className="nav__list__item--shop__item">
+                                    <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className="nav__list__item">
+                            <Link 
+                                className="button" 
+                                href="/"
+                                onClick={() => setOpen(false)}
+                            >
+                                O NAS
+                            </Link>
+                        </li>
+                        <li className="nav__list__item">
+                            <a className="button nav__list__item--btn" href="">Artykuły</a>
+                        </li>
+                        <li className="nav__list__item">
+                            <a className="button nav__list__item--btn" href="">Matki</a>
+                        </li>
+                        <li className="nav__list__item">
+                            <a className="button nav__list__item--btn" href="">Kontakt</a>
+                        </li>
+                        <li>
+                            <LoginButton />
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     );
