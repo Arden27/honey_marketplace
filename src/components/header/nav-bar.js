@@ -3,15 +3,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from 'next/link'
 import Image from "next/image";
-import Link from 'next/link'
 
 const Nav = () => {
     const node = useRef();
     const [open, setOpen] = useState(false);
     
-
-    
-
     const handleClickOutside = e => {
         if (node.current.contains(e.target)) {
             // inside click
@@ -56,7 +52,7 @@ const Nav = () => {
                     <Link 
                         className="button shop-btn" 
                         href="/sklep" 
-                        onClick={() => !isLargeScreen && setOpen(false)}
+                        onClick={() => setOpen(false)}
                     >
                         Sklep
                     </Link>
@@ -71,7 +67,7 @@ const Nav = () => {
                         <Link 
                             className="button nav__list__item--shop__btn" 
                             href="/sklep" 
-                            onClick={() => !isLargeScreen && setOpen(false)}
+                            onClick={() => setOpen(false)}
                         >
                             Sklep
                         </Link>
@@ -81,7 +77,7 @@ const Nav = () => {
                                 <Link 
                                     className="button nav__list__item--shop__item--btn" 
                                     href="/sklep/promocje" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                    onClick={() => setOpen(false)}
                                 >
                                     Promocje
                                 </Link>
@@ -90,7 +86,7 @@ const Nav = () => {
                                 <Link 
                                     className="button nav__list__item--shop__item--btn" 
                                     href="/sklep/miody" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                    onClick={() => setOpen(false)}
                                 >
                                     Miody
                                 </Link>
@@ -99,7 +95,7 @@ const Nav = () => {
                                 <Link 
                                     className="button nav__list__item--shop__item--btn" 
                                     href="/sklep/produkty-pszczele" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                    onClick={() => setOpen(false)}
                                 >
                                     Produkty pszczele
                                 </Link>
@@ -108,7 +104,7 @@ const Nav = () => {
                                 <Link 
                                     className="button nav__list__item--shop__item--btn" 
                                     href="/sklep/swiece" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                    onClick={() => setOpen(false)}
                                 >
                                     Świece
                                 </Link>
@@ -117,7 +113,7 @@ const Nav = () => {
                                 <Link 
                                     className="button nav__list__item--shop__item--btn" 
                                     href="/sklep/zestawy" 
-                                    onClick={() => !isLargeScreen && setOpen(false)}
+                                    onClick={() => setOpen(false)}
                                 >
                                     Zestawy
                                 </Link>
@@ -128,7 +124,7 @@ const Nav = () => {
                         <Link 
                             className="button nav__list__item--btn" 
                             href="/o-nas" 
-                            onClick={() => !isLargeScreen && setOpen(false)}
+                            onClick={() => setOpen(false)}
                         >
                             O nas
                         </Link>
@@ -137,7 +133,7 @@ const Nav = () => {
                         <Link 
                             className="button nav__list__item--btn" 
                             href="/artykuly" 
-                            onClick={() => !isLargeScreen && setOpen(false)}
+                            onClick={() => setOpen(false)}
                         >
                             Artykuły
                         </Link>
@@ -146,7 +142,7 @@ const Nav = () => {
                         <Link 
                             className="button nav__list__item--btn" 
                             href="/matki" 
-                            onClick={() => !isLargeScreen && setOpen(false)}
+                            onClick={() => setOpen(false)}
                         >
                             Matki
                         </Link>
@@ -155,7 +151,7 @@ const Nav = () => {
                         <Link 
                             className="button nav__list__item--btn" 
                             href="/kontakt" 
-                            onClick={() => !isLargeScreen && setOpen(false)}
+                            onClick={() => setOpen(false)}
                         >
                             Kontakt
                         </Link>

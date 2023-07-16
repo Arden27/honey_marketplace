@@ -4,6 +4,7 @@ import Description from "../components/home/description";
 import Register from "../components/register-bar";
 import RecomendedBar from "../components/recomended-bar.js";
 import ArticlesBar from "../components/articles-bar";
+import Link from 'next/link'
 
 
 export const metadata = {
@@ -15,10 +16,6 @@ export const metadata = {
 export default function Home() {
 	return (
 		<main className="main home">
-			<div className="main-wrapper home-wrapper">
-				<Link href="/login">Login</Link>
-				<LoginButton />
-			</div>
 			<div className="page-wrapper home__1">
 				<Hero />
 				<HowTo />
