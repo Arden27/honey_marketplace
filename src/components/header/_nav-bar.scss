@@ -39,11 +39,18 @@
 
     .nav {
         position: fixed;
+        left: 0;
         z-index: 1;
-        width: 60%;
-        min-height: 100%;
+
+        width: 80%;
+        height: 100%;
+
+        margin-top: $space-header-bar-s;
+
         background: $clr-nav-bg;
         display: none;
+
+        
 
         &__list {  
             &__item {                  
@@ -79,7 +86,6 @@
             position: fixed;
             z-index: 100;
             height: $space-header-bar-l;
-            padding: 0 $space-m;
             display: flex;
             align-items: center;
             justify-content: left;
@@ -94,7 +100,7 @@
                     margin-right: $space-3xs;
 
                     &--shop {
-                        &--btn {
+                        &__btn {
                             border: 2px solid $clr-text;
                         }
 

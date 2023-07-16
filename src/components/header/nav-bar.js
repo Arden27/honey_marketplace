@@ -8,9 +8,6 @@ const Nav = () => {
     const node = useRef();
     const [open, setOpen] = useState(false);
     
-
-    
-
     const handleClickOutside = e => {
         if (node.current.contains(e.target)) {
             // inside click
@@ -52,50 +49,113 @@ const Nav = () => {
                 </div>
 
                 <div className="shop-btn-wrapper">
-                    <div className="button shop-btn">Sklep</div>
+                    <Link 
+                        className="button shop-btn" 
+                        href="/sklep" 
+                        onClick={() => setOpen(false)}
+                    >
+                        Sklep
+                    </Link>
                 </div>
 
                 
                 <nav className="nav">
-                    <ul className="nav__list">
-                        <li className="nav__list__item nav__list__item--shop">
-                            <a className="button nav__list__item--shop--btn" href="">Sklep</a>
-                            <ul>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
-                                </li>
-                                <li className="nav__list__item--shop__item">
-                                    <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="nav__list__item">
-                            <Link 
-                                className="button" 
-                                href="/"
-                                onClick={() => setOpen(false)}
-                            >
-                                O NAS
-                            </Link>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Artykuły</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Matki</a>
-                        </li>
-                        <li className="nav__list__item">
-                            <a className="button nav__list__item--btn" href="">Kontakt</a>
-                        </li>
+                <ul className="nav__list">
+
+
+                    <li className="nav__list__item nav__list__item--shop">
+                        <Link 
+                            className="button nav__list__item--shop__btn" 
+                            href="/sklep" 
+                            onClick={() => setOpen(false)}
+                        >
+                            Sklep
+                        </Link>
+
+                        <ul>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/promocje" 
+                                    onClick={() => setOpen(false)}
+                                >
+                                    Promocje
+                                </Link>
+                            </li>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/miody" 
+                                    onClick={() => setOpen(false)}
+                                >
+                                    Miody
+                                </Link>
+                            </li>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/produkty-pszczele" 
+                                    onClick={() => setOpen(false)}
+                                >
+                                    Produkty pszczele
+                                </Link>
+                            </li>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/swiece" 
+                                    onClick={() => setOpen(false)}
+                                >
+                                    Świece
+                                </Link>
+                            </li>
+                            <li className="nav__list__item--shop__item">
+                                <Link 
+                                    className="button nav__list__item--shop__item--btn" 
+                                    href="/sklep/zestawy" 
+                                    onClick={() => setOpen(false)}
+                                >
+                                    Zestawy
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/o-nas" 
+                            onClick={() => setOpen(false)}
+                        >
+                            O nas
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/artykuly" 
+                            onClick={() => setOpen(false)}
+                        >
+                            Artykuły
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/matki" 
+                            onClick={() => setOpen(false)}
+                        >
+                            Matki
+                        </Link>
+                    </li>
+                    <li className="nav__list__item">
+                        <Link 
+                            className="button nav__list__item--btn" 
+                            href="/kontakt" 
+                            onClick={() => setOpen(false)}
+                        >
+                            Kontakt
+                        </Link>
+                    </li>
                     </ul>
                 </nav>
             </div>

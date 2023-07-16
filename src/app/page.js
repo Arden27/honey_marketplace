@@ -1,9 +1,10 @@
 import Hero from "../components/home/hero";
 import HowTo from "../components/home/how-to";
 import Description from "../components/home/description";
-import Register from "../components/home/register";
-import Recomended from "../components/home/recomended.js";
-import ArticlesBar from "../components/home/articles-bar";
+import Register from "../components/register-bar";
+import RecomendedBar from "../components/recomended-bar.js";
+import ArticlesBar from "../components/articles-bar";
+import Link from 'next/link'
 
 
 export const metadata = {
@@ -24,7 +25,7 @@ export default function Home() {
 				
 			<div className="page-wrapper home__2">
 				<Register />
-				<Recomended />
+				<RecomendedBar />
 				<ArticlesBar />
 			</div>
 			

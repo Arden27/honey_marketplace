@@ -26,23 +26,16 @@
 		grid-template-columns: 1fr;
 
 		gap: $space-gap;
-
 	}
-	.register {
+	.register-bar {
 		grid-row: 1 / 2;
-	
-		background-color: rgb(114, 87, 87);
 	}
-	.recomended {
+	.recomended-bar {
 		grid-row: 2 / 3;
-	
-		background-color: rgb(114, 87, 87);
 	}
 	
 	.articles-bar {
 		grid-row: 3 / 4;
-	
-		background-color: rgb(114, 87, 87);
 	}
 }
 
@@ -83,11 +76,11 @@
 	
 			gap: $space-gap;
 		}
-		.register {
+		.register-bar {
 			grid-column: 1 / 2;
 			grid-row: 1 / 2;
 		}
-		.recomended {
+		.recomended-bar {
 			grid-column: 2 / -1;
 			grid-row: 1 / 2;
 		}
@@ -103,14 +96,14 @@
 @media (min-width: $media-query-1) {
 	.home {
 		&__1 {
-			display: grid;
+			
 			grid-template-columns: 3fr 2fr;
 			grid-template-rows: calc(100vh - 4*$space-header-bar-l - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s));
 		}
 
 		&__2 {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 }

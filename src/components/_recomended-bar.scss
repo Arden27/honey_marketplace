@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as *;
+
+.recomended-bar {
+    @include box-image;
+
+    background-color: rgb(119, 81, 70);
+}

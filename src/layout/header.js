@@ -1,37 +1,36 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link'
 
 import NavBar from "../components/header/nav-bar";
 import ShopMenu from "../components/header/shop-menu";
 
 export default function Header() {
 	return (
-		
 		<header className="header">
 			
 
-
 			<NavBar />
-
-			
-
 
 			<div className="header-bar">
 				<div className="page-wrapper header-bar-wrapper">
-					<div className="header-bar__1 ">
-
-					</div>
+					<div className="header-bar__1 "></div>
 
 					<div className="logo">
-						<div className="logo--shadow"></div>
-						
-						<Image
-        					src="/img/logo.png"
-        					width={80}
-        					height={80}
-      		  				alt="Logo pasieki Kurpiowski Bartnik"
-     					 />
-						 
+						<div className="logo__shadow"></div>
+
+						<Link 
+							className="logo__link"
+							href="/"
+						>
+							<Image
+								className="logo__img" 
+								src="/img/logo.png"
+								width={80}
+								height={80}
+								alt="Logo pasieki Kurpiowski Bartnik"
+							/>
+						 </Link>
 					</div>
 
 					<div className="header-bar__2">
