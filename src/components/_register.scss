@@ -3,12 +3,12 @@
 .register {
     @include box-image;
 
-    background-color: tomato;
+    background-color: rgb(186, 79, 61);
 
     &--text {
         &-wrapper {
             & span {
-
+                
 
             }
         }

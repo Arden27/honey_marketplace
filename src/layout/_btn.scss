@@ -31,7 +31,7 @@
 		border: 2px solid $clr-text;
 		background: $clr-text;
 		fill: $clr-text;
-		color: $clr-nav-bg;
+		color: $clr-header-bar-bg;
 
 	}
 }
@@ -49,7 +49,7 @@
 	align-items: center;
 	justify-content: center;
 
-	background: transparent;
+	background: $clr-bg;
 	color: $clr-text;
 
     font-family: $ff-base;
@@ -61,8 +61,8 @@
 	&:hover {
 		border: 2px solid $clr-text;
 		background: $clr-text;
-		fill: $clr-text;
-		color: $clr-bg;
+		fill: $clr-header-bar-bg;
+		color: $clr-header-bar-bg;
 
 	}
 }
