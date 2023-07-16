@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Description() {
 	return (
-        <div className="shop-menu-wrapper">
+        <div className="page-wrapper shop-menu-wrapper">
             <div className="shop-menu">
 
                 <div className="shop-menu__item">   

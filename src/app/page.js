@@ -1,4 +1,4 @@
-import Slider from "../components/home/slider";
+import Hero from "../components/home/hero";
 import HowTo from "../components/home/how-to";
 import Description from "../components/home/description";
 import Register from "../components/home/register";
@@ -21,12 +21,20 @@ export default function Home() {
 				<Link href="/login">Login</Link>
 				<LoginButton />
 				<Slider />
+			</div>
+			<div className="page-wrapper home__1">
+				<Hero />
 				<HowTo />
-				<Description />
+			</div>
+
+			<Description />
+				
+			<div className="page-wrapper home__2">
 				<Register />
 				<Recomended />
 				<ArticlesBar />
 			</div>
+			
 		</main>
 	);
 }

@@ -4,25 +4,27 @@
 @use "../abstracts/mixins" as *;
 
 .button { 
-	border: 2px solid transparent;
+	
 	@include round-corners;
-
-	height: $space-xl;
-
-	margin: auto $space-3xs;
-	padding: 0 $space-s;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
+	height: $space-btn-height-s;
+	padding: 0 $space-s;
+
+	border: 2px solid transparent;
+
 	background: transparent;
 	color: $clr-text;
 
     font-family: $ff-base;
-    font-size: $fs-400;
+    font-size: $fs-accent-400;
     font-weight: 400;
 	text-transform: uppercase;
+
+	
 
 
 	&:hover {
@@ -40,7 +42,7 @@
 
 	height: calc($space-xl + $space-s);
 
-	margin: auto $space-3xs;
+	
 	padding: 0 $space-xl;
 
 	display: flex;
@@ -51,7 +53,7 @@
 	color: $clr-text;
 
     font-family: $ff-base;
-    font-size: $fs-400;
+    font-size: $fs-accent-400;
     font-weight: 400;
 	text-transform: uppercase;
 

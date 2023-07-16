@@ -1,8 +1,11 @@
 // Kolory na stronie:
 
-$clr-primary: #2a1800;
-$clr-secondary: #ffd34e;
-$clr-accent: #de9b0c;
+$clr-primary: #b89786;
+$clr-secondary: #cb8f71;
+
+$clr-secondary:#d19d5e;
+
+$clr-accent: #452818;
 $clr-bg: #f8dda5;
 
 $clr-text: #2b1800;
@@ -13,10 +16,14 @@ $clr-darkgray: #c0c0c0;
 $clr-lightblack: #111;
 $clr-black: #000;
 
-$clr-nav-bar-bg: #cb8f71;
-$clr-nav-bg: #b89786;
-$clr-footer-bg: #452818;
-$clr-shop-menu-bg: #b89786;
+
+
+$clr-nav-bar-bg: $clr-primary;
+$clr-nav-bg: $clr-primary;
+$clr-header-bar-bg: $clr-secondary;
+$clr-footer-bg: $clr-accent;
+
+
 
 // html {
 // 	color-scheme: light dark;

@@ -8,13 +8,12 @@
 		position: fixed;
 		z-index: 1;
 
-		height: $space-3xl;
+		height: $space-header-bar-s;
 		width: 100%;
 
-		background: $clr-nav-bar-bg;
+		background: $clr-header-bar-bg;
 
 		&-wrapper {
-			@include page-wrapper;
 
 			height: 100%;
 		}
@@ -34,17 +33,17 @@
 				position: absolute;
 				top: -1rem;
 
-				height: calc($space-3xl + 3rem);
-				width: calc($space-3xl + 3rem);
+				height: calc($space-header-bar-s + 3rem);
+				width: calc($space-header-bar-s + 3rem);
 
 				border-radius: 50%;
-				background: $clr-nav-bar-bg;
+				background: $clr-header-bar-bg;
 			}
 
 			img {
 				position: absolute;
-				height: calc($space-3xl + 1rem);
-				width: calc($space-3xl + 1rem);
+				height: calc($space-header-bar-s + 1rem);
+				width: calc($space-header-bar-s + 1rem);
 
 				border-radius: 50%;
 			}
@@ -55,11 +54,8 @@
 			align-items: center;
 			justify-content: flex-end;
 
-			.search-btn {	
-			}
-			.user-btn {	
-			}
-			.cart-btn {					
+			&__item {
+				padding-left: $space-3xs;
 			}
 		}
 	}
@@ -70,12 +66,11 @@
 @media (min-width: $media-query-1) {
 	.header {			
 		.header-bar {
-			height: calc($space-3xl + $space-s);
+			height: calc($space-header-bar-l);
 			
 			&-wrapper {
 				height: 100%;
 				
-				@include page-wrapper
 			}
 
 			&__1 {
@@ -85,12 +80,12 @@
 			}
 			.logo {
 				&--shadow {
-					height: calc($space-3xl + 5rem);
-					width: calc($space-3xl + 5rem);
+					height: calc($space-header-bar-l + 3rem);
+					width: calc($space-header-bar-l + 3rem);
 				}
 				img {
-					height: calc($space-3xl + 3rem);
-					width: calc($space-3xl + 3rem);
+					height: calc($space-header-bar-l + 1rem);
+					width: calc($space-header-bar-l + 1rem);
 				}
 			}				
 		}

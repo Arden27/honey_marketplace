@@ -44,7 +44,7 @@ const Nav = () => {
     }, []);
 
     return (
-        <div className="nav-bar-wrapper" >
+        <div className="page-wrapper nav-bar-wrapper" >
             <div className="nav-bar" ref={node}>
                 <div className="burger-btn-wrapper">
                     <button className="button burger-btn" onClick={() => setOpen(!open)}>
@@ -73,22 +73,22 @@ const Nav = () => {
                     <nav className="nav">
                         <ul className="nav__list">
                             <li className="nav__list__item nav__list__item--shop">
-                                <a className="button" href="">SKLEP</a>
+                                <a className="button nav__list__item--shop--btn" href="">Sklep</a>
                                 <ul>
                                     <li className="nav__list__item--shop__item">
-                                        <a href="">Promocje</a>
+                                        <a className="button nav__list__item--shop__item--btn" href="">Promocje</a>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a href="">Miody</a>
+                                        <a className="button nav__list__item--shop__item--btn" href="">Miody</a>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a href="">Produkty pszczele</a>
+                                        <a className="button nav__list__item--shop__item--btn" href="">Produkty pszczele</a>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a href="">Świece</a>
+                                        <a className="button nav__list__item--shop__item--btn" href="">Świece</a>
                                     </li>
                                     <li className="nav__list__item--shop__item">
-                                        <a href="">Zestawy</a>
+                                        <a className="button nav__list__item--shop__item--btn" href="">Zestawy</a>
                                     </li>
                                 </ul>
                             </li>
@@ -102,13 +102,13 @@ const Nav = () => {
                                 </Link>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">ARTYKUŁY</a>
+                                <a className="button nav__list__item--btn" href="">Artykuły</a>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">FAQ</a>
+                                <a className="button nav__list__item--btn" href="">Matki</a>
                             </li>
                             <li className="nav__list__item">
-                                <a className="button" href="">KONTAKT</a>
+                                <a className="button nav__list__item--btn" href="">Kontakt</a>
                             </li>
                             <li>
                                 <LoginButton />

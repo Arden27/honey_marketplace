@@ -36,12 +36,12 @@ $fs-base-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
 $fs-base-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5.00rem);
 $fs-base-800: clamp(2.80rem, calc(1.73rem + 6.09vw), 7.07rem);
 
-$fs-300: clamp(1.00rem, calc(1.16rem + 0.18vw), 1.13rem);
-$fs-400: clamp(1.20rem, calc(1.16rem + 0.19vw), 1.33rem);
-$fs-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
-$fs-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
-$fs-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
-$fs-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
+$fs-accent-300: clamp(1.00rem, calc(1.16rem + 0.18vw), 1.13rem);
+$fs-accent-400: clamp(1.20rem, calc(1.16rem + 0.19vw), 1.33rem);
+$fs-accent-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
+$fs-accent-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
+$fs-accent-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
+$fs-accent-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
 
 
 // Odstępy pomiędzy wierszami:
@@ -51,7 +51,7 @@ $text-flow: 1em;
 //
 
 body {
-	font-size: $fs-400;
+	font-size: $fs-base-400;
 	font-family: $ff-base;
 	font-weight: 300;
 	line-height: 1.6;
@@ -67,17 +67,17 @@ h3 {
 }
 
 h1 {
-	font-size: $fs-600;
-	$text-flow: 2em;
+	font-size: $fs-accent-600;
+	$text-flow: 3em;
 }
 
 h2 {
-	font-size: $fs-600;
+	font-size: $fs-accent-600;
 	$text-flow: 1.5em;
 }
 
 h3 {
-	font-size: $fs-500;
+	font-size: $fs-accent-500;
 	$text-flow: 1em;
 }
 
@@ -97,8 +97,8 @@ a:focus {
 
 // Sowa po lobotomii, zaznacza wszystkie dzieci za wyjątkiem pierwszego:
 
-.text-flow > * + * {
-	margin-top: $text-flow, 1em;
+.text-flow > * + *  {
+	margin-top: $text-flow;
 }
 
 //

@@ -9,7 +9,7 @@
 	min-height: 100vh;
 	min-height: 100svh;
 
-    gap: $space-s;
+    gap: $space-header-bar-s;
 
 	background-color: $clr-bg;
 
@@ -19,13 +19,15 @@
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: calc($space-3xl + $space-3xl - $space-s);
+		grid-template-rows: calc($space-3xl);
 
 
 
         .header-bar {
 			grid-column: 1 / -1;
 			grid-row: 1 / 2;
+
+			
 			
 			&-wrapper {
 				
@@ -64,7 +66,7 @@
 
 	.grid {
 		.header {
-			grid-template-rows: calc($space-3xl + $space-3xl);
+			grid-template-rows: calc(2*$space-3xl);
 
 			.shop-menu {
 				grid-column: 1 / -1;
@@ -80,8 +82,9 @@
 
 @media (min-width: $media-query-1) {
 	.grid {
+		gap: $space-header-bar-l;
 		.header {
-			grid-template-rows: calc($space-3xl + $space-3xl + $space-s + $space-s);
+			grid-template-rows: calc(2*$space-3xl + 2*$space-s);
 			.shop-menu {
 				
 			}

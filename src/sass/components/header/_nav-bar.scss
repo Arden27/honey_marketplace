@@ -6,62 +6,46 @@
 .nav-bar {
     .burger-btn {
         &-wrapper {
-        @include page-wrapper;
-        width: fit-content;
-        
-
         position: fixed;
         z-index: 3;
 
-        height: $space-3xl;
+        width: fit-content;
+        height: $space-header-bar-s;
+
+        
 
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
-
-
         }
     }
 
     .shop-btn {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin: auto $space-3xs;
-        padding: 0 $space-s;
-
         border: 2px solid $clr-text;
 
-        
         &-wrapper {
-            @include page-wrapper;
-            width: fit-content;
-
             position: fixed;
             z-index: 3;
+            left: calc($space-s + 30px + 3*$space-s);
 
-            left: calc($space-s + 30px + $space-s + $space-3xs  + $space-3xs + $space-3xs);
+            width: fit-content;
+            height: $space-header-bar-s;
 
             display: flex;
             align-items: center;
             justify-content: flex-start;
             
-            height: $space-3xl;
         }
     }
 
     .nav {
         position: fixed;
         z-index: 1;
+
+        width: 60%;
         min-height: 100%;
-        width: 70%;
 
         background: $clr-nav-bg;
-
-        
 
         &__list {  
             &__item {                  
@@ -78,10 +62,6 @@
     .nav-bar {
         all:unset;
 
-        &-wrapper {
-            @include page-wrapper;
-        }
-
         .burger-btn {
             display: none;
         }
@@ -94,34 +74,28 @@
             position: fixed;
             z-index: 100;
 
-            height: calc($space-3xl + 1rem);
+            height: $space-header-bar-l;
+
+            padding: 0 $space-m;
+
             display: flex;
             align-items: center;
             justify-content: left;
 
-            font-family:$ff-accent;
-            
-    
-            &-wrapper {
-                
-            }
-    
             &__list {
-                height: calc($space-3xl + 1rem);
+
     
                 all:unset;
     
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
+                
                 &__item {
-                    a {
-
-                    }
+                    margin-right: $space-3xs;
 
                     &--shop {
-                        a {
+                        &--btn {
                             border: 2px solid $clr-text;
                         }
 

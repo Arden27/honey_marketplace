@@ -18,7 +18,7 @@ export default function Header() {
 
 
 			<div className="header-bar">
-				<div className="header-bar-wrapper">
+				<div className="page-wrapper header-bar-wrapper">
 					<div className="header-bar__1 ">
 
 					</div>
@@ -36,13 +36,8 @@ export default function Header() {
 					</div>
 
 					<div className="header-bar__2">
-						<button className="button search-btn">
-							{/* <Image
-        						src="/icons/search.svg"
-        						width={25}
-        						height={25}
-      		  					alt="Szukaj"
-     					 	/> */}
+						<button className="button header-bar__2__item">
+
 							<svg 
 								width="25"
 								height="25"
@@ -59,7 +54,7 @@ export default function Header() {
 							
 						</button>
 						
-						<button className="button user-btn">
+						<button className="button header-bar__2__item">
 							<svg
 								width="25"
 								height="25"
@@ -75,7 +70,7 @@ export default function Header() {
 								<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
 							</svg>
 						</button>
-						<button className="button cart-btn">
+						<button className="button header-bar__2__item">
 							<svg 
 								width="25"
 								height="25"
