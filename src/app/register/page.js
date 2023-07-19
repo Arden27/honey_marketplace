@@ -21,22 +21,18 @@ function RegistrationForm() {
             localStorage.setItem('token', response.key);
             dispatch(setIsLoggedIn(true)); // dispatch the setIsLoggedIn action with true
         } catch (error) {
-            if (error.response) {
-                if(error.response.data.non_field_errors) {
-                    setError(error.response.data.non_field_errors[0]);
-                } else if (error.response.data.username) {
-                    setError(`Username: ${error.response.data.username[0]}`);
-                } else if (error.response.data.password1) {
-                    setError(`Password: ${error.response.data.password1[0]}`);
-                } else if (error.response.data.password2) {
-                    setError(`Confirm Password: ${error.response.data.password2[0]}`);
-                } else {
-                    setError("An unknown error occurred.");
-                }
+            if (error.status === 400) { // 400 is usually returned for client errors
+              if (error.detail.username) {
+                setError(error.detail.username[0]);
+              } else if (error.detail.non_field_errors) {
+                setError(error.detail.non_field_errors[0]);
+              } else {
+                setError('Unknown error occurred, please try again.');
+              }
             } else {
-                setError("Unable to register with provided information.");
+              setError(error.message);
             }
-        }
+          }
     };
 
     return (
