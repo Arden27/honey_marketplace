@@ -4,23 +4,37 @@
 
 .footer {
 	background: $clr-footer-bg;
-    
 
 	&-wrapper {
 		margin-top: $space-header-bar-s;
-		margin-bottom: $space-gap;
+		padding: 0 calc(2 * $space-gap);
+	}
 
-		gap: $space-gap;
+	&__item {
+		margin-bottom: $space-xl;
 
-        
+		&--copyrights {
+			margin-bottom: $space-gap;
+		}
 	}
 }
 
 @media (min-width: $media-query-1) {
 	.footer {
+		&-wrapper {
+			margin-top: $space-xl;
+		}
+
 		&__item {
+			margin-bottom: $space-xl;
+
 			&--media-bar {
 				text-align: right;
+                margin-bottom: $space-gap;
+			}
+
+			&--copyrights {
+				margin-bottom: $space-gap;
 			}
 		}
 	}
