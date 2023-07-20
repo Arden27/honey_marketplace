@@ -47,22 +47,41 @@
 			&-wrapper {
 				display: grid;
 				grid-template-columns: 1fr;
+				grid-template-rows: $space-3xl;
 				margin: $space-gap;
 
+				
+					align-items: center;
+					justify-content: center;
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__name {
 				text-align: center;
 			}
 
-			margin-top: $space-s;
-
-			&__name {
-			}
-
-			&__type {
+			&__weight {
 				&-wrapper {
 					display: flex;
 					align-items: center;
 					justify-content: center;
 				}
+
+				border: 2px solid;
+				margin: $space-s calc($space-3xs / 2) 0;
+			}
+			&__price {
+				margin: $space-gap;
+			}
+
+			&__add-to-basket {
+				padding: fit-content;
+					align-items: center;
+					justify-content: center;
+	
 			}
 		}
 	}

@@ -25,11 +25,10 @@ export default function Shop() {
 
 					<div className="shop__item__content-wrapper">
 						<h2 className="shop__item__content shop__item__content__name">
-							Miód rzepakowy<br />
-							z nutką gryki
+							Miód rzepakowy
 						</h2>
 
-						<div className="shop__item__content__type-wrapper">
+						<div className="shop__item__content__weight-wrapper">
 							<button className="button shop__item__content shop__item__content__weight">
 								250 g
 							</button>
@@ -44,7 +43,7 @@ export default function Shop() {
 						<div className="shop__item__content shop__item__content__price">
 							99,90 zł
 						</div>
-						<button className="button-big shop__item__content shop__item__content__type">
+						<button className="button-big shop__item__content shop__item__content__add-to-basket">
 							Dodaj do koszyka
 						</button>
 					</div>
@@ -61,10 +60,11 @@ export default function Shop() {
 
 					<div className="shop__item__content-wrapper">
 						<h2 className="shop__item__content shop__item__content__name">
-							Miód gryczany
+							Miód rzepakowy<br />
+							z nutką gryki
 						</h2>
 
-						<div className="shop__item__content__type-wrapper">
+						<div className="shop__item__content__weight-wrapper">
 							<button className="button shop__item__content shop__item__content__weight">
 								250 g
 							</button>
@@ -84,6 +84,7 @@ export default function Shop() {
 						</button>
 					</div>
 				</div>
+
 
 				<div className="shop__item">1</div>
 				<div className="shop__item">1</div>
