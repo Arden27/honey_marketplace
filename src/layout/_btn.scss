@@ -12,7 +12,7 @@
 	justify-content: center;
 
 	height: $space-btn-height-s;
-	padding: 0 $space-s;
+	padding: 0 $space-xs;
 
 	border: 2px solid transparent;
 
@@ -43,7 +43,7 @@
 	height: calc($space-xl + $space-s);
 
 	
-	padding: 0 $space-xl;
+	padding: 0 $space-gap;
 
 	display: flex;
 	align-items: center;

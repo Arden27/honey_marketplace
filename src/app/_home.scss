@@ -47,7 +47,7 @@
 @media (min-width: $media-query-shop-menu) {
 	.home {
 		&__1 {
-			display: grid;
+
 			grid-template-columns: 3fr 2fr;
 			grid-template-rows: calc(100vh - 4*$space-header-bar-s - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s));
 			
@@ -71,10 +71,9 @@
 		}
 	
 		&__2 {
-			display: grid;
+
 			grid-template-columns: repeat(3, 1fr);
-	
-			gap: $space-gap;
+
 		}
 		.register-bar {
 			grid-column: 1 / 2;
@@ -101,9 +100,6 @@
 			grid-template-rows: calc(100vh - 4*$space-header-bar-l - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s));
 		}
 
-		&__2 {
-			
-			grid-template-columns: repeat(3, 1fr);
-		}
+
 	}
 }

@@ -1,0 +1,99 @@
+@use "../../abstracts/mixins" as *;
+@use "../../base/fonts" as *;
+@use "../../base/spaces" as *;
+
+.shop {
+	&__1 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		gap: $space-gap;
+		margin-bottom: $space-gap;
+	}
+
+	&__2 {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		gap: $space-gap;
+
+		.register-bar {
+			grid-row: 1 / 2;
+		}
+		.recomended-bar {
+			grid-row: 2 / 3;
+		}
+
+		.articles-bar {
+			grid-row: 3 / 4;
+		}
+	}
+
+	&__item {
+		@include round-corners;
+		overflow: hidden;
+
+		background-color: rgb(232, 201, 167);
+
+		&__img {
+			width: 100%;
+			height: 30svh;
+
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&__content {
+			&-wrapper {
+				display: grid;
+				grid-template-columns: 1fr;
+				margin: $space-gap;
+
+				text-align: center;
+			}
+
+			margin-top: $space-s;
+
+			&__name {
+			}
+
+			&__type {
+				&-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $media-query-shop-menu) {
+	.shop {
+		&__1 {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+
+			gap: $space-gap;
+			margin-bottom: $space-gap;
+		}
+		&__2 {
+			grid-template-columns: repeat(3, 1fr);
+
+			.register-bar {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;
+			}
+
+			.recomended-bar {
+				grid-column: 2 / -1;
+				grid-row: 1 / 2;
+			}
+
+			.articles-bar {
+				grid-column: 1 / -1;
+				grid-row: 2 / 3;
+			}
+		}
+	}
+}

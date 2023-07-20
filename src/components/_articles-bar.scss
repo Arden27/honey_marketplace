@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as *;
+
+.articles-bar {
+    @include box-image;
+
+    background-color: rgb(119, 81, 70);
+}
