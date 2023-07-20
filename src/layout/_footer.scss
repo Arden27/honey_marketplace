@@ -1,19 +1,27 @@
 @use "../base/colors" as *;
+@use "../base/spaces" as *;
 @use "../abstracts/mixins" as *;
 
-
 .footer {
-    background: $clr-footer-bg;
-
+	background: $clr-footer-bg;
     
 
+	&-wrapper {
+		margin-top: $space-header-bar-s;
+		margin-bottom: $space-gap;
 
-    &-wrapper {
+		gap: $space-gap;
 
         
-                
-    }
+	}
+}
 
-
-   
+@media (min-width: $media-query-1) {
+	.footer {
+		&__item {
+			&--media-bar {
+				text-align: right;
+			}
+		}
+	}
 }
