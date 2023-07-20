@@ -22,7 +22,7 @@
 @media (min-width: $media-query-1) {
 	.footer {
 		&-wrapper {
-			margin-top: $space-xl;
+			margin-top: $space-header-bar-l;
 		}
 
 		&__item {
@@ -30,7 +30,7 @@
 
 			&--media-bar {
 				text-align: right;
-                margin-bottom: $space-gap;
+				margin-bottom: $space-gap;
 			}
 
 			&--copyrights {
