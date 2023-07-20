@@ -50,7 +50,40 @@ export default function Shop() {
 					</div>
 				</div>
 
-				<div className="shop__item">1</div>
+				<div className="shop__item">
+					<Image
+						className="shop__item__img"
+						src="/img/logo.png"
+						width={500}
+						height={500}
+						alt="Nazwa produktu"
+					/>
+
+					<div className="shop__item__content-wrapper">
+						<h2 className="shop__item__content shop__item__content__name">
+							Miód gryczany
+						</h2>
+
+						<div className="shop__item__content__type-wrapper">
+							<button className="button shop__item__content shop__item__content__weight">
+								250 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								450 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								1 kg
+							</button>
+						</div>
+
+						<div className="shop__item__content shop__item__content__price">
+							99,90 zł
+						</div>
+						<button className="button-big shop__item__content shop__item__content__type">
+							Dodaj do koszyka
+						</button>
+					</div>
+				</div>
 
 				<div className="shop__item">1</div>
 				<div className="shop__item">1</div>
