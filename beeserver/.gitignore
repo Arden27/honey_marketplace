@@ -17,7 +17,7 @@ staticfiles/staticfiles_backup/
 
 
 # Ignore SQLite database file
-*.sqlite3
+#*.sqlite3
 
 # Ignore environment files
 .env
