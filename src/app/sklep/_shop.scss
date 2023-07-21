@@ -1,4 +1,5 @@
 @use "../../abstracts/mixins" as *;
+@use "../../base/colors" as *;
 @use "../../base/fonts" as *;
 @use "../../base/spaces" as *;
 
@@ -9,18 +10,49 @@
 
 		gap: $space-gap;
 		margin-bottom: $space-gap;
+
+		@include round-corners;
+		background-color: $clr-shop-bg;
+
+		padding: $space-gap;
+
+		& > :last-child {
+			grid-column: 1 / -1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: $space-btn-height-s;
+		}
+	}
+
+	&__panel {
+		grid-column: 1 / -1;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: $space-btn-height-s;
+
+		&__category {
+			margin: 0 $space-xs;
+		}
 	}
 
 	&__item {
 		display: grid;
 		grid-template-rows: minmax(0, 1fr) auto;
 
+		height: calc(
+			100svh - $space-header-bar-s - $space-xl - 3 * $space-gap -
+				$space-btn-height-s
+		);
+
 		@include round-corners;
 		overflow: hidden;
 
-		background-color: rgb(232, 201, 167);
-
-		height: calc(100svh - $space-header-bar-s - $space-xl - $space-gap);
+		background-color: $clr-shop-item-bg;
 
 		&__img {
 			width: 100%;
@@ -60,11 +92,29 @@
 				margin: $space-gap;
 			}
 
-			&__add-to-basket {
-				padding: fit-content;
+			&__add-to-cart {
+				width: fit-content;
+				margin: 0 auto;
 				align-items: center;
 				justify-content: center;
+
+				border: 2px solid;
+				background: $clr-shop-item-bg;
 			}
+		}
+	}
+
+	&__pages {
+		grid-column: 1 / -1;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: $space-btn-height-s;
+
+		&__category {
+			margin: 0 $space-xs;
 		}
 	}
 
@@ -92,8 +142,8 @@
 	.shop {
 		&__item {
 			height: calc(
-				100vh - $space-header-bar-s - $space-2xl - $space-xl - $space-shop-menu -
-					$space-gap
+				100svh - $space-header-bar-s - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
 			);
 		}
 
@@ -114,8 +164,6 @@
 				grid-column: 1 / -1;
 				grid-row: 2 / 3;
 			}
-
-
 		}
 	}
 }
@@ -123,8 +171,8 @@
 	.shop {
 		&__item {
 			height: calc(
-				100vh - $space-header-bar-l - $space-2xl - $space-xl - $space-shop-menu -
-					$space-gap
+				100svh - $space-header-bar-l - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
 			);
 		}
 	}

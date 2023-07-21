@@ -1,13 +1,77 @@
 import React from "react";
+import Image from "next/image";
 
 export default function RecomendedBar() {
 	return (
 		<section className="recomended-bar">
-			<h2>
-				Polecane
-			</h2>
+				<div className="shop__item">
+					<Image
+						className="shop__item__img"
+						src="/img/home/jak-rozpoznac.jpg"
+						width={500}
+						height={500}
+						alt="Nazwa produktu"
+					/>
 
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, temporibus tenetur nostrum eligendi rerum, et deserunt at minus accusantium cum recusandae modi libero sapiente dicta repellat aliquam perspiciatis, commodi ullam laboriosam molestias blanditiis dolor alias sunt voluptates! Perferendis voluptates modi cupiditate id atque dolor asperiores eum molestias tempora, architecto aperiam iste velit iusto dignissimos esse aliquam nulla! Optio consequatur expedita blanditiis, odit corporis quos ipsa fugit, aliquam.
+					<div className="shop__item__content-wrapper">
+						<h2 className="shop__item__content shop__item__content__name">
+							Miód rzepakowy
+						</h2>
+
+						<div className="shop__item__content__weight-wrapper">
+							<button className="button shop__item__content shop__item__content__weight">
+								250 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								450 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								1 kg
+							</button>
+						</div>
+
+						<div className="shop__item__content shop__item__content__price">
+							99,90 zł
+						</div>
+						<button className="button-big shop__item__content shop__item__content__add-to-basket">
+							Dodaj do koszyka
+						</button>
+					</div>
+				</div>
+				<div className="shop__item">
+					<Image
+						className="shop__item__img"
+						src="/img/home/jak-rozpoznac.jpg"
+						width={500}
+						height={500}
+						alt="Nazwa produktu"
+					/>
+
+					<div className="shop__item__content-wrapper">
+						<h2 className="shop__item__content shop__item__content__name">
+							Miód rzepakowy
+						</h2>
+
+						<div className="shop__item__content__weight-wrapper">
+							<button className="button shop__item__content shop__item__content__weight">
+								250 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								450 g
+							</button>
+							<button className="button shop__item__content shop__item__content__weight">
+								1 kg
+							</button>
+						</div>
+
+						<div className="shop__item__content shop__item__content__price">
+							99,90 zł
+						</div>
+						<button className="button-big shop__item__content shop__item__content__add-to-basket">
+							Dodaj do koszyka
+						</button>
+					</div>
+				</div>
 		</section>
 	);
 }

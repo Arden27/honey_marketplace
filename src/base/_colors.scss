@@ -1,12 +1,14 @@
 // Kolory na stronie:
 
 $clr-primary: #b89786;
-$clr-secondary: #cb8f71;
 
-$clr-secondary:#d19d5e;
 
-$clr-accent: #452818;
+$clr-secondary: #d19d5e;
+
+$clr-accent: #cb8f71;
 $clr-bg: #f8dda5;
+$clr-bg-2: #e5be92;
+$clr-bg-3: #ffefca;
 
 $clr-text: #2b1800;
 
@@ -16,14 +18,14 @@ $clr-darkgray: #c0c0c0;
 $clr-lightblack: #111;
 $clr-black: #000;
 
-
-
 $clr-nav-bar-bg: $clr-primary;
 $clr-nav-bg: $clr-primary;
 $clr-header-bar-bg: $clr-secondary;
+
+$clr-shop-bg: $clr-bg-2;
+$clr-shop-item-bg: $clr-bg-3;
+
 $clr-footer-bg: $clr-accent;
-
-
 
 // html {
 // 	color-scheme: light dark;
@@ -31,5 +33,3 @@ $clr-footer-bg: $clr-accent;
 
 @media (prefers-color-scheme: dark) {
 }
-
-
