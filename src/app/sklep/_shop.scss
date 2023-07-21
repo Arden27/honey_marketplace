@@ -15,6 +15,15 @@
 		background-color: $clr-shop-bg;
 
 		padding: $space-gap;
+
+		& > :last-child {
+			grid-column: 1 / -1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: $space-btn-height-s;
+		}
 	}
 
 	&__panel {
@@ -35,7 +44,10 @@
 		display: grid;
 		grid-template-rows: minmax(0, 1fr) auto;
 
-		height: calc(100svh - $space-header-bar-s - $space-xl - $space-gap);
+		height: calc(
+			100svh - $space-header-bar-s - $space-xl - 3 * $space-gap -
+				$space-btn-height-s
+		);
 
 		@include round-corners;
 		overflow: hidden;
@@ -92,7 +104,7 @@
 		}
 	}
 
-		&__pages {
+	&__pages {
 		grid-column: 1 / -1;
 
 		display: flex;
@@ -130,8 +142,8 @@
 	.shop {
 		&__item {
 			height: calc(
-				100vh - $space-header-bar-s - $space-2xl - $space-xl - $space-shop-menu -
-					$space-gap
+				100svh - $space-header-bar-s - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
 			);
 		}
 
@@ -159,8 +171,8 @@
 	.shop {
 		&__item {
 			height: calc(
-				100vh - $space-header-bar-l - $space-2xl - $space-xl - $space-shop-menu -
-					$space-gap
+				100svh - $space-header-bar-l - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
 			);
 		}
 	}

@@ -90,6 +90,11 @@ export default function Shop() {
 				</div>
 
 				<div className="shop__item">1</div>
+				<div className="shop__item">1</div>
+				<div className="shop__item">1</div>
+
+				<button className="shop__page-btn">sdasdadsasdasdadsa</button>
+
 			</div>
 
 			<div className="shop__2">
