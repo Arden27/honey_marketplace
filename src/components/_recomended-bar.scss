@@ -1,7 +1,23 @@
 @use "../abstracts/mixins" as *;
+@use "../base/spaces" as *;
 
 .recomended-bar {
-    @include box-image;
+	@include box-image;
 
-    background-color: rgb(119, 81, 70);
+
+
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: $space-gap;
+}
+
+@media (min-width: $media-query-shop-item-2) {
+
+}
+@media (min-width: $media-query-shop-item-3) {
+
+}
+@media (min-width: $media-query-shop-item-4) {
+
 }
