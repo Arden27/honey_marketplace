@@ -1,3 +1,5 @@
+@use "./fonts" as *;
+
 // Odległości na stronie:
 
 $space-3xs: clamp(0.31rem, calc(0.31rem + 0vw), 0.31rem);
@@ -18,15 +20,35 @@ $space-btn-height-s: $space-xl;
 $space-btn-height-l: $space-m;
 
 $space-shop-menu-img: $space-3xl;
+$space-shop-menu: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
+
+// Media queries:
+
+$media-query-gap: 430px;
+
+$media-query-shop-item-2: 600px;
+$media-query-shop-item-3: 1000px;
+$media-query-shop-item-4: 1200px;
+
+$media-query-shop-menu: 800px;
+$media-query-header-bar-l: 1000px;
+$media-query-page-wrapper: 1400px;
+
 
 // Maksymalna szerokość strony:
 
 .page-wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1400px;
+	max-width: $media-query-page-wrapper;
 
-	padding: 0 $space-gap;
+	padding: 0 $space-xs;
+}
+
+@media (min-width: $media-query-gap) {
+	.page-wrapper {
+		padding: 0 $space-gap;
+	}
 }
 
 // Maksymalna szerokość tekstu:
@@ -35,3 +57,5 @@ $space-shop-menu-img: $space-3xl;
 	width: min(100% - $space-gap, 70ch);
 	margin-inline: auto;
 }
+
+

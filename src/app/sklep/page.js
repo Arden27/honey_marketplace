@@ -17,7 +17,7 @@ export default function Shop() {
 				<div className="shop__item">
 					<Image
 						className="shop__item__img"
-						src="/img/logo.png"
+						src="/img/home/jak-rozpoznac.jpg"
 						width={500}
 						height={500}
 						alt="Nazwa produktu"

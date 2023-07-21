@@ -5,7 +5,7 @@
 .home {
 	&__1 {
 			display: grid;
-			grid-template-rows: calc(60vh - 2*$space-header-bar-s - 2*$space-gap) 40vh;
+			grid-template-rows: calc(60vh - $space-header-bar-s - $space-xl - (2 * $space-gap)) 40vh;
 			
 			gap: $space-gap;
 		
@@ -49,7 +49,7 @@
 		&__1 {
 
 			grid-template-columns: 3fr 2fr;
-			grid-template-rows: calc(100vh - 4*$space-header-bar-s - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s));
+			grid-template-rows: calc(100vh - $space-header-bar-s - $space-2xl - $space-xl - $space-shop-menu - $space-gap);
 			
 			
 			gap: $space-gap;
@@ -92,12 +92,12 @@
 	
 }
 
-@media (min-width: $media-query-1) {
+@media (min-width: $media-query-header-bar-l) {
 	.home {
 		&__1 {
 			
 			grid-template-columns: 3fr 2fr;
-			grid-template-rows: calc(100vh - 4*$space-header-bar-l - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s));
+			grid-template-rows: calc(100vh - $space-header-bar-l - $space-2xl - $space-xl - (2 * $fs-accent-500 + $space-shop-menu-img + $space-s) - $space-gap);
 		}
 
 

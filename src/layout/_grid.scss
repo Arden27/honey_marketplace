@@ -9,7 +9,7 @@
 	min-height: 100vh;
 	min-height: 100svh;
 
-	gap: $space-header-bar-s;
+	gap: $space-xl;
 
 	background-color: $clr-bg;
 
@@ -93,7 +93,7 @@
 @media (min-width: $media-query-shop-menu) {
 	.grid {
 		.header {
-			grid-template-rows: calc(2 * $space-header-bar-s);
+			grid-template-rows: calc($space-header-bar-s + $space-2xl);
 
 			.shop-menu {
 				grid-column: 1 / -1;
@@ -106,11 +106,10 @@
 	}
 }
 
-@media (min-width: $media-query-1) {
+@media (min-width: $media-query-header-bar-l) {
 	.grid {
-		gap: $space-header-bar-l;
 		.header {
-			grid-template-rows: calc(2 * $space-header-bar-l);
+			grid-template-rows: calc($space-header-bar-l + $space-2xl);
 			.shop-menu {
 			}
 		}

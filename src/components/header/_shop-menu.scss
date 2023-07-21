@@ -9,7 +9,7 @@
 
 @media (min-width: $media-query-shop-menu) {
     .shop-menu {
-        height: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
+        height: $space-shop-menu;
 
         &__item {
             display: grid;

@@ -6,35 +6,26 @@
 	background: $clr-footer-bg;
 
 	&-wrapper {
-		margin-top: $space-header-bar-s;
+		margin-top: $space-xl;
 		width: calc(100% - 2 * $space-gap);
 	}
 
 	&__item {
-		margin-bottom: $space-xl;
+		margin-bottom: $space-gap;
 
 		&--copyrights {
-			margin-bottom: $space-gap;
+			margin-bottom: $space-s;
 		}
 	}
 }
 
-@media (min-width: $media-query-1) {
+@media (min-width: $media-query-header-bar-l) {
 	.footer {
-		&-wrapper {
-			margin-top: $space-header-bar-l;
-		}
-
 		&__item {
-			margin-bottom: $space-xl;
-
 			&--media-bar {
 				text-align: right;
-				margin-bottom: $space-gap;
-			}
 
-			&--copyrights {
-				margin-bottom: $space-gap;
+				margin-bottom: $space-s;
 			}
 		}
 	}
