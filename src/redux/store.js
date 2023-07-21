@@ -2,7 +2,7 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   shouldRefresh: false,
-  isLoggedIn: true,
+  isLoggedIn: false,
 };
 
 const appSlice = createSlice({
