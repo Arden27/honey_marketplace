@@ -19,7 +19,7 @@ export default function Shop() {
 		  image: "/img/home/jak-rozpoznac.jpg",
 		  sizes: [
 			{ size: "250 G", price: 59.9 },
-			{ size: "450 G", price: 79.9 },
+			{ size: "450 G", price: 79.9, default: true },
 			{ size: "1 KG", price: 99.9 }
 		  ],
 		},

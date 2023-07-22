@@ -194,9 +194,9 @@ input[type='radio'].visually-hidden:checked + label.button {
     @include round-corners;
 
     border: 2px solid $clr-text;
-    background: $clr-text;
+    
     fill: $clr-text;
-    color: $clr-header-bar-bg;
+    
 
 	cursor: pointer;
 }
