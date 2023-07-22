@@ -2,6 +2,10 @@
 @use "../base/colors" as *;
 @use "../base/spaces" as *;
 
+.body {
+	background-color: $clr-bg;
+
+}
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -11,9 +15,9 @@
 
 	gap: $space-xl;
 
-	background-color: $clr-bg;
 
 	.header {
+		
 		grid-column: 1 / -1;
 		grid-row: 1 / 2;
 
@@ -24,6 +28,7 @@
 		.header-bar {
 			grid-column: 1 / -1;
 			grid-row: 1 / 2;
+			
 
 			&-wrapper {
 				display: grid;
