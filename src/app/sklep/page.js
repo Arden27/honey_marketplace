@@ -22,15 +22,13 @@ export default function Shop() {
 					<Image
 						className="shop__item__img"
 						src="/img/home/jak-rozpoznac.jpg"
-						width={500}
-						height={500}
+						width={1000}
+						height={1000}
 						alt="Nazwa produktu"
 					/>
 
 					<div className="shop__item__content-wrapper">
-						<h2 className="shop__item__content shop__item__content__name">
-							Miód rzepakowy
-						</h2>
+						<h2 className="shop__item__content shop__item__content__name">Miód rzepakowy</h2>
 
 						<div className="shop__item__content__weight-wrapper">
 							<button className="button shop__item__content shop__item__content__weight">

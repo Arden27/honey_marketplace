@@ -24,15 +24,8 @@ $space-shop-menu: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
 
 // Media queries:
 
-$media-query-gap: 430px;
 
-$media-query-shop-item-2: 600px;
-$media-query-shop-item-3: 1000px;
-$media-query-shop-item-4: 1400px;
 
-$media-query-shop-menu: 800px;
-$media-query-header-bar-l: 1000px;
-$media-query-page-wrapper: 1400px;
 
 
 // Maksymalna szerokość strony:
@@ -40,14 +33,14 @@ $media-query-page-wrapper: 1400px;
 .page-wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: $media-query-page-wrapper;
+	max-width: 1400px;
 
 	padding: 0 $space-xs;
 
 
 }
 
-@media (min-width: $media-query-gap) {
+@media (min-width: 430px) {
 	.page-wrapper {
 		padding: 0 $space-gap;
 	}

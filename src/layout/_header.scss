@@ -4,7 +4,25 @@
 @use "../components/header/nav-bar" as *;
 
 .header {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: $space-header-bar-s;
+
+	@include media-query-shop-menu {
+		grid-template-rows: calc($space-header-bar-s + $space-2xl);
+	}
+
+	@include media-query-header-bar-l {
+		grid-template-rows: calc($space-header-bar-l + $space-2xl);
+	}
+
 	.header-bar {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+
 		position: fixed;
 		z-index: 1;
 
@@ -18,13 +36,21 @@
 		}
 
 		&-wrapper {
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+
 			height: 100%;
 		}
 
 		&__1 {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
 		}
 
 		.logo {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+
 			display: flex;
 			justify-content: center;
 
@@ -65,8 +91,10 @@
 		}
 
 		&__2 {
-			display: flex;
-			align-items: center;
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+
+			@include flex;
 			justify-content: flex-end;
 
 			&__item {

@@ -9,13 +9,16 @@
 	height: $space-shop-menu;
 
 	@include media-query-shop-menu {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+		
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 	}
 
 	&__item {
 		display: grid;
-		
+
 		align-items: top;
 		justify-items: center;
 

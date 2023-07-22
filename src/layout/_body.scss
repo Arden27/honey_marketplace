@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+@use "../base/colors" as *;
+@use "../base/spaces" as *;
+
+.body {
+	background-color: $clr-bg;
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		min-height: 100vh;
+		min-height: 100svh;
+
+		gap: $space-xl;
+
+		.main {
+			grid-column: 1 / -1;
+			grid-row: 2 / 3;
+		}
+	}
+}
