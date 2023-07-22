@@ -70,23 +70,26 @@
 		align-items: center;
 		justify-content: center;
 
-		height: $space-2xs;
-		width: $space-2xs;
+		height: $space-3xs;
+		width: $space-3xs;
+		margin: $space-s;
 		padding: $space-s;
-
 
 		@include round-corners;
 
 		background: transparent;
-		
 
 		font-size: $fs-accent-400;
 
-
-
+		&:hover {
+			
+			background: $clr-text;
+			fill: $clr-text;
+			color: $clr-header-bar-bg;
+		}
 	}
 	&-input {
-		width: $space-l;
+		width: $space-m;
 		height: $space-l;
 
 		border: none;

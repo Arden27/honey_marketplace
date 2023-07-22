@@ -61,17 +61,16 @@ export default function Shop() {
 								<input
 									className="quantity-btn-input shop__item__content__add-to-cart__quantity__input"
 									type="number"
-									value="1"
+									value="999"
 									min="1"
 								/>
 								<button className="quantity-btn-add shop__item__content__add-to-cart__quantity__add">
 									+
 								</button>
-
-								<button className="button-big shop__item__content shop__item__content__add-to-cart__btn">
-									Dodaj do koszyka
-								</button>
 							</div>
+							<button className="button-big shop__item__content shop__item__content__add-to-cart__btn">
+								Dodaj do koszyka
+							</button>
 						</div>
 					</div>
 				</div>

@@ -91,7 +91,7 @@
 					border: 2px solid;
 				}
 			}
-			
+
 			&__price {
 				margin: $space-gap $space-xs;
 
@@ -105,20 +105,29 @@
 			}
 
 			&__add-to-cart {
+				position: relative;
 				width: fit-content;
 				margin: 0 auto;
 				align-items: center;
 				justify-content: center;
 
-				display: flex;
-
 				&__quantity-btn {
 					margin-right: calc($space-3xs / 2);
 					margin-right: $space-2xs;
+
+					position: absolute;
+
+					background-color: $clr-shop-item-bg;
+
+					justify-content: left;
 				}
 
 				&__btn {
-height: $space-l;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding-left: calc(2 * $space-3xl);
+					border: 2px solid;
 
 					background: $clr-shop-item-bg;
 				}
