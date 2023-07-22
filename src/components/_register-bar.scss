@@ -1,9 +1,10 @@
 @use "../abstracts/mixins" as *;
+@use "../base/colors" as *;
 
 .register-bar {
     @include box-image;
     min-height: 300px;
-    background-color: rgb(186, 79, 61);
+    background-color: $clr-red;
 
     &--text {
         &-wrapper {

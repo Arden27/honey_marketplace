@@ -36,7 +36,7 @@ export default function Shop() {
 							<button className="button shop__item__content shop__item__content__weight">
 								250 g
 							</button>
-							<button className="button shop__item__content shop__item__content__weight">
+							<button className="button shop__item__content shop__item__content__weight button shop__item__content shop__item__content__weight--active">
 								450 g
 							</button>
 							<button className="button shop__item__content shop__item__content__weight">
@@ -44,48 +44,35 @@ export default function Shop() {
 							</button>
 						</div>
 
-						<div className="shop__item__content shop__item__content__price">
-							99,90 zł
-						</div>
-						<button className="button-big shop__item__content shop__item__content__add-to-cart">
-							Dodaj do koszyka
-						</button>
-					</div>
-				</div>
-
-				<div className="shop__item">
-					<Image
-						className="shop__item__img"
-						src="/img/logo.png"
-						width={500}
-						height={500}
-						alt="Nazwa produktu"
-					/>
-
-					<div className="shop__item__content-wrapper">
-						<h2 className="shop__item__content shop__item__content__name">
-							Miód rzepakowy
-							<br />z nutką gryki
-						</h2>
-
-						<div className="shop__item__content__weight-wrapper">
-							<button className="button shop__item__content shop__item__content__weight">
-								250 g
-							</button>
-							<button className="button shop__item__content shop__item__content__weight">
-								450 g
-							</button>
-							<button className="button shop__item__content shop__item__content__weight">
-								1 kg
-							</button>
+						<div className="shop__item__content shop__item__content__price-wrapper">
+							<div className="shop__item__content shop__item__content__price shop__item__content shop__item__content__price--old">
+								99,90 zł
+							</div>
+							<div className="shop__item__content shop__item__content__price shop__item__content shop__item__content__price--new">
+								99,90 zł
+							</div>
 						</div>
 
-						<div className="shop__item__content shop__item__content__price">
-							99,90 zł
+						<div className="shop__item__content__add-to-cart">
+							<div className="quantity-btn shop__item__content shop__item__content__add-to-cart__quantity-btn">
+								<button className="quantity-btn-subtract shop__item__content__add-to-cart__quantity__subtract">
+									-
+								</button>
+								<input
+									className="quantity-btn-input shop__item__content__add-to-cart__quantity__input"
+									type="number"
+									value="1"
+									min="1"
+								/>
+								<button className="quantity-btn-add shop__item__content__add-to-cart__quantity__add">
+									+
+								</button>
+
+								<button className="button-big shop__item__content shop__item__content__add-to-cart__btn">
+									Dodaj do koszyka
+								</button>
+							</div>
 						</div>
-						<button className="button-big shop__item__content shop__item__content__add-to-cart">
-							Dodaj do koszyka
-						</button>
 					</div>
 				</div>
 
@@ -94,7 +81,6 @@ export default function Shop() {
 				<div className="shop__item">1</div>
 
 				<button className="shop__page-btn">sdasdadsasdasdadsa</button>
-
 			</div>
 
 			<div className="shop__2">

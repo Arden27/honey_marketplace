@@ -17,7 +17,7 @@ $space-header-bar-s: $space-3xl;
 $space-header-bar-l: calc($space-3xl + $space-s);
 
 $space-btn-height-s: $space-xl;
-$space-btn-height-l: $space-m;
+$space-btn-height-l: calc($space-xl + $space-s);
 
 $space-shop-menu-img: $space-3xl;
 $space-shop-menu: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);

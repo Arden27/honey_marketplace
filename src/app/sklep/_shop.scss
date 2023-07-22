@@ -66,7 +66,7 @@
 			&-wrapper {
 				display: grid;
 				grid-template-columns: 1fr;
-				grid-template-rows: $space-3xl;
+				grid-template-rows: $space-2xl;
 				margin: $space-gap;
 			}
 
@@ -85,11 +85,23 @@
 					justify-content: center;
 				}
 
-				border: 2px solid;
 				margin: $space-s calc($space-3xs / 2) 0;
+
+				&--active {
+					border: 2px solid;
+				}
 			}
+			
 			&__price {
-				margin: $space-gap;
+				margin: $space-gap $space-xs;
+
+				&--old {
+					text-decoration: line-through;
+					color: $clr-red;
+				}
+
+				&--new {
+				}
 			}
 
 			&__add-to-cart {
@@ -98,8 +110,18 @@
 				align-items: center;
 				justify-content: center;
 
-				border: 2px solid;
-				background: $clr-shop-item-bg;
+				display: flex;
+
+				&__quantity-btn {
+					margin-right: calc($space-3xs / 2);
+					margin-right: $space-2xs;
+				}
+
+				&__btn {
+height: $space-l;
+
+					background: $clr-shop-item-bg;
+				}
 			}
 		}
 	}
