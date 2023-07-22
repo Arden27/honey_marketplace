@@ -72,25 +72,30 @@
 
 		height: $space-3xs;
 		width: $space-3xs;
-		margin: $space-s;
-		padding: $space-s;
+		margin: $space-2xs;
+		padding: $space-xs;
 
 		@include round-corners;
 
 		background: transparent;
 
-		font-size: $fs-accent-400;
+		font-size: $fs-accent-500;
 
 		&:hover {
-			
 			background: $clr-text;
 			fill: $clr-text;
 			color: $clr-header-bar-bg;
 		}
 	}
+	&-subtract {
+		margin-right: 0;
+	}
+	&-add {
+		margin-left: 0;
+	}
 	&-input {
-		width: $space-m;
-		height: $space-l;
+		width: $space-xl;
+		height: $space-xl;
 
 		border: none;
 		@include round-corners;

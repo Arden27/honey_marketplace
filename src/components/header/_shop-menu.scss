@@ -4,59 +4,55 @@
 @use "../../base/spaces" as *;
 
 .shop-menu {
-    display: none;
-}
+	display: none;
 
-@media (min-width: $media-query-shop-menu) {
-    .shop-menu {
-        height: $space-shop-menu;
+	height: $space-shop-menu;
 
-        &__item {
-            display: grid;
-            align-items: top;
-            justify-items: center;
-            
-    
-            &__img {              
-                width: $space-shop-menu-img;
-                height: $space-shop-menu-img;
+	@include media-query-shop-menu {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
 
-                border-radius: 50%;
-                align-items: flex-end;
+	&__item {
+		display: grid;
+		
+		align-items: top;
+		justify-items: center;
 
-                
-                &--sale {
-                    background-image: url("/img/header/promocje.png");
-                }
+		&__img {
+			width: $space-shop-menu-img;
+			height: $space-shop-menu-img;
 
-                &--honey {
-                    background-image: url("/img/header/miody.png");
-                }
+			border-radius: 50%;
+			align-items: flex-end;
 
-                &--bee-products {
-                    background-image: url("/img/header/produkty-pszczele.png");
-                }
+			&--sale {
+				background-image: url("/img/header/promocje.png");
+			}
 
-                &--candles {
-                    background-image: url("/img/header/swiece.png");
-                }
+			&--honey {
+				background-image: url("/img/header/miody.png");
+			}
 
-                &--sets {
-                    background-image: url("/img/header/zestawy.png");
-                }
-            }
+			&--bee-products {
+				background-image: url("/img/header/produkty-pszczele.png");
+			}
 
-            &__text {
-                margin-top: $space-s;
+			&--candles {
+				background-image: url("/img/header/swiece.png");
+			}
 
-                font-size: $fs-accent-500;
+			&--sets {
+				background-image: url("/img/header/zestawy.png");
+			}
+		}
+		&__text {
+			margin-top: $space-s;
 
-                text-align: center;
-                text-transform: uppercase;
-            }
-        }
-    }
+			font-size: $fs-accent-500;
 
-
-
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
 }

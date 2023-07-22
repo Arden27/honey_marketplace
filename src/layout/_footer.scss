@@ -13,20 +13,16 @@
 	&__item {
 		margin-bottom: $space-gap;
 
-		&--copyrights {
-			margin-bottom: $space-s;
-		}
-	}
-}
-
-@media (min-width: $media-query-header-bar-l) {
-	.footer {
-		&__item {
-			&--media-bar {
+		&--media-bar {
+			@include media-query-footer-item-2 {
 				text-align: right;
 
 				margin-bottom: $space-s;
 			}
+		}
+
+		&--copyrights {
+			margin-bottom: $space-s;
 		}
 	}
 }

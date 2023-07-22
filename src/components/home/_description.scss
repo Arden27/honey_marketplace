@@ -9,6 +9,11 @@
 
 		margin: $space-header-bar-s auto;
 		padding: $space-header-bar-s calc(2 * $space-gap);
+
+		@include media-query-header-bar-l {
+			margin: $space-header-bar-l auto;
+			padding: $space-header-bar-l calc(2 * $space-gap);
+		}
 	}
 
 	&__btn {
@@ -22,11 +27,4 @@
 	}
 }
 
-@media (min-width: $media-query-header-bar-l) {
-	.description {
-		&-wrapper {
-			margin: $space-header-bar-l auto;
-			padding: $space-header-bar-l calc(2 * $space-gap);
-		}
-	}
-}
+

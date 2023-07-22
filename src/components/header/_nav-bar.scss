@@ -4,112 +4,93 @@
 @use "../../base/spaces" as *;
 
 .nav-bar {
-    &.open {
-        .nav {
-            display: block;
-        }
-    }
+	&.open {
+		.nav {
+			display: block;
 
-    .burger-btn {
-        &-wrapper {
-            position: fixed;
-            z-index: 3;
-            width: fit-content;
-            height: $space-header-bar-s;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-    }
+			@include media-query-header-bar-l {
+				display: flex;
+			}
+		}
+	}
 
-    .shop-btn {
-        border: 2px solid $clr-text;
+	.burger-btn {
+		@include media-query-header-bar-l {
+			display: none;
+		}
 
-        &-wrapper {
-            position: fixed;
-            z-index: 3;
-            left: calc($space-s + 30px + 3*$space-s);
-            width: fit-content;
-            height: $space-header-bar-s;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-    }
+		&-wrapper {
+			position: fixed;
+			z-index: 3;
+			width: fit-content;
+			height: $space-header-bar-s;
+			@include flex;
+			justify-content: flex-start;
+		}
+	}
 
-    .nav {
-        position: fixed;
-        left: 0;
-        z-index: 1;
+	.shop-btn {
+		border: 2px solid $clr-text;
 
-        width: 80%;
-        height: 100%;
+		@include media-query-header-bar-l {
+			display: none;
+		}
 
-        margin-top: $space-header-bar-s;
+		&-wrapper {
+			position: fixed;
+			z-index: 3;
+			left: calc($space-s + 30px + 3 * $space-s);
+			width: fit-content;
+			height: $space-header-bar-s;
+			@include flex;
+			justify-content: flex-start;
+		}
+	}
 
-        background: $clr-nav-bg;
-        display: none;
+	.nav {
+		position: fixed;
+		left: 0;
+		z-index: 1;
 
-        
+		width: 80%;
+		height: 100%;
 
-        &__list {  
-            &__item {                  
-                &--shop {
-                    &__item {
-                    }
-                }
-            }
-        }
-    }
-}
+		margin-top: $space-header-bar-s;
 
-@media (min-width: $media-query-header-bar-l) {
-    .nav-bar {
-        all: unset;
+		background: $clr-nav-bg;
+		display: none;
 
-        .burger-btn {
-            display: none;
-        }
-        .shop-btn {
-            display: none;
-        }
-        
-        &.open {
-            .nav {
-                display: flex; // Override the display property of the .nav inside .nav-bar.open
-                // Add other styles that should be applied when the screen size is larger
-            }
-        }
+		@include media-query-header-bar-l {
+			all: unset;
+			position: fixed;
+			z-index: 100;
+			height: $space-header-bar-l;
+			@include flex;
+			justify-content: left;
+		}
 
-        .nav {
-            all: unset;  
-            position: fixed;
-            z-index: 100;
-            height: $space-header-bar-l;
-            display: flex;
-            align-items: center;
-            justify-content: left;
+		&__list {
+			@include media-query-header-bar-l {
+				@include flex;
+			}
 
-            &__list {
-                all: unset;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                &__item {
-                    margin-right: $space-3xs;
-
-                    &--shop {
-                        &__btn {
-                            border: 2px solid $clr-text;
-                        }
-
-                        &__item { 
-                           display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+			&__item {
+				@include media-query-header-bar-l {
+					margin-right: $space-3xs;
+				}
+				&--shop {
+					&__btn {
+						@include media-query-header-bar-l {
+							border: 2px solid $clr-text;
+						}
+					}
+					&__item {
+						@include media-query-header-bar-l {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }

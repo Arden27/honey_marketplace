@@ -16,22 +16,22 @@
 
 		padding: $space-gap;
 
-		& > :last-child {
-			grid-column: 1 / -1;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			height: $space-btn-height-s;
+		@include media-query-shop-item-2 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include media-query-shop-item-3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include media-query-shop-item-4 {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
 	&__panel {
 		grid-column: 1 / -1;
 
-		display: flex;
+		@include flex;
 		justify-content: space-between;
-		align-items: center;
 
 		height: $space-btn-height-s;
 
@@ -48,11 +48,25 @@
 			100svh - $space-header-bar-s - $space-xl - 3 * $space-gap -
 				$space-btn-height-s
 		);
+		min-height: 50rem;
 
 		@include round-corners;
 		overflow: hidden;
 
 		background-color: $clr-shop-item-bg;
+
+		@include media-query-shop-menu {
+			height: calc(
+				100svh - $space-header-bar-s - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
+			);
+		}
+		@include media-query-header-bar-l {
+			height: calc(
+				100svh - $space-header-bar-l - $space-2xl - $space-shop-menu - $space-xl -
+					3 * $space-gap - $space-btn-height-s
+			);
+		}
 
 		&__img {
 			width: 100%;
@@ -66,13 +80,11 @@
 			&-wrapper {
 				display: grid;
 				grid-template-columns: 1fr;
-				grid-template-rows: $space-2xl;
+				grid-template-rows: $space-2xl $space-2xl $space-3xl;
 				margin: $space-gap;
 			}
 
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flex;
 
 			&__name {
 				text-align: center;
@@ -80,9 +92,7 @@
 
 			&__weight {
 				&-wrapper {
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					@include flex;
 				}
 
 				margin: $space-s calc($space-3xs / 2) 0;
@@ -93,7 +103,7 @@
 			}
 
 			&__price {
-				margin: $space-gap $space-xs;
+				margin: 0 $space-xs;
 
 				&--old {
 					text-decoration: line-through;
@@ -107,26 +117,22 @@
 			&__add-to-cart {
 				position: relative;
 				width: fit-content;
+				width: 20rem;
+
 				margin: 0 auto;
 				align-items: center;
 				justify-content: center;
 
 				&__quantity-btn {
-					margin-right: calc($space-3xs / 2);
-					margin-right: $space-2xs;
-
 					position: absolute;
 
 					background-color: $clr-shop-item-bg;
-
-					justify-content: left;
 				}
 
 				&__btn {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					padding-left: calc(2 * $space-3xl);
+					@include flex;
+					padding: 0 $space-3xs;
+					padding-left: calc($space-3xl);
 					border: 2px solid;
 
 					background: $clr-shop-item-bg;
@@ -135,18 +141,12 @@
 		}
 	}
 
-	&__pages {
+	&__page-btn {
 		grid-column: 1 / -1;
 
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flex;
 
 		height: $space-btn-height-s;
-
-		&__category {
-			margin: 0 $space-xs;
-		}
 	}
 
 	&__2 {
@@ -155,78 +155,29 @@
 
 		gap: $space-gap;
 
+		@include media-query-shop-menu {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		.register-bar {
+			grid-column: 1 / 2;
 			grid-row: 1 / 2;
 		}
 
 		.recomended-bar {
 			grid-row: 2 / 3;
+			@include media-query-shop-menu {
+				grid-column: 2 / -1;
+				grid-row: 1 / 2;
+			}
 		}
 
 		.articles-bar {
 			grid-row: 3 / 4;
-		}
-	}
-}
-
-@media (min-width: $media-query-shop-menu) {
-	.shop {
-		&__item {
-			height: calc(
-				100svh - $space-header-bar-s - $space-2xl - $space-shop-menu - $space-xl -
-					3 * $space-gap - $space-btn-height-s
-			);
-		}
-
-		&__2 {
-			grid-template-columns: repeat(3, 1fr);
-
-			.register-bar {
-				grid-column: 1 / 2;
-				grid-row: 1 / 2;
-			}
-
-			.recomended-bar {
-				grid-column: 2 / -1;
-				grid-row: 1 / 2;
-			}
-
-			.articles-bar {
+			@include media-query-shop-menu {
 				grid-column: 1 / -1;
 				grid-row: 2 / 3;
 			}
-		}
-	}
-}
-@media (min-width: $media-query-header-bar-l) {
-	.shop {
-		&__item {
-			height: calc(
-				100svh - $space-header-bar-l - $space-2xl - $space-shop-menu - $space-xl -
-					3 * $space-gap - $space-btn-height-s
-			);
-		}
-	}
-}
-
-@media (min-width: $media-query-shop-item-2) {
-	.shop {
-		&__1 {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-}
-@media (min-width: $media-query-shop-item-3) {
-	.shop {
-		&__1 {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-}
-@media (min-width: $media-query-shop-item-4) {
-	.shop {
-		&__1 {
-			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }
