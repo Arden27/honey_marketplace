@@ -56,13 +56,34 @@ function ShopItem({ item }) {
                         </React.Fragment>
                     ))}
                 </div>
-
-                <div className="shop__item__content shop__item__content__price">
-                    {selectedPrice} zł
+                
+                <div className="shop__item__content shop__item__content__price-wrapper">
+                    <div className="shop__item__content shop__item__content__price shop__item__content shop__item__content__price--old">
+                        99,90 zł
+                    </div>
+                    <div className="shop__item__content shop__item__content__price shop__item__content shop__item__content__price--new">
+                        {selectedPrice} zł
+                    </div>
                 </div>
-                <button className="button-big shop__item__content shop__item__content__add-to-cart">
-                    Dodaj do koszyka
-                </button>
+                <div className="shop__item__content__add-to-cart">
+                    <div className="quantity-btn shop__item__content shop__item__content__add-to-cart__quantity-btn">
+                        <button className="quantity-btn-subtract shop__item__content__add-to-cart__quantity__subtract">
+                            -
+                        </button>
+                        <input
+                            className="quantity-btn-input shop__item__content__add-to-cart__quantity__input"
+                            type="number"
+                            value=""
+                            min="1"
+                        />
+                        <button className="quantity-btn-add shop__item__content__add-to-cart__quantity__add">
+                            +
+                        </button>
+                    </div>
+                    <button className="button-big shop__item__content shop__item__content__add-to-cart__btn">
+                        Dodaj do koszyka
+                    </button>
+                </div>
             </div>
         </div>
     );

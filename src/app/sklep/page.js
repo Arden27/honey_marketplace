@@ -66,7 +66,7 @@ export default function Shop() {
 								<input
 									className="quantity-btn-input shop__item__content__add-to-cart__quantity__input"
 									type="number"
-									value="999"
+									//value=""
 									min="1"
 								/>
 								<button className="quantity-btn-add shop__item__content__add-to-cart__quantity__add">
