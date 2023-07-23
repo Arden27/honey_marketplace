@@ -2,12 +2,10 @@
 @use "../base/spaces" as *;
 
 .recomended-bar {
-	@include box-image;
+  @include box-image;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-
-	display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: $space-gap;
+  gap: $space-gap;
 }

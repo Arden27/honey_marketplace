@@ -2,16 +2,14 @@
 @use "../base/colors" as *;
 
 .register-bar {
-    @include box-image;
-    min-height: 300px;
-    background-color: $clr-red;
+  @include box-image;
+  min-height: 300px;
+  background-color: $clr-red;
 
-    &--text {
-        &-wrapper {
-            & span {
-                
-
-            }
-        }
+  &--text {
+    &-wrapper {
+      & span {
+      }
     }
+  }
 }

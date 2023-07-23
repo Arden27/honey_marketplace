@@ -3,20 +3,20 @@
 @use "../base/spaces" as *;
 
 .body {
-	background-color: $clr-bg;
+  background-color: $clr-bg;
 
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
 
-		min-height: 100vh;
-		min-height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 
-		gap: $space-xl;
+    gap: $space-xl;
 
-		.main {
-			grid-column: 1 / -1;
-			grid-row: 2 / 3;
-		}
-	}
+    .main {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
 }

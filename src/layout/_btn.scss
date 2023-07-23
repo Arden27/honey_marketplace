@@ -4,113 +4,113 @@
 @use "../abstracts/mixins" as *;
 
 .button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	height: $space-btn-height-s;
-	padding: 0 $space-xs;
+  height: $space-btn-height-s;
+  padding: 0 $space-xs;
 
-	border: 2px solid transparent;
-	@include round-corners;
+  border: 2px solid transparent;
+  @include round-corners;
 
-	background: transparent;
-	color: $clr-text;
+  background: transparent;
+  color: $clr-text;
 
-	font-family: $ff-base;
-	font-size: $fs-accent-400;
-	font-weight: 400;
-	text-transform: uppercase;
+  font-family: $ff-base;
+  font-size: $fs-accent-400;
+  font-weight: 400;
+  text-transform: uppercase;
 
-	&:hover {
-		border: 2px solid $clr-text;
-		background: $clr-text;
-		fill: $clr-text;
-		color: $clr-header-bar-bg;
-	}
+  &:hover {
+    border: 2px solid $clr-text;
+    background: $clr-text;
+    fill: $clr-text;
+    color: $clr-header-bar-bg;
+  }
 }
 
 .button-big {
-	border: 2px solid transparent;
-	@include round-corners;
+  border: 2px solid transparent;
+  @include round-corners;
 
-	height: $space-btn-height-l;
+  height: $space-btn-height-l;
 
-	padding: 0 $space-gap;
+  padding: 0 $space-gap;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	background: $clr-bg;
-	color: $clr-text;
+  background: $clr-bg;
+  color: $clr-text;
 
-	font-family: $ff-base;
-	font-size: $fs-accent-400;
-	font-weight: 400;
-	text-transform: uppercase;
+  font-family: $ff-base;
+  font-size: $fs-accent-400;
+  font-weight: 400;
+  text-transform: uppercase;
 
-	&:hover {
-		border: 2px solid $clr-text;
-		background: $clr-text;
-		fill: $clr-text;
-		color: $clr-header-bar-bg;
-	}
+  &:hover {
+    border: 2px solid $clr-text;
+    background: $clr-text;
+    fill: $clr-text;
+    color: $clr-header-bar-bg;
+  }
 }
 
 .quantity-btn {
-	height: $space-btn-height-l;
+  height: $space-btn-height-l;
 
-	border: 2px solid $clr-text;
-	@include round-corners;
+  border: 2px solid $clr-text;
+  @include round-corners;
 
-	&-subtract,
-	&-add {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+  &-subtract,
+  &-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		height: $space-3xs;
-		width: $space-3xs;
-		margin: $space-2xs;
-		padding: $space-xs;
+    height: $space-3xs;
+    width: $space-3xs;
+    margin: $space-2xs;
+    padding: $space-xs;
 
-		@include round-corners;
+    @include round-corners;
 
-		background: transparent;
+    background: transparent;
 
-		font-size: $fs-accent-500;
+    font-size: $fs-accent-500;
 
-		&:hover {
-			background: $clr-text;
-			fill: $clr-text;
-			color: $clr-header-bar-bg;
-		}
-	}
-	&-subtract {
-		margin-right: 0;
-	}
-	&-add {
-		margin-left: 0;
-	}
-	&-input {
-		width: $space-xl;
-		height: $space-xl;
+    &:hover {
+      background: $clr-text;
+      fill: $clr-text;
+      color: $clr-header-bar-bg;
+    }
+  }
+  &-subtract {
+    margin-right: 0;
+  }
+  &-add {
+    margin-left: 0;
+  }
+  &-input {
+    width: $space-xl;
+    height: $space-xl;
 
-		border: none;
-		@include round-corners;
+    border: none;
+    @include round-corners;
 
-		background: $clr-shop-item-bg;
-		text-align: center;
-	}
+    background: $clr-shop-item-bg;
+    text-align: center;
+  }
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }

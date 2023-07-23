@@ -4,22 +4,22 @@
 @use "../../base/spaces" as *;
 
 .button.header-bar__2__item {
-    position: relative;
+  position: relative;
 
+  .cart-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background: #f9f9f9;
+    overflow-y: auto;
+  }
+
+  &.open {
     .cart-content {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80%;
-        height: 100vh;
-        background: #f9f9f9;
-        overflow-y: auto;
+      display: block;
     }
-    
-    &.open {
-        .cart-content {
-            display: block;
-        }
-    }
+  }
 }

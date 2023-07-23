@@ -4,93 +4,93 @@
 @use "../../base/spaces" as *;
 
 .nav-bar {
-	&.open {
-		.nav {
-			display: block;
+  &.open {
+    .nav {
+      display: block;
 
-			@include media-query-header-bar-l {
-				display: flex;
-			}
-		}
-	}
+      @include media-query-header-bar-l {
+        display: flex;
+      }
+    }
+  }
 
-	.burger-btn {
-		@include media-query-header-bar-l {
-			display: none;
-		}
+  .burger-btn {
+    @include media-query-header-bar-l {
+      display: none;
+    }
 
-		&-wrapper {
-			position: fixed;
-			z-index: 3;
-			width: fit-content;
-			height: $space-header-bar-s;
-			@include flex;
-			justify-content: flex-start;
-		}
-	}
+    &-wrapper {
+      position: fixed;
+      z-index: 3;
+      width: fit-content;
+      height: $space-header-bar-s;
+      @include flex;
+      justify-content: flex-start;
+    }
+  }
 
-	.shop-btn {
-		border: 2px solid $clr-text;
+  .shop-btn {
+    border: 2px solid $clr-text;
 
-		@include media-query-header-bar-l {
-			display: none;
-		}
+    @include media-query-header-bar-l {
+      display: none;
+    }
 
-		&-wrapper {
-			position: fixed;
-			z-index: 3;
-			left: calc($space-s + 30px + 3 * $space-s);
-			width: fit-content;
-			height: $space-header-bar-s;
-			@include flex;
-			justify-content: flex-start;
-		}
-	}
+    &-wrapper {
+      position: fixed;
+      z-index: 3;
+      left: calc($space-s + 30px + 3 * $space-s);
+      width: fit-content;
+      height: $space-header-bar-s;
+      @include flex;
+      justify-content: flex-start;
+    }
+  }
 
-	.nav {
-		position: fixed;
-		left: 0;
-		z-index: 1;
+  .nav {
+    position: fixed;
+    left: 0;
+    z-index: 1;
 
-		width: 80%;
-		height: 100%;
+    width: 80%;
+    height: 100%;
 
-		margin-top: $space-header-bar-s;
+    margin-top: $space-header-bar-s;
 
-		background: $clr-nav-bg;
-		display: none;
+    background: $clr-nav-bg;
+    display: none;
 
-		@include media-query-header-bar-l {
-			all: unset;
-			position: fixed;
-			z-index: 100;
-			height: $space-header-bar-l;
-			@include flex;
-			justify-content: left;
-		}
+    @include media-query-header-bar-l {
+      all: unset;
+      position: fixed;
+      z-index: 100;
+      height: $space-header-bar-l;
+      @include flex;
+      justify-content: left;
+    }
 
-		&__list {
-			@include media-query-header-bar-l {
-				@include flex;
-			}
+    &__list {
+      @include media-query-header-bar-l {
+        @include flex;
+      }
 
-			&__item {
-				@include media-query-header-bar-l {
-					margin-right: $space-3xs;
-				}
-				&--shop {
-					&__btn {
-						@include media-query-header-bar-l {
-							border: 2px solid $clr-text;
-						}
-					}
-					&__item {
-						@include media-query-header-bar-l {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
+      &__item {
+        @include media-query-header-bar-l {
+          margin-right: $space-3xs;
+        }
+        &--shop {
+          &__btn {
+            @include media-query-header-bar-l {
+              border: 2px solid $clr-text;
+            }
+          }
+          &__item {
+            @include media-query-header-bar-l {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -3,28 +3,26 @@
 @use "../../base/spaces" as *;
 
 .description {
-	&-wrapper {
-		width: 100%;
-		background: $clr-secondary;
+  &-wrapper {
+    width: 100%;
+    background: $clr-secondary;
 
-		margin: $space-header-bar-s auto;
-		padding: $space-header-bar-s calc(2 * $space-gap);
+    margin: $space-header-bar-s auto;
+    padding: $space-header-bar-s calc(2 * $space-gap);
 
-		@include media-query-header-bar-l {
-			margin: $space-header-bar-l auto;
-			padding: $space-header-bar-l calc(2 * $space-gap);
-		}
-	}
+    @include media-query-header-bar-l {
+      margin: $space-header-bar-l auto;
+      padding: $space-header-bar-l calc(2 * $space-gap);
+    }
+  }
 
-	&__btn {
-		&-wrapper {
-			display: flex;
-			justify-content: right;
-			align-items: flex-end;
-		}
+  &__btn {
+    &-wrapper {
+      display: flex;
+      justify-content: right;
+      align-items: flex-end;
+    }
 
-		border: 2px solid;
-	}
+    border: 2px solid;
+  }
 }
-
-

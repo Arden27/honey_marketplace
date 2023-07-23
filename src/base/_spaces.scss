@@ -20,37 +20,29 @@ $space-btn-height-s: $space-xl;
 $space-btn-height-l: calc($space-xl + $space-s);
 
 $space-shop-menu-img: $space-3xl;
-$space-shop-menu: calc(2*$fs-accent-500 + $space-shop-menu-img + $space-s);
+$space-shop-menu: calc(2 * $fs-accent-500 + $space-shop-menu-img + $space-s);
 
 // Media queries:
-
-
-
-
 
 // Maksymalna szerokość strony:
 
 .page-wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
 
-	padding: 0 $space-xs;
-
-
+  padding: 0 $space-xs;
 }
 
 @media (min-width: 430px) {
-	.page-wrapper {
-		padding: 0 $space-gap;
-	}
+  .page-wrapper {
+    padding: 0 $space-gap;
+  }
 }
 
 // Maksymalna szerokość tekstu:
 
 .text-wrapper {
-	width: min(100% - $space-gap, 70ch);
-	margin-inline: auto;
+  width: min(100% - $space-gap, 70ch);
+  margin-inline: auto;
 }
-
-

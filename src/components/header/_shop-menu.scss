@@ -4,58 +4,58 @@
 @use "../../base/spaces" as *;
 
 .shop-menu {
-	display: none;
+  display: none;
 
-	height: $space-shop-menu;
+  height: $space-shop-menu;
 
-	@include media-query-shop-menu {
-		grid-column: 1 / -1;
-		grid-row: 2 / 3;
-		
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-	}
+  @include media-query-shop-menu {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
 
-	&__item {
-		display: grid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 
-		align-items: top;
-		justify-items: center;
+  &__item {
+    display: grid;
 
-		&__img {
-			width: $space-shop-menu-img;
-			height: $space-shop-menu-img;
+    align-items: top;
+    justify-items: center;
 
-			border-radius: 50%;
-			align-items: flex-end;
+    &__img {
+      width: $space-shop-menu-img;
+      height: $space-shop-menu-img;
 
-			&--sale {
-				background-image: url("/img/header/promocje.png");
-			}
+      border-radius: 50%;
+      align-items: flex-end;
 
-			&--honey {
-				background-image: url("/img/header/miody.png");
-			}
+      &--sale {
+        background-image: url("/img/header/promocje.png");
+      }
 
-			&--bee-products {
-				background-image: url("/img/header/produkty-pszczele.png");
-			}
+      &--honey {
+        background-image: url("/img/header/miody.png");
+      }
 
-			&--candles {
-				background-image: url("/img/header/swiece.png");
-			}
+      &--bee-products {
+        background-image: url("/img/header/produkty-pszczele.png");
+      }
 
-			&--sets {
-				background-image: url("/img/header/zestawy.png");
-			}
-		}
-		&__text {
-			margin-top: $space-s;
+      &--candles {
+        background-image: url("/img/header/swiece.png");
+      }
 
-			font-size: $fs-accent-500;
+      &--sets {
+        background-image: url("/img/header/zestawy.png");
+      }
+    }
+    &__text {
+      margin-top: $space-s;
 
-			text-align: center;
-			text-transform: uppercase;
-		}
-	}
+      font-size: $fs-accent-500;
+
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
 }
