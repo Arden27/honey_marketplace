@@ -4,11 +4,7 @@ export default function ArticlesBar() {
   return (
     <section className="articles-bar">
       <article className="articles-bar article-bar-1">
-        <h2
-          className="font-bold m-3 p-3 flex text-9xl text-yellow-600 
-
-        justify-center container"
-        >
+        <h2 className="fafdsfs df sdf sd fsd fsd fsd f container bottom-1 m-1 flex">
           ARTYKUŁ1
         </h2>
       </article>
