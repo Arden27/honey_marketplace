@@ -3,7 +3,11 @@ import Image from "next/image";
 import Register from "../../components/register-bar.js";
 import RecomendedBar from "../../components/recomended-bar.js";
 import ArticlesBar from "../../components/articles-bar.js";
-import ShopItem from "./shop-item.js";
+// import ShopItem from "./shop-item.js";
+
+import dynamic from 'next/dynamic';
+
+const ShopItem = dynamic(() => import('./shop-item.js'), { ssr: false });
 
 export const metadata = {
   title: "Sklep - Kurpiowski Bartnik",
@@ -33,6 +37,16 @@ export default function Shop() {
 			{ size: "1 KG", price: 99.9, default: true }
 		  ],
 		},
+		{
+			id: 3,
+			name: "Miód rzepakowy\nz nutką gryki",
+			image: "/img/logo.png",
+			sizes: [
+				{ size: "250 G", price: 59.9 },
+				{ size: "450 G", price: 79.9 },
+				{ size: "1 KG", price: 99.9 }
+			],
+		  },
 		// add more items as needed
 	];
 	

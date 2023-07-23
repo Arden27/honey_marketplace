@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 function ShopItem({ item }) {
     // Find the default size object
-    const defaultSize = item.sizes.find(sizeObj => sizeObj.default); // Fallback to first size if no default found
+    const defaultSize = item.sizes.find(sizeObj => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
     console.log('Default size:', defaultSize); // Logging default size
 
     // Initialize state to store the currently selected size and price

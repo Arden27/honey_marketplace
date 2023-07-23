@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+//import Head from "next/head";
 import Providers from "@/redux/provider";
 
 import "./style.scss";
@@ -10,9 +10,9 @@ import Footer from "../layout/footer";
 export default function RootLayout({ children }) {
 	return (
     	<html lang="pl">
-			<Head>
+			{/* <Head>
 				<script src="https://unpkg.com/feather-icons"></script>
-			</Head>
+			</Head> */}
 
 			<body className="body">
 				<div className="grid">
