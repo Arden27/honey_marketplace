@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+//import Head from "next/head";
 import Providers from "@/redux/provider";
 
 import "./index.css";
