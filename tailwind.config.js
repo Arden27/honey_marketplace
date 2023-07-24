@@ -36,11 +36,11 @@ module.exports = {
 
         "header-bar-s": "theme(spacing.3xl)",
         "header-bar-l": "calc(theme('spacing.3xl') + theme('spacing.s'))",
-        btns: "theme('spacing.xl')",
+        "btn-s": "theme('spacing.xl')",
         "btn-l": "calc(theme('spacing.xl') + theme('spacing.s'))",
         "shop-menu-img": "theme('spacing.3xl')",
 
-        "shop-menu": "calc(3 * (theme('spacing.3xl') + theme('spacing.s')))",
+        "shop-menu": "calc(3 * theme('spacing.header-bar-l')",
 
         gap: "theme('spacing.m')",
       },
