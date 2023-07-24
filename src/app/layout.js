@@ -9,11 +9,11 @@ import Footer from "../layout/footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pl" className="h-full ">
+    <html lang="pl">
       <Head></Head>
 
-      <body className="h-full min-h-full">
-        <div className="grid h-full grid-cols-1">
+      <body className="">
+        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
           <Providers>
             <Header />
             {children}
