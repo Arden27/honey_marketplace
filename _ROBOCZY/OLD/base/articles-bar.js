@@ -4,9 +4,7 @@ export default function ArticlesBar() {
   return (
     <section className="articles-bar">
       <article className="articles-bar article-bar-1">
-        <h2 className="fafdsfs df sdf sd fsd fsd fsd f container bottom-1 m-1 flex">
-          ARTYKUŁ1
-        </h2>
+        <h2 className="fafdsfs df sdf sd fsd fsd">ARTYKUŁ1</h2>
       </article>
       <article className="articles-bar article-bar-2">
         <h2>ARTYKUŁ2</h2>

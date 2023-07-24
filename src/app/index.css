@@ -1,0 +1,24 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  @font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Satoshi Bold";
+  src: url("/fonts/Satoshi-Bold.ttf") format("truetype");
+}
+
+}
+
+html {
+  font-size: 62.5%;
+}

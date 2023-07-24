@@ -10,6 +10,8 @@ export default function RegisterBar() {
         </h3>
       </div>
 
+      div.3*3
+
       <div className="register-bar__btn-wrapper">
         <a className="register-bar__btn button-big">Zarejestruj się</a>
       </div>

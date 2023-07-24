@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Register from "../../components/register-bar.js";
 import RecomendedBar from "../../components/recomended-bar.js";
-import ArticlesBar from "../../components/articles-bar.js";
+import ArticlesBar from "./articles-bar.js";
 
 export const metadata = {
   title: "Sklep - Kurpiowski Bartnik",
@@ -47,13 +47,13 @@ export default function Shop() {
   return (
     <main className="page-wrapper main shop">
       <div className="shop__1">
-        <div className="shop__panel">
-          <h1 className="shop__panel__category">Sklep / Miody</h1>
+        <div className="shop__panel ">
+          <h1 className="shop__panel__category ">Sklep / Miody</h1>
           <button className="button shop__panel__sort-btn">Sortuj</button>
         </div>
         <div className="shop__item">
           <Image
-            className="shop__item__img"
+            className="shop__item__img "
             src="/img/home/jak-rozpoznac.jpg"
             width={1000}
             height={1000}

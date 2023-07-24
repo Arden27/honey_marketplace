@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
+
+import TwitterIcon from "./icons/menu.svg";
+
 export default function Hero() {
   return (
     <section className="hero">
