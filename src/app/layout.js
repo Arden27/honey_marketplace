@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <Head></Head>
 
       <body className="">
-        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+        <div className="grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto]">
           <Providers>
             <Header />
             {children}
