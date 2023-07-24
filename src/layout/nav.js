@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div
       className="flex h-3xl items-center
-        md:h-[calc(theme(spacing.3xl)+theme(spacing.s))]"
+        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
     >
       <button className="md:hidden">
         <svg
@@ -33,9 +33,9 @@ export default function NavBar() {
       </Link>
 
       <nav
-        className="!md:[all:unset] hidden fixed top-3xl  h-full w-3/5 bg-bg
+        className="!md:[all:unset] hidden fixed top-header-bar-sm  h-full w-3/5 bg-bg
 
-          md:fixed md:top-0 md:flex md:h-[calc(theme(spacing.3xl)+theme(spacing.s))] md:items-center md:bg-transparent"
+          md:fixed md:top-0 md:flex md:h-header-bar-lg md:items-center md:bg-transparent"
       >
         <ul className="md:flex">
           <li className="">

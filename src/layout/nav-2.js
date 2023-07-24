@@ -10,7 +10,7 @@ export default function Nav2() {
     <div className="w-100 relative">
       <div
         className=" flex h-3xl items-center justify-end
-        md:h-[calc(theme(spacing.3xl)+theme(spacing.s))]"
+        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
       >
         <SearchBar />
 

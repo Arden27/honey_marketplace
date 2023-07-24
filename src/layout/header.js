@@ -10,8 +10,8 @@ export default function Header() {
   return (
     <header>
       <div
-        className="fixed grid h-header-bar-s w-full grid-cols-3 bg-header-bar-bg 
-        md:h-header-bar-l"
+        className="fixed grid h-header-bar-sm w-full grid-cols-3 bg-header-bar-bg 
+        md:h-header-bar-lg"
       >
         <Nav />
 
@@ -19,14 +19,14 @@ export default function Header() {
           <div
             className="absolute -top-4
               h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full bg-header-bar-bg
-              md:h-[calc(theme(spacing.3xl)+theme(spacing.s)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.s)+3rem)]
+              md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)]
             "
           ></div>
 
           <Link className="flex justify-center" href="/">
             <Image
               className="absolute h-[calc(theme(spacing.3xl)+1rem)] w-[calc(theme(spacing.3xl)+1rem)] rounded-full 
-                md:h-[calc(theme(spacing.3xl)+theme(spacing.s)+1rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.s)+1rem)]"
+                md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)]"
               src="/img/logo.png"
               width={80}
               height={80}
