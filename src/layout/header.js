@@ -11,7 +11,7 @@ export default function Header() {
     <header>
       <div
         className="fixed grid h-header-bar-sm w-full grid-cols-3 bg-header-bar-bg 
-        md:h-header-bar-lg"
+        md:h-header-bar-lg z-50"
       >
         <Nav />
 

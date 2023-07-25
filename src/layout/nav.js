@@ -33,7 +33,7 @@ export default function NavBar() {
       </Link>
 
       <nav
-        className="!md:[all:unset] hidden fixed top-header-bar-sm  h-full w-3/5 bg-bg
+        className="!md:[all:unset] hidden fixed top-header-bar-sm  h-full w-3/5 bg-red-900
 
           md:fixed md:top-0 md:flex md:h-header-bar-lg md:items-center md:bg-transparent"
       >

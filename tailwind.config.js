@@ -17,6 +17,7 @@ module.exports = {
 
         "header-bar-bg": "theme('colors.secondary')",
         "nav-bar-bg": "theme('colors.primary')",
+        "about-box-bg": "theme(colors.bg2)",
 
         "shop-bg": "theme(colors.bg2)",
         "shop-item-bg": "theme('colors.bg3')",
@@ -56,6 +57,8 @@ module.exports = {
 
       fontFamily: {
         btn: ["Satoshi Bold"],
+        sans: ["Satoshi"],
+        serif: ["Satoshi Bold"],
       },
 
       fontSize: {
@@ -77,8 +80,7 @@ module.exports = {
 // FLEX-COL: flex flex-col items-center justify-center
 // FLEX-ROW: flex items-center justify-center
 
-//
-//
+// GRID CENTER: align-center justify-center
 //
 //
 //

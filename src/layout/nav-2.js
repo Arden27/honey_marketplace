@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-import CartBar from "../components/cart-bar";
-import SearchBar from "../components/search-bar";
-import UserBar from "../components/user-bar";
+import CartBar from "@/components/cart-bar";
+import SearchBar from "@/components/search-bar";
+import UserBar from "@/components/user-bar";
 
 export default function Nav2() {
   return (
