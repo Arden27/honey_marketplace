@@ -57,7 +57,7 @@ module.exports = {
       },
 
       fontFamily: {
-        btn: ["Satoshi"],
+        btn: ["Satoshi Bold"],
         sans: ["Satoshi"],
         serif: ["Satoshi Bold"],
       },

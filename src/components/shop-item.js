@@ -13,7 +13,7 @@ export default function ShopItem() {
         alt="Nazwa produktu"
       />
 
-      <div className="m-gap grid grid-cols-1 justify-items-center gap-gap">
+      <div className="grid-rows-[theme(spacing.2xl)_theme(spacing.3xl)_theme(spacing.2xl)_auto] p-gap grid grid-cols-1 justify-items-center items-center ">
         <h2 className="text-center">Miód rzepakowy z nutką gryki</h2>
 
         <div className="flex">
@@ -31,13 +31,13 @@ export default function ShopItem() {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex border-2 border-text rounded-[3rem]">
           <div className="flex">
             <button className="">-</button>
-            <input className="" type="number" defaultValue="1" min="1" />
+            <input className="max-w-min " type="number" defaultValue="1" min="1" />
             <button className="">+</button>
           </div>
-          <button className="btn-lg btn-border hover:text-shop-item-bg">
+          <button className="btn-lg  hover:text-shop-item-bg">
             Dodaj do koszyka
           </button>
         </div>

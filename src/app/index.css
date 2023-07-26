@@ -58,11 +58,7 @@
   }
 
   .btn-sm {
-    @apply flex h-btn-sm min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn uppercase text-text;
-  }
-
-  .btn-sm:active {
-    @apply border-text bg-red-400;
+    @apply flex h-btn-sm min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text;
   }
 
   .btn-sm:hover {
@@ -70,7 +66,7 @@
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn uppercase text-text;
+    @apply flex h-btn-lg min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text;
   }
 
   .btn-lg:hover {
@@ -84,4 +80,14 @@
   .box {
     @apply overflow-hidden rounded-[3rem] p-gap;
   }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

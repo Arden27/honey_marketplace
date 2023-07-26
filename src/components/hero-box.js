@@ -14,7 +14,7 @@ export default function HeroBox() {
       />
 
       <Link
-        className="btn-lg btn-border absolute bottom-0 m-gap bg-bg 
+        className="btn-lg absolute bottom-0 m-gap bg-bg 
         hover:text-bg"
         href="/sklep"
       >
