@@ -13,7 +13,7 @@ export default function ShopItem() {
         alt="Nazwa produktu"
       />
 
-      <div className="grid-rows-[theme(spacing.2xl)_theme(spacing.3xl)_theme(spacing.2xl)_auto] p-gap grid grid-cols-1 justify-items-center items-center ">
+      <div className="grid grid-cols-1 grid-rows-[theme(spacing.2xl)_theme(spacing.3xl)_theme(spacing.2xl)_auto] items-center justify-items-center p-gap ">
         <h2 className="text-center">Miód rzepakowy z nutką gryki</h2>
 
         <div className="flex">
@@ -24,20 +24,28 @@ export default function ShopItem() {
 
         <div className="flex">
           <div className="mx-xs text-warning line-through">
-            <h2>99,90 zł</h2>
+            <h3>99,90 zł</h3>
           </div>
           <div className="mx-xs">
-            <h2>99,90 zł</h2>
+            <h3>99,90 zł</h3>
           </div>
         </div>
 
-        <div className="flex border-2 border-text rounded-[3rem]">
-          <div className="flex">
-            <button className="">-</button>
-            <input className="max-w-min " type="number" defaultValue="1" min="1" />
-            <button className="">+</button>
+        <div className="relative flex rounded-[3rem]">
+          <div
+            className="absolute flex h-btn-lg items-center justify-items-center rounded-[3rem] border-2 border-text bg-shop-item-bg
+          "
+          >
+            <button className="h-3xs w-3xs m-2xs p-xs  hover:bg-text rounded-full ">-</button>
+            <input
+              className="h-xl w-xl rounded-[3rem] bg-transparent font-btn text-sm text-center"
+              type="number"
+              defaultValue="1"
+              min="1"
+            />
+            <button className="pr-xs">+</button>
           </div>
-          <button className="btn-lg  hover:text-shop-item-bg">
+          <button className="btn-lg border-text pl-[10rem] hover:text-shop-item-bg">
             Dodaj do koszyka
           </button>
         </div>
