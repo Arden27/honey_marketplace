@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutBox() {
   return (
     <section className=" my-3xl w-full bg-about-box-bg pb-2xl pt-3xl">
-      <article className="w-100 mx-auto flex max-w-[80ch] flex-col">
+      <article className="w-100 m-auto mx-auto flex w-[calc(100%-2*theme(spacing.md))] max-w-[80ch] flex-col">
         <h2 className="font-serif text-m">Miód z Kurpiów</h2>
         <p className="font-sans">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,

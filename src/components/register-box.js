@@ -2,5 +2,5 @@ import React from "react";
 import Link from "next/link";
 
 export default function RegisterBox() {
-  return <div>Register</div>;
+  return <div className="box bg-yellow-800">register-box</div>;
 }

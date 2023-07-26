@@ -4,16 +4,20 @@ import Image from "next/image";
 
 export default function HeroBox() {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden rounded-[3rem]">
+    <section className="box relative flex items-center justify-center ">
       <Image
-        className="h-full w-full object-cover object-left-bottom"
+        className="absolute top-0 h-full w-full object-cover object-left-bottom"
         src="/img/home/hero.png"
         width={500}
         height={500}
         alt="Nasze nowości"
       />
 
-      <Link className="absolute bottom-0 m-gap" href="/sklep/promocje">
+      <Link
+        className="btn-lg btn-border absolute bottom-0 m-gap bg-bg 
+        hover:text-bg"
+        href="/sklep"
+      >
         Przejdź do sklepu
       </Link>
     </section>

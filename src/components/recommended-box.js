@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function RecommendedBox() {
   return (
 
-        <div>
-          polecane
+        <div className="box bg-yellow-800">
+          recommended-box
         </div>
   );
 }

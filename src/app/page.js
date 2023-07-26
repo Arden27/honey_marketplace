@@ -1,11 +1,12 @@
 import Link from "next/link";
 
-import AboutBox from "@/components/about-box";
-import ArticlesBox from "@/components/articles-box";
+import ShopMenu from "@/components/shop-menu";
 import HeroBox from "@/components/hero-box";
 import HowToBox from "@/components/how-to-box";
-import RecommendedBox from "@/components/recommended-box";
+import AboutBox from "@/components/about-box";
 import RegisterBox from "@/components/register-box";
+import RecommendedBox from "@/components/recommended-box";
+import ArticlesBox from "@/components/articles-box";
 
 export const metadata = {
   title: "Kurpiowski Bartnik",
@@ -15,10 +16,12 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="">
+      <ShopMenu />
+
       <div
-        className="w-100 mx-auto mt-header-bar-sm grid h-80 max-w-screen-2xl gap-gap pt-2xl md:mt-0
-      md:grid-cols-2 md:pt-0"
+        className="w-100 mx-auto grid h-80 w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap 
+      md:grid-cols-2"
       >
         <HeroBox />
 
@@ -27,7 +30,7 @@ export default function Home() {
 
       <AboutBox />
 
-      <div className="w-100 mx-auto grid max-w-screen-2xl gap-gap md:grid-cols-2 ">
+      <div className="w-100 mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap md:grid-cols-2 ">
         <RegisterBox />
         <RecommendedBox />
         <ArticlesBox />

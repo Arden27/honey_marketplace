@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <div
-      className="flex h-3xl items-center
-        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
+      className="m-auto flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
+      md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
     >
-      <button className="md:hidden">
+      <button className="lg:hidden">
         <svg
           width="25"
           height="25"
@@ -25,69 +25,85 @@ export default function NavBar() {
       </button>
 
       <Link
-        className="font-btn text-m 
-            md:hidden"
+        className="btn-sm
+        hover:text-header-bar-bg
+        lg:hidden"
         href="/sklep"
       >
         Sklep
       </Link>
 
       <nav
-        className="!md:[all:unset] hidden fixed top-header-bar-sm  h-full w-3/5 bg-red-900
-
-          md:fixed md:top-0 md:flex md:h-header-bar-lg md:items-center md:bg-transparent"
+        className="!lg:[all:unset]
+        w-3/5 h-full sticky top-header-bar-sm hidden 
+        lg:sticky lg:top-0 lg:flex lg:h-full lg:w-full lg:items-center"
       >
-        <ul className="md:flex">
+        <ul className="lg:flex">
           <li className="">
-            <Link className="" href="/sklep">
+            <Link className="btn-sm hover:text-header-bar-bg" href="/sklep">
               Sklep
             </Link>
 
-            <ul className="md:hidden">
+            <ul className="lg:hidden">
               <li className="">
-                <Link className="" href="/sklep/promocje">
+                <Link
+                  className="btn-sm hover:text-header-bar-bg"
+                  href="/sklep/promocje"
+                >
                   Promocje
                 </Link>
               </li>
               <li className="">
-                <Link className="" href="/sklep/miody">
+                <Link
+                  className="btn-sm hover:text-header-bar-bg"
+                  href="/sklep/miody"
+                >
                   Miody
                 </Link>
               </li>
               <li className="">
-                <Link className="" href="/sklep/produkty-pszczele">
+                <Link
+                  className="btn-sm hover:text-header-bar-bg"
+                  href="/sklep/produkty-pszczele"
+                >
                   Produkty pszczele
                 </Link>
               </li>
               <li className="">
-                <Link className="" href="/sklep/swiece">
+                <Link
+                  className="btn-sm hover:text-header-bar-bg"
+                  href="/sklep/swiece"
+                >
                   Świece
                 </Link>
               </li>
               <li className="">
-                <Link className="" href="/sklep/zestawy">
+                <Link
+                  className="btn-sm hover:text-header-bar-bg"
+                  href="/sklep/zestawy"
+                >
                   Zestawy
                 </Link>
               </li>
             </ul>
           </li>
           <li className="nav__list__item">
-            <Link className="button nav__list__item--btn" href="/o-nas">
+            <Link className="btn-sm hover:text-header-bar-bg" href="/o-nas">
               O nas
             </Link>
           </li>
           <li className="nav__list__item">
-            <Link className="button nav__list__item--btn" href="/artykuly">
+            <Link className="btn-sm hover:text-header-bar-bg" href="/artykuly">
               Artykuły
             </Link>
           </li>
           <li className="nav__list__item">
-            <Link className="button nav__list__item--btn" href="/matki">
+            <Link className="btn-sm hover:text-header-bar-bg" href="/matki">
               Matki
             </Link>
           </li>
           <li className="nav__list__item">
-            <Link className="button nav__list__item--btn" href="/kontakt">
+            <Link className="btn-sm hover:text-header-bar-bg" href="/kontakt">
               Kontakt
             </Link>
           </li>
