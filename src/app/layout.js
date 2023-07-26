@@ -2,27 +2,25 @@ import React from "react";
 //import Head from "next/head";
 import Providers from "@/redux/provider";
 
-import "./style.scss";
+import "./index.css";
 
 import Header from "../layout/header";
 import Footer from "../layout/footer";
 
 export default function RootLayout({ children }) {
-	return (
-    	<html lang="pl">
-			{/* <Head>
-				<script src="https://unpkg.com/feather-icons"></script>
-			</Head> */}
+  return (
+    <html lang="pl">
+      <Head></Head>
 
-			<body className="body">
-				<div className="grid">
-					<Providers>
-						<Header />
-						{children}
-						<Footer />
-					</Providers>
-				</div>
-			</body>
-		</html>
-	);
+      <body className=" bg-bg">
+        <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+          <Providers>
+            <Header />
+            {children}
+            <Footer />
+          </Providers>
+        </div>
+      </body>
+    </html>
+  );
 }

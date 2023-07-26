@@ -1,13 +1,13 @@
-import Image from "next/image";
+import Link from "next/link";
 
-import Register from "../../components/register-bar.js";
-import RecomendedBar from "../../components/recomended-bar.js";
-import ArticlesBar from "../../components/articles-bar.js";
-// import ShopItem from "./shop-item.js";
+import ShopMenu from "@/components/shop-menu";
+import FilterItemsBtn from "@/components/filter-items-btn";
+import ShopItem from "@/components/shop-item";
+import Pagination from "@/components/pagination";
 
-import dynamic from 'next/dynamic';
-
-const ShopItem = dynamic(() => import('./shop-item.js'), { ssr: false });
+import RegisterBox from "@/components/register-box";
+import RecommendedBox from "@/components/recommended-box";
+import ArticlesBox from "@/components/articles-box";
 
 export const metadata = {
   title: "Sklep - Kurpiowski Bartnik",
@@ -15,63 +15,32 @@ export const metadata = {
   keywords: "TAGI",
 };
 
-export default function Shop() {
-	const items = [
-		{
-		  id: 1,
-		  name: "Miód rzepakowy",
-		  image: "/img/home/jak-rozpoznac.jpg",
-		  sizes: [
-			{ size: "250 G", price: 59.9 },
-			{ size: "450 G", price: 79.9, default: true },
-			{ size: "1 KG", price: 99.9 }
-		  ],
-		},
-		{
-		  id: 2,
-		  name: "Miód rzepakowy\nz nutką gryki",
-		  image: "/img/logo.png",
-		  sizes: [
-			{ size: "250 G", price: 59.9 },
-			{ size: "450 G", price: 79.9 },
-			{ size: "1 KG", price: 99.9, default: true }
-		  ],
-		},
-		{
-			id: 3,
-			name: "Miód rzepakowy\nz nutką gryki",
-			image: "/img/logo.png",
-			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9 },
-				{ size: "1 KG", price: 99.9 }
-			],
-		  },
-		// add more items as needed
-	];
-	
-
+export default function Home() {
   return (
-    <main className="page-wrapper main shop">
-      <div className="shop__1">
-        <div className="shop__panel">
-          <h1 className="shop__panel__category">Sklep / Miody</h1>
-          <button className="button shop__panel__sort-btn">Sortuj</button>
+    <main className="">
+      <ShopMenu />
+      <section
+        className=" w-100 m-auto mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl grid-cols-1 grid-rows-[auto_1fr_auto] gap-gap overflow-hidden rounded-[3rem] bg-shop-bg p-gap
+        md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <div className="col-span-full flex items-center justify-between">
+          <div>PANEL</div>
+          <FilterItemsBtn />
         </div>
-		
-        
-          {items.map((item) => (
-            <ShopItem key={item.id} item={item} />
-          ))}
 
-        <button className="shop__page-btn">sdasdadsasdasdadsa</button>
-      </div>
+        <ShopItem />
+        <ShopItem />
+        <ShopItem />
+        <ShopItem />
 
-      <div className="shop__2">
-        <Register />
-        <RecomendedBar />
-        <ArticlesBar />
-      </div>
+        <Pagination />
+      </section>
+
+      <section className="w-100 m-auto  mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl md:grid-cols-2">
+        <RegisterBox />
+        <RecommendedBox />
+        <ArticlesBox />
+      </section>
     </main>
   );
 }

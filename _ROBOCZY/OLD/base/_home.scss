@@ -1,0 +1,77 @@
+@use "../abstracts/mixins" as *;
+@use "../base/fonts" as *;
+@use "../base/spaces" as *;
+
+.home {
+  &__1 {
+    display: grid;
+    grid-template-rows:
+      calc(60vh - $space-header-bar-s - $space-xl - (2 * $space-gap))
+      40vh;
+
+    gap: $space-gap;
+
+    @include media-query-shop-menu {
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: calc(
+        100vh - $space-header-bar-s - $space-2xl - $space-xl - $space-shop-menu -
+          $space-gap
+      );
+    }
+
+    @include media-query-header-bar-l {
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: calc(
+        100vh - $space-header-bar-l - $space-2xl - $space-xl -
+          (2 * $fs-accent-500 + $space-shop-menu-img + $space-s) - $space-gap
+      );
+    }
+
+    .hero {
+      grid-row: 1 / 2;
+    }
+    .how-to {
+      grid-row: 2 / 3;
+
+      @include media-query-shop-menu {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
+  &__2 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: $space-gap;
+
+    @include media-query-shop-menu {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .register-bar {
+    grid-row: 1 / 2;
+
+    @include media-query-shop-menu {
+      grid-column: 1 / 2;
+    }
+  }
+  .recomended-bar {
+    grid-row: 2 / 3;
+
+    @include media-query-shop-menu {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+
+  .articles-bar {
+    grid-row: 3 / 4;
+
+    @include media-query-shop-menu {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+}
