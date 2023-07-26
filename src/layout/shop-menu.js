@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ShopMenu() {
   return (
     <div
-      className="w-100  mx-auto mt-header-bar-lg hidden max-w-screen-xl grid-cols-5 md:grid
+      className="w-100 mx-auto mt-header-bar-lg hidden max-w-screen-2xl grid-cols-5 md:grid
       "
     >
       <div className="my-2xl grid justify-items-center">

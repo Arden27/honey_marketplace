@@ -74,7 +74,7 @@ module.exports = {
   },
 };
 
-// PAGE WRAPPER: w-100 mx-auto max-w-screen-xl
+// PAGE WRAPPER: w-100 mx-auto max-w-screen-2xl
 // TEXT WRAPPER:
 
 // FLEX-COL: flex flex-col items-center justify-center
@@ -84,7 +84,7 @@ module.exports = {
 //
 //
 //
-//
+// BORDER RADIUS 50%: overflow-hidden rounded-[3rem]
 //
 //
 //

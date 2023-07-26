@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main>
       <div
-        className="w-100 mx-auto mt-header-bar-sm grid h-80 max-w-screen-xl gap-gap pt-2xl md:mt-0
+        className="w-100 mx-auto mt-header-bar-sm grid h-80 max-w-screen-2xl gap-gap pt-2xl md:mt-0
       md:grid-cols-2 md:pt-0"
       >
         <HeroBox />
@@ -27,7 +27,7 @@ export default function Home() {
 
       <AboutBox />
 
-      <div className="w-100 mx-auto grid max-w-screen-xl gap-gap md:grid-cols-2 ">
+      <div className="w-100 mx-auto grid max-w-screen-2xl gap-gap md:grid-cols-2 ">
         <RegisterBox />
         <RecommendedBox />
         <ArticlesBox />
