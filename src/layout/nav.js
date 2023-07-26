@@ -38,76 +38,78 @@ export default function NavBar() {
         w-3/5 h-full sticky top-header-bar-sm hidden 
         lg:sticky lg:top-0 lg:flex lg:h-full lg:w-full lg:items-center"
       >
-        <ul className="lg:flex">
-          <li className="">
-            <Link className="btn-sm hover:text-header-bar-bg" href="/sklep">
-              Sklep
-            </Link>
+        <div className={`nav-bar ${open ? "lg:flex" : "hidden lg:block"}`} ref={node}>
+          <ul className="lg:flex">
+            <li className="">
+              <Link className="btn-sm hover:text-header-bar-bg" href="/sklep">
+                Sklep
+              </Link>
 
-            <ul className="lg:hidden">
-              <li className="">
-                <Link
-                  className="btn-sm hover:text-header-bar-bg"
-                  href="/sklep/promocje"
-                >
-                  Promocje
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="btn-sm hover:text-header-bar-bg"
-                  href="/sklep/miody"
-                >
-                  Miody
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="btn-sm hover:text-header-bar-bg"
-                  href="/sklep/produkty-pszczele"
-                >
-                  Produkty pszczele
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="btn-sm hover:text-header-bar-bg"
-                  href="/sklep/swiece"
-                >
-                  Świece
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="btn-sm hover:text-header-bar-bg"
-                  href="/sklep/zestawy"
-                >
-                  Zestawy
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="nav__list__item">
-            <Link className="btn-sm hover:text-header-bar-bg" href="/o-nas">
-              O nas
-            </Link>
-          </li>
-          <li className="nav__list__item">
-            <Link className="btn-sm hover:text-header-bar-bg" href="/artykuly">
-              Artykuły
-            </Link>
-          </li>
-          <li className="nav__list__item">
-            <Link className="btn-sm hover:text-header-bar-bg" href="/matki">
-              Matki
-            </Link>
-          </li>
-          <li className="nav__list__item">
-            <Link className="btn-sm hover:text-header-bar-bg" href="/kontakt">
-              Kontakt
-            </Link>
-          </li>
-        </ul>
+              <ul className="lg:hidden">
+                <li className="">
+                  <Link
+                    className="btn-sm hover:text-header-bar-bg"
+                    href="/sklep/promocje"
+                  >
+                    Promocje
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    className="btn-sm hover:text-header-bar-bg"
+                    href="/sklep/miody"
+                  >
+                    Miody
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    className="btn-sm hover:text-header-bar-bg"
+                    href="/sklep/produkty-pszczele"
+                  >
+                    Produkty pszczele
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    className="btn-sm hover:text-header-bar-bg"
+                    href="/sklep/swiece"
+                  >
+                    Świece
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    className="btn-sm hover:text-header-bar-bg"
+                    href="/sklep/zestawy"
+                  >
+                    Zestawy
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav__list__item">
+              <Link className="btn-sm hover:text-header-bar-bg" href="/o-nas">
+                O nas
+              </Link>
+            </li>
+            <li className="nav__list__item">
+              <Link className="btn-sm hover:text-header-bar-bg" href="/artykuly">
+                Artykuły
+              </Link>
+            </li>
+            <li className="nav__list__item">
+              <Link className="btn-sm hover:text-header-bar-bg" href="/matki">
+                Matki
+              </Link>
+            </li>
+            <li className="nav__list__item">
+              <Link className="btn-sm hover:text-header-bar-bg" href="/kontakt">
+                Kontakt
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );
