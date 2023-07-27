@@ -10,7 +10,7 @@ import Footer from "../layout/footer";
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <Head></Head>
+      {/* <Head></Head> */}
 
       <body className=" bg-bg">
         <div className="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
