@@ -5,6 +5,7 @@ import HeroBox from "@/components/hero-box";
 import HowToBox from "@/components/how-to-box";
 import AboutBox from "@/components/about-box";
 
+
 import BottomBox from "@/components/bottom-box";
 
 export const metadata = {
