@@ -1,0 +1,96 @@
+@use "./colors" as *;
+
+// Zaciąganie czcionki:
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi Bold";
+  src: url("/fonts/Satoshi-Bold.ttf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300;400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;500;600&display=swap");
+
+// Typ czcionki:
+
+$ff-base: "Satoshi Bold", sans-serif;
+
+$ff-accent: "Open Sans", sans-serif;
+
+// Wielkość czcionki:
+
+$fs-base-300: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem);
+$fs-base-400: clamp(1.35rem, calc(1.25rem + 0.6vw), 1.77rem);
+$fs-base-500: clamp(1.62rem, calc(1.4rem + 1.26vw), 2.5rem);
+$fs-base-600: clamp(1.94rem, calc(1.55rem + 2.27vw), 3.53rem);
+$fs-base-700: clamp(2.33rem, calc(1.67rem + 3.81vw), 5rem);
+$fs-base-800: clamp(2.8rem, calc(1.73rem + 6.09vw), 7.07rem);
+
+$fs-accent-300: clamp(1rem, calc(1.16rem + 0.18vw), 1.13rem);
+$fs-accent-400: clamp(1.2rem, calc(1.16rem + 0.19vw), 1.33rem);
+$fs-accent-500: clamp(1.28rem, calc(1.15rem + 0.72vw), 1.78rem);
+$fs-accent-600: clamp(1.37rem, calc(1.09rem + 1.46vw), 2.37rem);
+$fs-accent-700: clamp(1.46rem, calc(0.99rem + 2.47vw), 3.16rem);
+$fs-accent-800: clamp(1.56rem, calc(0.83rem + 3.86vw), 4.21rem);
+
+// Odstępy pomiędzy wierszami:
+
+$text-flow: 1em;
+
+//
+
+body {
+  font-size: $fs-base-400;
+  font-family: $ff-base;
+  font-weight: 300;
+  line-height: 1.6;
+  color: $clr-text;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $ff-accent;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: $fs-accent-600;
+  $text-flow: 3em;
+}
+
+h2 {
+  font-size: $fs-accent-600;
+  $text-flow: 1.5em;
+}
+
+h3 {
+  font-size: $fs-accent-500;
+  $text-flow: 1em;
+}
+
+a {
+  color: $clr-text;
+}
+
+a:hover,
+a:focus {
+  color: $clr-accent;
+}
+
+::marker {
+  color: $ff-accent;
+}
+
+// Sowa po lobotomii, zaznacza wszystkie dzieci za wyjątkiem pierwszego:
+
+.text-flow > * + * {
+  margin-top: $text-flow;
+}
+
+//

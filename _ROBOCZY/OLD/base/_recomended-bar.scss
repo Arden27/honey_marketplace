@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as *;
+@use "../base/spaces" as *;
+
+.recomended-bar {
+  @include box-image;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: $space-gap;
+}

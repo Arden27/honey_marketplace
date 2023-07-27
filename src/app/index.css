@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Satoshi Bold";
+    src: url("/fonts/Satoshi-Bold.ttf") format("truetype");
+  }
+
+  :root {
+    --text-flow: 1em;
+  }
+
+  html {
+    @apply text-[62.5%];
+  }
+  body {
+    @apply text-base text-text;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+
+    text-wrap: balance;
+  }
+
+  h1 {
+    --text-flow: 3em;
+
+    @apply text-lg;
+  }
+
+  h2 {
+    --text-flow: 2.5em;
+
+    @apply text-md;
+  }
+
+  h3 {
+    --text-flow: 1em;
+  }
+
+  article > * + * {
+    @apply mt-[var(--text-flow)];
+  }
+
+  a:hover,
+  a:focus {
+    @apply text-accent;
+  }
+
+  .btn-sm {
+    @apply flex h-btn-sm min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text;
+  }
+
+  .btn-sm:hover {
+    @apply border-text bg-text;
+  }
+
+  .btn-lg {
+    @apply flex h-btn-lg min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text;
+  }
+
+  .btn-lg:hover {
+    @apply border-text bg-text;
+  
+  }
+
+  .btn-border {
+    @apply border-text;
+  }
+
+  .box {
+    @apply overflow-hidden rounded-[3rem] p-gap;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

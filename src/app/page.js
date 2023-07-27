@@ -1,34 +1,36 @@
-import Hero from "../components/home/hero";
-import HowTo from "../components/home/how-to";
-import Description from "../components/home/description";
-import Register from "../components/register-bar";
-import RecomendedBar from "../components/recomended-bar.js";
-import ArticlesBar from "../components/articles-bar";
-import Link from 'next/link'
+import Link from "next/link";
 
+import ShopMenu from "@/components/shop-menu";
+import HeroBox from "@/components/hero-box";
+import HowToBox from "@/components/how-to-box";
+import AboutBox from "@/components/about-box";
+
+import BottomBox from "@/components/bottom-box";
 
 export const metadata = {
-	title: "Kurpiowski Bartnik",
-	description: "OPIS",
-	keywords: "TAGI",
+  title: "Kurpiowski Bartnik",
+  description: "OPIS",
+  keywords: "TAGI",
 };
 
 export default function Home() {
-	return (
-		<main className="main home">
-			<div className="page-wrapper home__1">
-				<Hero />
-				<HowTo />
-			</div>
+  return (
+    <main className="">
+      <ShopMenu />
 
-			<Description />
-				
-			<div className="page-wrapper home__2">
-				<Register />
-				<RecomendedBar />
-				<ArticlesBar />
-			</div>
-			
-		</main>
-	);
+      <div
+        className="mx-auto grid h-80 w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap 
+      md:grid-cols-2"
+      >
+        <HeroBox />
+
+        <HowToBox />
+      </div>
+
+      <AboutBox />
+      <div className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+        <BottomBox />
+      </div>
+    </main>
+  );
 }
