@@ -36,16 +36,27 @@ export default function ShopItem() {
             className="absolute flex h-btn-lg items-center justify-items-center rounded-[3rem] border-2 border-text bg-shop-item-bg
           "
           >
-            <button className="h-3xs w-3xs m-2xs p-xs  hover:bg-text rounded-full ">-</button>
+            <button
+              className="ml-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
+            hover:bg-text hover:text-bg"
+            >
+              -
+            </button>
             <input
-              className="h-xl w-xl rounded-[3rem] bg-transparent font-btn text-sm text-center"
+              className="h-xl w-xl rounded-[3rem] bg-transparent text-center font-btn text-sm"
               type="number"
               defaultValue="1"
               min="1"
+              max="99"
             />
-            <button className="pr-xs">+</button>
+            <button
+              className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
+            hover:bg-text hover:text-bg"
+            >
+              -
+            </button>
           </div>
-          <button className="btn-lg border-text pl-[10rem] hover:text-shop-item-bg">
+          <button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg">
             Dodaj do koszyka
           </button>
         </div>
