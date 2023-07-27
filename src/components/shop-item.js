@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ShopItem() {
   return (
-    <section className="grid h-[calc(theme(spacing.header-bar-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-shop-item-bg">
+    <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.2xs))] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-shop-item-bg md:h-[calc(100svh-5*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.xs))]">
       <Image
         className="h-full w-full object-cover object-center"
         src="/img/home/jak-rozpoznac.jpg"
@@ -23,8 +23,10 @@ export default function ShopItem() {
         </div>
 
         <div className="flex">
-          <div className="mx-xs text-warning line-through">
-            <h3>99,90 zł</h3>
+          <div className="mx-xs ">
+            <h3>
+              <del className="text-warning">99,90 zł</del>
+            </h3>
           </div>
           <div className="mx-xs">
             <h3>99,90 zł</h3>
@@ -56,8 +58,8 @@ export default function ShopItem() {
               +
             </button>
           </div>
-          <button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg">
-            Dodaj do koszyka
+          <button className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item-bg">
+            Dodaj do koszyka <span className="sr-only">PRODUCT_NAME</span>
           </button>
         </div>
       </div>

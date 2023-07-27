@@ -9,9 +9,13 @@ export default function ShopMenu() {
       "
     >
       <div className="grid justify-items-center ">
-        <Link className="" href="/sklep/promocje" tabIndex={-1}>
+        <Link
+          className=""
+          href="/sklep/promocje"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
           <Image
-            
             className="h-shop-menu-img w-shop-menu-img rounded-full"
             src="/img/logo.png"
             width={80}
@@ -24,7 +28,7 @@ export default function ShopMenu() {
         </Link>
       </div>
       <div className="grid justify-items-center">
-        <Link className="" href="/sklep/miody" tabIndex={-1}>
+        <Link className="" href="/sklep/miody" aria-hidden="true" tabIndex={-1}>
           <Image
             className="h-shop-menu-img w-shop-menu-img rounded-full"
             src="/img/logo.png"
@@ -38,7 +42,12 @@ export default function ShopMenu() {
         </Link>
       </div>
       <div className="grid justify-items-center">
-        <Link className="" href="/sklep/produkty-pszczele" tabIndex={-1}>
+        <Link
+          className=""
+          href="/sklep/produkty-pszczele"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
           <Image
             className="h-shop-menu-img w-shop-menu-img rounded-full"
             src="/img/logo.png"
@@ -54,7 +63,12 @@ export default function ShopMenu() {
         </Link>
       </div>
       <div className="grid justify-items-center">
-        <Link className="" href="/sklep/swiece" tabIndex={-1}>
+        <Link
+          className=""
+          href="/sklep/swiece"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
           <Image
             className="h-shop-menu-img w-shop-menu-img rounded-full"
             src="/img/logo.png"
@@ -70,7 +84,12 @@ export default function ShopMenu() {
         </Link>
       </div>
       <div className="grid justify-items-center">
-        <Link className="" href="/sklep/zestawy" tabIndex={-1}>
+        <Link
+          className=""
+          href="/sklep/zestawy"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
           <Image
             className="h-shop-menu-img w-shop-menu-img  rounded-full"
             src="/img/logo.png"

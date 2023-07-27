@@ -12,7 +12,7 @@ export default function Cart() {
   return (
     <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
       KOSZYK
-      <BottomBox />
+
     </main>
   );
 }

@@ -1,22 +1,22 @@
 import React from "react";
-//import Head from "next/head";
+
 import Providers from "@/redux/provider";
 
-import "./index.css";
+import "@/style/index.css";
 
 import Header from "../layout/header";
 import Footer from "../layout/footer";
+import BottomBox from "@/components/bottom-box";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      {/* <Head></Head> */}
-
       <body className="  bg-bg">
-        <div className="min-h-screen grid-rows-[auto_minmax(0,1fr)_auto] grid grid-cols-1 ">
+        <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] ">
           <Providers>
             <Header />
             {children}
+            <BottomBox />
             <Footer />
           </Providers>
         </div>

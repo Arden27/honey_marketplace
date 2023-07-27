@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div>
           <h2>Dane Pasieki</h2>
-          <p>
+          <address>
             Stanisław Młynarczyk
             <br />
             Olszyny 26
@@ -71,10 +71,10 @@ export default function Footer() {
             <br />
             Nr weterynaryjny 14156077
             <br />
-          </p>
+          </address>
         </div>
 
-        <ul className="col-span-full">
+        <ul className=" grid  md:col-start-4 md:col-end-[-1]  md:row-start-2 md:text-right">
           <li>
             <Link href="/">Fb</Link>
             <Link href="/">Ins</Link>
@@ -83,7 +83,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <p className="col-span-full">
+        <p className="col-span-full md:col-start-1  md:col-end-4 md:row-start-2">
           Copyright &copy; 2023 <Link href="/">Kurpiowski Bartnik</Link>.
           Wszystkie prawa zastrzeżone.
         </p>

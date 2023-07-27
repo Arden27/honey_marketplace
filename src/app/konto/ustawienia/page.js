@@ -12,7 +12,7 @@ export default function Settings() {
   return (
     <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
       USTAWIENIA KONTA
-      <BottomBox />
+
     </main>
   );
 }
