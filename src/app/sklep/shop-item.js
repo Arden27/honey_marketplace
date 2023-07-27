@@ -30,12 +30,12 @@ function ShopItem({ item }) {
 	};
 
 	return (
-		<div className="shop__item">
+		<section className="grid h-[calc(theme(spacing.header-bar-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-shop-item-bg">
 			<Image
 				className="h-full w-full object-cover object-center"
 				src={item.image}
-				width={500}
-				height={500}
+				width={100}
+				height={100}
 				alt={item.name}
 			/>
 
@@ -56,7 +56,7 @@ function ShopItem({ item }) {
 
 				<div className="flex">
 					<div className="mx-xs text-warning line-through">
-						<h3>{selectedPrice * 1.1} zł</h3>
+						<h3>{selectedPrice} zł</h3>
 					</div>
 					<div className="mx-xs">
 						<h3>{selectedPrice} zł</h3>
@@ -93,7 +93,7 @@ function ShopItem({ item }) {
 					</button>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
