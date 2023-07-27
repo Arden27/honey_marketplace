@@ -53,7 +53,7 @@ export default function ShopItem() {
               className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
             hover:bg-text hover:text-bg"
             >
-              -
+              +
             </button>
           </div>
           <button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg">
