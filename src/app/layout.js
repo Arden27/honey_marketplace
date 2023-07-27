@@ -10,7 +10,6 @@ import Footer from "../layout/footer";
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <Head></Head>
       {/* <Head></Head> */}
 
       <body className="  bg-bg">
