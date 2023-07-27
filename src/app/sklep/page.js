@@ -5,13 +5,7 @@ import FilterItemsBtn from "@/components/filter-items-btn";
 import ShopItem from "@/components/shop-item";
 import Pagination from "@/components/pagination";
 
-<<<<<<< HEAD
-import RegisterBox from "@/components/register-box";
-import RecommendedBox from "@/components/recommended-box";
-import ArticlesBox from "@/components/articles-box";
-=======
 import BottomBox from "@/components/bottom-box";
->>>>>>> Tailwind
 
 export const metadata = {
   title: "Sklep - Kurpiowski Bartnik",
@@ -40,15 +34,7 @@ export default function Home() {
         <Pagination />
       </section>
 
-<<<<<<< HEAD
-      <section className="w-100 m-auto  mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl md:grid-cols-2">
-        <RegisterBox />
-        <RecommendedBox />
-        <ArticlesBox />
-      </section>
-=======
       <BottomBox />
->>>>>>> Tailwind
     </main>
   );
 }
