@@ -34,29 +34,29 @@ export default function Footer() {
             <Link href="/regulamin">Regulamin</Link>
           </li>
           <li>
-            <Link href="/prywatnosc">Polityka prywatności</Link>
+            <Link href="/polityka-prywatnosci">Polityka prywatności</Link>
           </li>
           <li>
             <Link href="/dostawa">Dostawa</Link>
           </li>
           <li>
-            <Link href="/reklamacje">Zwroty i reklamacje</Link>
+            <Link href="/zwroty-i-reklamacje">Zwroty i reklamacje</Link>
           </li>
         </ul>
 
         <ul>
           <h2>Moje konto</h2>
           <li>
-            <Link href="/zamowienia">Zamówienia</Link>
+            <Link href="/konto/zamowienia">Zamówienia</Link>
           </li>
           <li>
-            <Link href="/opinie">Opinie</Link>
+            <Link href="/konto/opinie">Opinie</Link>
           </li>
           <li>
-            <Link href="/ustawienia">Ustawienia</Link>
+            <Link href="/konto/ustawienia">Ustawienia</Link>
           </li>
           <li>
-            <Link href="/">Wyloguj się</Link>
+            <button>Wyloguj się</button>
           </li>
         </ul>
 

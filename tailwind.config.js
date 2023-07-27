@@ -13,7 +13,7 @@ module.exports = {
         bg: "#f8dda5",
         bg2: "#e5be92",
         bg3: "#ffefca",
-        text: "#2b1800",
+        text: "#3f260b",
 
         "header-bar-bg": "theme('colors.secondary')",
         "nav-bar-bg": "theme('colors.primary')",
