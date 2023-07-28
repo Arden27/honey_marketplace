@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer-bg">
+    <footer className="bg-footer">
       <div
         className="w-100 mx-auto mb-gap mt-xl grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl grid-cols-2 justify-between gap-gap 
         md:grid-cols-4"

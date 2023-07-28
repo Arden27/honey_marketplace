@@ -29,7 +29,7 @@
     height: $space-header-bar-s;
     width: 100%;
 
-    background: $clr-header-bar-bg;
+    background: $clr-header;
 
     @include media-query-header-bar-l {
       height: calc($space-header-bar-l);
@@ -62,7 +62,7 @@
         width: calc($space-header-bar-s + 3rem);
 
         border-radius: 50%;
-        background: $clr-header-bar-bg;
+        background: $clr-header;
 
         @include media-query-header-bar-l {
           height: calc($space-header-bar-l + 3rem);

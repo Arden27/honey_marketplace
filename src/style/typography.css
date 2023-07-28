@@ -1,5 +1,4 @@
 @layer base {
-
   :root {
     --text-flow: 1em;
   }
@@ -45,7 +44,7 @@
   }
 
   .btn-sm {
-    @apply flex h-btn-sm min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text;
+    @apply flex h-btn-sm min-w-max rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text items-center justify-center;
   }
 
   .btn-sm:hover {
@@ -53,12 +52,11 @@
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-max items-center justify-items-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text;
+    @apply flex h-btn-lg min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text;
   }
 
   .btn-lg:hover {
     @apply border-text bg-text;
-  
   }
 
   .btn-border {
@@ -67,6 +65,15 @@
 
   .box {
     @apply overflow-hidden rounded-[3rem] p-gap;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 

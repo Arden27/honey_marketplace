@@ -57,78 +57,62 @@ export default function NavBar() {
       </button>
 
       <Link
-        className="btn-sm
-        btn-border hover:text-header-bar-bg
-        lg:hidden"
+        className="btn-sm btn-border hover:text-header lg:hidden"
         href="/sklep"
       >
         Sklep
       </Link>
 
       <nav
-        className={` lg:sticky lg:top-0 lg:flex lg:h-full lg:w-full lg:items-center
-        max-lg:absolute max-lg:top-header-bar-sm max-lg:h-full max-lg:w-3/5 max-lg:bg-slate-400
+        className={` 
+        max-lg:
+        max-lg:h-[calc(100svh-theme(spacing.3xl)) rounded-r-[3rem] lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] max-lg:w-4/5
+        max-lg:bg-nav max-md:top-header-sm 
+        max-md:h-[calc(100svh-theme(spacing.3xl))]
+
         ${open ? "flex " : "hidden"} `}
         ref={node}
       >
-        <ul className=" [&_a]:btn-sm lg:flex hover:lg:[&_a]:text-header-bar-bg">
+        <ul className="lg:[&_a]:btn-sm lg:flex hover:lg:[&_a]:text-header">
           <li>
-            <Link className="  xl:flex " href="/">
-              Główna
-            </Link>
-          </li>
-          <li className="">
-            <Link className="btn-sm !btn-border" href="/sklep">
+            <Link className=" lg:!border-text" href="/sklep">
               Sklep
             </Link>
 
             <ul className="lg:hidden">
-              <li className="">
-                <Link className="" href="/sklep/promocje">
-                  Promocje
-                </Link>
+              <li>
+                <Link href="/sklep/promocje">Promocje</Link>
               </li>
-              <li className="">
-                <Link className="" href="/sklep/miody">
-                  Miody
-                </Link>
+              <li>
+                <Link href="/sklep/miody">Miody</Link>
               </li>
-              <li className="">
-                <Link className="" href="/sklep/produkty-pszczele">
-                  Produkty pszczele
-                </Link>
+              <li>
+                <Link href="/sklep/produkty-pszczele">Produkty pszczele</Link>
               </li>
-              <li className="">
-                <Link className="" href="/sklep/swiece">
-                  Świece
-                </Link>
+              <li>
+                <Link href="/sklep/swiece">Świece</Link>
               </li>
-              <li className="">
-                <Link className="" href="/sklep/zestawy">
-                  Zestawy
-                </Link>
+              <li>
+                <Link href="/sklep/zestawy">Zestawy</Link>
               </li>
             </ul>
           </li>
-          <li className="">
-            <Link className="" href="/o-nas">
-              O nas
+          <li>
+            <Link className="lg:!hidden xl:!flex" href="/">
+              Główna
             </Link>
           </li>
-          <li className="">
-            <Link className="" href="/artykuly">
-              Artykuły
-            </Link>
+          <li>
+            <Link href="/o-nas">O nas</Link>
           </li>
-          <li className="">
-            <Link className="" href="/matki">
-              Matki
-            </Link>
+          <li>
+            <Link href="/artykuly">Artykuły</Link>
           </li>
-          <li className="">
-            <Link className="" href="/kontakt">
-              Kontakt
-            </Link>
+          <li>
+            <Link href="/matki">Matki</Link>
+          </li>
+          <li>
+            <Link href="/kontakt">Kontakt</Link>
           </li>
         </ul>
       </nav>

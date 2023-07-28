@@ -6,8 +6,9 @@ module.exports = {
     extend: {
       screens: {
         "max-lg": { max: "1023px" },
+        "max-md": { max: "768px" },
       },
-      
+
       colors: {
         primary: "#b89786",
         secondary: "#d19d5e",
@@ -19,13 +20,16 @@ module.exports = {
         bg3: "#ffefca",
         text: "#3f260b",
 
-        "header-bar-bg": "theme('colors.secondary')",
-        "nav-bar-bg": "theme('colors.primary')",
-        "about-box-bg": "theme(colors.bg2)",
+        header: "theme('colors.secondary')",
+        nav: "theme('colors.primary')",
+        "cart-bar": "theme('colors.primary')",
+        "cart-bar-item": "theme('colors.accent')",
 
-        "shop-bg": "theme(colors.bg2)",
-        "shop-item-bg": "theme('colors.bg3')",
-        "footer-bg": "theme('colors.accent')",
+        "about-box": "theme(colors.bg2)",
+
+        shop: "theme(colors.bg2)",
+        "shop-item": "theme('colors.bg3')",
+        footer: "theme('colors.accent')",
       },
 
       spacing: {
@@ -51,13 +55,12 @@ module.exports = {
         "btn-sm": "theme('spacing.xl')",
         "btn-lg": "calc(theme('spacing.xl') + theme('spacing.sm'))",
 
-        "header-bar-sm": "theme(spacing.3xl)",
-        "header-bar-lg": "calc(theme('spacing.3xl') + theme('spacing.sm'))",
+        "header-sm": "theme(spacing.3xl)",
+        "header-lg": "calc(theme('spacing.3xl') + theme('spacing.sm'))",
 
         "shop-menu-img": "theme('spacing.3xl')",
         "shop-menu":
           "calc(2 * theme('spacing.3xl') + theme('spacing.lg') + theme('spacing.sm'))",
-        // "shop-menu": "calc((2 * theme('spacing.3xl')) + theme('spacing.lg') + theme('spacing.s'))",
       },
 
       fontFamily: {

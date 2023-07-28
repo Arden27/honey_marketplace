@@ -5,12 +5,12 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <div
-      className="relative flex h-header-bar-sm justify-center
-      md:h-header-bar-lg"
+      className="relative flex h-header-sm justify-center
+      md:h-header-lg"
     >
       <div
-        className="absolute -top-4
-              h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full bg-header-bar-bg
+        className="absolute -top-4 z-10
+              h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full bg-header
               md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)]
             "
       ></div>

@@ -26,7 +26,7 @@
     border: 2px solid $clr-text;
     background: $clr-text;
     fill: $clr-text;
-    color: $clr-header-bar-bg;
+    color: $clr-header;
   }
 }
 
@@ -54,7 +54,7 @@
     border: 2px solid $clr-text;
     background: $clr-text;
     fill: $clr-text;
-    color: $clr-header-bar-bg;
+    color: $clr-header;
   }
 }
 
@@ -84,7 +84,7 @@
     &:hover {
       background: $clr-text;
       fill: $clr-text;
-      color: $clr-header-bar-bg;
+      color: $clr-header;
     }
   }
   &-subtract {
@@ -100,7 +100,7 @@
     border: none;
     @include round-corners;
 
-    background: $clr-shop-item-bg;
+    background: $clr-shop-item;
     text-align: center;
   }
 }

@@ -12,7 +12,7 @@
     margin-bottom: $space-gap;
 
     @include round-corners;
-    background-color: $clr-shop-bg;
+    background-color: $clr-shop;
 
     padding: $space-gap;
 
@@ -53,7 +53,7 @@
     @include round-corners;
     overflow: hidden;
 
-    background-color: $clr-shop-item-bg;
+    background-color: $clr-shop-item;
 
     @include media-query-shop-menu {
       height: calc(
@@ -126,7 +126,7 @@
         &__quantity-btn {
           position: absolute;
 
-          background-color: $clr-shop-item-bg;
+          background-color: $clr-shop-item;
         }
 
         &__btn {
@@ -135,7 +135,7 @@
           padding-left: calc($space-3xl);
           border: 2px solid;
 
-          background: $clr-shop-item-bg;
+          background: $clr-shop-item;
         }
       }
     }

@@ -10,13 +10,16 @@ const Cart = () => {
   const [open, setOpen] = useState(false);
 
   const handleClickOutside = (e) => {
-		if (node.current.contains(e.target) || buttonRef.current.contains(e.target)) {
-			// inside click
-			return;
-		}
-		// outside click
-		setOpen(false);
-	};
+    if (
+      node.current.contains(e.target) ||
+      buttonRef.current.contains(e.target)
+    ) {
+      // inside click
+      return;
+    }
+    // outside click
+    setOpen(false);
+  };
 
   useEffect(() => {
     // add when mounted
@@ -46,14 +49,47 @@ const Cart = () => {
         </svg>
       </button>
 
-      <div className={open ? "flex" : "hidden"}
+      <div
+        className={`
+      max-w-3/5 no-scrollbar absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col overflow-scroll rounded-l-[3rem]
+      bg-cart-bar p-gap md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] pt-xl md:pt-gap
+      ${open ? "flex" : "hidden"} `}
         ref={node}
       >
-        <div className="">
-          <p>item1</p>
-          <p>item2</p>
-          {/* Add cart items here */}
+        <div className="mb-gap grid h-[15rem] grid-cols-[1fr_2fr] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-cart-bar-item ">
+          <Image
+            className="row-span-2 h-full w-full object-cover object-center"
+            src="/img/home/jak-rozpoznac.jpg"
+            width={50}
+            height={50}
+            alt="Nazwa produktu"
+          />
+          <h3 className="p-sm">Miód rzepakowy z nutką gryki</h3>
+
+          <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] p-sm">
+            <button className="btn-sm">
+              -1+
+              {/* <RadioBtn /> */}
+            </button>
+
+            <h3 className="flex items-center justify-center ">x 99,99zł</h3>
+            <button className="btn-sm">DEL</button>
+          </div>
         </div>
+
+        <div className="mx-xs mb-xs flex items-end justify-between text-warning">
+          <h3 className="text-end">Rabat:</h3>
+
+          <h3 className="">-999,99 zł</h3>
+        </div>
+
+        <div className="mx-xs mb-gap flex items-end justify-between">
+          <h2 className="text-end">Razem:</h2>
+
+          <h2>999,99 zł</h2>
+        </div>
+
+        <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
       </div>
     </React.Fragment>
   );

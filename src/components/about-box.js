@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function AboutBox() {
   return (
-    <section className=" my-3xl w-full bg-about-box-bg pb-2xl pt-3xl">
+    <section className=" my-3xl w-full bg-about-box pb-2xl pt-3xl">
       <article className="w-100 m-auto mx-auto flex w-[calc(100%-2*theme(spacing.md))] max-w-[80ch] flex-col">
-        <h2 className="font-serif text-m">Miód z Kurpiów</h2>
+        <h2 className="text-m font-serif">Miód z Kurpiów</h2>
         <p className="font-sans">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
           temporibus tenetur nostrum eligendi rerum, et deserunt at minus
@@ -17,7 +17,7 @@ export default function AboutBox() {
           blanditiis, odit corporis quos ipsa fugit, aliquam
         </p>
 
-        <Link className="w-fit self-end border-2 font-btn" href="/o-nas">
+        <Link className="btn-sm btn-border self-end font-btn hover:text-bg2" href="/o-nas">
           Czytaj dalej
         </Link>
       </article>
