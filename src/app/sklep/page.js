@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import ShopMenu from "@/components/shop-menu";
 import FilterItemsBtn from "@/components/filter-items-btn";
-import ShopItem from "@/components/shop-item";
+import ShopItem from "./shop-item";
 import Pagination from "@/components/pagination";
 
 import BottomBox from "@/components/bottom-box";
@@ -13,7 +13,41 @@ export const metadata = {
   keywords: "TAGI",
 };
 
-export default function Home() {
+export default function Shop() {
+	const items = [
+		{
+			id: 1,
+			name: "Miód rzepakowy",
+			image: "/img/home/jak-rozpoznac.jpg",
+			sizes: [
+				{ size: "250 G", price: 59.9 },
+				{ size: "450 G", price: 79.9, default: true },
+				{ size: "1 KG", price: 99.9 },
+			],
+		},
+		{
+			id: 2,
+			name: "Miód rzepakowy\nz nutką gryki",
+			image: "/img/logo.png",
+			sizes: [
+				{ size: "250 G", price: 59.9 },
+				{ size: "450 G", price: 79.9 },
+				{ size: "1 KG", price: 99.9, default: true },
+			],
+		},
+		{
+			id: 3,
+			name: "Miód rzepakowy\nz nutką gryki",
+			image: "/img/logo.png",
+			sizes: [
+				{ size: "250 G", price: 59.9 },
+				{ size: "450 G", price: 79.9 },
+				{ size: "1 KG", price: 99.9 },
+			],
+		},
+		// add more items as needed
+	];
+
   return (
     <main className="">
       <ShopMenu />
@@ -26,10 +60,9 @@ export default function Home() {
           <FilterItemsBtn />
         </div>
 
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
+		{items.map((item) => (
+			<ShopItem key={item.id} item={item} />
+		))}
 
         <Pagination />
       </section>

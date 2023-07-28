@@ -6,16 +6,17 @@ import Image from "next/image";
 
 const Cart = () => {
   const node = useRef();
+  const buttonRef = useRef(null);
   const [open, setOpen] = useState(false);
 
   const handleClickOutside = (e) => {
-    if (node.current.contains(e.target)) {
-      // inside click
-      return;
-    }
-    // outside click
-    setOpen(false);
-  };
+		if (node.current.contains(e.target) || buttonRef.current.contains(e.target)) {
+			// inside click
+			return;
+		}
+		// outside click
+		setOpen(false);
+	};
 
   useEffect(() => {
     // add when mounted
@@ -27,12 +28,8 @@ const Cart = () => {
   }, []);
 
   return (
-    <div
-      className={`${open ? "open" : ""}`}
-      onClick={() => setOpen(!open)}
-      ref={node}
-    >
-      <button>
+    <React.Fragment>
+      <button ref={buttonRef} onClick={() => setOpen(!open)}>
         <svg
           width="25"
           height="25"
@@ -49,13 +46,16 @@ const Cart = () => {
         </svg>
       </button>
 
-      <div className="">
-        <button className="" onClick={() => setOpen(false)}>
-          close
-        </button>
-        <div className="">{/* Add cart items here */}</div>
+      <div className={open ? "flex" : "hidden"}
+        ref={node}
+      >
+        <div className="">
+          <p>item1</p>
+          <p>item2</p>
+          {/* Add cart items here */}
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

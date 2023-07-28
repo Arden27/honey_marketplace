@@ -14,10 +14,10 @@ function RadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
 			/>
 			<label
 				htmlFor={`weight-${sizeObj.size}-${item.id}`}
-				className={`px-4 py-2 uppercase text-sm font-medium border-2 rounded-md cursor-pointer ${
+				className={`btn-sm cursor-pointer hover:text-shop-item-bg ${
 					sizeObj.size === selectedSize
-					  ? "bg-black text-white border-black"
-					  : "text-black border-transparent"
+					  ? "text-text border-text"
+					  : "text-text border-transparent"
 				  }`}
 			>
 				{sizeObj.size}
