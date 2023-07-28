@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Nav2() {
+export default function SearchBar() {
   return (
         <button className="">
           <svg

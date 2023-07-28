@@ -4,6 +4,10 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        "max-lg": { max: "1023px" },
+      },
+      
       colors: {
         primary: "#b89786",
         secondary: "#d19d5e",
