@@ -17,13 +17,7 @@ function ShopItem({ item }) {
 	const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
 	const [quantity, setQuantity] = useState(1);
 
-	// Log selectedSize and selectedPrice on each render
-	useEffect(() => {
-		console.log("Quantity", quantity);
-	}, [quantity]);
-
 	const handleSizeChange = (size, price) => {
-		console.log("Changing size to:", size, "and price to:", price); // Log new size and price
 		setSelectedSize(size);
 		setSelectedPrice(price);
 	};
