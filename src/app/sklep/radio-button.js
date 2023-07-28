@@ -16,8 +16,8 @@ function RadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
 				htmlFor={`weight-${sizeObj.size}-${item.id}`}
 				className={`btn-sm cursor-pointer hover:text-shop-item-bg ${
 					sizeObj.size === selectedSize
-					  ? "text-black border-black"
-					  : "text-black border-transparent"
+					  ? "text-text border-text"
+					  : "text-text border-transparent"
 				  }`}
 			>
 				{sizeObj.size}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import ShopMenu from "@/components/shop-menu";
 import FilterItemsBtn from "@/components/filter-items-btn";
-import ShopItem from "@/components/shop-item";
+import ShopItem from "./shop-item";
 import Pagination from "@/components/pagination";
 
 import BottomBox from "@/components/bottom-box";
