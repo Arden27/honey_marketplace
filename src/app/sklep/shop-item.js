@@ -103,7 +103,7 @@ export default function ShopItem({ item }) {
 						</button>
 					</div>
 					<button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg"
-						onClick={() => dispatch(addToCart(item))}
+						onClick={() => dispatch(addToCart({ id: item.id, weight: selectedSize, quantity }))}
 					>
 						Dodaj do koszyka
 					</button>
