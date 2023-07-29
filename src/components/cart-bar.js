@@ -12,6 +12,7 @@ const Cart = () => {
   const [open, setOpen] = useState(false);
 
   const cartItems = useSelector((state) => state.cart); 
+  const items = useSelector((state) => state.items);
 
   const handleClickOutside = (e) => {
     if (
@@ -60,41 +61,45 @@ const Cart = () => {
       ${open ? "flex" : "hidden"} `}
         ref={node}
       >
-        <div className="mb-gap grid h-[15rem] grid-cols-[1fr_2fr] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-cart-bar-item ">
-          <Image
-            className="row-span-2 h-full w-full object-cover object-center"
-            src="/img/home/jak-rozpoznac.jpg"
-            width={50}
-            height={50}
-            alt="Nazwa produktu"
-          />
-          <h3 className="p-sm">Miód rzepakowy z nutką gryki</h3>
+        {
+          cartItems.length > 0 ? (
+            <React.Fragment>
+              {
+                cartItems.map((cartItem, index) => {
+                  const item = items.find(item => item.id === cartItem.id);
+                  const size = item.sizes.find(size => size.size === cartItem.weight);
+                
+                  return (
+                    <CartItem 
+                      key={cartItem.id + "-" + index} // Create a unique key by combining the item id and index
+                      item={{
+                        ...item,
+                        weight: cartItem.weight,
+                        quantity: cartItem.quantity,
+                        price: size.price
+                      }} 
+                    />
+                  );
+                })
+              }
+              <div className="mx-xs mb-xs flex items-end justify-between text-warning">
+                <h3 className="text-end">Rabat:</h3>
+                <h3 className="">-999,99 zł</h3>
+              </div>
 
-          <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] p-sm">
-            <button className="btn-sm">
-              -1+
-              {/* <RadioBtn /> */}
-            </button>
+              <div className="mx-xs mb-gap flex items-end justify-between">
+                <h2 className="text-end">Razem:</h2>
+                <h2>999,99 zł</h2>
+              </div>
 
-            <h3 className="flex items-center justify-center ">x 99,99zł</h3>
-            <button className="btn-sm">DEL</button>
-          </div>
-        </div>
-        <CartItem />
+              <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
+            </React.Fragment>
+          ) : (
+            <p>Koszyk jest pusty</p>
+          )
+        }
 
-        <div className="mx-xs mb-xs flex items-end justify-between text-warning">
-          <h3 className="text-end">Rabat:</h3>
-
-          <h3 className="">-999,99 zł</h3>
-        </div>
-
-        <div className="mx-xs mb-gap flex items-end justify-between">
-          <h2 className="text-end">Razem:</h2>
-
-          <h2>999,99 zł</h2>
-        </div>
-
-        <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
+        
       </div>
     </React.Fragment>
   );
