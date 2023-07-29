@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useSelector } from 'react-redux';
 import Link from "next/link";
 import Image from "next/image";
+import CartItem from "./cart-item";
 
 const Cart = () => {
   const node = useRef();
   const buttonRef = useRef(null);
   const [open, setOpen] = useState(false);
+
+  const cartItems = useSelector((state) => state.cart); 
 
   const handleClickOutside = (e) => {
     if (
@@ -76,6 +80,7 @@ const Cart = () => {
             <button className="btn-sm">DEL</button>
           </div>
         </div>
+        <CartItem />
 
         <div className="mx-xs mb-xs flex items-end justify-between text-warning">
           <h3 className="text-end">Rabat:</h3>

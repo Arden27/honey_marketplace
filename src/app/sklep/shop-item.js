@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/store';
+
 // import RadioButton from "./radio-button";
 
 import dynamic from "next/dynamic";
@@ -18,10 +21,12 @@ export default function ShopItem({ item }) {
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
 
-  const handleSizeChange = (size, price) => {
-    setSelectedSize(size);
-    setSelectedPrice(price);
-  };
+	const dispatch = useDispatch();
+
+	const handleSizeChange = (size, price) => {
+		setSelectedSize(size);
+		setSelectedPrice(price);
+	};
 
   return (
     <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-shop-item">
@@ -92,18 +97,18 @@ export default function ShopItem({ item }) {
             <button
               className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
 							hover:bg-text hover:text-bg"
-              onClick={() =>
-                quantity < 99 && setQuantity(Math.round(quantity + 1))
-              }
-            >
-              +
-            </button>
-          </div>
-          <button className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item">
-            Dodaj do koszyka
-          </button>
-        </div>
-      </div>
-    </section>
-  );
+							onClick={() => quantity < 99 && setQuantity(Math.round(quantity + 1))}
+							>
+							+
+						</button>
+					</div>
+					<button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg"
+						onClick={() => dispatch(addToCart(item))}
+					>
+						Dodaj do koszyka
+					</button>
+				</div>
+			</div>
+		</section>
+	);
 }
