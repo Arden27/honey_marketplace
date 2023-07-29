@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 
 import ShopMenu from "@/components/shop-menu";
@@ -7,13 +8,19 @@ import Pagination from "@/components/pagination";
 
 import BottomBox from "@/components/bottom-box";
 
-export const metadata = {
-  title: "Sklep - Kurpiowski Bartnik",
-  description: "OPIS",
-  keywords: "TAGI",
-};
+import { useDispatch } from 'react-redux';
+import { setItems } from "@/redux/store";
+import { useEffect } from "react";
+
+// export const metadata = {
+//   title: "Sklep - Kurpiowski Bartnik",
+//   description: "OPIS",
+//   keywords: "TAGI",
+// };
 
 export default function Shop() {
+	const dispatch = useDispatch();
+
 	const items = [
 		{
 			id: 1,
@@ -47,6 +54,11 @@ export default function Shop() {
 		},
 		// add more items as needed
 	];
+
+	useEffect(() => {
+		dispatch(setItems(items));
+		console.log(items)
+	  }, []);
 
   return (
     <main className="">

@@ -7,6 +7,7 @@ const initialState = {
   shouldRefresh: false,
   isLoggedIn: false,
   cart: [],
+  items: [],
 };
 
 const appSlice = createSlice({
@@ -25,11 +26,14 @@ const appSlice = createSlice({
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
     },
+    setItems: (state, action) => { // add this reducer
+      state.items = action.payload;
+    },
     resetStore: () => initialState,
   },
 });
 
-export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, resetStore } = appSlice.actions;
+export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, setItems, resetStore } = appSlice.actions;
 
 const store = configureStore({
   reducer: appSlice.reducer,
@@ -39,6 +43,7 @@ const store = configureStore({
 // Save state to localStorage whenever it changes
 store.subscribe(() => {
   saveState({
+    items: store.getState().items,
     cart: store.getState().cart,
   });
 });
