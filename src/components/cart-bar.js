@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from 'react-redux';
 import Link from "next/link";
 import Image from "next/image";
+import CartItem from "./cart-item";
 
 const Cart = () => {
   const node = useRef();
@@ -13,13 +14,16 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart); 
 
   const handleClickOutside = (e) => {
-		if (node.current.contains(e.target) || buttonRef.current.contains(e.target)) {
-			// inside click
-			return;
-		}
-		// outside click
-		setOpen(false);
-	};
+    if (
+      node.current.contains(e.target) ||
+      buttonRef.current.contains(e.target)
+    ) {
+      // inside click
+      return;
+    }
+    // outside click
+    setOpen(false);
+  };
 
   useEffect(() => {
     // add when mounted
@@ -49,20 +53,35 @@ const Cart = () => {
         </svg>
       </button>
 
-      <div className={open ? "flex" : "hidden"}
+      <div
+        className={`
+      max-w-3/5 no-scrollbar absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col overflow-scroll rounded-l-[3rem]
+      bg-cart-bar p-gap md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] pt-xl md:pt-gap
+      ${open ? "flex" : "hidden"} `}
         ref={node}
       >
-        <div className="">
-          {
-            cartItems.length > 0 ? (
-              cartItems.map((item, index) => (
-                <p key={index}>{item.name}</p> // Replace with appropriate fields
-              ))
-            ) : (
-              <p>Koszyk jest pusty</p>
-            )
-          }
+        {
+          cartItems.length > 0 ? (
+            cartItems.map(item => (
+              <CartItem key={item.id} item={item} />
+            ))
+          ) : (
+            <p>Koszyk jest pusty</p>
+          )
+        }
+        <div className="mx-xs mb-xs flex items-end justify-between text-warning">
+          <h3 className="text-end">Rabat:</h3>
+
+          <h3 className="">-999,99 zł</h3>
         </div>
+
+        <div className="mx-xs mb-gap flex items-end justify-between">
+          <h2 className="text-end">Razem:</h2>
+
+          <h2>999,99 zł</h2>
+        </div>
+
+        <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
       </div>
     </React.Fragment>
   );
