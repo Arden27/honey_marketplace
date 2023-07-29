@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/store';
+
 // import RadioButton from "./radio-button";
 
 import dynamic from "next/dynamic";
@@ -16,6 +19,8 @@ export default function ShopItem({ item }) {
 	const [selectedSize, setSelectedSize] = useState(defaultSize.size);
 	const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
 	const [quantity, setQuantity] = useState(1);
+
+	const dispatch = useDispatch();
 
 	const handleSizeChange = (size, price) => {
 		setSelectedSize(size);
@@ -94,7 +99,9 @@ export default function ShopItem({ item }) {
 							+
 						</button>
 					</div>
-					<button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg">
+					<button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg"
+						onClick={() => dispatch(addToCart(item))}
+					>
 						Dodaj do koszyka
 					</button>
 				</div>

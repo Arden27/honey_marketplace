@@ -6,7 +6,11 @@ import Nav from "./nav";
 import Logo from "./logo";
 import UserBar from "@/components/user-bar";
 import SearchBar from "@/components/search-bar";
-import CartBar from "@/components/cart-bar";
+// import CartBar from "@/components/cart-bar";
+
+import dynamic from "next/dynamic";
+
+const CartBar = dynamic(() => import("@/components/cart-bar"), { ssr: false });
 
 export default function Header() {
   return (

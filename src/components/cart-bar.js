@@ -1,6 +1,7 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect, useRef } from "react";
+import { useSelector } from 'react-redux';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,6 +9,8 @@ const Cart = () => {
   const node = useRef();
   const buttonRef = useRef(null);
   const [open, setOpen] = useState(false);
+
+  const cartItems = useSelector((state) => state.cart); 
 
   const handleClickOutside = (e) => {
 		if (node.current.contains(e.target) || buttonRef.current.contains(e.target)) {
@@ -50,9 +53,15 @@ const Cart = () => {
         ref={node}
       >
         <div className="">
-          <p>item1</p>
-          <p>item2</p>
-          {/* Add cart items here */}
+          {
+            cartItems.length > 0 ? (
+              cartItems.map((item, index) => (
+                <p key={index}>{item.name}</p> // Replace with appropriate fields
+              ))
+            ) : (
+              <p>Koszyk jest pusty</p>
+            )
+          }
         </div>
       </div>
     </React.Fragment>
