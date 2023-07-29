@@ -21,19 +21,37 @@ const appSlice = createSlice({
       state.isLoggedIn = action.payload;
     },
     addToCart: (state, action) => {
-      state.cart.push(action.payload);
+      // find the item in the cart
+      const existingCartItem = state.cart.find(
+        (item) => item.id === action.payload.id && item.weight === action.payload.weight
+      );
+    
+      if (existingCartItem) {
+        // if the item exists, increment the quantity
+        existingCartItem.quantity += action.payload.quantity;
+      } else {
+        // if the item doesn't exist, add the new item to the cart
+        state.cart.push(action.payload);
+      }
     },
     removeFromCart: (state, action) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+      state.cart = state.cart.filter((item) => item.id !== action.payload.id || item.weight !== action.payload.weight);
     },
-    setItems: (state, action) => { // add this reducer
+    updateCartItem: (state, action) => {
+      state.cart = state.cart.map((item) => 
+        item.id === action.payload.id && item.weight === action.payload.weight 
+        ? {...item, quantity: action.payload.quantity} 
+        : item
+      );
+    },
+    setItems: (state, action) => {
       state.items = action.payload;
     },
     resetStore: () => initialState,
   },
 });
 
-export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, setItems, resetStore } = appSlice.actions;
+export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, updateCartItem, setItems, resetStore } = appSlice.actions;
 
 const store = configureStore({
   reducer: appSlice.reducer,

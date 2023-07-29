@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { removeFromCart } from "@/redux/store";
 import Link from "next/link";
 import Image from "next/image";
 import CartItem from "./cart-item";
@@ -13,6 +15,9 @@ const Cart = () => {
 
   const cartItems = useSelector((state) => state.cart); 
   const items = useSelector((state) => state.items);
+
+  const dispatch = useDispatch();
+  const removeFromCartAction = (item) => dispatch(removeFromCart(item));
 
   const handleClickOutside = (e) => {
     if (
@@ -34,6 +39,10 @@ const Cart = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    // function to run when cartItems changes
+  }, [cartItems]);
 
   return (
     <React.Fragment>
@@ -78,6 +87,7 @@ const Cart = () => {
                         quantity: cartItem.quantity,
                         price: size.price
                       }} 
+                      removeFromCart={removeFromCartAction}
                     />
                   );
                 })
