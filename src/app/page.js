@@ -21,7 +21,7 @@ export default function Home() {
 
       <div
         className="mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap 
-      md:grid-cols-2"
+      md:grid-cols-[2fr_1fr]"
       >
         <HeroBox />
 

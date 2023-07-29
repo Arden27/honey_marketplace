@@ -17,8 +17,8 @@ export default function Header() {
 
       <div className="m-auto w-[calc(100%-2*theme(spacing.md))] ">
         <div
-          className=" flex h-3xl items-center justify-end
-        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
+          className=" [&>*]:ml-3xs flex h-3xl items-center
+        justify-end md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
         >
           <SearchBar />
 

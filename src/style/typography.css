@@ -13,7 +13,7 @@
   h1,
   h2,
   h3 {
-    @apply font-serif;
+    @apply font-serif leading-tight;
 
     text-wrap: balance;
   }
@@ -63,9 +63,6 @@
     @apply border-text;
   }
 
-  .box {
-    @apply overflow-hidden rounded-[3rem] p-gap;
-  }
 
   .no-scrollbar::-webkit-scrollbar {
     display: none;

@@ -66,7 +66,7 @@ module.exports = {
       fontFamily: {
         btn: ["Satoshi Bold"],
         sans: ["Satoshi"],
-        serif: ["Satoshi Bold"],
+        serif: ["Calistoga"],
       },
 
       fontSize: {
@@ -92,8 +92,7 @@ module.exports = {
 //
 //
 //
-// BORDER RADIUS 50%: overflow-hidden rounded-[3rem]
-//
+// box: overflow-hidden rounded-[3rem]
 //
 //
 //

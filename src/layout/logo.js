@@ -19,7 +19,7 @@ export default function Logo() {
         <Image
           className="z-50 h-[calc(theme(spacing.3xl)+1rem)] w-[calc(theme(spacing.3xl)+1rem)] rounded-full 
                 md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)]"
-          src="/img/logo.png"
+          src="/img/boxes/logo.png"
           width={80}
           height={80}
           alt="Logo pasieki Kurpiowski Bartnik"

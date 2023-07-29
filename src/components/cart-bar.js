@@ -32,8 +32,13 @@ const Cart = () => {
 
   return (
     <React.Fragment>
-      <button ref={buttonRef} onClick={() => setOpen(!open)}>
+      <button
+        className="btn-sm [&>*]:hover:stroke-header"
+        ref={buttonRef}
+        onClick={() => setOpen(!open)}
+      >
         <svg
+          className=""
           width="25"
           height="25"
           viewBox="0 0 24 24"
@@ -52,7 +57,7 @@ const Cart = () => {
       <div
         className={`
       max-w-3/5 no-scrollbar absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col overflow-scroll rounded-l-[3rem]
-      bg-cart-bar p-gap md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] pt-xl md:pt-gap
+      bg-cart-bar p-gap pt-xl md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] md:pt-gap
       ${open ? "flex" : "hidden"} `}
         ref={node}
       >
