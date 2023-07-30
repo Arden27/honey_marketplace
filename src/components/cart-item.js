@@ -9,14 +9,16 @@ const CartItem = ({item, removeFromCart }) => {
 
   const handleQuantityChange = (value) => {
     // const value = Math.round(Number(e.target.value));
-    if (value < 1) {
-      setQuantity(1);
-    } else if (value > 99) {
-      setQuantity(99);
-    } else {
-      setQuantity(value);
+    let clampedValue = value;
+
+    if (clampedValue < 1) {
+      clampedValue = 1;
+    } else if (clampedValue > 99) {
+      clampedValue = 99;
     }
-    dispatch(updateCartItem({ id: item.id, weight: item.weight, quantity: value })); // Update the cart item in the store
+
+    setQuantity(clampedValue);
+    dispatch(updateCartItem({ id: item.id, weight: item.weight, quantity: clampedValue })); // Update the cart item in the store
   };
 	
 	useEffect(() => {

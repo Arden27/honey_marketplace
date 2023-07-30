@@ -55,7 +55,7 @@ export default function ShopItem({ item }) {
 
         <div className="flex">
           <div className="mx-xs text-warning line-through">
-            <h3>{selectedPrice} zł</h3>
+            <h3>{(selectedPrice*1.1).toFixed(2)} zł</h3>
           </div>
           <div className="mx-xs">
             <h3>{selectedPrice} zł</h3>

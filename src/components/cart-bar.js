@@ -112,7 +112,7 @@ const Cart = () => {
               }
               <div className="mx-xs mb-xs flex items-end justify-between text-warning">
                 <h3 className="text-end">Rabat:</h3>
-                <h3 className="">-999,99 zł</h3>
+                <h3 className="">{(totalPrice*0.1).toFixed(2)} zł</h3>
               </div>
 
               <div className="mx-xs mb-gap flex items-end justify-between">
