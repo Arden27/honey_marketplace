@@ -4,17 +4,19 @@ import Image from "next/image";
 
 export default function HeroBox() {
   return (
-    <section className="box relative flex h-[calc(60svh-theme(spacing.3xl)-theme(spacing.2xl)-2*theme(spacing.md))] min-h-[30rem] items-center justify-center md:h-[calc(100svh-4*theme(spacing.3xl)-theme(spacing.xl)-theme(spacing.2xs))]">
+    <section className="relative flex h-[calc(60svh-theme(spacing.3xl)-theme(spacing.2xl)-2*theme(spacing.md))] min-h-[30rem] items-center justify-center overflow-hidden rounded-[3rem] md:h-[calc(100svh-4*theme(spacing.3xl)-theme(spacing.xl)-theme(spacing.2xs))] [&>*]:text-center">
       <Image
-        className="absolute top-0 h-full w-full object-cover object-left-bottom"
-        src="/img/home/hero.png"
+        className="top-0 h-full w-full object-cover object-left-bottom"
+        src="/img/logo.png"
         width={500}
         height={500}
         alt="Nasze nowości"
       />
 
+      <h2 className="absolute">Zobacz nasze najnowsze zbiory!</h2>
+
       <Link
-        className="btn-lg absolute bottom-0 m-gap bg-bg 
+        className="btn-lg absolute bottom-gap bg-bg 
         hover:text-bg"
         href="/sklep"
       >
@@ -23,5 +25,3 @@ export default function HeroBox() {
     </section>
   );
 }
-
-// "calc(2 * theme('spacing.3xl') + theme('spacing.lg') + theme('spacing.sm'))",

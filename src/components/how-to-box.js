@@ -1,12 +1,29 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HowToBox() {
   return (
-    <div className="box h-[40svh] bg-yellow-800 min-h-[30rem] md:h-[calc(100svh-4*theme(spacing.3xl)-theme(spacing.xl)-theme(spacing.2xs))]">
-      <h2 className="1">
+    <section className="relative flex h-[40svh] min-h-[30rem] items-center justify-center overflow-hidden rounded-[3rem] md:h-[calc(100svh-4*theme(spacing.3xl)-theme(spacing.xl)-theme(spacing.2xs))] [&>*]:text-center ">
+      <Image
+        className="top-0 h-full w-full object-cover object-left-bottom"
+        src="/img/logo.png"
+        width={500}
+        height={500}
+        alt="Prawdziwy miód"
+      />
+
+      <h2 className="absolute p-gap">
         Jak poznać <strong>prawdziwy</strong> miód?
       </h2>
-    </div>
+
+      <Link
+        className="btn-lg absolute bottom-gap bg-bg 
+        hover:text-bg"
+        href="/sklep"
+      >
+        Sprawdź już dziś!
+      </Link>
+    </section>
   );
 }

@@ -7,7 +7,7 @@ import ArticlesBox from "@/components/articles-box";
 
 export default function BottomBox() {
   return (
-    <div className="mx-auto mb-xl grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap md:grid-cols-2">
+    <div className="mx-auto mb-xl grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_3fr]">
       <RegisterBox />
       <RecommendedBox />
       <ArticlesBox />
