@@ -64,7 +64,7 @@ const Cart = () => {
         <div className="mb-gap grid h-[15rem] grid-cols-[1fr_2fr] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-cart-bar-item ">
           <Image
             className="row-span-2 h-full w-full object-cover object-center"
-            src="/img/home/jak-rozpoznac.jpg"
+            src="/img/logo.png"
             width={50}
             height={50}
             alt="Nazwa produktu"

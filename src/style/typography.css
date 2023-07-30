@@ -13,7 +13,7 @@
   h1,
   h2,
   h3 {
-    @apply font-serif leading-tight;
+    @apply font-serif font-semibold leading-tight;
 
     text-wrap: balance;
   }
