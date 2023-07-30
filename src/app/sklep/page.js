@@ -25,7 +25,7 @@ export default function Shop() {
 		{
 			id: 1,
 			name: "Miód rzepakowy",
-			image: "/img/home/jak-rozpoznac.jpg",
+			image: "/img/boxes/jak-rozpoznac.jpg",
 			sizes: [
 				{ size: "250 G", price: 59.9 },
 				{ size: "450 G", price: 79.9, default: true },
@@ -64,7 +64,7 @@ export default function Shop() {
     <main className="">
       <ShopMenu />
       <section
-        className="mx-auto mb-gap grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl grid-cols-1 grid-rows-[auto_1fr_auto] gap-gap overflow-hidden rounded-[3rem] bg-shop p-gap
+        className="mx-auto mb-gap grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl grid-cols-1  gap-gap overflow-hidden rounded-[3rem] bg-shop p-gap
         md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <div className="col-span-full flex items-center justify-between">
