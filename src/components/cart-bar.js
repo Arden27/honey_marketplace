@@ -15,6 +15,7 @@ const Cart = () => {
 
   const cartItems = useSelector((state) => state.cart); 
   const items = useSelector((state) => state.items);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const dispatch = useDispatch();
   const removeFromCartAction = (item) => dispatch(removeFromCart(item));
@@ -41,8 +42,20 @@ const Cart = () => {
   }, []);
 
   useEffect(() => {
+    console.log(cartItems);
     // function to run when cartItems changes
   }, [cartItems]);
+
+  useEffect(() => {
+    // Calculate total price when cartItems or items change
+    let total = 0;
+    for (let cartItem of cartItems) {
+      const item = items.find(item => item.id === cartItem.id);
+      const size = item.sizes.find(size => size.size === cartItem.weight);
+      total += size.price * cartItem.quantity;
+    }
+    setTotalPrice(total.toFixed(2));
+  }, [cartItems, items]);
 
   return (
     <React.Fragment>
@@ -104,7 +117,7 @@ const Cart = () => {
 
               <div className="mx-xs mb-gap flex items-end justify-between">
                 <h2 className="text-end">Razem:</h2>
-                <h2>999,99 zł</h2>
+                <h2>{totalPrice} zł</h2>
               </div>
 
               <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>

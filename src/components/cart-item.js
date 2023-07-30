@@ -36,8 +36,7 @@ const CartItem = ({item, removeFromCart }) => {
         height={50}
         alt={item.name}
       />
-      <h3 className="p-sm">{item.name}</h3>
-
+      <h3 className="p-sm">{item.name} {item.weight}</h3>
       <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] p-sm">
         <div className="flex items-center">
           <button
