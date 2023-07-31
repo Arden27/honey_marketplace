@@ -18,7 +18,7 @@ export default function LogIn() {
             <legend>
               <h1>Zaloguj się</h1>
             </legend>
-            <label for="email">e-mail</label>
+            <label for="email">Email</label>
 
             <input
               type="text"
@@ -27,7 +27,7 @@ export default function LogIn() {
               placeholder="Podaj swój email..."
             />
 
-            <label for="password">hasło</label>
+            <label for="password">Hasło</label>
             <input
               type="password"
               id="password"
