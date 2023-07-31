@@ -5,7 +5,6 @@ import HeroBox from "@/components/hero-box";
 import HowToBox from "@/components/how-to-box";
 import AboutBox from "@/components/about-box";
 
-
 import BottomBox from "@/components/bottom-box";
 
 export const metadata = {
@@ -19,10 +18,7 @@ export default function Home() {
     <main>
       <ShopMenu />
 
-      <div
-        className="mx-auto grid w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl gap-gap 
-      md:grid-cols-[2fr_1fr]"
-      >
+      <div className="page-wrapper grid gap-gap md:grid-cols-[2fr_1fr]">
         <HeroBox />
 
         <HowToBox />

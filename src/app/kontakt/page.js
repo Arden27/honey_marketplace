@@ -11,9 +11,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <main>
-      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-        KONTAKT
-      </section>
+      <section className="page-wrapper">KONTAKT</section>
 
       <BottomBox />
     </main>

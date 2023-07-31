@@ -10,27 +10,39 @@ export default function LogIn() {
   return (
     <main>
       <div
-        className="mx-auto grid w-[calc(100%-2*theme(spacing.md))] grid-cols-2 gap-gap 
-      [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center [&>*]:overflow-hidden [&>*]:rounded-[3rem] [&>*]:bg-bg2 [&>*]:p-gap"
+        className="page-wrapper grid gap-gap md:grid-cols-2 
+    "
       >
-        <section>
+        <section className="flex flex-col items-center  overflow-hidden rounded-[3rem] bg-bg2 p-gap">
           <fieldset>
             <legend>
-              <h2>Zaloguj się</h2>
+              <h1>Zaloguj się</h1>
             </legend>
-
-            <input type="text" id="email" name="email" ></input>
             <label for="email">e-mail</label>
-            <br />
 
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Podaj swój email..."
+            />
+
+            <label for="password">hasło</label>
             <input
               type="password"
               id="password"
-              name="monster"
+              name="password"
+              placeholder="Podaj swoje hasło..."
+            />
 
-            ></input>
-            <label for="password">hasło</label>
-            <br />
+            <div>
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Zapamiętaj mnie</label>
+
+              <Link className="" href="/rejestracja">
+                Nie pamiętam hasła
+              </Link>
+            </div>
           </fieldset>
 
           <Link className="btn-lg bottom-gap bg-bg hover:text-bg" href="/">

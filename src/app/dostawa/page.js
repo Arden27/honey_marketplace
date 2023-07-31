@@ -11,9 +11,7 @@ export const metadata = {
 export default function Delivery() {
   return (
     <main>
-      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-        Dostawa
-      </section>
+      <section className="page-wrapper">Dostawa</section>
 
       <BottomBox />
     </main>

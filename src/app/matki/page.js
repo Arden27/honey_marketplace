@@ -11,9 +11,7 @@ export const metadata = {
 export default function Queens() {
   return (
     <main>
-      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-        MATKI
-      </section>
+      <section className="page-wrapper">MATKI</section>
 
       <BottomBox />
     </main>

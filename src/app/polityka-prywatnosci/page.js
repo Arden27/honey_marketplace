@@ -11,9 +11,7 @@ export const metadata = {
 export default function Privacy() {
   return (
     <main>
-      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-        POLITYKA PRYWATNOŚCI
-      </section>
+      <section className="page-wrapper">POLITYKA PRYWATNOŚCI</section>
 
       <BottomBox />
     </main>

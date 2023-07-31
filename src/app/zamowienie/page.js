@@ -11,7 +11,7 @@ export const metadata = {
 export default function Order() {
   return (
     <main>
-      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+      <section className="page-wrapper">
 
         STATUS ZAMÓWIENIA nr 1
       </section>
