@@ -13,7 +13,7 @@ export default function LogIn() {
         <section className="flex flex-col items-center  overflow-hidden rounded-[3rem] bg-bg2 p-gap">
           <fieldset>
             <legend>
-              <h1>Zaloguj się</h1>
+              Zaloguj się
             </legend>
             <label for="email">Email</label>
 

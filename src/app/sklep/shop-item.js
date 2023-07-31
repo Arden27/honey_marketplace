@@ -29,7 +29,7 @@ export default function ShopItem({ item }) {
   };
 
   return (
-    <section className="  grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item">
+    <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item">
       <div className="relative">
         <Image
           className="object-cover object-center"
