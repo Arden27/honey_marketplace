@@ -10,9 +10,12 @@ export const metadata = {
 
 export default function Cart() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      KOSZYK
+    <main>
+      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+        KOSZYK
+      </section>
 
+      <BottomBox />
     </main>
   );
 }

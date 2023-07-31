@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import { addToCart } from '@/redux/store';
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/store";
 
 // import RadioButton from "./radio-button";
 
@@ -21,22 +21,23 @@ export default function ShopItem({ item }) {
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
 
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	const handleSizeChange = (size, price) => {
-		setSelectedSize(size);
-		setSelectedPrice(price);
-	};
+  const handleSizeChange = (size, price) => {
+    setSelectedSize(size);
+    setSelectedPrice(price);
+  };
 
   return (
-    <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-shop-item">
-      <Image
-        className="h-full w-full object-cover object-center"
-        src={item.image}
-        width={100}
-        height={100}
-        alt={item.name}
-      />
+    <section className="  grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item">
+      <div className="relative">
+        <Image
+          className="object-cover object-center"
+          fill={true}
+          src={item.image}
+          alt={item.name}
+        />
+      </div>
 
       <div className="grid grid-cols-1 grid-rows-[theme(spacing.2xl)_theme(spacing.3xl)_theme(spacing.2xl)_auto] items-center justify-items-center p-gap ">
         <h2 className="text-center">{item.name}</h2>
@@ -97,18 +98,25 @@ export default function ShopItem({ item }) {
             <button
               className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
 							hover:bg-text hover:text-bg"
-							onClick={() => quantity < 99 && setQuantity(Math.round(quantity + 1))}
-							>
-							+
-						</button>
-					</div>
-					<button className="btn-lg pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] border-text hover:text-shop-item-bg"
-						onClick={() => dispatch(addToCart({ id: item.id, weight: selectedSize, quantity }))}
-					>
-						Dodaj do koszyka
-					</button>
-				</div>
-			</div>
-		</section>
-	);
+              onClick={() =>
+                quantity < 99 && setQuantity(Math.round(quantity + 1))
+              }
+            >
+              +
+            </button>
+          </div>
+          <button
+            className="btn-lg hover:text-shop-item-bg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))]"
+            onClick={() =>
+              dispatch(
+                addToCart({ id: item.id, weight: selectedSize, quantity }),
+              )
+            }
+          >
+            Dodaj do koszyka
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }

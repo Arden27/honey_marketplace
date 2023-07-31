@@ -52,7 +52,7 @@
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text;
+    @apply flex h-btn-lg items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap font-btn text-sm uppercase text-text min-w-[15rem] px-lg;
   }
 
   .btn-lg:hover {

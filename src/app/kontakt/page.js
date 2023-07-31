@@ -10,9 +10,12 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      KONTAKT
+    <main>
+      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+        KONTAKT
+      </section>
 
+      <BottomBox />
     </main>
   );
 }

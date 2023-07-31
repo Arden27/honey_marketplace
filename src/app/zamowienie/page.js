@@ -10,8 +10,12 @@ export const metadata = {
 
 export default function Order() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      STATUS ZAMÓWIENIA nr 1
+    <main>
+      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+
+        STATUS ZAMÓWIENIA nr 1
+      </section>
+
       <BottomBox />
     </main>
   );

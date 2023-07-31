@@ -10,10 +10,12 @@ export const metadata = {
 
 export default function Statute() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      REGULAMIN
-      
+    <main>
+      <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+        REGULAMIN
+      </section>
 
+      <BottomBox />
     </main>
   );
 }

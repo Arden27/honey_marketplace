@@ -22,38 +22,38 @@ export default function Shop() {
 	const dispatch = useDispatch();
 
 	const items = [
-		{
-			id: 1,
-			name: "Miód rzepakowy",
-			image: "/img/boxes/jak-rozpoznac.jpg",
-			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9, default: true },
-				{ size: "1 KG", price: 99.9 },
-			],
-		},
-		{
-			id: 2,
-			name: "Miód rzepakowy\nz nutką gryki",
-			image: "/img/logo.png",
-			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9 },
-				{ size: "1 KG", price: 99.9, default: true },
-			],
-		},
-		{
-			id: 3,
-			name: "Miód rzepakowy\nz nutką gryki",
-			image: "/img/logo.png",
-			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9 },
-				{ size: "1 KG", price: 99.9 },
-			],
-		},
-		// add more items as needed
-	];
+    {
+      id: 1,
+      name: "Miód rzepakowy",
+      image: "/img/boxes/jak-rozpoznac.jpg",
+      sizes: [
+        { size: "250 G", price: 59.9 },
+        { size: "450 G", price: 79.9, default: true },
+        { size: "1 KG", price: 99.9 },
+      ],
+    },
+    {
+      id: 2,
+      name: "Miód rzepakowy",
+      image: "/img/boxes/hero.png",
+      sizes: [
+        { size: "250 G", price: 59.9 },
+        { size: "450 G", price: 79.9 },
+        { size: "1 KG", price: 99.9, default: true },
+      ],
+    },
+    {
+      id: 3,
+      name: "Miód rzepakowy\nz nutką gryki",
+      image: "/img/logo.png",
+      sizes: [
+        { size: "250 G", price: 59.9 },
+        { size: "450 G", price: 79.9 },
+        { size: "1 KG", price: 99.9 },
+      ],
+    },
+    // add more items as needed
+  ];
 
 	useEffect(() => {
 		dispatch(setItems(items));
@@ -72,12 +72,13 @@ export default function Shop() {
           <FilterItemsBtn />
         </div>
 
-		{items.map((item) => (
-			<ShopItem key={item.id} item={item} />
-		))}
+        {items.map((item) => (
+          <ShopItem key={item.id} item={item} />
+        ))}
 
         <Pagination />
       </section>
+      <BottomBox />
     </main>
   );
 }

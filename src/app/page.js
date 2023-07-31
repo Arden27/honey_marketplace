@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <ShopMenu />
 
       <div
@@ -30,6 +30,7 @@ export default function Home() {
 
       <AboutBox />
 
+      <BottomBox />
     </main>
   );
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ShopMenu() {
   return (
-    <div
+    <section
       className="w-100 p m-auto mx-auto hidden h-shop-menu w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl grid-cols-5 pb-2xl md:grid
       "
     >
@@ -104,6 +104,6 @@ export default function ShopMenu() {
           </h2>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
