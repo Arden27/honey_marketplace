@@ -9,10 +9,7 @@ export const metadata = {
 export default function LogIn() {
   return (
     <main>
-      <div
-        className="page-wrapper grid gap-gap md:grid-cols-2 
-    "
-      >
+      <div className="page-wrapper grid gap-gap md:grid-cols-2">
         <section className="flex flex-col items-center  overflow-hidden rounded-[3rem] bg-bg2 p-gap">
           <fieldset>
             <legend>
@@ -39,7 +36,7 @@ export default function LogIn() {
               <input type="checkbox" id="remember-me" />
               <label for="remember-me">Zapamiętaj mnie</label>
 
-              <Link className="" href="/rejestracja">
+              <Link  href="/rejestracja">
                 Nie pamiętam hasła
               </Link>
             </div>

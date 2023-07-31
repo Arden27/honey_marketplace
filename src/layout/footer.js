@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className="bg-footer">
       <div
-        className="page-wrapper mb-gap mt-xl grid  grid-cols-2 justify-between 
+        className="page-wrapper mb-gap gap-gap mt-xl grid  grid-cols-2 justify-between 
         md:grid-cols-4"
       >
-        <ul className="">
+        <ul >
           <h2>Menu</h2>
           <li>
             <Link href="/sklep">Sklep</Link>

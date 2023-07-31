@@ -61,10 +61,10 @@ export default function Shop() {
 	  }, []);
 
   return (
-    <main className="">
+    <main >
       <ShopMenu />
       <section
-        className="page-wrapper mb-gap grid max-w-screen-2xl grid-cols-1  overflow-hidden rounded-[3rem] bg-shop p-gap
+        className="page-wrapper mb-gap grid max-w-screen-2xl grid-cols-1  overflow-hidden rounded-[3rem] bg-shop p-gap gap-gap
         md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <div className="col-span-full flex items-center justify-between">
