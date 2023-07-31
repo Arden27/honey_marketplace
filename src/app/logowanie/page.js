@@ -10,11 +10,18 @@ export default function LogIn() {
   return (
     <main>
       <div className="page-wrapper grid gap-gap md:grid-cols-2">
-        <section className="">
-          <form>
-            <fieldset className="flex flex-col  overflow-hidden rounded-[3rem] bg-bg2 p-gap">
+        <form>
+          <fieldset
+            className="grid grid-cols-1 items-center justify-items-center overflow-hidden rounded-[3rem] 
+            bg-bg2 p-gap"
+          >
+            <h2 className="self-center">Zaloguj się</h2>
+            <div
+              className="my-gap flex w-full flex-col overflow-hidden 
+            rounded-[3rem] bg-bg3 p-gap"
+            >
               <legend className="sr-only">Zaloguj się</legend>
-              <h2 className="self-center">Zaloguj się</h2>
+              <div></div>
               <label for="email">Email</label>
 
               <input
@@ -38,14 +45,20 @@ export default function LogIn() {
                   <label for="remember-me">Zapamiętaj mnie</label>
                 </div>
 
-                <Link href="/rejestracja">Nie pamiętam hasła</Link>
+                <Link href="/logowanie/zmiana-hasla">Nie pamiętam hasła</Link>
               </div>
-              <Link className="btn-lg bottom-gap bg-bg hover:text-bg" href="/">
+            </div>
+
+            <div>
+              <button
+                className="btn-lg bottom-gap bg-bg hover:text-bg"
+                href="/"
+              >
                 Zaloguj się
-              </Link>
-            </fieldset>
-          </form>
-        </section>
+              </button>
+            </div>
+          </fieldset>
+        </form>
 
         <section>
           <h2>Zarejestruj się</h2>
