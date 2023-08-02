@@ -65,7 +65,7 @@ const Cart = () => {
         onClick={() => setOpen(!open)}
       >
         <svg
-          className=""
+          
           width="25"
           height="25"
           viewBox="0 0 24 24"

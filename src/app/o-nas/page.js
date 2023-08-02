@@ -10,9 +10,10 @@ export const metadata = {
 
 export default function AboutUs() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      O NAS
+    <main>
+      <section className="page-wrapper">O NAS</section>
 
+      <BottomBox />
     </main>
   );
 }

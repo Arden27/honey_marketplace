@@ -10,9 +10,10 @@ export const metadata = {
 
 export default function Settings() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      USTAWIENIA KONTA
+    <main>
+      <section className="page-wrapper">Ustawienia konta</section>
 
+      <BottomBox />
     </main>
   );
 }

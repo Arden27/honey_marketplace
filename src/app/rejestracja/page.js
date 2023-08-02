@@ -3,17 +3,17 @@ import Link from "next/link";
 import BottomBox from "@/components/bottom-box";
 
 export const metadata = {
-  title: "Artykuły - Kurpiowski Bartnik",
+  title: "Rejestracja - Kurpiowski Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };
 
-export default function Articles() {
+export default function Register() {
   return (
     <main>
-      <section className="page-wrapper">ARTYKUŁY</section>
-
-      <BottomBox />
+      <section className="page-wrapper">
+        Rejestracja
+      </section>
     </main>
   );
 }

@@ -10,27 +10,27 @@ export default function Footer() {
           <h2>Menu</h2>
           <ul>
             <li>
-              <Link className="" href="/sklep">
+              <Link  href="/sklep">
                 Sklep
               </Link>
             </li>
             <li>
-              <Link className="" href="/artykuly">
+              <Link  href="/artykuly">
                 Artykuły
               </Link>
             </li>
             <li>
-              <Link className="" href="/o-nas">
+              <Link  href="/o-nas">
                 O nas
               </Link>
             </li>
             <li>
-              <Link className="" href="/matki">
+              <Link  href="/matki">
                 Matki
               </Link>
             </li>
             <li>
-              <Link className="" href="/kontakt">
+              <Link  href="/kontakt">
                 Kontakt
               </Link>
             </li>
@@ -40,22 +40,22 @@ export default function Footer() {
           <h2>Informacje</h2>
           <ul>
             <li>
-              <Link className="" href="/regulamin">
+              <Link  href="/regulamin">
                 Regulamin
               </Link>
             </li>
             <li>
-              <Link className="" href="/prywatnosc">
+              <Link  href="/prywatnosc">
                 Polityka prywatności
               </Link>
             </li>
             <li>
-              <Link className="" href="/dostawa">
+              <Link  href="/dostawa">
                 Dostawa
               </Link>
             </li>
             <li>
-              <Link className="" href="/reklamacje">
+              <Link  href="/reklamacje">
                 Zwroty i reklamacje
               </Link>
             </li>
@@ -65,22 +65,22 @@ export default function Footer() {
           <h2>Moje konto</h2>
           <ul>
             <li>
-              <Link className="" href="/zamowienia">
+              <Link  href="/zamowienia">
                 Zamówienia
               </Link>
             </li>
             <li>
-              <Link className="" href="/opinie">
+              <Link  href="/opinie">
                 Opinie
               </Link>
             </li>
             <li>
-              <Link className="" href="/ustawienia">
+              <Link  href="/ustawienia">
                 Ustawienia
               </Link>
             </li>
             <li>
-              <Link className="" href="/">
+              <Link  href="/">
                 Wyloguj się
               </Link>
             </li>
@@ -102,16 +102,16 @@ export default function Footer() {
         <div className="footer__item footer__item--media-bar">
           <ul>
             <li>
-              <Link className="" href="/">
+              <Link  href="/">
                 Fb
               </Link>
-              <Link className="" href="/">
+              <Link  href="/">
                 Ins
               </Link>
-              <Link className="" href="/">
+              <Link  href="/">
                 Sig
               </Link>
-              <Link className="" href="/">
+              <Link  href="/">
                 Tel
               </Link>
             </li>

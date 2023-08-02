@@ -10,9 +10,10 @@ export const metadata = {
 
 export default function Articles() {
   return (
-    <main className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
-      MOJE OPINIE
+    <main>
+      <section className="page-wrapper">Moje opinie</section>
 
+      <BottomBox />
     </main>
   );
 }
