@@ -12,7 +12,7 @@ export default function LogInBox() {
         >
           <legend className="sr-only">Zaloguj się</legend>
           <div></div>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
 
           <input
             type="text"
@@ -21,7 +21,7 @@ export default function LogInBox() {
             placeholder="Podaj swój email..."
           />
 
-          <label for="password">Hasło</label>
+          <label htmlFor="password">Hasło</label>
           <input
             type="password"
             id="password"
@@ -32,7 +32,7 @@ export default function LogInBox() {
           <div className="flex justify-between">
             <div>
               <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Zapamiętaj mnie</label>
+              <label htmlFor="remember-me">Zapamiętaj mnie</label>
             </div>
 
             <Link href="/logowanie/zmiana-hasla">Nie pamiętam hasła</Link>
