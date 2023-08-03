@@ -6,7 +6,7 @@ import "@/style/index.css";
 
 import Header from "../layout/header";
 import Footer from "../layout/footer";
-import BottomBox from "@/components/bottom-box";
+import BottomBox from "@/components/box/bottom-box";
 
 export default function RootLayout({ children }) {
   return (

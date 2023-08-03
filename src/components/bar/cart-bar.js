@@ -1,19 +1,19 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
 import Link from "next/link";
 import Image from "next/image";
-import CartItem from "./cart-item";
+import CartItem from "../box/cart-item";
 
 const Cart = () => {
   const node = useRef();
   const buttonRef = useRef(null);
   const [open, setOpen] = useState(false);
 
-  const cartItems = useSelector((state) => state.cart); 
+  const cartItems = useSelector((state) => state.cart);
   const items = useSelector((state) => state.items);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -50,8 +50,8 @@ const Cart = () => {
     // Calculate total price when cartItems or items change
     let total = 0;
     for (let cartItem of cartItems) {
-      const item = items.find(item => item.id === cartItem.id);
-      const size = item.sizes.find(size => size.size === cartItem.weight);
+      const item = items.find((item) => item.id === cartItem.id);
+      const size = item.sizes.find((size) => size.size === cartItem.weight);
       total += size.price * cartItem.quantity;
     }
     setTotalPrice(total.toFixed(2));
@@ -65,7 +65,6 @@ const Cart = () => {
         onClick={() => setOpen(!open)}
       >
         <svg
-          
           width="25"
           height="25"
           viewBox="0 0 24 24"
@@ -88,46 +87,42 @@ const Cart = () => {
       ${open ? "flex" : "hidden"} `}
         ref={node}
       >
-        {
-          cartItems.length > 0 ? (
-            <React.Fragment>
-              {
-                cartItems.map((cartItem, index) => {
-                  const item = items.find(item => item.id === cartItem.id);
-                  const size = item.sizes.find(size => size.size === cartItem.weight);
-                
-                  return (
-                    <CartItem 
-                      key={cartItem.id + "-" + index} // Create a unique key by combining the item id and index
-                      item={{
-                        ...item,
-                        weight: cartItem.weight,
-                        quantity: cartItem.quantity,
-                        price: size.price
-                      }} 
-                      removeFromCart={removeFromCartAction}
-                    />
-                  );
-                })
-              }
-              <div className="mx-xs mb-xs flex items-end justify-between text-warning">
-                <h3 className="text-end">Rabat:</h3>
-                <h3 className="">{(totalPrice*0.1).toFixed(2)} zł</h3>
-              </div>
+        {cartItems.length > 0 ? (
+          <React.Fragment>
+            {cartItems.map((cartItem, index) => {
+              const item = items.find((item) => item.id === cartItem.id);
+              const size = item.sizes.find(
+                (size) => size.size === cartItem.weight,
+              );
 
-              <div className="mx-xs mb-gap flex items-end justify-between">
-                <h2 className="text-end">Razem:</h2>
-                <h2>{totalPrice} zł</h2>
-              </div>
+              return (
+                <CartItem
+                  key={cartItem.id + "-" + index} // Create a unique key by combining the item id and index
+                  item={{
+                    ...item,
+                    weight: cartItem.weight,
+                    quantity: cartItem.quantity,
+                    price: size.price,
+                  }}
+                  removeFromCart={removeFromCartAction}
+                />
+              );
+            })}
+            <div className="mx-xs mb-xs flex items-end justify-between text-warning">
+              <h3 className="text-end">Rabat:</h3>
+              <h3 className="">{(totalPrice * 0.1).toFixed(2)} zł</h3>
+            </div>
 
-              <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
-            </React.Fragment>
-          ) : (
-            <p>Koszyk jest pusty</p>
-          )
-        }
+            <div className="mx-xs mb-gap flex items-end justify-between">
+              <h2 className="text-end">Razem:</h2>
+              <h2>{totalPrice} zł</h2>
+            </div>
 
-        
+            <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
+          </React.Fragment>
+        ) : (
+          <p>Koszyk jest pusty</p>
+        )}
       </div>
     </React.Fragment>
   );

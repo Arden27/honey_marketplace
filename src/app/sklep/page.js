@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import ShopMenu from "@/components/shop-menu";
-import FilterItemsBtn from "@/components/filter-items-btn";
-import Pagination from "@/components/pagination";
+import ShopMenu from "@/components/box/shop-menu";
+import FilterItemsBtn from "@/components/btn/filter-items-btn";
+import Pagination from "@/components/btn/pagination";
 
-import BottomBox from "@/components/bottom-box";
+import BottomBox from "@/components/box/bottom-box";
 
 import DB from "@/components/db";
 
@@ -16,18 +16,18 @@ export const metadata = {
 
 export default function Shop() {
   return (
-    <main >
+    <main>
       <ShopMenu />
       <section
-        className="page-wrapper mb-gap grid max-w-screen-2xl grid-cols-1  overflow-hidden rounded-[3rem] bg-shop p-gap gap-gap
-        md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        className="page-wrapper mb-gap grid  grid-cols-1  gap-gap overflow-hidden rounded-[3rem] bg-shop p-gap 
+        sm:grid-cols-2 lg:grid-cols-3"
       >
         <div className="col-span-full flex items-center justify-between">
           <div>PANEL</div>
           <FilterItemsBtn />
         </div>
 
-				<DB />
+        <DB />
 
         <Pagination />
       </section>

@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className="bg-footer">
       <div
-        className="page-wrapper mb-gap gap-gap mt-xl grid  grid-cols-2 justify-between 
-        md:grid-cols-4"
+        className="page-wrapper mb-gap mt-xl grid grid-cols-2  justify-between gap-gap md:grid-cols-4
+        [&_h2]:mb-2xs"
       >
-        <ul >
+        <ul className="box-sm bg-footer-item">
           <h2>Menu</h2>
           <li>
             <Link href="/sklep">Sklep</Link>
@@ -28,7 +28,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul>
+        <ul className="box-sm bg-footer-item">
           <h2>Informacje</h2>
           <li>
             <Link href="/regulamin">Regulamin</Link>
@@ -42,9 +42,12 @@ export default function Footer() {
           <li>
             <Link href="/zwroty-i-reklamacje">Zwroty i reklamacje</Link>
           </li>
+          <li>
+            <Link href="/kontakt">Współpraca</Link>
+          </li>
         </ul>
 
-        <ul>
+        <ul className="box-sm bg-footer-item">
           <h2>Moje konto</h2>
           <li>
             <Link href="/konto/zamowienia">Zamówienia</Link>
@@ -60,7 +63,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <div>
+        <div className="box-sm bg-footer-item">
           <h2>Dane Pasieki</h2>
           <address>
             Stanisław Młynarczyk

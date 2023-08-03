@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ShopMenu() {
   return (
-    <section className="w-100 page-wrapper [&_img]:rh-shop-menu-img hidden h-shop-menu grid-cols-5 pb-2xl md:grid [&>*]:grid [&>*]:justify-items-center [&_h2]:mt-xs [&_h2]:text-center [&_h2]:text-base [&_h2]:uppercase [&_img]:h-shop-menu-img [&_img]:w-shop-menu-img [&_img]:rounded-full">
+    <section className="w-100 page-wrapper [&_img]:rh-shop-menu-img hidden h-shop-menu grid-cols-5 pb-2xl sm:grid [&>*]:grid [&>*]:justify-items-center [&_h2]:mt-xs [&_h2]:text-center [&_h2]:text-base [&_h2]:uppercase [&_img]:h-shop-menu-img [&_img]:w-shop-menu-img [&_img]:rounded-full">
       <div>
         <Link href="/sklep/promocje" aria-hidden="true" tabIndex={-1}>
           <Image src="/img/logo.png" width={80} height={80} alt="Promocje" />

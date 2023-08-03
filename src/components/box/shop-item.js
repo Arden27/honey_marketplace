@@ -9,7 +9,9 @@ import { addToCart } from "@/redux/store";
 
 import dynamic from "next/dynamic";
 
-const RadioButton = dynamic(() => import("./radio-button"), { ssr: false });
+const RadioButton = dynamic(() => import("../btn/radio-button"), {
+  ssr: false,
+});
 
 export default function ShopItem({ item }) {
   // Find the default size object
@@ -29,7 +31,11 @@ export default function ShopItem({ item }) {
   };
 
   return (
-    <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item">
+    <section
+      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.2xs))] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item sm:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.xl)-theme(spacing.md))] md:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.2xl)-theme(spacing.xs))]
+    
+    "
+    >
       <div className="relative">
         <Image
           className="object-cover object-center"
@@ -56,7 +62,7 @@ export default function ShopItem({ item }) {
 
         <div className="flex">
           <div className="mx-xs text-warning line-through">
-            <h3>{(selectedPrice*1.1).toFixed(2)} zł</h3>
+            <h3>{(selectedPrice * 1.1).toFixed(2)} zł</h3>
           </div>
           <div className="mx-xs">
             <h3>{selectedPrice} zł</h3>
@@ -106,7 +112,7 @@ export default function ShopItem({ item }) {
             </button>
           </div>
           <button
-            className="btn-lg hover:text-shop-item-bg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))]"
+            className="btn-lg hover:text-shop-item border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))]"
             onClick={() =>
               dispatch(
                 addToCart({ id: item.id, weight: selectedSize, quantity }),

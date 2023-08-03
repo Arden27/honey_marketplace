@@ -1,5 +1,5 @@
 
-import BottomBox from "@/components/bottom-box";
+import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
   title: "Moje zamówienia - Kurpiowski Bartnik",

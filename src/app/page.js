@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import ShopMenu from "@/components/shop-menu";
-import HeroBox from "@/components/hero-box";
-import HowToBox from "@/components/how-to-box";
-import AboutBox from "@/components/about-box";
+import ShopMenu from "@/components/box/shop-menu";
+import HeroBox from "@/components/box/hero-box";
+import HowToBox from "@/components/box/how-to-box";
+import AboutBox from "@/components/box/about-box";
 
-import BottomBox from "@/components/bottom-box";
+import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
   title: "Kurpiowski Bartnik",

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function RecommendedBox() {
   return (
 
-        <section className="box bg-yellow-800">
+        <section className="box-lg bg-yellow-800">
           recommended-box
         </section>
   );

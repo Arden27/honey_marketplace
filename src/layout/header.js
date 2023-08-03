@@ -4,13 +4,15 @@ import Image from "next/image";
 
 import Nav from "./nav";
 import Logo from "./logo";
-import UserBar from "@/components/user-bar";
-import SearchBar from "@/components/search-bar";
+import UserBar from "@/components/bar/user-bar";
+import SearchBar from "@/components/bar/search-bar";
 // import CartBar from "@/components/cart-bar";
 
 import dynamic from "next/dynamic";
 
-const CartBar = dynamic(() => import("@/components/cart-bar"), { ssr: false });
+const CartBar = dynamic(() => import("@/components/bar/cart-bar"), {
+  ssr: false,
+});
 
 export default function Header() {
   return (
@@ -21,8 +23,8 @@ export default function Header() {
 
       <div className="m-auto w-[calc(100%-2*theme(spacing.md))] ">
         <div
-          className=" [&>*]:ml-3xs flex h-3xl items-center
-        justify-end md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
+          className=" flex h-3xl items-center justify-end
+        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))] [&>*]:ml-3xs"
         >
           <SearchBar />
 

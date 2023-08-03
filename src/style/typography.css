@@ -48,28 +48,34 @@
   }
 
   .btn-sm {
-    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text;
+    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  duration-300 ease-in-out ;
   }
 
   .btn-sm:hover {
-    @apply border-text bg-text;
+    @apply bg-text;
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-[15rem] items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text;
+    @apply flex h-btn-lg min-w-[15rem] items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-transform duration-300 ease-in-out;
   }
 
   .btn-lg:hover {
-    @apply border-text bg-text;
+    @apply bg-text ;
   }
 
   .btn-border {
     @apply border-text;
   }
 
-  .box-lg {
-    @apply grid grid-cols-1 items-center justify-items-center overflow-hidden rounded-[3rem] bg-bg2 p-gap;
+  .box-sm {
+    @apply overflow-hidden rounded-[3rem] bg-bg3 p-gap;
   }
+
+  .box-lg {
+    @apply grid grid-cols-1 items-center justify-items-center overflow-hidden rounded-[3rem] bg-bg2 p-gap  ;
+  }
+
+
 
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -78,6 +84,24 @@
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .bg {
+    background-image: linear-gradient(
+      to top,
+      #ffd479,
+      #fed681,
+      #fdd88a,
+      #fbd992,
+      #fadb9a,
+      #fadb9a,
+      #fadb9a,
+      #fadb9a,
+      #fbd992,
+      #fdd88a,
+      #fed681,
+      #ffd479
+    );
   }
 }
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-import PromoBox from "@/components/promo-box";
-import RecommendedBox from "@/components/recommended-box";
-import ArticlesBox from "@/components/articles-box";
+import PromoBox from "@/components/box/promo-box";
+import RecommendedBox from "@/components/box/recommended-box";
+import ArticlesBox from "@/components/box/articles-box";
 
 export default function BottomBox() {
   return (

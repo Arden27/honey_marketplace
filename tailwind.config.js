@@ -10,26 +10,30 @@ module.exports = {
       },
 
       colors: {
-        primary: "#b89786",
-        secondary: "#d19d5e",
-        accent: "#cb8f71",
-        warning: "#ba4f3d",
+        primary: "hsl(33, 55%, 60%)",
+        secondary: "hsl(33, 55%, 70%)",
 
-        bg: "#f8dda5",
-        bg2: "#e5be92",
-        bg3: "#ffefca",
-        text: "#3f260b",
+        accent: "hsl(20, 50%, 60%)",
+        accent2: "hsl(20, 50%, 65%)",
+        warning: "hsl(9, 50%, 50%)",
 
-        header: "theme('colors.secondary')",
-        nav: "theme('colors.primary')",
-        "cart-bar": "theme('colors.primary')",
-        "cart-bar-item": "theme('colors.accent')",
+        bg: "hsl(40, 85%, 80%)",
+        bg2: "hsl(38, 85%, 75%)",
+        bg3: "hsl(40, 100%, 86%)",
+        text: "hsl(31, 70%, 15%)",
+
+        header: "theme('colors.primary')",
+        nav: "theme('colors.secondary')",
+        "cart-bar": "theme('colors.secondary')",
+        "cart-bar-item": "theme('colors.bg3')",
 
         "about-box": "theme(colors.bg2)",
 
         shop: "theme(colors.bg2)",
         "shop-item": "theme('colors.bg3')",
-        footer: "theme('colors.accent')",
+
+        footer: "theme('colors.bg2')",
+        "footer-item": "theme('colors.bg3')",
       },
 
       spacing: {

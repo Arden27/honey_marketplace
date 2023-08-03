@@ -1,5 +1,5 @@
 "use client"
-import ShopItem from "@/components/shop-item";
+import ShopItem from "@/components/box/shop-item";
 
 import { useDispatch } from 'react-redux';
 import { setItems } from "@/redux/store";

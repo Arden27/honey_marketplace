@@ -64,15 +64,15 @@ export default function NavBar() {
       </Link>
 
       <nav
-        className={` 
-        max-lg:h-[calc(100svh-theme(spacing.3xl)) rounded-r-[3rem] lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] max-lg:w-4/5
-        max-lg:bg-nav max-md:top-header-sm 
-        max-md:h-[calc(100svh-theme(spacing.3xl))]
+        className={`  max-lg:h-[calc(100svh-theme(spacing.3xl))
+        rounded-r-[3rem]  lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
+        max-lg:w-4/5 max-lg:bg-nav 
+        max-md:top-header-sm max-md:h-[calc(100svh-theme(spacing.3xl))]
 
-        ${open ? "flex " : "hidden"} `}
+        ${open ? "slide-in-left flex" : "slide-out-left hidden"} `}
         ref={node}
       >
-        <ul className="lg:[&_a]:btn-sm lg:flex hover:lg:[&_a]:text-header [&>*]:mr-3xs">
+        <ul className="lg:[&_a]:btn-sm lg:flex [&>*]:mr-3xs hover:lg:[&_a]:text-header">
           <li>
             <Link className=" lg:!border-text" href="/sklep">
               Sklep
