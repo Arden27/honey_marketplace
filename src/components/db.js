@@ -14,9 +14,9 @@ export default function DB() {
 			name: "Miód rzepakowy",
 			image: "/img/boxes/jak-rozpoznac.jpg",
 			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9, default: true },
-				{ size: "1 KG", price: 99.9 },
+				{ size: "250 G", price: 59.99 },
+				{ size: "450 G", price: 79.99, default: true },
+				{ size: "1 KG", price: 99.99 },
 			],
 		},
 		{
@@ -24,9 +24,9 @@ export default function DB() {
 			name: "Miód rzepakowy\nz nutką gryki",
 			image: "/img/logo.png",
 			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9 },
-				{ size: "1 KG", price: 99.9, default: true },
+				{ size: "250 G", price: 59.99 },
+				{ size: "450 G", price: 79.99 },
+				{ size: "1 KG", price: 99.99, default: true },
 			],
 		},
 		{
@@ -34,9 +34,9 @@ export default function DB() {
 			name: "Miód rzepakowy\nz nutką gryki",
 			image: "/img/logo.png",
 			sizes: [
-				{ size: "250 G", price: 59.9 },
-				{ size: "450 G", price: 79.9 },
-				{ size: "1 KG", price: 99.9 },
+				{ size: "250 G", price: 59.99 },
+				{ size: "450 G", price: 79.99 },
+				{ size: "1 KG", price: 99.99 },
 			],
 		},
 		// add more items as needed

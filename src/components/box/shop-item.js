@@ -61,10 +61,10 @@ export default function ShopItem({ item }) {
         </div>
 
         <div className="flex">
-          <div className="mx-xs text-warning line-through">
+          <div className="mx-xs line-through">
             <h3>{(selectedPrice * 1.1).toFixed(2)} zł</h3>
           </div>
-          <div className="mx-xs">
+          <div className="mx-xs text-warning ">
             <h3>{selectedPrice} zł</h3>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function ShopItem({ item }) {
             </button>
           </div>
           <button
-            className="btn-lg hover:text-shop-item border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))]"
+            className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item"
             onClick={() =>
               dispatch(
                 addToCart({ id: item.id, weight: selectedSize, quantity }),

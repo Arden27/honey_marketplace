@@ -76,16 +76,20 @@ const CartItem = ({ item, removeFromCart }) => {
               +
             </button>
           </div>
-          <p className="text-m font-btn"> x {item.price} zł</p>
+          <h4 className="text-m font-btn leading-none">x</h4>
+          <div className=".[&>*]:font-btn [&>*]:text-base [&>*]:leading-none ">
+            <h4 className="pb-xs line-through">{item.price} zł</h4>
+            <h4 className=" text-warning ">{item.price} zł</h4>
+          </div>
           <button
-            className="...border-2 .border-text flex h-xl w-xl items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
+            className="flex h-lg w-lg items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
             onClick={handleRemove}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class=""
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
