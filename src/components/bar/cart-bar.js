@@ -82,33 +82,36 @@ const Cart = () => {
 
       <div
         className={`
-      max-w-3/5 no-scrollbar absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col overflow-scroll rounded-l-[3rem]
-      bg-cart-bar p-gap pt-xl md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))] md:pt-gap
+      max-w-4/5  absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col  rounded-l-[3rem]
+      bg-cart-bar p-gap  md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
       ${open ? "flex" : "hidden"} `}
         ref={node}
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            {cartItems.map((cartItem, index) => {
-              const item = items.find((item) => item.id === cartItem.id);
-              const size = item.sizes.find(
-                (size) => size.size === cartItem.weight,
-              );
+            <div className="cart-items-scrollbar overflow-auto border-b-2 mb-xl border-text pr-3xs">
+              {cartItems.map((cartItem, index) => {
+                const item = items.find((item) => item.id === cartItem.id);
+                const size = item.sizes.find(
+                  (size) => size.size === cartItem.weight,
+                );
 
-              return (
-                <CartItem
-                  key={cartItem.id + "-" + index} // Create a unique key by combining the item id and index
-                  item={{
-                    ...item,
-                    weight: cartItem.weight,
-                    quantity: cartItem.quantity,
-                    price: size.price,
-                  }}
-                  removeFromCart={removeFromCartAction}
-                />
-              );
-            })}
-            <div className="mx-xs mb-xs flex items-end justify-between text-warning">
+                return (
+                  <CartItem
+                    key={cartItem.id + "-" + index} // Create a unique key by combining the item id and index
+                    item={{
+                      ...item,
+                      weight: cartItem.weight,
+                      quantity: cartItem.quantity,
+                      price: size.price,
+                    }}
+                    removeFromCart={removeFromCartAction}
+                  />
+                );
+              })}
+            </div>
+            <div className="mx-xs mb-xs flex items-end justify-between 
+             text-warning">
               <h3 className="text-end">Rabat:</h3>
               <h3 className="">{(totalPrice * 0.1).toFixed(2)} zł</h3>
             </div>
@@ -118,7 +121,9 @@ const Cart = () => {
               <h2>{totalPrice} zł</h2>
             </div>
 
-            <button className="btn-lg  bg-bg hover:text-bg ">Zamawiam</button>
+            <button className="btn-lg  border-text bg-cart-bar hover:text-bg">
+              Zamawiam
+            </button>
           </React.Fragment>
         ) : (
           <p>Koszyk jest pusty</p>

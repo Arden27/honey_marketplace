@@ -77,14 +77,26 @@
 
 
 
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+
+
+
+  .cart-items-scrollbar::-webkit-scrollbar {
+     @apply w-sm ;
+
+    
   }
 
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  .cart-items-scrollbar::-webkit-scrollbar-track {
+    @apply bg-cart-bar w-[20px];
   }
+
+  .cart-items-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-cart-bar border-[3px]  rounded-[3rem] border-solid bg-text border-cart-bar;
+    
+    
+
+  }
+
 
   .bg {
     background-image: linear-gradient(

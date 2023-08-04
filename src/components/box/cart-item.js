@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { updateCartItem } from '@/redux/store';
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { updateCartItem } from "@/redux/store";
 
-const CartItem = ({item, removeFromCart }) => {
+const CartItem = ({ item, removeFromCart }) => {
   const [quantity, setQuantity] = useState(item.quantity); // Initial quantity is from props
   const dispatch = useDispatch();
 
@@ -18,54 +18,91 @@ const CartItem = ({item, removeFromCart }) => {
     }
 
     setQuantity(clampedValue);
-    dispatch(updateCartItem({ id: item.id, weight: item.weight, quantity: clampedValue })); // Update the cart item in the store
+    dispatch(
+      updateCartItem({
+        id: item.id,
+        weight: item.weight,
+        quantity: clampedValue,
+      }),
+    ); // Update the cart item in the store
   };
-	
-	useEffect(() => {
-		setQuantity(item.quantity);
-	}, [item.quantity]);
 
-	const handleRemove = () => {
+  useEffect(() => {
+    setQuantity(item.quantity);
+  }, [item.quantity]);
+
+  const handleRemove = () => {
     dispatch(removeFromCart(item));
   };
-	
+
   return (
-    <div className="mb-gap grid h-[15rem] grid-cols-[1fr_2fr] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[3rem] bg-cart-bar-item ">
+    <div className="mb-gap grid h-[15rem] grid-cols-[2fr_5fr]  overflow-hidden rounded-[3rem] bg-cart-bar-item">
       <Image
-        className="row-span-2 h-full w-full object-cover object-center"
+        className="h-full w-full object-cover object-center"
         src={item.image}
         width={50}
         height={50}
         alt={item.name}
       />
-      <h3 className="p-sm">{item.name} {item.weight}</h3>
-      <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] p-sm">
-        <div className="flex items-center">
-          <button
-            className="btn-sm"
-            onClick={() => handleQuantityChange(quantity - 1)}
-          >
-            -
-          </button>
-          <input
-            className="h-xl w-xl rounded-[3rem] bg-transparent text-center font-btn text-sm"
-            type="number"
-            value={quantity.toString()}
-            min="1"
-            max="99"
-            step="1"
-            onChange={(e) => handleQuantityChange(Math.round(Number(e.target.value)))}
-          />
-          <button
-            className="btn-sm"
-            onClick={() => handleQuantityChange(quantity + 1)}
-          >
-            +
-          </button>
+      <div className="m-sm flex flex-col justify-between">
+        <div>
+          <h3 className="mb-sm">{item.name}</h3>
+          <h4>{item.weight}</h4>
         </div>
 
-        <h3 className="flex items-center justify-center ">x {item.price} zł</h3>
-        <button className="btn-sm" onClick={handleRemove}>DEL</button> {/* Make sure to wire up this delete button as well */}
+        <div className="flex w-full items-center justify-between ">
+          <div className="flex h-btn-sm items-center justify-center rounded-[3rem] border-2 border-text">
+            <button
+              className="ml-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              onClick={() => handleQuantityChange(quantity - 1)}
+            >
+              -
+            </button>
+            <input
+              className="h-xl w-xl rounded-[3rem] bg-transparent text-center font-btn text-sm"
+              type="number"
+              value={quantity.toString()}
+              min="1"
+              max="99"
+              step="1"
+              onChange={(e) =>
+                handleQuantityChange(Math.round(Number(e.target.value)))
+              }
+            />
+            <button
+              className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              onClick={() => handleQuantityChange(quantity + 1)}
+            >
+              +
+            </button>
+          </div>
+          <p className="text-m font-btn"> x {item.price} zł</p>
+          <button
+            className="...border-2 .border-text flex h-xl w-xl items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
+            onClick={handleRemove}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class=""
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 7l16 0"></path>
+              <path d="M10 11l0 6"></path>
+              <path d="M14 11l0 6"></path>
+              <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+            </svg>
+          </button>{" "}
+          {/* Make sure to wire up this delete button as well */}
+        </div>
       </div>
     </div>
   );

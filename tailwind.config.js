@@ -20,7 +20,7 @@ module.exports = {
         bg: "hsl(40, 85%, 80%)",
         bg2: "hsl(38, 85%, 75%)",
         bg3: "hsl(40, 100%, 86%)",
-        text: "hsl(31, 70%, 15%)",
+        text: "hsl(30, 70%, 18%)",
 
         header: "theme('colors.primary')",
         nav: "theme('colors.secondary')",
