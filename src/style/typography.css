@@ -83,6 +83,7 @@
   .cart-items-scrollbar::-webkit-scrollbar {
      @apply w-sm ;
 
+     
     
   }
 

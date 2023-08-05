@@ -60,13 +60,12 @@ export default function ShopItem({ item }) {
           ))}
         </div>
 
-        <div className="flex">
-          <div className="mx-xs line-through">
-            <h3>{(selectedPrice * 1.1).toFixed(2)} zł</h3>
-          </div>
-          <div className="mx-xs text-warning ">
-            <h3>{selectedPrice} zł</h3>
-          </div>
+        <div className="flex items-center justify-center [&>*]:font-sans">
+          <h3 className="text-warning line-through">
+            {(selectedPrice * 1.1).toFixed(2)} zł
+          </h3>
+
+          <h3 className="mx-xs text-md">{selectedPrice} zł</h3>
         </div>
 
         <div className="relative flex rounded-[3rem]">

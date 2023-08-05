@@ -81,15 +81,14 @@ const Cart = () => {
       </button>
 
       <div
-        className={`
-      max-w-4/5  absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[40rem] flex-col  rounded-l-[3rem]
-      bg-cart-bar p-gap  md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
+        className={` absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar p-gap
+      md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
       ${open ? "flex" : "hidden"} `}
         ref={node}
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar overflow-auto border-b-2 mb-xl border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-xl overflow-auto border-b-2 border-text pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -110,18 +109,25 @@ const Cart = () => {
                 );
               })}
             </div>
-            <div className="mx-xs mb-xs flex items-end justify-between 
-             text-warning">
+            <div
+              className=" mb-xs flex items-end justify-between text-warning
+             [&>*]:font-sans"
+            >
               <h3 className="text-end">Rabat:</h3>
-              <h3 className="">{(totalPrice * 0.1).toFixed(2)} zł</h3>
+              <h3 className="">- {(totalPrice * 0.1).toFixed(2)} zł</h3>
             </div>
 
-            <div className="mx-xs mb-gap flex items-end justify-between">
-              <h2 className="text-end">Razem:</h2>
-              <h2>{totalPrice} zł</h2>
+            <div className=" mb-gap flex items-end justify-between">
+              <h2 className="text-end font-sans">Razem:</h2>
+              <div className="flex items-center justify-center [&>*]:font-sans ">
+                <h3 className="mx-xs text-warning line-through">
+                  {totalPrice} zł
+                </h3>
+                <h2 className="text-md">{totalPrice} zł</h2>
+              </div>
             </div>
 
-            <button className="btn-lg  border-text bg-cart-bar hover:text-bg">
+            <button className="btn-lg border-text bg-cart-bar hover:text-bg">
               Zamawiam
             </button>
           </React.Fragment>

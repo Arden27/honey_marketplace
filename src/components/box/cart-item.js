@@ -36,17 +36,17 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div className="mb-gap grid h-[15rem] grid-cols-[2fr_5fr]  overflow-hidden rounded-[3rem] bg-cart-bar-item">
+    <div className="mb-gap grid h-[15rem] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[3rem] bg-cart-bar-item">
       <Image
-        className="h-full w-full object-cover object-center"
+        className=" h-full w-full object-cover object-center"
         src={item.image}
         width={50}
         height={50}
         alt={item.name}
       />
-      <div className="m-sm flex flex-col justify-between">
+      <div className="m-sm flex max-h-fit flex-col justify-between">
         <div>
-          <h3 className="mb-sm">{item.name}</h3>
+          <h3 className="mb-xs">{item.name}</h3>
           <h4>{item.weight}</h4>
         </div>
 
@@ -76,10 +76,12 @@ const CartItem = ({ item, removeFromCart }) => {
               +
             </button>
           </div>
-          <h4 className="text-m font-btn leading-none">x</h4>
-          <div className=".[&>*]:font-btn [&>*]:text-base [&>*]:leading-none ">
-            <h4 className="pb-xs line-through">{item.price} zł</h4>
-            <h4 className=" text-warning ">{item.price} zł</h4>
+          <h3 className="font-sans text-sm leading-none">x</h3>
+          <div className="relative top-0.5 flex [&>*]:font-sans [&>*]:leading-none ">
+            <h3 className="absolute -top-7 text-sm text-warning line-through ">
+              {item.price} zł
+            </h3>
+            <h3 className=" ">{item.price} zł</h3>
           </div>
           <button
             className="flex h-lg w-lg items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
@@ -87,15 +89,14 @@ const CartItem = ({ item, removeFromCart }) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class=""
-              width="16"
-              height="16"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M4 7l16 0"></path>
