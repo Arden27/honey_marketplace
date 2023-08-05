@@ -8,6 +8,13 @@ const initialState = {
   isLoggedIn: false,
   cart: [],
   items: [],
+  isCartOpen: false,
+  shouldCloseCart: true,
+};
+
+const preloadedState = {
+  ...initialState,
+  ...persistedState,
 };
 
 const appSlice = createSlice({
@@ -47,15 +54,24 @@ const appSlice = createSlice({
     setItems: (state, action) => {
       state.items = action.payload;
     },
+    openCart: (state) => {
+      state.isCartOpen = true;
+    },
+    closeCart: (state) => {
+      state.isCartOpen = false;
+    },
+    setShouldCloseCart: (state, action) => {
+      state.shouldCloseCart = action.payload;
+    },
     resetStore: () => initialState,
   },
 });
 
-export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, updateCartItem, setItems, resetStore } = appSlice.actions;
+export const { setShouldRefresh, setIsLoggedIn, addToCart, removeFromCart, updateCartItem, setItems, openCart, closeCart, setShouldCloseCart, resetStore } = appSlice.actions;
 
 const store = configureStore({
   reducer: appSlice.reducer,
-  preloadedState: persistedState
+  preloadedState: preloadedState
 });
 
 // Save state to localStorage whenever it changes

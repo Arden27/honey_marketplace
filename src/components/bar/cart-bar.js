@@ -8,11 +8,15 @@ import Link from "next/link";
 import Image from "next/image";
 import CartItem from "../box/cart-item";
 import { formatPrice } from "@/components/formatPrice";
+import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
 
 const Cart = () => {
   const node = useRef();
   const buttonRef = useRef(null);
-  const [open, setOpen] = useState(false);
+
+  const isCartOpen = useSelector((state) => state.isCartOpen);
+  const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
+  // const [open, setOpen] = useState(false);
 
   const cartItems = useSelector((state) => state.cart);
   const items = useSelector((state) => state.items);
@@ -27,10 +31,17 @@ const Cart = () => {
       buttonRef.current.contains(e.target)
     ) {
       // inside click
+      console.log("click inside")
       return;
     }
     // outside click
-    setOpen(false);
+    // setOpen(false);
+    console.log("click outside")
+    console.log("shouldCloseCart: ", shouldCloseCart)
+    if (shouldCloseCart) {
+      dispatch(closeCart()); // close the cart using Redux only if shouldCloseCart is true
+    }
+    //dispatch(closeCart());
   };
 
   useEffect(() => {
@@ -63,7 +74,9 @@ const Cart = () => {
       <button
         className="btn-sm [&>*]:hover:stroke-header"
         ref={buttonRef}
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          isCartOpen ? 
+          dispatch(closeCart()) : dispatch(openCart())}}
       >
         <svg
           width="25"
@@ -84,7 +97,7 @@ const Cart = () => {
       <div
         className={` absolute right-0 top-header-sm flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar p-gap
       md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
-      ${open ? "flex" : "hidden"} `}
+      ${isCartOpen ? "flex" : "hidden"} `}
         ref={node}
       >
         {cartItems.length > 0 ? (
