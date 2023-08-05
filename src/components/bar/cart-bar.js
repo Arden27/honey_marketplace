@@ -7,6 +7,7 @@ import { removeFromCart } from "@/redux/store";
 import Link from "next/link";
 import Image from "next/image";
 import CartItem from "../box/cart-item";
+import { formatPrice } from "@/components/formatPrice";
 
 const Cart = () => {
   const node = useRef();
@@ -54,7 +55,7 @@ const Cart = () => {
       const size = item.sizes.find((size) => size.size === cartItem.weight);
       total += size.price * cartItem.quantity;
     }
-    setTotalPrice(total.toFixed(2));
+    setTotalPrice(total);
   }, [cartItems, items]);
 
   return (
@@ -114,16 +115,16 @@ const Cart = () => {
              [&>*]:font-sans"
             >
               <h3 className="text-end">Rabat:</h3>
-              <h3 className="">-{(totalPrice * 0.1).toFixed(2)} zł</h3>
+              <h3 className="">-{formatPrice(totalPrice, 0.1)} zł</h3>
             </div>
 
             <div className=" mb-gap flex items-end justify-between">
               <h2 className="text-end font-sans">Razem:</h2>
               <div className="flex items-center justify-center [&>*]:font-sans ">
                 <h3 className="mx-xs text-warning line-through">
-                  {totalPrice} zł
+                  {formatPrice(totalPrice, 1.1)} zł
                 </h3>
-                <h2 className="text-md">{totalPrice} zł</h2>
+                <h2 className="text-md">{formatPrice(totalPrice)} zł</h2>
               </div>
             </div>
 

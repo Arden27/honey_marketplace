@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/store";
+import { formatPrice } from "@/components/formatPrice";
 
 // import RadioButton from "./radio-button";
 
@@ -62,10 +63,10 @@ export default function ShopItem({ item }) {
 
         <div className="flex items-center justify-center [&>*]:font-sans">
           <h3 className="text-warning line-through">
-            {(selectedPrice * 1.1).toFixed(2)} zł
+            {formatPrice(selectedPrice, 1.1)} zł
           </h3>
 
-          <h3 className="mx-xs text-md">{selectedPrice} zł</h3>
+          <h3 className="mx-xs text-md">{formatPrice(selectedPrice)} zł</h3>
         </div>
 
         <div className="relative flex rounded-[3rem]">

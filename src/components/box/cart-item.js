@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateCartItem } from "@/redux/store";
+import { formatPrice } from "@/components/formatPrice";
 
 const CartItem = ({ item, removeFromCart }) => {
   const [quantity, setQuantity] = useState(item.quantity); // Initial quantity is from props
@@ -79,9 +80,9 @@ const CartItem = ({ item, removeFromCart }) => {
           <h3 className="font-sans text-sm leading-none">x</h3>
           <div className="relative flex [&>*]:font-sans [&>*]:leading-none ">
             <h3 className="absolute -top-7 text-sm text-warning line-through ">
-              {item.price} zł
+              {formatPrice(item.price, 1.1)} zł
             </h3>
-            <h3 className=" ">{item.price} zł</h3>
+            <h3 className=" ">{formatPrice(item.price)} zł</h3>
           </div>
           <button
             className="flex h-lg w-lg items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
