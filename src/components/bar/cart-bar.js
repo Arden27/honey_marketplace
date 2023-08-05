@@ -88,7 +88,7 @@ const Cart = () => {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-xl overflow-auto border-b-2 border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-xl grid gap-gap overflow-auto border-b-2 border-text pb-gap pr-2xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
