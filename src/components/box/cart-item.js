@@ -46,7 +46,7 @@ const CartItem = ({ item, removeFromCart }) => {
       />
       <div className="m-sm flex max-h-fit flex-col justify-between">
         <div>
-          <h3 className="mb-xs">{item.name}</h3>
+          <h3 className="mb-2xs">{item.name}</h3>
           <h4>{item.weight}</h4>
         </div>
 
