@@ -12,7 +12,7 @@ import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
 
 const Cart = () => {
   const node = useRef();
-  const buttonRef = useRef(null);
+  const buttonRef = useRef();
 
   const isCartOpen = useSelector((state) => state.isCartOpen);
   const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
@@ -45,18 +45,22 @@ const Cart = () => {
   };
 
   useEffect(() => {
+    console.log('shouldCloseCart change detected in cart', shouldCloseCart)
+  }, [shouldCloseCart]);
+
+  useEffect(() => {
     // add when mounted
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mouseup", handleClickOutside);
     // return function to be called when unmounted
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mouseup", handleClickOutside);
     };
   }, []);
 
-  useEffect(() => {
-    console.log(cartItems);
-    // function to run when cartItems changes
-  }, [cartItems]);
+  // useEffect(() => {
+  //   console.log(cartItems);
+  //   // function to run when cartItems changes
+  // }, [cartItems]);
 
   useEffect(() => {
     // Calculate total price when cartItems or items change

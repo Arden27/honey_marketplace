@@ -25,6 +25,9 @@ export default function ShopItem({ item }) {
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
 
+  const isCartOpen = useSelector((state) => state.isCartOpen);
+  const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
+  
   const dispatch = useDispatch();
 
   const handleSizeChange = (size, price) => {
@@ -115,16 +118,19 @@ export default function ShopItem({ item }) {
           <button
             className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item"
             onClick={() => {
-                // dispatch(setShouldCloseCart(false));
-                dispatch(
-                  addToCart({ id: item.id, weight: selectedSize, quantity }),
-                )
-                dispatch(openCart())
-                // setTimeout(() => {
-                //   dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
-                // }, 200);
-              }
+              dispatch(setShouldCloseCart(false));
+              console.log("after click on Dodaj", shouldCloseCart)
+              dispatch(
+                addToCart({ id: item.id, weight: selectedSize, quantity }),
+              )
+              dispatch(openCart())
+              
+              setTimeout(() => {
+                dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
+                console.log("timeout shouldCloseCart set to: ", shouldCloseCart)
+              }, 500);
             }
+          }
           >
             Dodaj do koszyka
           </button>
