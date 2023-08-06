@@ -7,7 +7,15 @@ import Image from "next/image";
 export default function NavBar() {
   const node = useRef();
   const buttonRef = useRef(null);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState("start");
+
+  const handleButtonClick = () => {
+    if (open === "start" || open === "close") {
+      setOpen("open");
+    } else {
+      setOpen("close");
+    }
+  }
 
   const handleClickOutside = (e) => {
     if (
@@ -38,7 +46,7 @@ export default function NavBar() {
       <button
         ref={buttonRef}
         className="btn-sm mr-3xs lg:hidden [&>*]:hover:stroke-header"
-        onClick={() => setOpen(!open)}
+        onClick={() => handleButtonClick()}
       >
         <svg
           width="25"
@@ -62,14 +70,12 @@ export default function NavBar() {
         Sklep
       </Link>
 
-      {/* // TUTAJ TRZEBA ZROBIĆ DOBRZE NAVBAROWI: */}
-
       <nav
         className={`  max-lg:h-[calc(100svh-theme(spacing.3xl))
         rounded-r-[3rem]  lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
         max-lg:w-4/5 max-lg:bg-nav 
         max-md:top-header-sm max-md:h-[calc(100svh-theme(spacing.3xl))]
-        ${open ? "slide-in-left flex" : "slide-out-left hidden"} `}
+        ${open === "open" ? "slide-in-left flex" : open === "close" ? "slide-out-left flex" : "hidden"} `}
         ref={node}
       >
         <ul className="lg:[&_a]:btn-sm lg:flex [&>*]:mr-3xs hover:lg:[&_a]:text-header">
