@@ -55,7 +55,6 @@ export default function NavBar() {
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
-
       <Link
         className="btn-sm btn-border hover:text-header lg:hidden"
         href="/sklep"
@@ -63,12 +62,13 @@ export default function NavBar() {
         Sklep
       </Link>
 
+      {/* // TUTAJ TRZEBA ZROBIĆ DOBRZE NAVBAROWI: */}
+
       <nav
         className={`  max-lg:h-[calc(100svh-theme(spacing.3xl))
         rounded-r-[3rem]  lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
         max-lg:w-4/5 max-lg:bg-nav 
         max-md:top-header-sm max-md:h-[calc(100svh-theme(spacing.3xl))]
-
         ${open ? "slide-in-left flex" : "slide-out-left hidden"} `}
         ref={node}
       >
