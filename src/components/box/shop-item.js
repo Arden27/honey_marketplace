@@ -115,14 +115,14 @@ export default function ShopItem({ item }) {
           <button
             className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item"
             onClick={() => {
-                dispatch(setShouldCloseCart(false));
+                // dispatch(setShouldCloseCart(false));
                 dispatch(
                   addToCart({ id: item.id, weight: selectedSize, quantity }),
                 )
                 dispatch(openCart())
-                setTimeout(() => {
-                  dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
-                }, 100);
+                // setTimeout(() => {
+                //   dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
+                // }, 200);
               }
             }
           >
