@@ -26,7 +26,7 @@ export default function NavBar() {
       return;
     }
     // outside click
-    setOpen(false);
+    setOpen("close");
   };
 
   useEffect(() => {
