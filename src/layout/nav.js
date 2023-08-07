@@ -55,7 +55,8 @@ export default function NavBar() {
         className="btn-sm mr-3xs lg:hidden [&>*]:hover:stroke-header"
         onClick={() => handleButtonClick()}
       >
-        <svg
+        <Image src="icons/menu.svg" alt="Menu Icon" width={25} height={25} />
+        {/* <svg
           width="25"
           height="25"
           viewBox="0 0 24 24"
@@ -68,7 +69,7 @@ export default function NavBar() {
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+        </svg> */}
       </button>
       <Link
         className="btn-sm btn-border hover:text-header lg:hidden"
