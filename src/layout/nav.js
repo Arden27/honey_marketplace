@@ -8,16 +8,23 @@ export default function NavBar() {
   const node = useRef();
   const buttonRef = useRef(null);
   const [open, setOpen] = useState("start");
+  const [wasOpened, setWasOpened] = useState(false)
 
   const handleButtonClick = () => {
-    if (open === "start" || open === "close") {
+    if (open === "close") {
       setOpen("open");
-    } else {
+    } else if (open === "open") {
       setOpen("close");
+    } else if (open === "start") {
+      setOpen("open");
+      setWasOpened(true);
     }
-  }
+  };
 
   const handleClickOutside = (e) => {
+    if (!wasOpened) {
+      return
+    }
     if (
       node.current.contains(e.target) ||
       buttonRef.current.contains(e.target)
