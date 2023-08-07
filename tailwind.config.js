@@ -82,6 +82,16 @@ module.exports = {
         "2xl": "clamp(3.91rem, 1.9vw + 3.34rem, 6rem)",
         "3xl": "clamp(4.88rem, 2.83vw + 4.03rem, 8rem)",
       },
+      // loading animation
+      keyframes: {
+        loading: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        loading: 'loading 1s infinite alternate',
+      },
     },
   },
 };
