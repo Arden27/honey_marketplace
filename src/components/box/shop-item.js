@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/store";
 import { formatPrice } from "@/components/formatPrice";
-import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
+import { openCart, setShouldCloseCart } from "@/redux/store";
 
 // import RadioButton from "./radio-button";
 
@@ -25,8 +25,8 @@ export default function ShopItem({ item }) {
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
 
-  const isCartOpen = useSelector((state) => state.isCartOpen);
-  const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
+  // const isCartOpen = useSelector((state) => state.isCartOpen);
+  // const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
   
   const dispatch = useDispatch();
 
@@ -119,7 +119,7 @@ export default function ShopItem({ item }) {
             className="btn-lg border-text pl-[calc(theme(spacing.xl)+2*theme(spacing.md)+2*theme(spacing.3xs)+theme(spacing.md))] hover:text-shop-item"
             onClick={() => {
               dispatch(setShouldCloseCart(false));
-              console.log("after click on Dodaj", shouldCloseCart)
+              // console.log("after click on Dodaj", shouldCloseCart)
               dispatch(
                 addToCart({ id: item.id, weight: selectedSize, quantity }),
               )
@@ -127,7 +127,7 @@ export default function ShopItem({ item }) {
               
               setTimeout(() => {
                 dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
-                console.log("timeout shouldCloseCart set to: ", shouldCloseCart)
+                // console.log("timeout shouldCloseCart set to: ", shouldCloseCart)
               }, 500);
             }
           }

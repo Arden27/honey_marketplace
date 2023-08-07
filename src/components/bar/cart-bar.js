@@ -31,22 +31,22 @@ const Cart = () => {
       buttonRef.current.contains(e.target)
     ) {
       // inside click
-      console.log("click inside")
+      //console.log("click inside")
       return;
     }
     // outside click
     // setOpen(false);
-    console.log("click outside")
-    console.log("shouldCloseCart: ", shouldCloseCart)
+    // console.log("click outside")
+    // console.log("shouldCloseCart: ", shouldCloseCart)
     if (shouldCloseCart) {
       dispatch(closeCart()); // close the cart using Redux only if shouldCloseCart is true
     }
     //dispatch(closeCart());
   };
 
-  useEffect(() => {
-    console.log('shouldCloseCart change detected in cart', shouldCloseCart)
-  }, [shouldCloseCart]);
+  // useEffect(() => {
+  //   console.log('shouldCloseCart change detected in cart', shouldCloseCart)
+  // }, [shouldCloseCart]);
 
   useEffect(() => {
     // add when mounted
