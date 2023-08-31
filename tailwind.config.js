@@ -82,6 +82,11 @@ module.exports = {
         "2xl": "clamp(3.91rem, 1.9vw + 3.34rem, 6rem)",
         "3xl": "clamp(4.88rem, 2.83vw + 4.03rem, 8rem)",
       },
+
+      boxShadow: {
+        DEFAULT: '0px 4px 6px 0px rgb(0 0 0 / 0.2)',
+      },
+      
       // loading animation
       keyframes: {
         loading: {

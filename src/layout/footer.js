@@ -1,6 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+
+import Image from "next/image";
+import FacebookIcon from "public/icons/facebook.svg";
+import InstagramIcon from "public/icons/at.svg";
+import YouTubeIcon from "public/icons/youtube.svg";
+import SignalIcon from "public/icons/at.svg";
+import TelegramIcon from "public/icons/at.svg";
 
 export default function Footer() {
   return (
@@ -71,49 +77,42 @@ export default function Footer() {
             Olszyny 26
             <br />
             07-430 Myszyniec
-            <br />
-            Nr weterynaryjny 14156077
-            <br />
           </address>
+          Nr weterynaryjny 14156077
         </div>
       </div>
 
-      <div className="page-wrapper grid grid-cols-[auto,auto] [&>*]:flex [&>*]:h-xl [&>*]:items-center">
-        <ul className=" [&_li]:btn-sm md:col-start-4 md:col-end-[-1] md:row-start-2 md:justify-end md:text-right [&_a]:mr-3xs  md:[&_a]:ml-3xs md:[&_a]:mr-3xs hover:[&_li]:[&_*]:bg-red-400">
+      <div className="page-wrapper gap-xs grid grid-cols-[auto,auto] [&>*]:flex [&>*]:h-xl [&>*]:items-center">
+        <ul className=" [&_li>*]:btn-sm md:col-start-4 md:col-end-[-1] md:row-start-2 md:justify-end md:text-right [&_a>*]:h-[25px] [&_a>*]:w-[25px] [&_a>*]:stroke-text  [&_a>*]:stroke-2 [&_a]:mr-3xs md:[&_a]:ml-3xs md:[&_a]:mr-3xs [&>*]:hover:[&_a]:stroke-header">
           <li>
-            <Link href="/">Fb</Link>
-          </li>
-          <li>
-            <Link href="/">Ins</Link>
-          </li>
-          <li>
-            <Link className="" href="/">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-              </svg>
+            <Link href="/">
+              <FacebookIcon />
             </Link>
           </li>
           <li>
-            <Link href="/">Sig</Link>
+            <Link href="/">
+              <InstagramIcon />
+            </Link>
           </li>
           <li>
-            <Link href="/">Tel</Link>
+            <Link href="/">
+              <YouTubeIcon />
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <SignalIcon />
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <TelegramIcon />
+            </Link>
           </li>
         </ul>
 
-        <p className="col-span-full h-xl md:col-start-1  md:col-end-4 md:row-start-2">
-          Copyright &copy; 2023 <Link href="/">Kurpiowski Bartnik</Link>.
+        <p className="col-span-full h-xl md:col-start-1  px-sm md:col-end-4 md:row-start-2">
+          Copyright &copy; 2023&nbsp;<Link href="/">Kurpiowski Bartnik</Link>.
         </p>
       </div>
     </footer>

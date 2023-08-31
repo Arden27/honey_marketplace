@@ -1,23 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
+import UserIcon from "public/icons/user.svg";
 
 export default function UserBar() {
   return (
-    <button className="btn-sm [&>*]:hover:stroke-header">
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="7" r="4"></circle>
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-      </svg>
+    <button className="btn-sm z-30 [&>*]:hover:stroke-header">
+      <UserIcon className="h-[25px] w-[25px] stroke-text stroke-2 " />
     </button>
   );
 }

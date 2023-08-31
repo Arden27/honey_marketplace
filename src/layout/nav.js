@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+
 import Image from "next/image";
+import BurgerIcon from "public/icons/menu.svg"
 
 export default function NavBar() {
   const node = useRef();
@@ -47,7 +49,7 @@ export default function NavBar() {
 
   return (
     <div
-      className="m-auto flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
+      className="m-auto z-30 flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
       md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
     >
       <button
@@ -55,21 +57,7 @@ export default function NavBar() {
         className="btn-sm mr-3xs lg:hidden [&>*]:hover:stroke-header"
         onClick={() => handleButtonClick()}
       >
-        <Image src="icons/menu.svg" alt="Menu Icon" width={25} height={25} />
-        {/* <svg
-          width="25"
-          height="25"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg> */}
+        <BurgerIcon className="h-[25px] w-[25px] stroke-text stroke-2 hover:stroke-header" />
       </button>
       <Link
         className="btn-sm btn-border hover:text-header lg:hidden"
@@ -83,7 +71,13 @@ export default function NavBar() {
         rounded-r-[3rem]  lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
         max-lg:w-4/5 max-lg:bg-nav 
         max-md:top-header-sm max-md:h-[calc(100svh-theme(spacing.3xl))]
-        ${open === "open" ? "slide-in-left flex" : open === "close" ? "slide-out-left flex" : "hidden"} `}
+        ${
+          open === "open"
+            ? "slide-in-left flex"
+            : open === "close"
+            ? "slide-out-left flex"
+            : "hidden"
+        } `}
         ref={node}
       >
         <ul className="lg:[&_a]:btn-sm lg:flex [&>*]:mr-3xs hover:lg:[&_a]:text-header">
