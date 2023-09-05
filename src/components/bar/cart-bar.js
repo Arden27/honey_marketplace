@@ -80,7 +80,7 @@ const Cart = () => {
   return (
     <React.Fragment>
       <button
-        className="btn-sm [&>*]:hover:stroke-header z-30"
+        className="btn-sm z-30 [&>*]:hover:stroke-header"
         ref={buttonRef}
         onClick={() => {
           isCartOpen ? dispatch(closeCart()) : dispatch(openCart());
@@ -135,9 +135,12 @@ const Cart = () => {
               </div>
             </div>
 
-            <button className="btn-lg border-text bg-cart-bar hover:text-bg">
+            <Link
+              href="/koszyk"
+              className="btn-lg border-text bg-cart-bar hover:text-bg"
+            >
               Zamawiam
-            </button>
+            </Link>
           </React.Fragment>
         ) : (
           <p>Koszyk jest pusty</p>

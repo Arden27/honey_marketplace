@@ -5,9 +5,11 @@ import Image from "next/image";
 export default function PromoBox() {
   return (
     <section className="grid min-h-[30rem] grid-rows-[1fr_auto] items-center justify-items-center overflow-hidden rounded-[3rem] bg-warning p-gap [&>*]:text-center ">
-      <h2 className="max-w-[10ch] p-gap text-[5rem] font-bold">
-        Załóż konto<br />i zyskaj<br />
-        <span className="text-[10rem]">5%</span>
+      <h2 className="p-gap text-[5rem] font-bold">
+        Załóż konto
+        <br /> i zyskaj
+        <br />
+        <span className="text-[10rem] leading-tight">5%</span>
         <br />
         rabatu
       </h2>

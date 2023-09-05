@@ -4,14 +4,10 @@ import Link from "next/link";
 export default function LogInBox() {
   return (
     <form>
-      <fieldset className="box-lg">
+      <fieldset className="box-lg grid-rows-[auto,1fr,auto] ">
         <h2>Zaloguj się</h2>
-        <div
-          className="my-gap flex w-full flex-col overflow-hidden 
-            rounded-[3rem] bg-bg3 p-gap"
-        >
+        <div className="box-sm flex flex-col">
           <legend className="sr-only">Zaloguj się</legend>
-          <div></div>
           <label htmlFor="email">Email</label>
 
           <input

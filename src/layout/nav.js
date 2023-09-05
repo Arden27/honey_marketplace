@@ -4,13 +4,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import Image from "next/image";
-import BurgerIcon from "public/icons/menu.svg"
+import BurgerIcon from "public/icons/menu.svg";
 
 export default function NavBar() {
   const node = useRef();
   const buttonRef = useRef(null);
   const [open, setOpen] = useState("start");
-  const [wasOpened, setWasOpened] = useState(false)
+  const [wasOpened, setWasOpened] = useState(false);
 
   const handleButtonClick = () => {
     if (open === "close") {
@@ -25,7 +25,7 @@ export default function NavBar() {
 
   const handleClickOutside = (e) => {
     if (!wasOpened) {
-      return
+      return;
     }
     if (
       node.current.contains(e.target) ||
@@ -49,7 +49,7 @@ export default function NavBar() {
 
   return (
     <div
-      className="m-auto z-30 flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
+      className="z-30 m-auto flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
       md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
     >
       <button
