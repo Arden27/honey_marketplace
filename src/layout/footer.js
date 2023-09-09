@@ -70,7 +70,7 @@ export default function Footer() {
         </ul>
 
         <div className="box-sm bg-footer-item">
-          <h2>Dane Pasieki</h2>
+          <h2>Dane pasieki</h2>
           <address>
             Stanisław Młynarczyk
             <br />
