@@ -136,7 +136,7 @@ const Cart = () => {
             </div>
 
             <Link
-              href="/koszyk"
+              href="/sklep/koszyk"
               className="btn-lg border-text bg-cart-bar hover:text-bg"
             >
               Zamawiam

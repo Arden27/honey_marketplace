@@ -18,7 +18,7 @@ module.exports = {
         warning: "hsl(9, 50%, 50%)",
 
         bg: "hsl(40, 85%, 80%)",
-        bg2: "hsl(38, 85%, 75%)",
+        bg2: "hsl(33, 65%, 65%)",
         bg3: "hsl(40, 100%, 86%)",
         text: "hsl(30, 70%, 18%)",
 
@@ -32,7 +32,7 @@ module.exports = {
         shop: "theme(colors.bg2)",
         "shop-item": "theme('colors.bg3')",
 
-        footer: "theme('colors.bg2')",
+        footer: "theme('colors.secondary')",
         "footer-item": "theme('colors.bg3')",
       },
 

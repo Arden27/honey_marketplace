@@ -11,7 +11,7 @@ export const metadata = {
 export default function Cart() {
   return (
     <main className="page-wrapper mb-xl grid grid-cols-2 gap-gap">
-      <div className="[&>*]:box-sm flex flex-col [&>*]:mb-gap [&>*]:h-auto last:[&>*]:mb-0">
+      <div className="[&>*]:box-lg flex flex-col [&>*]:mb-gap [&>*]:h-auto last:[&>*]:mb-0">
         <section className="">
           <h2>Produkty:</h2>
         </section>
@@ -23,7 +23,7 @@ export default function Cart() {
         </section>
       </div>
 
-      <section className="box-sm col-start-2 row-span-full">
+      <section className="box-lg col-start-2 row-span-full">
         <h2>Podsumowanie:</h2>
       </section>
     </main>
