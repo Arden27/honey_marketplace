@@ -14,13 +14,12 @@ import CartItem from "../box/cart-item";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
 
-const Cart = () => {
+export default function Cart(){
   const node = useRef();
   const buttonRef = useRef();
 
   const isCartOpen = useSelector((state) => state.isCartOpen);
   const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
-  // const [open, setOpen] = useState(false);
 
   const cartItems = useSelector((state) => state.cart);
   const items = useSelector((state) => state.items);
@@ -36,18 +35,11 @@ const Cart = () => {
       node.current.contains(e.target) ||
       buttonRef.current.contains(e.target)
     ) {
-      // inside click
-      //console.log("click inside")
       return;
     }
-    // outside click
-    // setOpen(false);
-    // console.log("click outside")
-    // console.log("shouldCloseCart: ", shouldCloseCart)
     if (shouldCloseCart) {
-      dispatch(closeCart()); // close the cart using Redux only if shouldCloseCart is true
+      dispatch(closeCart());
     }
-    //dispatch(closeCart());
   };
 
   useEffect(() => {
@@ -58,11 +50,6 @@ const Cart = () => {
       document.removeEventListener("mouseup", handleClickOutside);
     };
   }, []);
-
-  // useEffect(() => {
-  //   console.log(cartItems);
-  //   // function to run when cartItems changes
-  // }, [cartItems]);
 
   useEffect(() => {
     // Calculate total price when cartItems or items change
@@ -148,5 +135,3 @@ const Cart = () => {
     </React.Fragment>
   );
 };
-
-export default Cart;
