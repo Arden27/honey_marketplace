@@ -18,10 +18,38 @@
   }
 }
 
+@keyframes slide-in-right {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: -100%;
+  }
+}
+
 .slide-in-left {
   animation: slide-in-left 500ms forwards;
   
 }
 .slide-out-left {
   animation: slide-out-left 500ms forwards;
+}
+
+.slide-in-right {
+  animation: slide-in-right 500ms forwards;
+  
+}
+.slide-out-right {
+  animation: slide-out-right 500ms forwards;
 }

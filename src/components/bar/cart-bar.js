@@ -25,6 +25,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const removeFromCartAction = (item) => dispatch(removeFromCart(item));
 
+  const [wasOpened, setWasOpened] = useState(false);
+
   const handleClickOutside = (e) => {
     if (
       node.current.contains(e.target) ||
@@ -43,10 +45,6 @@ const Cart = () => {
     }
     //dispatch(closeCart());
   };
-
-  // useEffect(() => {
-  //   console.log('shouldCloseCart change detected in cart', shouldCloseCart)
-  // }, [shouldCloseCart]);
 
   useEffect(() => {
     // add when mounted
@@ -79,6 +77,7 @@ const Cart = () => {
         className="btn-sm [&>*]:hover:stroke-header"
         ref={buttonRef}
         onClick={() => {
+          setWasOpened(true);
           isCartOpen ? dispatch(closeCart()) : dispatch(openCart());
         }}
       >
@@ -102,7 +101,7 @@ const Cart = () => {
       <div
         className={` absolute right-0 top-header-sm -z-10 flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar  p-gap shadow-2xl
       shadow-[rgba(0,0,0,0.5)] md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
-      ${isCartOpen ? "flex" : "hidden"} `}
+      ${isCartOpen ? "slide-in-right flex" : wasOpened ? "slide-out-right flex" : "hidden"} `}
         ref={node}
       >
         {cartItems.length > 0 ? (
