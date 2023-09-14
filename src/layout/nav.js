@@ -9,39 +9,23 @@ import BurgerIcon from "public/icons/menu.svg";
 export default function NavBar() {
   const node = useRef();
   const buttonRef = useRef(null);
-  const [open, setOpen] = useState("start");
-  const [wasOpened, setWasOpened] = useState(false);
-
-  const handleButtonClick = () => {
-    if (open === "close") {
-      setOpen("open");
-    } else if (open === "open") {
-      setOpen("close");
-    } else if (open === "start") {
-      setOpen("open");
-      setWasOpened(true);
-    }
-  };
+  const [open, setOpen] = useState(false);
+  const [wasOpened, setWasOpened] = useState(false)
 
   const handleClickOutside = (e) => {
-    if (!wasOpened) {
-      return;
-    }
-    if (
-      node.current.contains(e.target) ||
-      buttonRef.current.contains(e.target)
-    ) {
-      // inside click
-      return;
-    }
-    // outside click
-    setOpen("close");
-  };
+      if (
+        node.current.contains(e.target) ||
+        buttonRef.current.contains(e.target)
+      ) {
+        return;
+      }
+      setOpen(false);
+    };
 
   useEffect(() => {
-    // add when mounted
+    // Add when mounted
     document.addEventListener("mousedown", handleClickOutside);
-    // return function to be called when unmounted
+    // Return function to be called when unmounted
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -55,7 +39,10 @@ export default function NavBar() {
       <button
         ref={buttonRef}
         className="btn-sm mr-3xs lg:hidden [&>*]:hover:stroke-header"
-        onClick={() => handleButtonClick()}
+        onClick={() => {
+          setWasOpened(true);
+          setOpen(!open);
+        }}
       >
         <BurgerIcon className="h-[25px] w-[25px] stroke-text stroke-2 hover:stroke-header" />
       </button>
@@ -71,13 +58,7 @@ export default function NavBar() {
         rounded-r-[3rem]  lg:flex max-lg:absolute max-lg:left-0 max-lg:top-header-lg max-lg:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
         max-lg:w-4/5 max-lg:bg-nav 
         max-md:top-header-sm max-md:h-[calc(100svh-theme(spacing.3xl))]
-        ${
-          open === "open"
-            ? "slide-in-left flex"
-            : open === "close"
-            ? "slide-out-left flex"
-            : "hidden"
-        } `}
+        ${open ? "slide-in-left flex" : wasOpened ? "slide-out-left flex" : "hidden"} `}
         ref={node}
       >
         <ul className="lg:[&_a]:btn-sm lg:flex [&>*]:mr-3xs hover:lg:[&_a]:text-header">
