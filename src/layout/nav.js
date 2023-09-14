@@ -11,39 +11,40 @@ export default function NavBar() {
   const [wasOpened, setWasOpened] = useState(false)
 
   const handleButtonClick = () => {
-    if (open === "close") {
+    if (open === "start" || open === "close") {
       setOpen("open");
-    } else if (open === "open") {
+      setWasOpened(true);  // Set wasOpened to true here.
+    } else {
       setOpen("close");
-    } else if (open === "start") {
-      setOpen("open");
-      setWasOpened(true);
     }
   };
 
   const handleClickOutside = (e) => {
-    if (!wasOpened) {
-      return
-    }
-    if (
-      node.current.contains(e.target) ||
-      buttonRef.current.contains(e.target)
-    ) {
-      // inside click
-      return;
-    }
-    // outside click
-    setOpen("close");
-  };
+      console.log("from clickOutside function wasOpened:", wasOpened); // Debugging line
+      console.log("from clickOutside function open:", open); // Debugging line
+      if (!wasOpened) {
+        return;
+      }
+      if (
+        node.current.contains(e.target) ||
+        buttonRef.current.contains(e.target)
+      ) {
+        return;
+      }
+      setOpen("close");
+    };
 
   useEffect(() => {
-    // add when mounted
+    console.log("from useEffect function wasOpened:", wasOpened); // Debugging line
+    console.log("from useEffect function open:", open); // Debugging line
+  
+    // Add when mounted
     document.addEventListener("mousedown", handleClickOutside);
-    // return function to be called when unmounted
+    // Return function to be called when unmounted
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [wasOpened, open]);
 
   return (
     <div
