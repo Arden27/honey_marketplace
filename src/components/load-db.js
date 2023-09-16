@@ -17,6 +17,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 79.99, default: true },
 				{ size: "1 KG", price: 99.99 },
 			],
+            categories: ["honey"]
 		},
 		{
 			id: 2,
@@ -27,6 +28,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 79.99 },
 				{ size: "1 KG", price: 99.99, default: true },
 			],
+            categories: ["honey"]
 		},
 		{
 			id: 3,
@@ -37,6 +39,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 79.99, default: true },
 				{ size: "1 KG", price: 99.99 },
 			],
+            categories: ["honey", "promo"]
 		},
         {
 			id: 4,
@@ -47,6 +50,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 59.99, default: true },
 				{ size: "1 KG", price: 69.99 },
 			],
+            categories: ["honey"]
 		},
         {
 			id: 5,
@@ -57,6 +61,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 29.99, default: true },
 				{ size: "1 KG", price: 39.99 },
 			],
+            categories: ["honey"]
 		},
         {
 			id: 6,
@@ -66,6 +71,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 769.99 },
 				{ size: "1 KG", price: 1089.99, default: true },
 			],
+            categories: ["honey", "sets"]
 		},
         {
 			id: 7,
@@ -76,6 +82,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 869.99, default: true },
 				{ size: "1 KG", price: 989.99 },
 			],
+            categories: ["honey", "sets", "promo"]
 		},
         {
 			id: 8,
@@ -86,6 +93,7 @@ export default function LoadDB() {
 				{ size: "450 G", price: 669.99, default: true },
 				{ size: "1 KG", price: 889.99 },
 			],
+            categories: ["honey", "sets"]
 		},
         {
 			id: 9,
@@ -95,6 +103,7 @@ export default function LoadDB() {
 				{ size: "3 KG", price: 1069.99, default: true },
 				{ size: "5 KG", price: 1489.99 },
 			],
+            categories: ["honey", "sets"]
 		},
         {
 			id: 10,
@@ -103,6 +112,7 @@ export default function LoadDB() {
 			sizes: [
 				{ size: "3 KG", price: 15.99, default: true }
 			],
+            categories: ["candles"]
 		},
         {
 			id: 11,
@@ -111,6 +121,7 @@ export default function LoadDB() {
 			sizes: [
 				{ size: "3 KG", price: 21.99, default: true }
 			],
+            categories: ["candles", "promo"]
 		},
         {
 			id: 12,
@@ -119,6 +130,7 @@ export default function LoadDB() {
 			sizes: [
 				{ size: "3 KG", price: 16.99, default: true }
 			],
+            categories: ["candles"]
 		},
         {
 			id: 13,
@@ -127,6 +139,7 @@ export default function LoadDB() {
 			sizes: [
 				{ size: "3 KG", price: 12.99, default: true }
 			],
+            categories: ["candles"]
 		},
         {
 			id: 14,
@@ -137,6 +150,7 @@ export default function LoadDB() {
 				{ size: "25 szt", price: 50.99, default: true },
 				{ size: "40 szt", price: 99.99 },
 			],
+            categories: ["candles", "sets"]
 		},
         {
 			id: 15,
@@ -147,6 +161,18 @@ export default function LoadDB() {
 				{ size: "85 szt", price: 249.99, default: true },
 				{ size: "130 szt", price: 599.99 },
 			],
+            categories: ["candles", "sets"]
+		},
+        {
+			id: 16,
+			name: "Wosk pszczeli ",
+			image: "/img/products/sets/zestaw_swiec2.jpeg",
+			sizes: [
+				{ size: "50 szt", price: 139.99 },
+				{ size: "85 szt", price: 249.99, default: true },
+				{ size: "130 szt", price: 599.99 },
+			],
+            categories: ["products"]
 		},
 		// add more items as needed
 	];
