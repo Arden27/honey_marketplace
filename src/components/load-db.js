@@ -38,6 +38,26 @@ export default function LoadDB() {
 				{ size: "1 KG", price: 99.99 },
 			],
 		},
+        {
+			id: 4,
+			name: "Aiód rzepakowy\nz nutką gryki",
+			image: "/img/logo.png",
+			sizes: [
+				{ size: "250 G", price: 2359.99 },
+				{ size: "450 G", price: 79.99 },
+				{ size: "1 KG", price: 99.99 },
+			],
+		},
+        {
+			id: 5,
+			name: "ZAiód rzepakowy\nz nutką gryki",
+			image: "/img/logo.png",
+			sizes: [
+				{ size: "250 G", price: 19.99 },
+				{ size: "450 G", price: 79.99 },
+				{ size: "1 KG", price: 99.99 },
+			],
+		},
 		// add more items as needed
 	];
 
