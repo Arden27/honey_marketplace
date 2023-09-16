@@ -6,7 +6,13 @@ import Pagination from "@/components/btn/pagination";
 
 import BottomBox from "@/components/box/bottom-box";
 
-import DB from "@/components/db";
+// import DB from "@/components/db";
+
+import dynamic from "next/dynamic";
+
+const DB = dynamic(() => import("@/components/db"), {
+  ssr: false,
+});
 
 export const metadata = {
   title: "Sklep - Kurpiowski Bartnik",
@@ -25,6 +31,7 @@ export default function Shop() {
         <div className="col-span-full flex items-center justify-between">
           <div>PANEL</div>
           <FilterItemsBtn />
+          
         </div>
 
         <DB />
