@@ -47,7 +47,7 @@ export default function UserBar(){
         ${open ? "slide-in-right flex" : wasOpened ? "slide-out-right flex" : "hidden"} `}
         ref={node}
       >
-        MENU UŻYTKOWNIKA
+        MENU UŻYTKOWNIKA...
       </div>
     </React.Fragment>
   );
