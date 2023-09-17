@@ -69,19 +69,19 @@ export default function NavBar() {
 
             <ul className="lg:hidden">
               <li>
-                <Link href="/sklep/promocje">Promocje</Link>
+                <Link href="/sklep?categoria=promocje">Promocje</Link>
               </li>
               <li>
-                <Link href="/sklep/miody">Miody</Link>
+                <Link href="/sklep?categoria=miody">Miody</Link>
               </li>
               <li>
-                <Link href="/sklep/produkty-pszczele">Produkty pszczele</Link>
+                <Link href="/sklep?categoria=produkty-pszczele">Produkty pszczele</Link>
               </li>
               <li>
-                <Link href="/sklep/swiece">Świece</Link>
+                <Link href="/sklep?categoria=swiece">Świece</Link>
               </li>
               <li>
-                <Link href="/sklep/zestawy">Zestawy</Link>
+                <Link href="/sklep?categoria=zestawy">Zestawy</Link>
               </li>
             </ul>
           </li>
