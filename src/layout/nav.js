@@ -23,7 +23,7 @@ export default function NavBar() {
     };
 
   const handleLinkClick = (e) => {
-    if (e.target.tagName === 'LINK') {
+    if (e.target.tagName === 'A') {
       setOpen(false);
     }
   };
@@ -31,11 +31,15 @@ export default function NavBar() {
   useEffect(() => {
     // Add when mounted
     document.addEventListener("mousedown", handleClickOutside);
-    node.current.addEventListener("click", handleLinkClick);
+    if (node.current) {
+      node.current.addEventListener("click", handleLinkClick);
+    }
     // Return function to be called when unmounted
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      node.current.removeEventListener("click", handleLinkClick);
+      if (node.current) {
+        node.current.removeEventListener("click", handleLinkClick);
+      }
     };
   }, []);
 
