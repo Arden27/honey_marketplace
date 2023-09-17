@@ -22,12 +22,20 @@ export default function NavBar() {
       setOpen(false);
     };
 
+  const handleLinkClick = (e) => {
+    if (e.target.tagName === 'LINK') {
+      setOpen(false);
+    }
+  };
+
   useEffect(() => {
     // Add when mounted
     document.addEventListener("mousedown", handleClickOutside);
+    node.current.addEventListener("click", handleLinkClick);
     // Return function to be called when unmounted
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      node.current.removeEventListener("click", handleLinkClick);
     };
   }, []);
 
