@@ -1,27 +1,35 @@
 import { useSelector } from "react-redux";
-import React from "react";
+import React, { useMemo } from "react";
 import ShopItem from "@/components/box/shop-item";
 
-export default function Items({ sortType }) {
+export default function Items({ sortType, category }) {
   const items = useSelector((state) => state.items);
-  
+
+  const filteredItems = useMemo(() => {
+    if (!category) return items;
+
+    return items.filter(item => 
+      item.categories.includes(category)
+    );
+  }, [items, category]);
+
   let sortedItems;
 
   switch (sortType) {
     case 'A-Z':
-      sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name));
+      sortedItems = [...filteredItems].sort((a, b) => a.name.localeCompare(b.name));
       break;
     case 'Z-A':
-      sortedItems = [...items].sort((a, b) => b.name.localeCompare(a.name));
+      sortedItems = [...filteredItems].sort((a, b) => b.name.localeCompare(a.name));
       break;
     case 'By price from lowest':
-      sortedItems = [...items].sort((a, b) => a.sizes[0].price - b.sizes[0].price);
+      sortedItems = [...filteredItems].sort((a, b) => a.sizes[0].price - b.sizes[0].price);
       break;
     case 'By price from highest':
-      sortedItems = [...items].sort((a, b) => b.sizes[0].price - a.sizes[0].price);
+      sortedItems = [...filteredItems].sort((a, b) => b.sizes[0].price - a.sizes[0].price);
       break;
     default:
-      sortedItems = items;
+      sortedItems = filteredItems;
   }
   
   return (

@@ -1,5 +1,7 @@
 "use client"
 
+
+
 import Link from "next/link";
 
 import ShopMenu from "@/components/box/shop-menu";
@@ -10,13 +12,43 @@ import BottomBox from "@/components/box/bottom-box";
 
 import { useState, useEffect } from "react";
 
-// import DB from "@/components/db";
+import { usePathname, useSearchParams } from 'next/navigation';
 
 import dynamic from "next/dynamic";
 
 const Items = dynamic(() => import("@/components/items"), {
   ssr: false,
 });
+
+const Breadcrumb = ({ baseDomain, pathname, category, searchParams }) => {
+  return (
+    <div>
+      <Link className="hover:underline" href="/">
+        {baseDomain}
+      </Link>
+      <span>/</span>
+      { pathname === '/sklep' && !category ? (
+        'sklep'
+      ) : (
+        <Link className="hover:underline" href="/sklep">
+          sklep
+        </Link>
+      )}
+      { category && (
+        <>
+          <span>/</span>
+          { category === searchParams.get('categoria') ? (
+            category
+          ) : (
+            <Link className="hover:underline" href={`/sklep?categoria=${category}`}>
+              {category}
+            </Link>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
 
 // export const metadata = {
 //   title: "Sklep - Kurpiowski Bartnik",
@@ -25,7 +57,19 @@ const Items = dynamic(() => import("@/components/items"), {
 // };
 
 export default function Shop() {
+  const pathname = usePathname();
+  const searchParams = new URLSearchParams(useSearchParams());
+  const category = searchParams.get('categoria');
+
   const [sortType, setSortType] = useState('A-Z');
+
+  let baseDomain = 'KurpiowskiBartnik.pl';
+  let displayPath = pathname;
+
+  // append the category if it exists
+  if (category) {
+    displayPath += '/' + category;
+  }
 
   const handleSort = (type) => {
     setSortType(type);
@@ -39,12 +83,16 @@ export default function Shop() {
         sm:grid-cols-2 lg:grid-cols-3"
       >
         <div className="col-span-full flex items-center justify-between">
-          <div>PANEL</div>
+          <Breadcrumb 
+            baseDomain={baseDomain} 
+            pathname={pathname} 
+            category={category} 
+            searchParams={searchParams}
+          />
           <SortItemsBtn onSelect={handleSort} />
-          
         </div>
 
-        <Items sortType={sortType} />
+        <Items sortType={sortType} category={category} />
 
         <Pagination />
       </section>
