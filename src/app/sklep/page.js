@@ -1,17 +1,12 @@
 "use client"
-
-
-
 import Link from "next/link";
 
 import ShopMenu from "@/components/box/shop-menu";
 import SortItemsBtn from "@/components/btn/sort-items-btn";
 import Pagination from "@/components/btn/pagination";
-
 import BottomBox from "@/components/box/bottom-box";
 
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 import { usePathname, useSearchParams } from 'next/navigation';
 
 import dynamic from "next/dynamic";
