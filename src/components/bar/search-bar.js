@@ -44,7 +44,7 @@ export default function SearchBar(){
 
       <div
         className={` absolute right-0 top-header-sm z-10 flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar p-gap shadow md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
-        ${open ? "slide-in-right flex" : wasOpened ? "slide-out-right flex" : "hidden"} `}
+        ${open ? "slide-in-top flex" : wasOpened ? "slide-out-top flex" : "hidden"} `}
         ref={node}
       >
         <input/>
