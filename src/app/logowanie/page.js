@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function LogIn() {
   return (
-    <main className="page-wrapper mb-xl grid gap-gap lg:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr]">
+    <main className="page-wrapper mb-xl grid gap-gap md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr] [&>*]:justify-items-center">
 
         <LogInBox />
 

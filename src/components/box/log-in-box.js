@@ -3,10 +3,11 @@ import Link from "next/link";
 
 export default function LogInBox() {
   return (
-    <form>
-      <fieldset className="box-lg grid-rows-[auto,1fr,auto] ">
-        <h2>Zaloguj się</h2>
-        <div className="box-sm flex flex-col">
+    <div className="box-lg grid-rows-[auto,1fr,auto] ">
+      <h2>Zaloguj się</h2>
+
+      <form className="box-sm">
+        <fieldset className="flex flex-col">
           <legend className="sr-only">Zaloguj się</legend>
           <label htmlFor="email">Email</label>
 
@@ -33,14 +34,12 @@ export default function LogInBox() {
 
             <Link href="/logowanie/zmiana-hasla">Nie pamiętam hasła</Link>
           </div>
-        </div>
+        </fieldset>
+      </form>
 
-        <div>
-          <button className="btn-lg bottom-gap bg-bg hover:text-bg" href="/">
-            Zaloguj się
-          </button>
-        </div>
-      </fieldset>
-    </form>
+      <button className="btn-lg bottom-gap bg-bg hover:text-bg" href="/">
+        Zaloguj się
+      </button>
+    </div>
   );
 }

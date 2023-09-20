@@ -48,7 +48,7 @@
   }
 
   .btn-sm {
-    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  duration-300 ease-in-out ;
+    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  duration-300 ease-in-out;
   }
 
   .btn-sm:hover {
@@ -56,11 +56,11 @@
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-[15rem] items-center justify-center rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-transform duration-300 ease-in-out;
+    @apply flex h-btn-lg min-w-[15rem] items-center justify-center self-end rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-transform duration-300 ease-in-out;
   }
 
   .btn-lg:hover {
-    @apply bg-text ;
+    @apply bg-text;
   }
 
   .btn-border {
@@ -68,36 +68,24 @@
   }
 
   .box-sm {
-    @apply overflow-hidden w-full h-full rounded-[3rem] bg-bg3 p-gap;
+    @apply h-full w-full overflow-hidden rounded-[3rem] bg-bg3 p-gap;
   }
 
   .box-lg {
-    @apply w-full h-full  overflow-hidden rounded-[3rem] bg-bg2 p-gap gap-gap ;
+    @apply grid h-full  w-full grid-cols-1  gap-gap overflow-hidden rounded-[3rem] bg-bg2 p-gap;
   }
 
-
-
-
-
-
   .cart-items-scrollbar::-webkit-scrollbar {
-     @apply w-sm ;
-
-     
-    
+    @apply w-sm;
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-track {
-    @apply bg-cart-bar w-[20px];
+    @apply w-[20px] bg-cart-bar;
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-cart-bar border-[3px]  rounded-[3rem] border-solid bg-text border-cart-bar;
-    
-    
-
+    @apply rounded-[3rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
   }
-
 
   .bg {
     background-image: linear-gradient(
