@@ -16,8 +16,8 @@ const CartBar = dynamic(() => import("@/components/bar/cart-bar"), {
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 mb-2xl grid h-header-sm w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]  bg-header md:h-header-lg">
-      <div className="absolute z-20 h-header-sm w-full shadow md:h-header-lg"></div>
+    <header className="fixed top-0 z-50 grid h-header-sm w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]  bg-header md:h-header-lg shadow">
+
       <Nav />
 
       <Logo />

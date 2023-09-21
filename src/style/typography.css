@@ -3,15 +3,13 @@
     --text-flow: 1em;
   }
 
-  html {
-    @apply text-[62.5%];
-  }
+
   body {
     @apply text-base text-text;
   }
 
   .page-wrapper {
-    @apply mx-auto w-[calc(100%-2*theme(spacing.md))] max-w-screen-xl;
+    @apply mx-auto w-[calc(100%-2*theme(spacing.md))] max-w-screen-2xl;
   }
 
   h1,
@@ -48,7 +46,7 @@
   }
 
   .btn-sm {
-    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  duration-300 ease-in-out;
+    @apply flex h-btn-sm min-w-max items-center justify-center rounded-[3rem] border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  transition-colors duration-300 ease-in-out;
   }
 
   .btn-sm:hover {
@@ -56,7 +54,7 @@
   }
 
   .btn-lg {
-    @apply flex h-btn-lg min-w-[15rem] items-center justify-center self-end rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-transform duration-300 ease-in-out;
+    @apply flex h-btn-lg min-w-[15rem] items-center justify-center self-end rounded-[3rem] border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
   }
 
   .btn-lg:hover {

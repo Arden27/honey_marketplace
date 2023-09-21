@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl">
       <body className="  bg-bg">
-        <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto]">
+        <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] [&>main]:mt-[calc(theme(spacing.3xl)+theme(spacing.2xl))] [&>main]:md:mt-[calc(theme(spacing.3xl)+theme(spacing.2xl)+theme(spacing.sm))]">
           <Providers>
             <LoadDB />
             <Header />

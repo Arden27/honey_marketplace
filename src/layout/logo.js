@@ -6,11 +6,11 @@ export default function Logo() {
   return (
     <div
       className="relative flex h-header-sm justify-center 
-      md:h-header-lg"
+      md:h-header-lg "
     >
-      <div className="absolute -top-4 z-30 h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full bg-header shadow md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)]"></div>
+      <div className="absolute -top-4 -z-20 h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full shadow bg-header md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)]"></div>
 
-      <div className="absolute -top-4 z-40 h-[calc(theme(spacing.3xl)+1rem)] md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] w-[calc(2*theme(spacing.3xl))] bg-header  "></div>
+      {/* <div className="absolute z-40 h-3xl w-[calc(theme(spacing.3xl)+4rem)] bg-header  md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] "></div> */}
 
       <Link className="flex justify-center" href="/">
         <Image

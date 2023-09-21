@@ -45,7 +45,7 @@ export default function NavBar() {
 
   return (
     <div
-      className="z-30 m-auto flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
+      className="z-30 page-wrapper flex h-3xl w-[calc(100%-2*theme(spacing.md))] items-center
       md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))]"
     >
       <button
