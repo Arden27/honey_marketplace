@@ -5,16 +5,15 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <div
-      className="relative flex h-header-sm justify-center 
-      md:h-header-lg "
+      className="flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))] justify-center"
     >
-      <div className="absolute -top-4 -z-20 h-[calc(theme(spacing.3xl)+3rem)] w-[calc(theme(spacing.3xl)+3rem)] rounded-full shadow bg-header md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+3rem)]"></div>
+      <div className="fixed -top-2xs h-[calc(theme(spacing.3xl)+theme(spacing.xs))] w-[calc(theme(spacing.3xl)+theme(spacing.xs))] rounded-b-full bg-header shadow "></div>
 
-      {/* <div className="absolute z-40 h-3xl w-[calc(theme(spacing.3xl)+4rem)] bg-header  md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] "></div> */}
+      <div className="fixed h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-[calc(theme(spacing.3xl)+theme(spacing.xs)+0.9rem)] bg-header"></div>
 
       <Link className="flex justify-center" href="/">
         <Image
-          className="z-50 h-[calc(theme(spacing.3xl)+1rem)] w-[calc(theme(spacing.3xl)+1rem)] rounded-full md:h-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)] md:w-[calc(theme(spacing.3xl)+theme(spacing.sm)+1rem)]"
+          className="fixed h-[calc(theme(spacing.2xl)+theme(spacing.md))] w-[calc(theme(spacing.2xl)+theme(spacing.md))] rounded-full "
           src="/img/logo.png"
           width={80}
           height={80}

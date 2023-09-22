@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "./styles" layer(base);
 @import "./fonts" layer(base);
 @import "./animations" layer(base);
 @import "./typography" layer(components);

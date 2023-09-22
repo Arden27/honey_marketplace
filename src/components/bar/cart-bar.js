@@ -14,7 +14,7 @@ import CartItem from "../box/cart-item";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
 
-export default function Cart(){
+export default function Cart() {
   const node = useRef();
   const buttonRef = useRef();
 
@@ -65,7 +65,7 @@ export default function Cart(){
   return (
     <React.Fragment>
       <button
-        className="btn-sm z-30 [&>*]:hover:stroke-header"
+        className="btn-sm [&>*]:hover:stroke-header"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
@@ -74,10 +74,16 @@ export default function Cart(){
       >
         <ShoppingCartIcon className="h-[25px] w-[25px] stroke-text stroke-2 " />
       </button>
-      
+
       <div
-        className={` fixed right-0 top-header-sm z-10 flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar p-gap shadow md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
-        ${isCartOpen ? "slide-in-right flex" : wasOpened ? "slide-out-right flex" : "hidden"} `}
+        className={` bar right-0 flex-col rounded-l-3xl
+        ${
+          isCartOpen
+            ? "slide-in-right flex"
+            : wasOpened
+            ? "slide-out-right flex"
+            : "hidden"
+        } `}
         ref={node}
       >
         {cartItems.length > 0 ? (
@@ -134,4 +140,4 @@ export default function Cart(){
       </div>
     </React.Fragment>
   );
-};
+}

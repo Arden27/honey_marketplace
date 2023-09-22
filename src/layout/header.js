@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Nav from "./nav";
+import BurgerBar from "../components/bar/burger-bar";
 import Logo from "./logo";
 import UserBar from "@/components/bar/user-bar";
 import SearchBar from "@/components/bar/search-bar";
@@ -16,17 +17,18 @@ const CartBar = dynamic(() => import("@/components/bar/cart-bar"), {
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-50 grid h-header-sm w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]  bg-header md:h-header-lg shadow">
+    <header className=" fixed z-50 h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-full">
+      <div className="mx-sm grid h-[calc(theme(spacing.2xl)+theme(spacing.sm))] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+        <div className="fixed left-0 -z-10 h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-full bg-header shadow"></div>
 
-      <Nav />
+        <div className="flex  h-[calc(theme(spacing.2xl)+theme(spacing.sm))]  items-center justify-start [&>button]:mr-3xs">
+          <BurgerBar />
+          <Nav />
+        </div>
 
-      <Logo />
+        <Logo />
 
-      <div className="m-auto w-[calc(100%-2*theme(spacing.md))] ">
-        <div
-          className="flex h-3xl items-center justify-end
-        md:h-[calc(theme(spacing.3xl)+theme(spacing.sm))] [&>*]:ml-3xs"
-        >
+        <div className="flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))]  items-center justify-end [&>button]:ml-3xs">
           <SearchBar />
 
           <UserBar />

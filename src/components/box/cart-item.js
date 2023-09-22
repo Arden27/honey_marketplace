@@ -37,7 +37,7 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div className=" grid  h-[15rem] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[3rem] bg-cart-bar-item">
+    <div className=" grid  h-[15rem] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-3xl bg-cart-bar-item">
       <Image
         className=" h-full w-full object-cover object-center"
         src={item.image}
@@ -52,15 +52,15 @@ const CartItem = ({ item, removeFromCart }) => {
         </div>
 
         <div className="flex w-full items-center justify-between ">
-          <div className="flex h-btn-sm items-center justify-center rounded-[3rem] border-2 border-text">
+          <div className="flex h-btn-sm items-center justify-center rounded-3xl border-2 border-text">
             <button
-              className="ml-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              className="ml-3xs h-md w-md justify-center rounded-3xl text-center font-btn leading-none hover:bg-text hover:text-bg"
               onClick={() => handleQuantityChange(quantity - 1)}
             >
               -
             </button>
             <input
-              className="h-xl w-xl rounded-[3rem] bg-transparent text-center font-btn text-sm"
+              className="h-xl w-xl rounded-3xl bg-transparent text-center font-btn text-sm"
               type="number"
               value={quantity.toString()}
               min="1"
@@ -71,7 +71,7 @@ const CartItem = ({ item, removeFromCart }) => {
               }
             />
             <button
-              className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              className="mr-3xs h-md w-md justify-center rounded-3xl text-center font-btn leading-none hover:bg-text hover:text-bg"
               onClick={() => handleQuantityChange(quantity + 1)}
             >
               +
@@ -85,7 +85,7 @@ const CartItem = ({ item, removeFromCart }) => {
             <h3 className=" ">{formatPrice(item.price)} zł</h3>
           </div>
           <button
-            className="flex h-lg w-lg items-center  justify-center rounded-[3rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
+            className="flex h-lg w-lg items-center  justify-center rounded-3xl text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
             onClick={handleRemove}
           >
             <svg

@@ -37,7 +37,7 @@ export default function ShopItem({ item }) {
 
   return (
     <section
-      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.2xs))] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[3rem] bg-shop-item sm:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.xl)-theme(spacing.md))] md:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.2xl)-theme(spacing.xs))]
+      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.2xs))] min-h-[50rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-3xl bg-shop-item sm:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.xl)-theme(spacing.md))] md:h-[calc(100svh-4*theme(spacing.3xl)-2*theme(spacing.2xl)-theme(spacing.xs))]
     
     "
     >
@@ -73,13 +73,13 @@ export default function ShopItem({ item }) {
           <h3 className="mx-xs text-md">{formatPrice(selectedPrice)} zł</h3>
         </div>
 
-        <div className="relative flex rounded-[3rem]">
+        <div className="relative flex rounded-3xl">
           <div
-            className="absolute flex h-btn-lg items-center justify-items-center rounded-[3rem] border-2 border-text bg-shop-item
+            className="absolute flex h-btn-lg items-center justify-items-center rounded-3xl border-2 border-text bg-shop-item
 					"
           >
             <button
-              className="ml-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
+              className="ml-3xs h-md w-md justify-center rounded-3xl text-center font-btn leading-none 
 							hover:bg-text hover:text-bg"
               onClick={() =>
                 quantity > 1 && setQuantity(Math.round(quantity - 1))
@@ -88,7 +88,7 @@ export default function ShopItem({ item }) {
               -
             </button>
             <input
-              className="h-xl w-xl rounded-[3rem] bg-transparent text-center font-btn text-sm"
+              className="h-xl w-xl rounded-3xl bg-transparent text-center font-btn text-sm"
               type="number"
               value={quantity.toString()}
               min="1"
@@ -106,7 +106,7 @@ export default function ShopItem({ item }) {
               }}
             />
             <button
-              className="mr-3xs h-md w-md justify-center rounded-[3rem] text-center font-btn leading-none 
+              className="mr-3xs h-md w-md justify-center rounded-3xl text-center font-btn leading-none 
 							hover:bg-text hover:text-bg"
               onClick={() =>
                 quantity < 99 && setQuantity(Math.round(quantity + 1))

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HowToBox() {
   return (
-    <section className="relative flex h-[40svh] min-h-[30rem] items-center justify-center overflow-hidden rounded-[3rem] sm:h-[30svh] md:h-full [&>*]:text-center">
+    <section className="relative flex h-[40svh] min-h-[30rem] items-center justify-center overflow-hidden rounded-3xl sm:h-[30svh] md:h-full [&>*]:text-center">
       <Image
         className="top-0 h-full w-full object-cover object-left-bottom"
         src="/img/logo.png"
@@ -18,7 +18,7 @@ export default function HowToBox() {
       </h2>
 
       <Link
-        className="btn-lg absolute bottom-gap bg-bg 
+        className="btn-lg bottom-gap  absolute bg-bg 
         hover:text-bg"
         href="/sklep"
       >

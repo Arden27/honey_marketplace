@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import SearchIcon from "public/icons/search.svg";
 
-export default function SearchBar(){
+export default function SearchBar() {
   const node = useRef();
   const buttonRef = useRef();
   const [open, setOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function SearchBar(){
   return (
     <React.Fragment>
       <button
-        className="btn-sm z-30 [&>*]:hover:stroke-header"
+        className=" btn-sm hidden 430px:flex [&>*]:hover:stroke-header"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
@@ -43,13 +43,29 @@ export default function SearchBar(){
       </button>
 
       <div
-        className={` absolute right-0 top-header-sm z-10 flex max-h-[calc(100svh-theme(spacing.3xl))] w-[45rem] max-w-[100svw] flex-col rounded-l-[3rem] bg-cart-bar p-gap shadow md:top-header-lg md:max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm))]
-        ${open ? "slide-in-top flex" : wasOpened ? "slide-out-top flex" : "hidden"} `}
+        className={` bar left-1/2 -z-30 w-[calc(100%-theme(spacing.xs))] max-w-[calc(theme(screens.xl)+theme(spacing.sm))] self-center  rounded-b-3xl 
+        ${
+          open
+            ? "slide-in-top flex"
+            : wasOpened
+            ? "slide-out-top flex"
+            : "hidden"
+        } `}
         ref={node}
       >
-        <input/>
-        <button>Szukaj</button>
+        <div className="">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae amet
+          veritatis maiores, nam aliquam aliquid aspernatur voluptatem totam eos
+          recusandae vero eligendi at tenetur consequatur? Ad iusto doloribus
+          consectetur laboriosam cupiditate autem! Dolores repudiandae ullam
+          iure? Nesciunt tempore tenetur doloribus quidem! Minus itaque fuga
+          voluptatum numquam quibusdam ipsam eaque id nam qui harum deserunt
+          consequuntur omnis voluptas facere, excepturi facilis, iure temporibus
+          similique asperiores eos. Ullam quibusdam ipsa eligendi velit.
+          <input />
+          <button>Szukaj</button>
+        </div>
       </div>
     </React.Fragment>
   );
-};
+}
