@@ -43,7 +43,7 @@ export default function UserBar() {
       </button>
 
       <div
-        className={`bar right-0 flex-col rounded-l-3xl bg-cart-bar p-gap shadow
+        className={`bar right-0 flex-col rounded-l-[2rem] bg-cart-bar p-gap shadow
         ${
           open
             ? "slide-in-right flex"

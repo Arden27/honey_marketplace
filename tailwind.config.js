@@ -47,8 +47,7 @@ module.exports = {
         xl: "clamp(3.00rem, 2.81rem + 0.94vw, 3.56rem)",
         "2xl": "clamp(4.00rem, 3.75rem + 1.25vw, 4.75rem)",
         "3xl": "clamp(6.00rem, 5.63rem + 1.88vw, 7.13rem)",
-        "4xl": "clamp(6.00rem, 5.63rem + 1.88vw, 7.13rem)",
-        "5xl": "clamp(6.00rem, 5.63rem + 1.88vw, 7.13rem)",
+
 
         gap: "theme('spacing.sm')",
 
@@ -98,11 +97,5 @@ module.exports = {
 // FLEX-ROW: flex items-center justify-center
 
 // GRID CENTER: items-center justify-items-center
-//
-//
-//
-// box: overflow-hidden rounded-4xl
-//
-//
 //
 //

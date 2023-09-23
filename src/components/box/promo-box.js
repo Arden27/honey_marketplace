@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PromoBox() {
   return (
-    <section className="grid min-h-[30rem] grid-rows-[1fr_auto] items-center justify-items-center overflow-hidden rounded-3xl bg-warning p-gap [&>*]:text-center ">
+    <section className="grid min-h-[30rem] grid-rows-[1fr_auto] items-center justify-items-center overflow-hidden rounded-[2rem] bg-warning p-gap [&>*]:text-center ">
       <h2 className="p-gap text-[5rem] font-bold">
         Załóż konto
         <br /> i zyskaj

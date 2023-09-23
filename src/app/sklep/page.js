@@ -74,7 +74,7 @@ export default function Shop() {
     <main>
       <ShopMenu />
       <section
-        className="page-wrapper mb-gap grid grid-cols-1  gap-gap overflow-hidden rounded-3xl bg-shop p-gap 
+        className="page-wrapper mb-gap grid grid-cols-1  gap-gap overflow-hidden rounded-[2rem] bg-shop p-gap 
         sm:grid-cols-2 lg:grid-cols-3"
       >
         <div className="col-span-full flex items-center justify-between">

@@ -37,19 +37,20 @@ export default function SortItemsBtn({ onSelect }){
 
   return (
     <div className="relative w-96 text-end">
-      <button 
-        ref={buttonRef}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {selected} <span>{isOpen ? '▲' : '▼'}</span>
+      <button ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
+        {selected} <span>{isOpen ? "▲" : "▼"}</span>
       </button>
-      <ul 
-        className={`absolute right-0 z-50 bg-cart-bar rounded-xl p-2 text-end
+      <ul
+        className={`absolute right-0 z-50 rounded-[2rem] bg-cart-bar p-2 text-end
         ${isOpen ? "block" : "hidden"}`}
         ref={node}
       >
         {options.map((option, index) => (
-          <li className="cursor-pointer hover:bg-cart-bar-item" key={index} onClick={() => handleSelect(option)}>
+          <li
+            className="cursor-pointer hover:bg-cart-bar-item"
+            key={index}
+            onClick={() => handleSelect(option)}
+          >
             {option}
           </li>
         ))}

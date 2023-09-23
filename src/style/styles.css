@@ -11,17 +11,17 @@
   /* --- BOXES --- */
 
   .box-sm {
-    @apply h-full w-full overflow-hidden rounded-3xl bg-bg3 p-gap;
+    @apply h-full w-full overflow-hidden rounded-[2rem] bg-bg3 p-gap;
   }
 
   .box-lg {
-    @apply grid h-full  w-full grid-cols-1  gap-gap overflow-hidden rounded-3xl bg-bg2 p-gap;
+    @apply grid h-full  w-full grid-cols-1  gap-gap overflow-hidden rounded-[2rem] bg-bg2 p-gap;
   }
 
   /* --- BUTTONS --- */
 
   .btn-sm {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] min-w-max items-center justify-center rounded-3xl border-2 border-solid border-transparent px-xs font-btn text-sm uppercase text-text  transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))]  items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text  transition-colors duration-300 ease-in-out;
   }
 
   .btn-sm:hover {
@@ -29,7 +29,7 @@
   }
 
   .btn-lg {
-    @apply flex h-xl  items-center justify-center self-end rounded-3xl border-2 border-solid border-transparent p-gap px-lg font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center self-end rounded-[2rem] border-2 border-solid border-transparent p-gap px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
   }
 
   .btn-lg:hover {
@@ -39,7 +39,7 @@
   /* --- SCROLLBAR --- */
 
   .cart-items-scrollbar::-webkit-scrollbar {
-    @apply w-sm;
+    @apply left-[5px] w-xs;
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-track {
@@ -47,7 +47,7 @@
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-3xl border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
+    @apply rounded-[2rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
   }
 
   input[type="number"]::-webkit-inner-spin-button,

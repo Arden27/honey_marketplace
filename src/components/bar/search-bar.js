@@ -43,13 +43,13 @@ export default function SearchBar() {
       </button>
 
       <div
-        className={` bar left-1/2 -z-30 w-[calc(100%-theme(spacing.xs))] max-w-[calc(theme(screens.xl)+theme(spacing.sm))] self-center  rounded-b-3xl 
+        className={` bar left-1/2 -z-30 w-[calc(100%-theme(spacing.xs))] max-w-[calc(theme(screens.xl)+theme(spacing.sm))] self-center  rounded-b-[2rem]
         ${
           open
             ? "slide-in-top flex"
             : wasOpened
             ? "slide-out-top flex"
-            : "hidden"
+            : "hidden "
         } `}
         ref={node}
       >

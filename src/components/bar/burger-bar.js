@@ -55,7 +55,7 @@ export default function BurgerBar() {
       </button>
 
       <nav
-        className={`bar left-0  max-w-[calc(100%-theme(spacing.2xs))] rounded-r-3xl
+        className={`bar left-0  max-w-[calc(100%-theme(spacing.2xs))] rounded-r-[2rem]
         ${
           open
             ? "slide-in-left flex"

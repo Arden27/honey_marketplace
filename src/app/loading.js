@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export default function Loading() {
   return (
-    <div className="fixed top-0 left-0 w-full h-2 bg-gray-300 z-[100]">
-      <div className="h-2 bg-primary animate-loading w-2/5"></div>
-    </div>
+    <React.Fragment>
+      {/* <div className="fixed left-0 top-0 z-[100] h-2 w-full bg-gray-300">
+        <div className="h-2 w-2/5 animate-loading bg-primary"></div>
+      </div> */}
+    </React.Fragment>
   );
 }

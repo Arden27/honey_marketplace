@@ -76,7 +76,7 @@ export default function Cart() {
       </button>
 
       <div
-        className={` bar right-0 flex-col rounded-l-3xl
+        className={` bar right-0 flex-col rounded-l-[2rem]
         ${
           isCartOpen
             ? "slide-in-right flex"
@@ -88,7 +88,7 @@ export default function Cart() {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-xl grid gap-gap overflow-auto border-b-2 border-text pb-gap pr-2xs">
+            <div className="cart-items-scrollbar rounded-tl-[2rem] border-b-2 mb-lg grid gap-gap overflow-auto border-text pb-gap pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -129,7 +129,7 @@ export default function Cart() {
 
             <Link
               href="/sklep/koszyk"
-              className="btn-lg border-text bg-cart-bar hover:text-bg"
+              className="btn-lg  self-center border-text  hover:text-bg"
             >
               Zamawiam
             </Link>
