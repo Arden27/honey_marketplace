@@ -41,4 +41,8 @@
   a:focus {
     @apply text-accent;
   }
+
+  .dot {
+    @apply w-[4px] h-[4px] mx-2xs bg-text rounded-full inline-block self-center;
+  }
 }

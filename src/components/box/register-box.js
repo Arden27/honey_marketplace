@@ -6,7 +6,7 @@ export default function RegisterBox() {
     <section className="box-lg">
       <h2>Zarejestruj się</h2>
       <Link
-        className="btn-lg bottom-gap bg-bg hover:text-bg"
+        className="btn-lg bottom-sm bg-bg hover:text-bg"
         href="/rejestracja"
       >
         Zarejestruj się

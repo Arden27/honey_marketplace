@@ -5,35 +5,40 @@
 
   /* --- BARS --- */
   .bar {
-    @apply flex fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] max-w-[calc(100%-theme(spacing.2xs))] bg-nav p-gap shadow w-[30rem];
+    @apply fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 flex max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] bg-nav p-sm shadow;
   }
 
   /* --- BOXES --- */
 
   .box-sm {
-    @apply h-full w-full overflow-hidden rounded-[2rem] bg-bg3 p-gap;
+    @apply h-full w-full overflow-hidden rounded-[1.5rem] bg-bg3 p-sm;
   }
 
   .box-lg {
-    @apply grid h-full  w-full grid-cols-1  gap-gap overflow-hidden rounded-[2rem] bg-bg2 p-gap;
+    @apply grid h-full w-full grid-cols-1  gap-sm overflow-hidden rounded-[1.5rem] bg-bg2 p-sm;
   }
 
   /* --- BUTTONS --- */
 
-  .btn-sm {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))]  items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text  transition-colors duration-300 ease-in-out;
+  .btn-sm:hover,
+  .btn-sm:focus,
+  .btn-lg:hover,
+  .btn-lg:focus,
+  .btn-icon:hover,
+  .btn-icon:focus {
+    @apply bg-text ring-0;
   }
 
-  .btn-sm:hover {
-    @apply bg-text;
+  .btn-sm {
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))]  items-center justify-center rounded-[1.5rem] border-2 border-solid border-transparent  p-xs font-btn text-sm uppercase  text-text transition-colors duration-300 ease-in-out;
   }
 
   .btn-lg {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center self-end rounded-[2rem] border-2 border-solid border-transparent p-gap px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center self-end rounded-[1.5rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
   }
 
-  .btn-lg:hover {
-    @apply bg-text;
+  .btn-icon {
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[1.5rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out;
   }
 
   /* --- SCROLLBAR --- */
@@ -47,16 +52,52 @@
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-[2rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
+    @apply rounded-[1.5rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
   }
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+  /* --- FORMS --- */
+
+  :focus {
+    @apply rounded-[1.5]  outline-none   ring-2 ring-accent duration-300 ease-in-out;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[1.5rem] border-2 border-solid border-text  bg-transparent p-xs text-text  transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50;
+  }
+
+  input[type="text"] + label,
+  input[type="email"] + label,
+  input[type="password"] + label {
+    @apply relative bottom-2xl ml-2xs h-0 font-btn text-sm uppercase text-text
+    after:content-[":"];
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply pointer-events-none;
     -webkit-appearance: none;
-    margin: 0;
+  }
+
+  input[type="checkbox"] {
+    @apply inline-block h-sm w-sm rounded-[1.5rem] border-2 border-text bg-transparent text-center  checked:after:absolute checked:after:content-['\2714'];
+    -webkit-appearance: none;
+  }
+  input[type="checkbox"]:checked,
+  input[type="checkbox"]:active {
+    @apply bg-[#e9ecee];
+  }
+
+  input[type="checkbox"] + label {
+    @apply ml-3xs inline-block bg-red-100;
   }
 
   input[type="number"] {
     -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

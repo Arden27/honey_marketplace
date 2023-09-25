@@ -47,13 +47,6 @@ module.exports = {
         xl: "clamp(3.00rem, 2.81rem + 0.94vw, 3.56rem)",
         "2xl": "clamp(4.00rem, 3.75rem + 1.25vw, 4.75rem)",
         "3xl": "clamp(6.00rem, 5.63rem + 1.88vw, 7.13rem)",
-
-
-        gap: "theme('spacing.sm')",
-
-        "shop-menu-img": "theme('spacing.3xl')",
-        "shop-menu":
-          "calc(2 * theme('spacing.3xl') + theme('spacing.lg') + theme('spacing.sm'))",
       },
 
       fontFamily: {

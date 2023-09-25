@@ -45,17 +45,17 @@ export default function BurgerBar() {
     <React.Fragment>
       <button
         ref={buttonRef}
-        className="btn-sm  lg:hidden [&>*]:hover:stroke-header"
+        className="btn-icon fixed lg:hidden [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
         onClick={() => {
           setWasOpened(true);
           setOpen(!open);
         }}
       >
-        <BurgerIcon className="h-[25px] w-[25px] stroke-text stroke-2 hover:stroke-header" />
+        <BurgerIcon className="h-[25px] w-[25px]" />
       </button>
 
       <nav
-        className={`bar left-0  max-w-[calc(100%-theme(spacing.2xs))] rounded-r-[2rem]
+        className={`bar left-0 w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[1.5rem]
         ${
           open
             ? "slide-in-left flex"
@@ -73,21 +73,24 @@ export default function BurgerBar() {
             <Link href="/sklep">Sklep</Link>
             <ul>
               <li>
-                <Link href="/sklep?categoria=promocje">Promocje</Link>
+                <Link href="/sklep?kategoria=promocje">Promocje</Link>
               </li>
               <li>
-                <Link href="/sklep?categoria=miody">Miody</Link>
+                <Link href="/sklep?kategoria=miody">Miody</Link>
               </li>
               <li>
-                <Link href="/sklep?categoria=produkty-pszczele">
+                <Link href="/sklep?kategoria=produkty-pszczele">
                   Produkty pszczele
                 </Link>
               </li>
-              <li>
-                <Link href="/sklep?categoria=swiece">Świece</Link>
+              <li className="!hidden">
+                <Link href="/sklep?kategoria=miody-pitne">Miody Pitne</Link>
+              </li>
+              <li className="!hidden">
+                <Link href="/sklep?kategoria=swiece">Świece</Link>
               </li>
               <li>
-                <Link href="/sklep?categoria=zestawy">Zestawy</Link>
+                <Link href="/sklep?kategoria=zestawy">Zestawy</Link>
               </li>
             </ul>
           </li>
@@ -97,7 +100,7 @@ export default function BurgerBar() {
           <li>
             <Link href="/artykuly">Artykuły</Link>
           </li>
-          <li>
+          <li className="!hidden">
             <Link href="/matki">Matki</Link>
           </li>
           <li>

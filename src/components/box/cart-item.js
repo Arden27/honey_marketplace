@@ -1,8 +1,10 @@
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateCartItem } from "@/redux/store";
 import { formatPrice } from "@/components/formatPrice";
+
+import Image from "next/image";
+import TrashIcon from "public/icons/trash.svg";
 
 const CartItem = ({ item, removeFromCart }) => {
   const [quantity, setQuantity] = useState(item.quantity); // Initial quantity is from props
@@ -37,30 +39,41 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div className="grid h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[2rem] bg-cart-bar-item">
+    <div className="relative mb-sm grid h-fit min-h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[1.5rem] bg-cart-bar-item">
       <Image
-        className=" h-full w-full object-cover object-center"
+        className="h-full w-full object-cover object-center"
         src={item.image}
         width={50}
         height={50}
         alt={item.name}
       />
-      <div className="m-sm flex max-h-fit flex-col justify-between">
-        <div>
-          <h3 className="mb-2xs">{item.name}</h3>
-          <h4>{item.weight}</h4>
+      <div className="m-xs flex flex-col justify-between">
+        <div className="mb-sm flex flex-col justify-between">
+          <div className="mb-2xs">
+            <h3 className="w-[90%] 380px:w-full">{item.name}</h3>
+
+            <h4 className="">z dodatkiem gryki</h4>
+          </div>
+
+          <div className=" flex ">
+            <h4>{item.weight}</h4>
+            <span className="dot"></span>
+
+            <h4>IV 2023</h4>
+          </div>
         </div>
 
         <div className="flex w-full items-center justify-between ">
-          <div className="h-btn-sm flex items-center justify-center rounded-[2rem] border-2 border-text">
+          <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[1.5rem] border-2 border-text">
             <button
-              className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              className="ml-3xs h-sm w-sm justify-center rounded-[1.5rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
               onClick={() => handleQuantityChange(quantity - 1)}
             >
               -
             </button>
+
             <input
-              className="h-xl w-xl rounded-[2rem] bg-transparent text-center font-btn text-sm"
+              className="h-lg w-lg rounded-[1.5rem] bg-transparent text-center font-btn text-sm"
               type="number"
               value={quantity.toString()}
               min="1"
@@ -70,42 +83,30 @@ const CartItem = ({ item, removeFromCart }) => {
                 handleQuantityChange(Math.round(Number(e.target.value)))
               }
             />
+
             <button
-              className="mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              className="mr-3xs h-sm w-sm justify-center rounded-[1.5rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
               onClick={() => handleQuantityChange(quantity + 1)}
             >
               +
             </button>
           </div>
-          <h3 className="font-sans text-sm leading-none">x</h3>
-          <div className="relative flex [&>*]:font-sans [&>*]:leading-none ">
-            <h3 className="absolute -top-7 text-sm text-warning line-through ">
+
+          <h3 className="font-sans text-lg leading-none">&#215;</h3>
+
+          <div className="[&>*]:whitespace-nowrap relative flex  [&>*]:font-sans [&>*]:leading-none ">
+            <h3 className=" absolute -top-sm min-w-full text-sm text-warning line-through">
               {formatPrice(item.price, 1.1)} zł
             </h3>
-            <h3 className=" ">{formatPrice(item.price)} zł</h3>
+            <h3>{formatPrice(item.price)} zł</h3>
           </div>
+
           <button
-            className="flex h-lg w-lg items-center  justify-center rounded-[2rem] text-center font-btn hover:bg-text hover:text-bg [&>*]:stroke-text [&>*]:hover:stroke-shop-item"
+            className="absolute right-2xs top-2xs flex h-md  w-md  items-center justify-center rounded-[1.5rem]  text-center font-btn hover:bg-text hover:text-bg 380px:static lg:hidden [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item"
             onClick={handleRemove}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="3 6 5 6 21 6"></polyline>
-              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-              <line x1="10" y1="11" x2="10" y2="17"></line>
-              <line x1="14" y1="11" x2="14" y2="17"></line>
-            </svg>
-          </button>{" "}
-          {/* Make sure to wire up this delete button as well */}
+            <TrashIcon className="h-[16px] w-[16px] stroke-text stroke-2 " />
+          </button>
         </div>
       </div>
     </div>

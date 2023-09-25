@@ -3,33 +3,31 @@ import Link from "next/link";
 
 export default function LogInBox() {
   return (
-    <div className="box-lg grid-rows-[auto,1fr,auto] ">
-      <h2>Zaloguj się</h2>
+    <div className="box-lg  grid-rows-[auto,1fr,auto] ">
+      <h2 aria-hidden="true">Zaloguj się</h2>
 
-      <form className="box-sm">
+      <form className=" h-full w-full">
         <fieldset className="flex flex-col">
           <legend className="sr-only">Zaloguj się</legend>
-          <label htmlFor="email">Email</label>
 
           <input
-            type="text"
-            id="email"
-            name="email"
+            type="email"
+            id="log-in-email"
             placeholder="Podaj swój email..."
           />
+          <label htmlFor="log-in-email">Email</label>
 
-          <label htmlFor="password">Hasło</label>
           <input
             type="password"
-            id="password"
-            name="password"
+            id="log-in-password"
             placeholder="Podaj swoje hasło..."
           />
+          <label htmlFor="log-in-password">Hasło</label>
 
           <div className="flex justify-between">
-            <div>
-              <input type="checkbox" id="remember-me" />
-              <label htmlFor="remember-me">Zapamiętaj mnie</label>
+            <div className="flex items-center">
+              <input type="checkbox" id="log-in-remember" />
+              <label htmlFor="log-in-remember">Zapamiętaj mnie</label>
             </div>
 
             <Link href="/logowanie/zmiana-hasla">Nie pamiętam hasła</Link>
@@ -37,7 +35,7 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <button className="btn-lg bottom-gap bg-bg hover:text-bg" href="/">
+      <button className="btn-lg bottom-sm bg-bg hover:text-bg" href="/">
         Zaloguj się
       </button>
     </div>

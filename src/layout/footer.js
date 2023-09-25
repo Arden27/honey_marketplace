@@ -10,12 +10,12 @@ import TelegramIcon from "public/icons/at.svg";
 
 export default function Footer() {
   return (
-    <footer className="[&>*]:page-wrapper bg-footer [&>*]:mb-gap">
+    <footer className="[&>*]:page-wrapper bg-footer pt-lg ">
       <div
-        className="mt-xl grid grid-cols-2  justify-between gap-gap md:grid-cols-4
+        className="[&>*]:box-sm mb-sm grid w-full grid-cols-1  gap-sm 380px:grid-cols-2 md:grid-cols-4 [&>*]:bg-footer-item
         [&_h2]:mb-2xs"
       >
-        <ul className="box-sm bg-footer-item">
+        <ul>
           <h2>Menu</h2>
           <li>
             <Link href="/sklep">Sklep</Link>
@@ -34,7 +34,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="box-sm bg-footer-item">
+        <ul>
           <h2>Informacje</h2>
           <li>
             <Link href="/regulamin">Regulamin</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="box-sm bg-footer-item">
+        <ul>
           <h2>Moje konto</h2>
           <li>
             <Link href="/konto/zamowienia">Zamówienia</Link>
@@ -69,21 +69,36 @@ export default function Footer() {
           </li>
         </ul>
 
-        <div className="box-sm bg-footer-item">
+        <div>
           <h2>Dane pasieki</h2>
-          <address>
-            Stanisław Młynarczyk
+          <address className="not-italic">
+            Pasieka Brydak
             <br />
             Olszyny 26
             <br />
             07-430 Myszyniec
           </address>
-          Nr weterynaryjny 14156077
+          Nr weterynaryjny 12349329
         </div>
       </div>
 
-      <div className="page-wrapper gap-xs grid grid-cols-[auto,auto] [&>*]:flex [&>*]:h-xl [&>*]:items-center">
-        <ul className=" [&_li>*]:btn-sm md:col-start-4 md:col-end-[-1] md:row-start-2 md:justify-end md:text-right [&_a>*]:h-[25px] [&_a>*]:w-[25px] [&_a>*]:stroke-text  [&_a>*]:stroke-2 [&_a]:mr-3xs md:[&_a]:ml-3xs md:[&_a]:mr-3xs [&>*]:hover:[&_a]:stroke-header">
+      <div className="grid grid-cols-1  sm:grid-cols-[auto,auto] [&>*]:mb-sm [&>*]:items-center">
+        <ul
+          className="
+        [&_a]:btn-icon flex 
+        flex-wrap sm:col-start-4 sm:col-end-[-1] sm:row-start-2 sm:justify-end 
+         
+        sm:text-right [&_a>*]:h-[25px] [&_a>*]:w-[25px]
+        
+        [&_a]:ml-3xs
+        [&>*]:hover:[&_a]:stroke-footer
+        [&>*]:focus:[&_a]:stroke-footer
+
+    
+        
+        
+        "
+        >
           <li>
             <Link href="/">
               <FacebookIcon />
@@ -111,8 +126,8 @@ export default function Footer() {
           </li>
         </ul>
 
-        <p className="col-span-full h-xl md:col-start-1  px-sm md:col-end-4 md:row-start-2">
-          Copyright &copy; 2023&nbsp;<Link href="/">Kurpiowski Bartnik</Link>.
+        <p className="col-span-full flex  px-xs  sm:col-start-1 sm:col-end-4 sm:row-start-2">
+          Copyright &copy; 2023 Pasieka Brydak
         </p>
       </div>
     </footer>

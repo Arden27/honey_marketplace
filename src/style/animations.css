@@ -1,6 +1,6 @@
 @keyframes slide-in-left {
   from {
-    transform: translateX(-105%);
+    transform: translateX(-110%);
   }
   to {
     transform: translateX(0);
@@ -12,13 +12,13 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-105%);
+    transform: translateX(-110%);
   }
 }
 
 @keyframes slide-in-right {
   from {
-    transform: translateX(105%);
+    transform: translateX(110%);
   }
   to {
     transform: translateX(0);
@@ -30,13 +30,13 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(105%);
+    transform: translateX(110%);
   }
 }
 
 @keyframes slide-in-top {
   from {
-    transform: translate(-50%,-105%);
+    transform: translate(-50%,-110%);
   }
   to {
     transform: translate(-50%,0);
@@ -48,7 +48,7 @@
     transform: translate(-50%,0);
   }
   to {
-    transform: translate(-50%,-105%);
+    transform: translate(-50%,-110%);
   }
 }
 

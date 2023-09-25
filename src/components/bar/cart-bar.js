@@ -65,18 +65,18 @@ export default function Cart() {
   return (
     <React.Fragment>
       <button
-        className="btn-sm [&>*]:hover:stroke-header"
+        className="btn-icon fixed [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
           isCartOpen ? dispatch(closeCart()) : dispatch(openCart());
         }}
       >
-        <ShoppingCartIcon className="h-[25px] w-[25px] stroke-text stroke-2 " />
+        <ShoppingCartIcon className="h-[25px] w-[25px]" />
       </button>
 
       <div
-        className={` bar right-0 flex-col rounded-l-[2rem]
+        className={` bar right-0 w-[30rem] flex-col rounded-bl-[1.5rem]
         ${
           isCartOpen
             ? "slide-in-right flex"
@@ -88,7 +88,7 @@ export default function Cart() {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar rounded-tl-[2rem] border-b-2 mb-lg grid gap-gap overflow-auto border-text pb-gap pr-3xs">
+            <div className="cart-items-scrollbar mb-md overflow-auto rounded-tl-[1.5rem] rounded-tr-[1.5rem] border-b-2 border-text pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -110,20 +110,29 @@ export default function Cart() {
               })}
             </div>
             <div
-              className=" mb-xs flex items-end justify-between text-warning
+              className=" mb-2xs flex items-end justify-between whitespace-nowrap
+             text-warning [&>*]:font-sans"
+            >
+              <h3 className="text-end">Wyprzedaż:</h3>
+              <h3 className="">-{formatPrice(totalPrice, 0.05)} zł</h3>
+            </div>
+            <div
+              className=" mb-2xs flex items-end justify-between text-warning
              [&>*]:font-sans"
             >
               <h3 className="text-end">Rabat:</h3>
               <h3 className="">-{formatPrice(totalPrice, 0.1)} zł</h3>
             </div>
 
-            <div className=" mb-gap flex items-end justify-between">
+            <div className="mb-sm flex items-end justify-between [&_*]:whitespace-nowrap">
               <h2 className="text-end font-sans">Razem:</h2>
               <div className="flex items-center justify-center [&>*]:font-sans ">
                 <h3 className="mx-xs text-warning line-through">
                   {formatPrice(totalPrice, 1.1)} zł
                 </h3>
-                <h2 className="text-md">{formatPrice(totalPrice)} zł</h2>
+                <h2 className="border-b-2 border-text font-sans text-lg">
+                  {formatPrice(totalPrice)} zł
+                </h2>
               </div>
             </div>
 

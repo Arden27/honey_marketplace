@@ -41,7 +41,7 @@ export default function SortItemsBtn({ onSelect }){
         {selected} <span>{isOpen ? "▲" : "▼"}</span>
       </button>
       <ul
-        className={`absolute right-0 z-50 rounded-[2rem] bg-cart-bar p-2 text-end
+        className={`absolute right-0 z-50 rounded-[1.5rem] bg-cart-bar p-2 text-end
         ${isOpen ? "block" : "hidden"}`}
         ref={node}
       >
