@@ -76,7 +76,7 @@ export default function Cart() {
       </button>
 
       <div
-        className={` bar right-0 w-[30rem] flex-col rounded-bl-[1.5rem]
+        className={` bar right-0 w-[30rem] flex-col rounded-bl-[2rem]
         ${
           isCartOpen
             ? "slide-in-right flex"
@@ -88,7 +88,7 @@ export default function Cart() {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-md overflow-auto rounded-tl-[1.5rem] rounded-tr-[1.5rem] border-b-2 border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-md overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(

@@ -18,17 +18,17 @@ const Items = dynamic(() => import("@/components/items"), {
 
 // ARTEM - Zrób proszę z tego oddzielny komponent shop-breadcrumb.js zmień nazwę zmiennej na ShopBreadcrumb i wrzuć do components/btn:
 
-const Breadcrumb = ({ baseDomain, pathname, category, searchParams }) => {
+const Breadcrumb = ({ pathname, category, searchParams }) => {
   return (
-    <div>
-      <Link className="hover:underline" href="/">
-        {baseDomain}
+    <div className="w-full ">
+      <Link className="hover:underline" href="">
+        {/* {baseDomain} */}
       </Link>
       <span>/</span>
-      {pathname === "/sklep" && !category ? (
+      {pathname === "sklep" && !category ? (
         "sklep"
       ) : (
-        <Link className="hover:underline" href="/sklep">
+        <Link className="hover:underline" href="sklep">
           sklep
         </Link>
       )}
@@ -40,7 +40,7 @@ const Breadcrumb = ({ baseDomain, pathname, category, searchParams }) => {
           ) : (
             <Link
               className="hover:underline"
-              href={`/sklep?kategoria=${category}`}
+              href={`sklep?kategoria=${category}`}
             >
               {category}
             </Link>
@@ -68,7 +68,7 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
-  let baseDomain = "KurpiowskiBartnik.pl";
+  // let baseDomain = "KurpiowskiBartnik.pl";
   let displayPath = pathname;
 
   // append the category if it exists
@@ -83,22 +83,20 @@ export default function Shop() {
   return (
     <main>
       <ShopMenu />
-      <section className="page-wrapper mb-sm">
-        <div
-          className="box-lg grid grid-cols-1
-        sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <div className="col-span-full flex items-center justify-between">
+      <section className="page-wrapper mb-sm ">
+        <div className="box-lg flex flex-col">
+          <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
             <Breadcrumb
-              baseDomain={baseDomain}
+              // baseDomain={baseDomain}
               pathname={pathname}
               category={category}
               searchParams={searchParams}
             />
             <ShopSortBtn onSelect={handleSort} />
           </div>
-
-          <Items sortType={sortType} category={category} />
+          <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
+            <Items sortType={sortType} category={category} />
+          </div>
 
           <ShopPagination />
         </div>

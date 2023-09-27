@@ -33,6 +33,8 @@
     @apply text-md;
   }
 
+
+
   article > * + * {
     @apply mt-[var(--text-flow)];
   }
@@ -43,6 +45,6 @@
   }
 
   .dot {
-    @apply w-[4px] h-[4px] mx-2xs bg-text rounded-full inline-block self-center;
+    @apply mx-2xs inline-block h-[4px] w-[4px] self-center rounded-full bg-text;
   }
 }

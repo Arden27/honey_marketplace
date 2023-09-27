@@ -18,7 +18,7 @@ export default function Home() {
     <main>
       <ShopMenu />
 
-      <div className="page-wrapper grid gap-sm md:grid-cols-[2fr_1fr]">
+      <div className="page-wrapper grid h-[calc(100svh-theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.md)-theme(spacing.3xs))] 380px:h-[calc(100svh-theme(spacing.2xl)-theme(spacing.md)-theme(spacing.3xs))] grid-rows-2 gap-sm md-grid-rows-1 md:grid-cols-[2fr_1fr]">
         <HeroBox />
 
         <HowToBox />

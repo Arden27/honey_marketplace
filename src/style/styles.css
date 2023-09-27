@@ -11,11 +11,11 @@
   /* --- BOXES --- */
 
   .box-sm {
-    @apply h-full w-full overflow-hidden rounded-[1.5rem] bg-bg3 p-sm;
+    @apply h-full w-full overflow-hidden rounded-[2rem] bg-bg3 p-sm;
   }
 
   .box-lg {
-    @apply grid h-full w-full grid-cols-1  gap-sm overflow-hidden rounded-[1.5rem] bg-bg2 p-sm;
+    @apply grid h-full w-full grid-cols-1  gap-sm overflow-hidden rounded-[2rem] bg-bg2 p-sm;
   }
 
   /* --- BUTTONS --- */
@@ -30,15 +30,15 @@
   }
 
   .btn-sm {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))]  items-center justify-center rounded-[1.5rem] border-2 border-solid border-transparent  p-xs font-btn text-sm uppercase  text-text transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))]  items-center justify-center rounded-[2rem] border-2 border-solid border-transparent  p-xs font-btn text-sm uppercase  text-text transition-colors duration-300 ease-in-out;
   }
 
   .btn-lg {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center self-end rounded-[1.5rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center self-end rounded-[2rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out;
   }
 
   .btn-icon {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[1.5rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out;
   }
 
   /* --- SCROLLBAR --- */
@@ -52,19 +52,19 @@
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-[1.5rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
+    @apply rounded-[2rem] border-[3px]  border-solid border-cart-bar bg-cart-bar bg-text;
   }
 
   /* --- FORMS --- */
 
   :focus {
-    @apply rounded-[1.5]  outline-none   ring-2 ring-accent duration-300 ease-in-out;
+    @apply rounded-[2]  outline-none   ring-2 ring-accent duration-300 ease-in-out;
   }
 
   input[type="text"],
   input[type="email"],
   input[type="password"] {
-    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[1.5rem] border-2 border-solid border-text  bg-transparent p-xs text-text  transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50;
+    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[2rem] border-2 border-solid border-text  bg-transparent p-xs text-text  transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50;
   }
 
   input[type="text"] + label,
@@ -80,7 +80,7 @@
   }
 
   input[type="checkbox"] {
-    @apply inline-block h-sm w-sm rounded-[1.5rem] border-2 border-text bg-transparent text-center  checked:after:absolute checked:after:content-['\2714'];
+    @apply inline-block h-sm w-sm rounded-[2rem] border-2 border-text bg-transparent text-center  checked:after:absolute checked:after:content-['\2714'];
     -webkit-appearance: none;
   }
   input[type="checkbox"]:checked,

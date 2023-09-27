@@ -32,7 +32,7 @@ export default function UserBar() {
   return (
     <React.Fragment>
       <button
-        className="btn-icon fixed right-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] hidden 515px:flex  [&>*]:hover:stroke-header [&>*]:focus:stroke-header "
+        className="btn-icon fixed right-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] hidden 430px:flex  [&>*]:hover:stroke-header [&>*]:focus:stroke-header "
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
@@ -43,7 +43,7 @@ export default function UserBar() {
       </button>
 
       <div
-        className={`bar right-0 flex-col rounded-bl-[1.5rem] bg-cart-bar p-sm shadow
+        className={`bar right-0 flex-col rounded-bl-[2rem] bg-cart-bar p-sm shadow
         ${
           open
             ? "slide-in-right flex"

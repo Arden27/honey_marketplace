@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav className="fixed left-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] z-20 lg:left-sm">
       <ul className="[&_a]:btn-sm flex [&>*]:mr-3xs [&>*]:hidden [&>*]:lg:flex hover:[&_a]:text-header focus:[&_a]:text-header">
-        <li className="430px:!flex">
+        <li className="380px:!flex">
           <Link className=" !border-text" href="/sklep">
             Sklep
           </Link>
