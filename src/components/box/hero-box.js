@@ -13,9 +13,9 @@ export default function HeroBox() {
         alt="Nasze nowości"
       />
 
-      <h2 className="absolute m-sm">Zobacz nasze najnowsze zbiory!</h2>
+      <h2 className="absolute p-sm">Zobacz nasze najnowsze zbiory!</h2>
 
-      <Link className="btn-lg absolute m-sm bg-bg hover:text-bg" href="/sklep">
+      <Link className="btn-lg absolute bottom-sm bg-bg hover:text-bg " href="/sklep">
         Przejdź do sklepu
       </Link>
     </section>
