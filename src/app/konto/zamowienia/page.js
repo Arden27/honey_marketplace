@@ -2,7 +2,7 @@
 import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
-  title: "Moje zamówienia - Kurpiowski Bartnik",
+  title: "Moje zamówienia - Dobry Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };

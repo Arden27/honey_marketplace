@@ -6,7 +6,7 @@ export default function HeroBox() {
   return (
     <section className="relative flex items-center justify-center overflow-hidden rounded-[2rem] [&>*]:text-center">
       <Image
-        className="top-0 h-full w-full object-cover object-left-bottom"
+        className="top-0 h-full w-full object-cover object-left-bottom " 
         src="/img/logo.png"
         width={500}
         height={500}

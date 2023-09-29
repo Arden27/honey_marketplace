@@ -65,48 +65,54 @@ export default function BurgerBar() {
         } `}
         ref={node}
       >
-        <ul>
-          <li>
-            <Link href="/">Główna</Link>
-          </li>
-          <li>
-            <Link href="/sklep">Sklep</Link>
-            <ul>
-              <li>
-                <Link href="/sklep?kategoria=promocje">Promocje</Link>
-              </li>
-              <li>
-                <Link href="/sklep?kategoria=miody">Miody</Link>
-              </li>
-              <li>
-                <Link href="/sklep?kategoria=produkty-pszczele">
-                  Produkty pszczele
-                </Link>
-              </li>
-              <li className="!hidden">
-                <Link href="/sklep?kategoria=miody-pitne">Miody Pitne</Link>
-              </li>
-              <li className="!hidden">
-                <Link href="/sklep?kategoria=swiece">Świece</Link>
-              </li>
-              <li>
-                <Link href="/sklep?kategoria=zestawy">Zestawy</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link href="/o-nas">O nas</Link>
-          </li>
-          <li>
-            <Link href="/artykuly">Artykuły</Link>
-          </li>
-          <li className="!hidden">
-            <Link href="/matki">Matki</Link>
-          </li>
-          <li>
-            <Link href="/kontakt">Kontakt</Link>
-          </li>
-        </ul>
+        <div className="relative -left-sm w-[calc(100%+theme(spacing.md))] rounded-r-[2rem] bg-bg2 ">
+          <ul
+            className="[&_ul]:btnsm [&>li>a]:btn-lg [&>li]: [&>li>a]:bg- flex flex-col  [&>li>a]:mb-3xs 
+        [&>li>a]:border-text"
+          >
+            <li>
+              <Link href="/">Główna</Link>
+            </li>
+
+            <li>
+              <Link href="/sklep">Sklep</Link>
+              <ul className="[&>li>a]:btn-svm box-sm">
+                <li>
+                  <Link href="/sklep?kategoria=promocje">Promocje</Link>
+                </li>
+                <li>
+                  <Link href="/sklep?kategoria=miody">Miody</Link>
+                </li>
+                <li>
+                  <Link href="/sklep?kategoria=produkty-pszczele">
+                    Produkty pszczele
+                  </Link>
+                </li>
+                <li className="!hidden">
+                  <Link href="/sklep?kategoria=miody-pitne">Miody Pitne</Link>
+                </li>
+                <li className="!hidden">
+                  <Link href="/sklep?kategoria=swiece">Świece</Link>
+                </li>
+                <li>
+                  <Link href="/sklep?kategoria=zestawy">Zestawy</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link href="/o-nas">O nas</Link>
+            </li>
+            <li>
+              <Link href="/artykuly">Artykuły</Link>
+            </li>
+            <li className="!hidden">
+              <Link href="/matki">Matki</Link>
+            </li>
+            <li>
+              <Link href="/kontakt">Kontakt</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </React.Fragment>
   );

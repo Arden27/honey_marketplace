@@ -102,7 +102,7 @@ const CartItem = ({ item, removeFromCart }) => {
           </div>
 
           <button
-            className="absolute right-2xs top-2xs flex h-md  w-md  items-center justify-center rounded-[2rem]  text-center font-btn hover:bg-text hover:text-bg 380px:static lg:hidden [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item"
+            className="absolute right-xs top-xs flex h-md  w-md  items-center justify-center rounded-[2rem]  text-center font-btn hover:bg-text hover:text-bg 380px:static [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item"
             onClick={handleRemove}
           >
             <TrashIcon className="h-[16px] w-[16px] stroke-text stroke-2 " />

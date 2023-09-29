@@ -3,7 +3,7 @@ import Link from "next/link";
 import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
-  title: "Moje opinie - Kurpiowski Bartnik",
+  title: "Moje opinie - Dobry Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };

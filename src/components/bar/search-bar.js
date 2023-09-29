@@ -65,8 +65,8 @@ export default function SearchBar() {
             placeholder="Wyszukaj..."
             className="h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-full rounded-[2rem] border-2 border-solid  border-text bg-transparent px-xl text-text placeholder:text-text placeholder:opacity-50"
           />
-          <div className="absolute right-sm flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center">
-            <button className="  flex  h-md  w-md items-center justify-center  rounded-[2rem] text-center hover:bg-text focus:bg-text hover:text-bg [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item">
+          <div className="absolute right-xs flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center">
+            <button className="flex h-md  w-md items-center justify-center  rounded-[2rem] text-center hover:bg-text focus:bg-text hover:text-bg [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item">
               <DeleteIcon className="h-[20px] w-[20px] stroke-text stroke-2" />
             </button>
           </div>

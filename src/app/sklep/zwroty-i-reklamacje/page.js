@@ -3,7 +3,7 @@ import Link from "next/link";
 import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
-  title: "Zwroty i reklamacje - Kurpiowski Bartnik",
+  title: "Zwroty i reklamacje - Dobry Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };

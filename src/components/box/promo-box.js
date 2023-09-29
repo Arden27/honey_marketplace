@@ -4,12 +4,14 @@ import Image from "next/image";
 
 export default function PromoBox() {
   return (
-    <section className="grid min-h-[30rem] grid-rows-[1fr_auto] items-center justify-items-center overflow-hidden rounded-[2rem] bg-warning p-sm [&>*]:text-center ">
-      <h2 className="p-sm text-[5rem] font-bold">
+    <section className=".min-h-[30rem] grid grid-rows-[1fr_auto] items-center justify-items-center overflow-hidden rounded-[2rem] bg-warning p-sm [&>*]:text-center ">
+      <h2 className="p-sm text-3xl font-bold leading-none">
         Załóż konto
-        <br /> i zyskaj
         <br />
-        <span className="text-[10rem] leading-tight">5%</span>
+        <span className="whitespace-nowrap">i zyskaj</span>
+        <br />
+        {/* MACIEK, trzeba zmienić czcionkę: */}
+        <span className="text-[5rem] font-bold">5%</span>
         <br />
         rabatu
       </h2>

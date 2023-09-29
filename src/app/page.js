@@ -8,7 +8,7 @@ import AboutBox from "@/components/box/about-box";
 import BottomBox from "@/components/box/bottom-box";
 
 export const metadata = {
-  title: "Kurpiowski Bartnik",
+  title: "Dobry Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };

@@ -17,7 +17,7 @@ export default function Logo() {
           src="/img/logo.png"
           width={80}
           height={80}
-          alt="Logo pasieki Kurpiowski Bartnik"
+          alt="Logo Pasieki Dobry Bartnik"
         />
       </Link>
     </div>

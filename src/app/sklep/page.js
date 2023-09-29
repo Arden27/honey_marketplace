@@ -54,12 +54,12 @@ const Breadcrumb = ({ pathname, category, searchParams }) => {
 // ARTEM - Czemu wykomentowane metadane? Jak to teraz działa?:
 
 // export const metadata = {
-//   title: "Sklep - Kurpiowski Bartnik",
+//   title: "Sklep - Dobry Bartnik",
 //   description: "OPIS",
 //   keywords: "TAGI",
 // };
 
-// ARTEM - "Czemu wykomentowane metadane? Jak to teraz działa?:"
+
 
 export default function Shop() {
   const pathname = usePathname();
@@ -68,7 +68,7 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
-  // let baseDomain = "KurpiowskiBartnik.pl";
+  // let baseDomain = "DobryBartnik.pl";
   let displayPath = pathname;
 
   // append the category if it exists

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Koszyk - Kurpiowski Bartnik",
+  title: "Koszyk - Dobry Bartnik",
   description: "OPIS",
   keywords: "TAGI",
 };

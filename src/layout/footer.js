@@ -10,9 +10,9 @@ import TelegramIcon from "public/icons/at.svg";
 
 export default function Footer() {
   return (
-    <footer className="[&>*]:page-wrapper bg-footer pt-lg ">
+    <footer className="[&>*]:page-wrapper bg-footer pt-lg">
       <div
-        className="[&>*]:box-sm mb-sm grid w-full grid-cols-1  gap-sm 380px:grid-cols-2 md:grid-cols-4 [&>*]:bg-footer-item
+        className="[&>*]:box-sm mb-sm grid w-full grid-cols-1  gap-sm sm:grid-cols-2 md:grid-cols-4 [&>*]:bg-footer-item
         [&_h2]:mb-2xs"
       >
         <ul>
@@ -21,14 +21,15 @@ export default function Footer() {
             <Link href="/sklep">Sklep</Link>
           </li>
           <li>
-            <Link href="/artykuly">Artykuły</Link>
-          </li>
-          <li>
             <Link href="/o-nas">O nas</Link>
           </li>
           <li>
-            <Link href="/matki">Matki</Link>
+            <Link href="/artykuly">Artykuły</Link>
           </li>
+
+          {/* <li>
+            <Link href="/matki">Matki</Link>
+          </li> */}
           <li>
             <Link href="/kontakt">Kontakt</Link>
           </li>
@@ -58,9 +59,9 @@ export default function Footer() {
           <li>
             <Link href="/konto/zamowienia">Zamówienia</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/konto/opinie">Opinie</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/konto/ustawienia">Ustawienia</Link>
           </li>
@@ -72,33 +73,18 @@ export default function Footer() {
         <div>
           <h2>Dane pasieki</h2>
           <address className="not-italic">
-            Pasieka Brydak
+            Maciej Brydak
             <br />
             Olszyny 26
             <br />
             07-430 Myszyniec
           </address>
-          Nr weterynaryjny 12349329
+          Nr weterynaryjny: 12349329
         </div>
       </div>
 
-      <div className="grid grid-cols-1  sm:grid-cols-[auto,auto] [&>*]:mb-sm [&>*]:items-center">
-        <ul
-          className="
-        [&_a]:btn-icon flex 
-        flex-wrap sm:col-start-4 sm:col-end-[-1] sm:row-start-2 sm:justify-end 
-         
-        sm:text-right [&_a>*]:h-[25px] [&_a>*]:w-[25px]
-        
-        [&_a]:ml-3xs
-        [&>*]:hover:[&_a]:stroke-footer
-        [&>*]:focus:[&_a]:stroke-footer
-
-    
-        
-        
-        "
-        >
+      <div className="grid grid-cols-1 sm:grid-cols-[auto,auto] [&>*]:mb-sm [&>*]:flex [&>*]:items-center">
+        <ul className="[&_a]:btn-icon flex-wrap sm:col-start-2 sm:!justify-end sm:text-right [&_a>*]:h-[25px] [&_a>*]:w-[25px] [&_a]:ml-3xs [&>*]:hover:[&_a]:stroke-footer [&>*]:focus:[&_a]:stroke-footer">
           <li>
             <Link href="/">
               <FacebookIcon />
@@ -126,9 +112,11 @@ export default function Footer() {
           </li>
         </ul>
 
-        <p className="col-span-full flex  px-xs  sm:col-start-1 sm:col-end-4 sm:row-start-2">
-          Copyright &copy; 2023 Pasieka Brydak
-        </p>
+        <div className="col-span-full rounded-[3rem] border-2 border-transparent px-2xs sm:col-span-1 sm:col-start-1 sm:row-start-1 ">
+          <Link href="/" className="font-btn text-sm uppercase ">
+            Copyright &copy; 2023 Dobry Bartnik
+          </Link>
+        </div>
       </div>
     </footer>
   );
