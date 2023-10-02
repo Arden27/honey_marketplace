@@ -42,7 +42,7 @@ export default function ShopItem({ item }) {
 
       <div className="relative overflow-hidden">
         <Image
-          className="object-cover  object-center duration-300 ease-in-out hover:scale-110"
+          className="object-cover object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
           src={item.image}
           alt={item.name}
