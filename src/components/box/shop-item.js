@@ -38,8 +38,6 @@ export default function ShopItem({ item }) {
   return (
     <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-shop-item 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
 
-{/* ARTEM, Czemu tutaj musi być position relative WTF?? */}
-
       <div className="relative overflow-hidden">
         <Image
           className="object-cover object-center duration-300 ease-in-out hover:scale-110"

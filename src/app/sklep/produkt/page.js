@@ -7,7 +7,6 @@ import NoRegisterBox from "@/components/box/no-register-box";
 import ShopSortBtn from "@/components/btn/radio-button";
 
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
-
 // ARTEM, Trzeba do bazy danych dodać też tagi na produkt na daną stronę i krótki opis z metadata
 
 export const metadata = {
@@ -49,7 +48,6 @@ export default function ProductPage() {
           />
         </div>
         <div className="m-sm">
-
           <h1>Miód Rzepakowy</h1>
           <h2>z nutką gryki</h2>
         </div>
@@ -57,4 +55,3 @@ export default function ProductPage() {
     </div>
   );
 }
-

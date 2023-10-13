@@ -51,7 +51,7 @@ const Breadcrumb = ({ pathname, category, searchParams }) => {
   );
 };
 
-// ARTEM - Czemu wykomentowane metadane? Jak to teraz działa?:
+
 
 // export const metadata = {
 //   title: "Sklep - Dobry Bartnik",
