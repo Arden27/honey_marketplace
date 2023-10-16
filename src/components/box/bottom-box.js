@@ -7,7 +7,7 @@ import ArticlesBox from "@/components/box/articles-box";
 
 export default function BottomBox() {
   return (
-    <div className="page-wrapper mb-xl grid gap-sm md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_3fr]">
+    <div className="page-wrapper mb-lg grid gap-sm md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_3fr]">
       <PromoBox />
       <RecommendedBox />
       <ArticlesBox />

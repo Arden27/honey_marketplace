@@ -76,7 +76,7 @@ export default function BurgerBar() {
 
             <li>
               <Link href="/sklep">Sklep</Link>
-              <ul className="[&>li>a]:btn-svm box-sm">
+              <ul className="[&>li>a]:btn-svm box">
                 <li>
                   <Link href="/sklep?kategoria=promocje">Promocje</Link>
                 </li>

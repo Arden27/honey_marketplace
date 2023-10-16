@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import LogInBox from "@/components/box/log-in-box";
+import RegisterBox from "@/components/box/register-box";
 import NoRegisterBox from "@/components/box/no-register-box";
-import RegisterBox from "@/components/box/promo-box";
+
 
 
 export const metadata = {

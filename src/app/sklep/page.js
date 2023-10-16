@@ -84,7 +84,7 @@ export default function Shop() {
     <main>
       <ShopMenu />
       <section className="page-wrapper mb-sm ">
-        <div className="box-lg flex flex-col">
+        <div className="box-lg bg-bg2 flex flex-col">
           <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
             <Breadcrumb
               // baseDomain={baseDomain}
