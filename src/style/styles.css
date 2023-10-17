@@ -26,7 +26,7 @@
   .btn-lg:focus,
   .btn-icon:hover,
   .btn-icon:focus {
-    @apply bg-text ring-0;
+    @apply bg-text ;
   }
 
   .btn-sm {
@@ -62,7 +62,7 @@
   /* --- FORMS --- */
 
   :focus {
-    @apply rounded-[2]  outline-none   ring-2 ring-accent duration-300 ease-in-out;
+    @apply rounded-[2] outline-none ring-2 ring-accent duration-300 ease-in-out;
   }
 
   input[type="text"],
