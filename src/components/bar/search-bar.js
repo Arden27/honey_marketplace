@@ -63,7 +63,7 @@ export default function SearchBar() {
             type="search"
             id="search"
             placeholder="Wyszukaj..."
-            className="h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-full rounded-[2rem] border-2 border-solid border-text bg-transparent pl-xl pr-[calc(theme(spacing.2xl)+3*theme(spacing.sm))] text-text placeholder:text-text placeholder:opacity-50"
+            className="h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-full rounded-[2rem] border-2 border-solid border-text bg-transparent pl-[calc(20px+2*theme(spacing.sm))] pr-[calc(25px+2*theme(spacing.sm))] text-text placeholder:text-text placeholder:opacity-50"
           />
           <div className="absolute left-sm flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center">
             <button

@@ -30,11 +30,11 @@
   }
 
   .btn-sm {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-1000 [&>*]:ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out;
   }
 
   .btn-lg {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center  rounded-[2rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-1000 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out;
+    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center  rounded-[2rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out;
   }
 
   .btn-sm svg {
