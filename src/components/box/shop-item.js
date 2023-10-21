@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/store";
 import { formatPrice } from "@/components/formatPrice";
@@ -10,6 +10,7 @@ import { openCart, setShouldCloseCart } from "@/redux/store";
 // import RadioButton from "./radio-button";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const RadioButton = dynamic(() => import("../btn/radio-button"), {
   ssr: false,
@@ -35,17 +36,24 @@ export default function ShopItem({ item }) {
     setSelectedPrice(price);
   };
 
+  useEffect(() => {
+    console.log(item.tag);
+  });
+
   return (
     <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-shop-item 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
-
-      <div className="relative overflow-hidden">
+      <Link
+        href={`/sklep/produkt/${item.tag}`}
+        className="relative overflow-hidden"
+      >
         <Image
           className="object-cover object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
           src={item.image}
           alt={item.name}
+          sizes="w-full"
         />
-      </div>
+      </Link>
 
       <div className="flex flex-col items-center justify-between p-sm  [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
         <div className="h-[calc(theme(spacing.2xl)+theme(spacing.sm))] flex-col !justify-start  ">

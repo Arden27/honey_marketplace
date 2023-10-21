@@ -11,6 +11,7 @@ export default function LoadDB() {
 		{
 			id: 1,
 			name: "Miód rzepakowy",
+			tag: "miod-rzepakowy",
 			image: "/img/boxes/jak-rozpoznac.jpg",
 			sizes: [
 				{ size: "250 G", price: 59.99 },
@@ -22,6 +23,7 @@ export default function LoadDB() {
 		{
 			id: 2,
 			name: "Miód rzepakowy\nz nutką gryki",
+			tag: "miod-rzepakowy-z-nutka-gryki",
 			image: "/img/products/honey/honey1.jpeg",
 			sizes: [
 				{ size: "250 G", price: 59.99 },
@@ -33,6 +35,7 @@ export default function LoadDB() {
 		{
 			id: 3,
 			name: "Miód firmowy",
+			tag: "miod-firmowy",
 			image: "/img/products/honey/honey2.webp",
 			sizes: [
 				{ size: "250 G", price: 59.99 },
@@ -44,6 +47,7 @@ export default function LoadDB() {
         {
 			id: 4,
 			name: "Miod gorzki",
+			tag: "miod-gorzki",
 			image: "/img/products/honey/honey3.webp",
 			sizes: [
 				{ size: "250 G", price: 49.99 },
@@ -55,6 +59,7 @@ export default function LoadDB() {
         {
 			id: 5,
 			name: "Miod z krowy",
+			tag: "miod-z-krowy",
 			image: "/img/products/honey/honey4.jpeg",
 			sizes: [
 				{ size: "250 G", price: 19.99 },
@@ -66,6 +71,7 @@ export default function LoadDB() {
         {
 			id: 6,
 			name: "Bzestaw miodu",
+			tag: "bzestaw-miodu",
 			image: "/img/products/sets/zestaw_miodu5.jpeg",
 			sizes: [
 				{ size: "450 G", price: 769.99 },
@@ -76,6 +82,7 @@ export default function LoadDB() {
         {
 			id: 7,
 			name: "Zestaw miodu powiększony",
+			tag: "zestaw-miodu-powiekszony",
 			image: "/img/products/sets/zestaw_miodu2.jpeg",
 			sizes: [
 				{ size: "250 G", price: 489.99 },
@@ -87,6 +94,7 @@ export default function LoadDB() {
         {
 			id: 8,
 			name: "Zestaw miodu",
+			tag: "zestaw-miodu",
 			image: "/img/products/sets/zestaw_miodu3.jpeg",
 			sizes: [
                 { size: "250 G", price: 389.99 },
@@ -98,6 +106,7 @@ export default function LoadDB() {
         {
 			id: 9,
 			name: "Elitny zestaw miodu",
+			tag: "elitny-zestaw-miodu",
 			image: "/img/products/sets/zestaw_miodu4.png",
 			sizes: [
 				{ size: "3 KG", price: 1069.99, default: true },
@@ -108,6 +117,7 @@ export default function LoadDB() {
         {
 			id: 10,
 			name: "Świca oryginalna",
+			tag: "swica-oryginalna",
 			image: "/img/products/candles/candle1.webp",
 			sizes: [
 				{ size: "3 KG", price: 15.99, default: true }
@@ -117,6 +127,7 @@ export default function LoadDB() {
         {
 			id: 11,
 			name: "Świca czarna",
+			tag: "swica-czarna",
 			image: "/img/products/candles/candle2.jpeg",
 			sizes: [
 				{ size: "3 KG", price: 21.99, default: true }
@@ -126,6 +137,7 @@ export default function LoadDB() {
         {
 			id: 12,
 			name: "Świca prosto z miodu",
+			tag: "swica-prosto-z-miodu",
 			image: "/img/products/candles/candle4.jpeg",
 			sizes: [
 				{ size: "3 KG", price: 16.99, default: true }
@@ -135,6 +147,7 @@ export default function LoadDB() {
         {
 			id: 13,
 			name: "Świca podstawowa",
+			tag: "swica-podstawowa",
 			image: "/img/products/candles/candle3.jpeg",
 			sizes: [
 				{ size: "3 KG", price: 12.99, default: true }
@@ -144,6 +157,7 @@ export default function LoadDB() {
         {
 			id: 14,
 			name: "Zestaw świec miodowych",
+			tag: "zestaw-swiec-miodowych",
 			image: "/img/products/sets/zestaw_swiec1.jpeg",
 			sizes: [
 				{ size: "10 szt", price: 35.99 },
@@ -155,6 +169,7 @@ export default function LoadDB() {
         {
 			id: 15,
 			name: "Mega miodowy zestaw świec",
+			tag: "mega-miodowy-zestaw-swiec",
 			image: "/img/products/sets/zestaw_swiec2.jpeg",
 			sizes: [
 				{ size: "50 szt", price: 139.99 },
@@ -166,6 +181,7 @@ export default function LoadDB() {
         {
 			id: 16,
 			name: "Wosk pszczeli ",
+			tag: "wosk-pszczeli",
 			image: "/img/products/bee_products/bee_product1.jpeg",
 			sizes: [
 				{ size: "50 szt", price: 139.99 },
