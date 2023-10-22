@@ -39,7 +39,7 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div className="relative mb-sm grid h-fit min-h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[2rem] bg-cart-bar-item">
+    <div className="relative mb-sm grid h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-cols-[3fr_7fr] grid-rows-1 overflow-hidden rounded-[2rem] bg-cart-bar-item">
       <Image
         className="h-full w-full object-cover object-center"
         src={item.image}
