@@ -76,7 +76,7 @@ export default function Cart() {
       </button>
 
       <div
-        className={` bar right-0 w-[30rem] flex-col rounded-bl-[2rem]
+        className={`bar right-0 min-h-[calc(3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]
         ${
           isCartOpen
             ? "slide-in-right flex"
@@ -88,7 +88,7 @@ export default function Cart() {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-md overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-md  min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -123,7 +123,6 @@ export default function Cart() {
               <h3 className="text-end">Rabat:</h3>
               <h3 className="">-{formatPrice(totalPrice, 0.1)} zł</h3>
             </div>
-
             <div className="mb-sm flex items-end justify-between [&_*]:whitespace-nowrap">
               <h2 className="text-end font-sans">Razem:</h2>
               <div className="flex items-center justify-center [&>*]:font-sans ">
@@ -135,7 +134,6 @@ export default function Cart() {
                 </h2>
               </div>
             </div>
-
             <Link
               href="/sklep/koszyk"
               className="btn-lg  self-center border-text  hover:text-bg"

@@ -5,7 +5,7 @@
 
   /* --- BARS --- */
   .bar {
-    @apply fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 flex max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] bg-nav p-sm shadow;
+    @apply fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20  max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  max-w-[calc(100%-theme(spacing.2xs))] bg-nav p-sm shadow;
   }
 
   /* --- BOXES --- */
@@ -26,7 +26,7 @@
   .btn-lg:focus,
   .btn-icon:hover,
   .btn-icon:focus {
-    @apply bg-text ;
+    @apply bg-text ring-0;
   }
 
   .btn-sm {
@@ -65,15 +65,17 @@
     @apply rounded-[2] outline-none ring-2 ring-accent duration-300 ease-in-out;
   }
 
+  input[type="phone"],
   input[type="text"],
   input[type="email"],
   input[type="password"] {
-    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[2rem] border-2 border-solid border-text  bg-transparent p-xs px-sm text-text transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50;
+    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[2rem] border-2 border-solid border-text  bg-transparent p-xs px-sm text-text transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50 border-opacity-50;
   }
 
-  input[type="text"] + label,
-  input[type="email"] + label,
-  input[type="password"] + label {
+  input[type="phone"] label,
+  input[type="text"] label,
+  input[type="email"] label,
+  input[type="password"] label {
     @apply relative bottom-2xl ml-2xs h-0 font-btn text-sm uppercase text-text
     after:content-[":"];
   }

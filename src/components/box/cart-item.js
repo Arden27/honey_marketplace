@@ -48,19 +48,15 @@ const CartItem = ({ item, removeFromCart }) => {
         alt={item.name}
       />
       <div className="m-xs flex flex-col justify-between">
-        <div className="mb-sm flex flex-col justify-between">
-          <div className="mb-2xs">
-            <h3 className="w-[90%] 380px:w-full">{item.name}</h3>
+        <div>
+          <h3 className="w-[90%] 380px:w-full">{item.name}</h3>
+          <h4 className="">z dodatkiem gryki</h4>
+        </div>
 
-            <h4 className="">z dodatkiem gryki</h4>
-          </div>
-
-          <div className=" flex ">
-            <h4>{item.weight}</h4>
-            <span className="dot"></span>
-
-            <h4>IV 2023</h4>
-          </div>
+        <div className="flex">
+          <h4>{item.weight}</h4>
+          <span className="dot"></span>
+          <h4>IV 2023</h4>
         </div>
 
         <div className="flex w-full items-center justify-between ">
@@ -94,7 +90,7 @@ const CartItem = ({ item, removeFromCart }) => {
 
           <h3 className="font-sans text-lg leading-none">&#215;</h3>
 
-          <div className="[&>*]:whitespace-nowrap relative flex  [&>*]:font-sans [&>*]:leading-none ">
+          <div className="relative flex [&>*]:whitespace-nowrap  [&>*]:font-sans [&>*]:leading-none ">
             <h3 className=" absolute -top-sm min-w-full text-sm text-warning line-through">
               {formatPrice(item.price, 1.1)} zł
             </h3>

@@ -17,12 +17,14 @@ export default function LogInBox() {
           />
           <label htmlFor="log-in-email">Email</label>
 
-          <input
-            type="password"
-            id="log-in-password"
-            placeholder="Podaj swoje hasło..."
-          />
-          <label htmlFor="log-in-password">Hasło</label>
+          <label htmlFor="log-in-password">
+            Hasło
+            <input
+              type="password"
+              id="log-in-password"
+              placeholder="Podaj swoje hasło..."
+            />
+          </label>
 
           <div className="flex justify-between">
             <div className="flex items-center">
