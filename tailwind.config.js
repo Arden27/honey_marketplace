@@ -12,9 +12,6 @@ module.exports = {
       },
 
       colors: {
-        primary: "hsl(33, 65%, 65%)",
-        secondary: "hsl(33, 55%, 70%)",
-
         text: "hsl(30, 70%, 18%)",
 
         accent: "hsl(22, 40%, 70%)",
@@ -25,14 +22,15 @@ module.exports = {
         bg2: "hsl(33, 55%, 70%)",
         bg3: "hsl(40, 100%, 86%)",
 
+        header: "hsl(33, 65%, 65%)",
 
-        header: "theme('colors.primary')",
-
-        bar: "theme('colors.accent')",
+        bar: "hsl(20, 50%, 65%)",
 
         "about-box": "theme(colors.bg2)",
 
-        footer: "theme('colors.secondary')",
+        footer: "hsl(33, 65%, 65%)",
+        primary: "hsl(33, 55%, 60%)",
+        secondary: "hsl(33, 55%, 70%)",
       },
 
       spacing: {
