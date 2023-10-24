@@ -69,13 +69,13 @@
   input[type="text"],
   input[type="email"],
   input[type="password"] {
-    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[2rem] border-2 border-solid border-text  bg-transparent p-xs px-sm text-text transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50 border-opacity-50;
+    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] rounded-[2rem] border-2 border-solid border-text  border-opacity-50 bg-transparent p-xs px-sm text-text transition-colors duration-300 ease-in-out placeholder:text-text placeholder:opacity-50;
   }
 
-  input[type="phone"] label,
-  input[type="text"] label,
-  input[type="email"] label,
-  input[type="password"] label {
+  input[type="phone"] + label,
+  input[type="text"] + label,
+  input[type="email"] + label,
+  input[type="password"] + label {
     @apply relative bottom-2xl ml-2xs h-0 font-btn text-sm uppercase text-text
     after:content-[":"];
   }

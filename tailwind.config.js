@@ -22,6 +22,8 @@ module.exports = {
         bg: "hsl(40, 85%, 80%)",
         bg2: "hsl(33, 65%, 65%)",
         bg3: "hsl(40, 100%, 86%)",
+
+        
         text: "hsl(30, 70%, 18%)",
 
         header: "theme('colors.primary')",

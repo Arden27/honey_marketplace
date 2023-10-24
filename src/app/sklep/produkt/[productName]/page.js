@@ -3,8 +3,10 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-import BottomBox from "@/components/box/bottom-box";
 import ShopSortBtn from "@/components/btn/radio-button";
+import OpinionBtn from "@/components/btn/radio-button";
+import BottomBox from "@/components/box/bottom-box";
+
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, addToCart, setShouldCloseCart } from "@/redux/store";
 
@@ -57,10 +59,11 @@ export default function ProductPage({ params }) {
             BREADCRUMB
           </div>
 
-          <div className="grid md:grid-cols-2">
+          <section className="grid  min-h-[30rem] w-full grid-rows-[1fr_auto] md:grid-cols-[minmax(50%,1fr)_auto] ">
             <div className="overflow-hidden rounded-t-[2rem] md:!rounded-l-[2rem] md:!rounded-tr-none">
               <Image
-                className="h-[30rem] w-full object-cover object-center duration-300 ease-in-out hover:scale-110"
+                className="h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] w-full  object-cover object-center duration-300 ease-in-out hover:scale-110
+                "
                 src={item.image}
                 width={500}
                 height={500}
@@ -68,35 +71,58 @@ export default function ProductPage({ params }) {
               />
             </div>
 
-            <div className="flex flex-col justify-between overflow-hidden rounded-b-[2rem] bg-bg3 p-sm md:rounded-r-[2rem] md:rounded-bl-none">
-              <div className="[&>div>span]:font-btn [&>div>span]:text-sm [&>div>span]:uppercase [&>div>span]:text-text">
-                <h1>{item.name}</h1>
-                <h2>z nutką gryki</h2>
-                <p>
-                  Krótki opis produktu Lorem, ipsum dolor sit amet consectetur
-                  adipisicing.
-                </p>
-                <div>
-                  <span>DATA ROZLEWU:&nbsp;</span>
-                  IV 2023
-                </div>
-                <div>
-                  <span>DATA WAŻNOŚCI:&nbsp;</span>
-                  IV 2026
-                </div>
-                <div>
-                  <span>Konsystencja:&nbsp;</span>
-                  skrystalizowany, kremowy
-                </div>
-                <div>
-                  <span>Barwa:&nbsp;</span>
-                  jasno-żółta
-                </div>
-              </div>
+            <div
+              className="flex flex-col justify-between overflow-hidden rounded-b-[2rem]
+            bg-bg3 p-sm  md:max-w-[calc(30rem-theme(spacing.lg))]  md:rounded-r-[2rem] md:rounded-bl-none"
+            >
+              <div className="pb-sm">
+                <h1 className="">{item.name}</h1>
+                <h2 className="pb-2xs">{item.name2}</h2>
 
-              <div className="flex flex-col items-center justify-between p-sm  [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
+                <div className="flex items-end pb-sm">
+                  <h3 className=" font-sans text-lg">
+                    {formatPrice(selectedPrice)} zł
+                  </h3>
+                  <h3 className="mx-xs font-sans text-warning line-through">
+                    {formatPrice(selectedPrice, 1.1)} zł
+                  </h3>
+                </div>
 
-                <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
+                <p className="pb-sm">{item.descriptionShort}</p>
+                <div>
+                  <span className="font-btn text-sm uppercase text-text">
+                    Data rozlewu:&nbsp;
+                  </span>
+                  {item.harvestDate}
+                </div>
+                <div>
+                  <span className="font-btn text-sm uppercase text-text">
+                    Data ważności:&nbsp;
+                  </span>
+                  {item.terminationDate}
+                </div>
+                <div>
+                  <span className="font-btn text-sm uppercase text-text">
+                    Konsystencja:&nbsp;
+                  </span>
+                  {item.consistency}
+                </div>
+                <div>
+                  <span className="font-btn text-sm uppercase text-text">
+                    Barwa:&nbsp;
+                  </span>
+                  {item.color}
+                </div>
+
+                <div>
+                  <span className="font-btn text-sm uppercase text-text ">
+                    Waga:&nbsp;
+                  </span>
+                </div>
+
+                {/* ARTEM - wklej tutaj proszę listę rozwijaną na wagę */}
+
+                <div className="flex items-center">
                   {item.sizes.map((sizeObj, index) => (
                     <RadioButton
                       key={index}
@@ -107,19 +133,12 @@ export default function ProductPage({ params }) {
                     />
                   ))}
                 </div>
+              </div>
 
-                <div className="mb-sm  [&>*]:font-sans">
-                  <h3 className="text-warning line-through">
-                    {formatPrice(selectedPrice, 1.1)} zł
-                  </h3>
-                  <h3 className="mx-xs text-lg">
-                    {formatPrice(selectedPrice)} zł
-                  </h3>
-                </div>
-
-                <div className="relative rounded-[2rem]">
+              <div>
+                <div className="relative  flex rounded-[2rem]">
                   <button
-                    className="btn-lg overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 hover:text-shop-item focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                    className=" btn-lg w-full overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 hover:text-shop-item focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     onClick={() => {
                       dispatch(setShouldCloseCart(false));
                       // console.log("after click on Dodaj", shouldCloseCart)
@@ -146,8 +165,7 @@ export default function ProductPage({ params }) {
 					"
                   >
                     <button
-                      className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none 
-							hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                      className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
                       onClick={() =>
                         quantity > 1 && setQuantity(Math.round(quantity - 1))
                       }
@@ -173,8 +191,7 @@ export default function ProductPage({ params }) {
                       }}
                     />
                     <button
-                      className="mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none 
-							hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                      className="mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none	hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
                       onClick={() =>
                         quantity < 99 && setQuantity(Math.round(quantity + 1))
                       }
@@ -185,29 +202,19 @@ export default function ProductPage({ params }) {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="box-sm bg-bg3">
-            <h2>Tutuł opisu tego rodzaju miodu</h2>
-            <p>Opis tego rodzaju miodu</p>
-          </div>
-          <div className="box-sm bg-bg3">
-            <h2>Tutuł opisu tej partii miodu</h2>
-            <p>Opis tej partii miodu</p>
-          </div>
-          <div className="box-sm bg-bg3">
-            <h2>O miodzie słów kilka...</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-              veritatis at, dignissimos iure nulla aliquid nisi quo minima omnis
-              eius recusandae, voluptatem eligendi illo? Aut corrupti quasi odit
-              natus, omnis deleniti tempora dolorem. Fuga assumenda eos minus
-              autem, et quaerat sunt eligendi aspernatur odit laboriosam
-              voluptas distinctio commodi molestias quae consequatur laborum
-              officiis est dolorem! Quas autem quo corrupti, voluptatum
-              architecto debitis ut animi voluptatem.
-            </p>
-          </div>
+          <section className="box-sm bg-bg3">
+            <h2>{item.type}</h2>
+            <p>opis z typu miodu</p>
+            <br />
+            <h2>Zbiory {item.harvestDate}</h2>
+            <p>{item.descriptionLong}</p>
+          </section>
+          <section className="box-sm bg-bg3">
+            <h2>Nasze {item.categories}</h2>
+            <p>opis z kategorii</p>
+          </section>
         </div>
       </div>
       <BottomBox />
