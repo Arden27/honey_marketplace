@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ShopItem() {
   return (
-    <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[2rem] bg-shop-item">
+    <section className="grid h-[calc(theme(spacing.header-lg)+3rem)] min-h-[50rem] grid-cols-1 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[2rem] bg-bg3">
       <Image
         className="h-full w-full object-cover object-center"
         src="/img/home/jak-rozpoznac.jpg"
@@ -39,7 +39,7 @@ export default function ShopItem() {
 
         <div className="relative flex rounded-[2rem]">
           <div
-            className="absolute flex h-btn-lg items-center justify-items-center rounded-[2rem] border-2 border-text bg-shop-item
+            className="absolute flex h-btn-lg items-center justify-items-center rounded-[2rem] border-2 border-text bgbg3
           "
           >
             <button

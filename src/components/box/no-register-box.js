@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function NoRegisterBox() {
   return (
-    <section className="box-lg bg-bg2 md:col-span-full xl:col-span-1 ">
+    <section className="box-sm md:col-span-full xl:col-span-1 ">
       <h2>Zamówienie bez rejestracji</h2>
-      <button className="btn-lg bottom-sm bg-bg hover:text-bg" href="/">
+      <button className="btn-lg bottom-sm hover:text-bg" href="/">
         Kontynuuj
       </button>
     </section>

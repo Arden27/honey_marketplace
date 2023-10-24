@@ -9,7 +9,7 @@ export const metadata = {
 export default function Cart() {
   return (
     <main className="page-wrapper mb-lg">
-      <div className="box-lg bg-bg2">
+      <div className="box-lg ">
         <h2>Koszyk</h2>
         <div className="[&>*]:box-sm mb-xl grid grid-cols-3 grid-rows-2 gap-sm [&>*]:bg-bg3">
           <section className="row-span-full">

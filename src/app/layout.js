@@ -12,7 +12,7 @@ import Footer from "../layout/footer";
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body className="  bg-bg">
+      <body className="bg-bg">
         <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] ">
           <Providers>
             <LoadDB />

@@ -52,7 +52,7 @@ export default function ProductPage({ params }) {
   return (
     <main className="">
       <div className="page-wrapper mb-sm">
-        <div className="box-lg bg-bg2">
+        <div className="box-lg">
           {/* <ShopBreadcrumb/> */}
 
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
@@ -204,14 +204,14 @@ export default function ProductPage({ params }) {
             </div>
           </section>
 
-          <section className="box-sm bg-bg3">
+          <section className="box-sm">
             <h2>{item.type}</h2>
             <p>opis z typu miodu</p>
             <br />
             <h2>Zbiory {item.harvestDate}</h2>
             <p>{item.descriptionLong}</p>
           </section>
-          <section className="box-sm bg-bg3">
+          <section className="box-sm">
             <h2>Nasze {item.categories}</h2>
             <p>opis z kategorii</p>
           </section>

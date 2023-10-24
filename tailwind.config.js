@@ -12,32 +12,27 @@ module.exports = {
       },
 
       colors: {
-        primary: "hsl(33, 55%, 60%)",
+        primary: "hsl(33, 65%, 65%)",
         secondary: "hsl(33, 55%, 70%)",
 
-        accent: "hsl(20, 50%, 60%)",
+        text: "hsl(30, 70%, 18%)",
+
+        accent: "hsl(22, 40%, 70%)",
         accent2: "hsl(20, 50%, 65%)",
         warning: "hsl(9, 50%, 50%)",
 
         bg: "hsl(40, 85%, 80%)",
-        bg2: "hsl(33, 65%, 65%)",
+        bg2: "hsl(33, 55%, 70%)",
         bg3: "hsl(40, 100%, 86%)",
 
-        
-        text: "hsl(30, 70%, 18%)",
 
         header: "theme('colors.primary')",
-        nav: "theme('colors.secondary')",
-        "cart-bar": "theme('colors.secondary')",
-        "cart-bar-item": "theme('colors.bg3')",
+
+        bar: "theme('colors.accent')",
 
         "about-box": "theme(colors.bg2)",
 
-        shop: "theme(colors.bg2)",
-        "shop-item": "theme('colors.bg3')",
-
         footer: "theme('colors.secondary')",
-        "footer-item": "theme('colors.bg3')",
       },
 
       spacing: {

@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="[&>*]:page-wrapper bg-footer pt-lg">
       <div
-        className="[&>*]:box-sm mb-sm grid w-full grid-cols-1  gap-sm sm:grid-cols-2 lg:grid-cols-4 [&>*]:bg-bg3
+        className="[&>*]:box-sm mb-sm grid w-full grid-cols-1  gap-sm sm:grid-cols-2 lg:grid-cols-4 
         [&_h2]:mb-2xs"
       >
         <ul>

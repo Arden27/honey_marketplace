@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function LogInBox() {
   return (
-    <div className="box-lg grid-rows-[auto,1fr,auto] bg-bg2">
+    <div className="box-sm grid">
       <h2 aria-hidden="true">Zaloguj się</h2>
 
-      <form className="h-full w-full">
+      <form className="mb-sm w-full">
         <fieldset className="flex flex-col">
           <legend className="sr-only">Zaloguj się</legend>
 
@@ -37,7 +37,7 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <button className="btn-lg  bg-bg hover:text-bg" href="/">
+      <button className="btn-lg w-fit border-text self-end hover:text-bg" href="/">
         Zaloguj się
       </button>
     </div>

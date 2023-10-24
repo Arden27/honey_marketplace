@@ -41,7 +41,7 @@ export default function ShopItem({ item }) {
   });
 
   return (
-    <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-shop-item 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
+    <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
       <Link
         href={`/sklep/produkt/${item.tag}`}
         className="relative overflow-hidden"
@@ -106,7 +106,7 @@ export default function ShopItem({ item }) {
           </button>
 
           <div
-            className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-shop-item
+            className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3
 					"
           >
             <button

@@ -14,11 +14,13 @@ export const metadata = {
 
 export default function LogIn() {
   return (
-    <main className="page-wrapper mb-lg grid gap-sm md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr] [&>*]:justify-items-center">
-      <LogInBox />
+    <main className="page-wrapper mb-lg">
+      <div className="box-lg grid gap-sm md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr] [&>*]:justify-items-center">
+        <LogInBox />
 
-      <RegisterBox />
-      <NoRegisterBox />
+        <RegisterBox />
+        <NoRegisterBox />
+      </div>
     </main>
   );
 }

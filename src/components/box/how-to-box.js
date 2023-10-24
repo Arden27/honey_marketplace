@@ -18,7 +18,7 @@ export default function HowToBox() {
       </h2>
 
       <Link
-        className="btn-lg absolute bottom-sm bg-bg 
+        className="btn-lg absolute bottom-sm  
         hover:text-bg"
         href="/sklep"
       >

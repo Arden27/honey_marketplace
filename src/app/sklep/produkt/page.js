@@ -19,7 +19,7 @@ export default function ProductPage() {
   return (
     <main className="">
       <div className="page-wrapper mb-sm">
-        <div className="box-lg bg-bg2">
+        <div className="box-lg">
           {/* <ShopBreadcrumb/> */}
 
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
@@ -76,15 +76,15 @@ export default function ProductPage() {
             </div>
           </div>
 
-          <div className="box-sm bg-bg3">
+          <div className="box-sm">
             <h2>Tutuł opisu tego rodzaju miodu</h2>
             <p>Opis tego rodzaju miodu</p>
           </div>
-          <div className="box-sm bg-bg3">
+          <div className="box-sm">
             <h2>Tutuł opisu tej partii miodu</h2>
             <p>Opis tej partii miodu</p>
           </div>
-          <div className="box-sm bg-bg3">
+          <div className="box-sm">
             <h2>O miodzie słów kilka...</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
