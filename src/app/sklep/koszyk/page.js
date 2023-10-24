@@ -14,7 +14,7 @@ export default function Cart() {
         <div className="[&>*]:box-sm mb-xl grid grid-cols-3 grid-rows-2 gap-sm [&>*]:bg-bg3">
           <section className="row-span-full">
             <form className="h-full w-full">
-              {/* <fieldset className="flex flex-col">
+              <fieldset className="flex flex-col">
                 <legend>
                   <h2>Twoje dane</h2>
                 </legend>
@@ -24,7 +24,7 @@ export default function Cart() {
 
                 <input type="phone" id="log-in-email" />
                 <label htmlFor="log-in-email">*Nr telefonu</label>
-              </fieldset> */}
+              </fieldset>
 
               <fieldset className="flex flex-col">
                 <legend>
