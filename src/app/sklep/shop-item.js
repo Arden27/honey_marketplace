@@ -61,7 +61,7 @@ export default function ShopItem({ item }) {
             {item.name}
           </h2>
 
-          <h3 className="">z dodatkiem gryki</h3>
+          <h3 className="">{item.name2}</h3>
 
           <h4 className="mt-xs">IV 2023</h4>
         </div>
@@ -87,7 +87,7 @@ export default function ShopItem({ item }) {
 
         <div className="relative rounded-[2rem]">
           <button
-            className="btn-lg overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 hover:text-shop-item focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+            className="btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
             onClick={() => {
               dispatch(setShouldCloseCart(false));
               // console.log("after click on Dodaj", shouldCloseCart)

@@ -50,7 +50,7 @@ const CartItem = ({ item, removeFromCart }) => {
       <div className="m-xs flex flex-col justify-between">
         <div>
           <h3 className="w-[90%] 380px:w-full">{item.name}</h3>
-          <h4 className="">z dodatkiem gryki</h4>
+          <h4 className="">{item.name2}</h4>
         </div>
 
         <div className="flex">
@@ -98,7 +98,7 @@ const CartItem = ({ item, removeFromCart }) => {
           </div>
 
           <button
-            className="absolute right-xs top-xs flex h-md  w-md  items-center justify-center rounded-[2rem]  text-center font-btn hover:bg-text hover:text-bg 380px:static [&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item"
+            className="[&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item absolute right-xs top-xs  flex  h-md w-md items-center  justify-center rounded-[2rem] text-center font-btn hover:bg-text hover:text-bg 380px:static"
             onClick={handleRemove}
           >
             <TrashIcon className="h-[16px] w-[16px] stroke-text stroke-2 " />
