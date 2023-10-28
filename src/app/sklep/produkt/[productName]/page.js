@@ -3,8 +3,9 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-import ShopSortBtn from "@/components/btn/radio-button";
-import OpinionBtn from "@/components/btn/radio-button";
+
+// Artem - Breadcrumb
+// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
 import BottomBox from "@/components/box/bottom-box";
 
 import { formatPrice } from "@/components/formatPrice";
@@ -20,8 +21,8 @@ const RadioButton = dynamic(() => import("@/components/btn/radio-button"), {
   ssr: false,
 });
 
-// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
-// ARTEM, Trzeba do bazy danych dodać też tagi na produkt na daną stronę i krótki opis z metadata
+
+
 
 // export const metadata = {
 //   title: "Miód Gryczany - Miody - Dobry Bartnik",
@@ -59,7 +60,10 @@ export default function ProductPage({ params }) {
             BREADCRUMB
           </div>
 
-          <section className="grid  min-h-[30rem] w-full grid-rows-[1fr_auto] md:grid-cols-[minmax(50%,1fr)_auto] ">
+          <section
+            className="grid min-h-[30rem] grid-rows-[1fr_auto]
+          md:grid-cols-[minmax(50%,auto)_minmax(30%,30rem)] "
+          >
             <div className="overflow-hidden rounded-t-[2rem] md:!rounded-l-[2rem] md:!rounded-tr-none">
               <Image
                 className="h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] w-full  object-cover object-center duration-300 ease-in-out hover:scale-110
@@ -73,7 +77,7 @@ export default function ProductPage({ params }) {
 
             <div
               className="flex flex-col justify-between overflow-hidden rounded-b-[2rem]
-            bg-bg3 p-sm  md:max-w-[calc(30rem-theme(spacing.lg))]  md:rounded-r-[2rem] md:rounded-bl-none"
+            bg-bg3 p-sm   md:rounded-r-[2rem] md:rounded-bl-none"
             >
               <div className="pb-sm">
                 <h1 className="">{item.name}</h1>
@@ -133,12 +137,21 @@ export default function ProductPage({ params }) {
                     />
                   ))}
                 </div>
+
+                {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
+
+                <div className="mt-sm">
+                  <span className="font-btn text-sm uppercase text-text ">
+                    Dostępność:&nbsp;
+                  </span>
+                  zostało jedynie 14 szt.
+                </div>
               </div>
 
               <div>
                 <div className="relative  flex rounded-[2rem]">
                   <button
-                    className=" btn-lg w-full overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 hover:text-shop-item focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                    className=" btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     onClick={() => {
                       dispatch(setShouldCloseCart(false));
                       // console.log("after click on Dodaj", shouldCloseCart)
@@ -161,7 +174,7 @@ export default function ProductPage({ params }) {
                   </button>
 
                   <div
-                    className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-shop-item
+                    className="bg-shop-item absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text
 					"
                   >
                     <button

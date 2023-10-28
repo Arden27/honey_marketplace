@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+
+import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/form-fieldset";
 import InputLabel from "@/components/forms/input-label";
 
@@ -11,57 +13,180 @@ export const metadata = {
 
 export default function Cart() {
   return (
-    <main className="page-wrapper mb-lg">
-      <div className="box-lg ">
-        <h2>Koszyk</h2>
-        <div className="[&>*]:box-sm mb-xl grid grid-rows-2 gap-sm md:grid-cols-2 [&>*]:bg-bg3">
-          <section className="">
-            <form className="h-full w-full">
-              <FormFieldset legend="Twoje dane">
-                <InputLabel type="email" id="log-in-email" label="*E-mail" />
-              </FormFieldset>
-              <FormFieldset legend="Dane adresowe">
-                <InputLabel type="text" id="address-firstname" label="*Imię" />
-                <InputLabel
-                  type="text"
-                  id="address-lastname"
-                  label="*Nazwisko"
-                />
-                <InputLabel
-                  type="text"
-                  id="address-street"
-                  label="*Ulica i nr domu"
-                />
-                <InputLabel
-                  type="text"
-                  id="address-zipcode"
-                  label="*Kod pocztowy"
-                />
-                <InputLabel type="text" id="address-city" label="*Miasto" />
-                <InputLabel type="text" id="address-country" label="*kraj" />
+    <main className="page-wrapper mb-lg ">
+      <div className="box-lg">
+        <h1>Koszyk</h1>
+        <div className="grid gap-sm md:grid-cols-[minmax(50%,1fr)_auto]">
+          <div className="flex flex-col gap-sm">
+            <section className="box-sm relative grid gap-md">
+              <button className="absolute right-0 m-sm">
+                <EditIcon />
+              </button>
+              <FormFieldset legend="Moje dane">
+                <div className="flex gap-3xs">
+                  <InputLabel
+                    type="text"
+                    id="main-adress-firstname"
+                    label="Imię"
+                  />
+                  <InputLabel
+                    type="text"
+                    id="main-adress-lastname"
+                    label="Nazwisko"
+                  />
+                </div>
+                <InputLabel type="email" id="log-in-email" label="E-mail" />
                 <InputLabel
                   type="phone"
-                  id="log-in-phone"
-                  label="*Nr telefonu"
+                  id="main-adress-phone"
+                  label="Nr telefonu"
                 />
               </FormFieldset>
-            </form>
-          </section>
+              <FormFieldset legend="Adres rozliczeniowy">
+                <InputLabel
+                  type="text"
+                  id="main-adress-street"
+                  label="Ulica i nr domu"
+                />
+                <div className="flex gap-3xs">
+                  <InputLabel
+                    type="text"
+                    id="main-adress-zipcode"
+                    label="Kod pocztowy"
+                  />
+                  <InputLabel
+                    type="text"
+                    id="main-adress-city"
+                    label="Miasto
+                  "
+                  />
+                </div>
+                {/* <InputLabel
+                  type="text"
+                  id="main-adress-country"
+                  label="Państwo"
+                /> */}
 
-          <section className="">
-            <h2>Dostawa</h2>
+                <sub>
+                  * Aby kontynuować należy wypełnić wszystkie oznaczone komórki
+                </sub>
+              </FormFieldset>
 
-            <div className="flex items-center">
-              <input type="radio" id="log-in-remember" />
-              <label htmlFor="log-in-remember">Zapamiętaj mnie</label>
-              <input type="radio" id="log-in-remember2" />
-              <label htmlFor="log-in-remember2">Zapamiętaj mnie</label>
-            </div>
-          </section>
-          <section className=" row-span-full">
+              <div className="flex justify-center">
+                <button className="btn-sm border-text">Zapisz</button>
+              </div>
+            </section>
+
+            <section className="box-sm relative grid gap-sm">
+              <button className="absolute right-0 m-sm">
+                <EditIcon />
+              </button>
+              <FormFieldset legend="Adres dostawy">
+                <InputLabel
+                  type="checkbox"
+                  id="send-send-address-firstname"
+                  label="Taki sam jak mój adres rozliczeniowy"
+                />
+
+                <div className="flex gap-3xs">
+                  <InputLabel
+                    type="text"
+                    id="send-address-firstname"
+                    label="Imię"
+                  />
+                  <InputLabel
+                    type="text"
+                    id="send-address-lastname"
+                    label="Nazwisko"
+                  />
+                </div>
+                <InputLabel
+                  type="text"
+                  id="send-address-street"
+                  label="Ulica i nr domu"
+                />
+                <div className="flex gap-3xs">
+                  <InputLabel
+                    type="text"
+                    id="send-address-zipcode"
+                    label="Kod pocztowy"
+                  />
+                  <InputLabel
+                    type="text"
+                    id="send-address-city"
+                    label="Miasto"
+                  />
+                </div>
+                {/* <InputLabel
+                  type="text"
+                  id="send-address-country"
+                  label="Państwo"
+                /> */}
+              </FormFieldset>
+
+              <FormFieldset legend="Sposób dostawy">
+                <InputLabel
+                  type="radio"
+                  id="delivery-method-inpost-courier"
+                  label="Kurier InPost"
+                />
+                <InputLabel
+                  type="radio"
+                  id="delivery-method-inpost-lockers"
+                  label="Paczkomaty InPost"
+                />
+              </FormFieldset>
+              <div className="flex justify-center">
+                <button className="btn-sm border-text">Zapisz</button>
+              </div>
+            </section>
+
+            <section className="box-sm relative grid gap-sm">
+              <button className="absolute right-0 m-sm">
+                <EditIcon />
+              </button>
+              <FormFieldset legend="Płatności">
+                <InputLabel
+                  type="radio"
+                  id="payment-transfer"
+                  label="Przelew online"
+                />
+                <InputLabel type="radio" id="payment-blik" label="BLIK" />
+                <InputLabel
+                  type="radio"
+                  id="payment-card"
+                  label="Karta płatnicza"
+                />
+                <InputLabel type="radio" id="payment-apple" label="Apple Pay" />
+                <InputLabel
+                  type="radio"
+                  id="payment-google"
+                  label="Google Pay"
+                />
+                <InputLabel type="radio" id="payment-paypal" label="Paypal" />
+                <InputLabel
+                  type="radio"
+                  id="payment-cash"
+                  label="Za pobraniem"
+                />
+              </FormFieldset>
+
+              <div className="flex justify-center">
+                <button className="btn-sm border-text">Zapisz</button>
+              </div>
+            </section>
+          </div>
+
+          <section className="box-sm flex flex-col gap-sm md:max-w-[30rem]">
             <h2>Produkty</h2>
 
             <h2>Podsumowanie:</h2>
+
+            <div className="flex justify-center">
+              <button className="btn-lg border-text">
+                Przejdź do płatności
+              </button>
+            </div>
           </section>
         </div>
       </div>

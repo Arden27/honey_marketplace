@@ -6,8 +6,7 @@ import ShopSortBtn from "@/components/btn/radio-button";
 
 import Image from "next/image";
 
-// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
-// ARTEM, Trzeba do bazy danych dodać też tagi na produkt na daną stronę i krótki opis z metadata
+
 
 export const metadata = {
   title: "Miód Gryczany - Miody - Dobry Bartnik",

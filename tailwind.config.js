@@ -24,7 +24,7 @@ module.exports = {
 
         header: "hsl(33, 65%, 65%)",
 
-        bar: "hsl(20, 50%, 65%)",
+        bar: "hsl(22, 40%, 70%)",
 
         "about-box": "theme(colors.bg2)",
 
