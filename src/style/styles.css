@@ -35,10 +35,6 @@
     [&>*]:duration-300 [&>*]:ease-in-out;
   }
 
-  .btn-sm svg {
-    @apply border-red-400 stroke-red-300;
-  }
-
   .btn-icon {
     @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out
     [&>*]:transition-colors [&>*]:duration-300 [&>*]:ease-in-out;
