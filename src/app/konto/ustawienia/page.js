@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import BottomBox from "@/components/box/bottom-box";
+import PageWrapper from "@/components/page-wrapper";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
   title: "Ustawienia konta - Dobry Bartnik",
@@ -11,7 +12,9 @@ export const metadata = {
 export default function Settings() {
   return (
     <main>
-      <section className="page-wrapper">Ustawienia konta</section>
+      <PageWrapper>
+        <section>Ustawienia konta</section>
+      </PageWrapper>
 
       <BottomBox />
     </main>

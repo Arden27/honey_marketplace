@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import BottomBox from "@/components/box/bottom-box";
+import PageWrapper from "@/components/page-wrapper";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
   title: "Regulamin - Dobry Bartnik",
@@ -11,7 +12,9 @@ export const metadata = {
 export default function Statute() {
   return (
     <main>
-      <section className="page-wrapper">REGULAMIN</section>
+      <PageWrapper>
+        <section>REGULAMIN</section>
+      </PageWrapper>
 
       <BottomBox />
     </main>

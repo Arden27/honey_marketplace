@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import BottomBox from "@/components/box/bottom-box";
+import PageWrapper from "@/components/page-wrapper";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
   title: "Rejestracja - Dobry Bartnik",
@@ -11,9 +12,9 @@ export const metadata = {
 export default function Register() {
   return (
     <main>
-      <section className="page-wrapper">
-        Rejestracja
-      </section>
+      <PageWrapper>
+        <section>Rejestracja</section>
+      </PageWrapper>
     </main>
   );
 }

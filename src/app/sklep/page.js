@@ -1,11 +1,14 @@
 "use client";
 import Link from "next/link";
 
-import ShopMenu from "@/components/box/shop-menu";
+import PageWrapper from "@/components/page-wrapper";
+
+
+import ShopMenu from "@/app/sklep/shop-menu";
+// import Breadcrumb from "@/components/btn/shop-breadcrumb";
 import ShopSortBtn from "@/components/btn/shop-sort-btn";
-import ShopPagination from "@/components/btn/shop-pagination";
-import BottomBox from "@/components/box/bottom-box";
-// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
+import Pagination from "@/components/btn/pagination";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 import { useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -15,8 +18,6 @@ import dynamic from "next/dynamic";
 const Items = dynamic(() => import("@/components/items"), {
   ssr: false,
 });
-
-// ARTEM - Zrób proszę z tego oddzielny komponent shop-breadcrumb.js zmień nazwę zmiennej na ShopBreadcrumb i wrzuć do components/btn:
 
 const Breadcrumb = ({ pathname, category, searchParams }) => {
   return (
@@ -51,15 +52,11 @@ const Breadcrumb = ({ pathname, category, searchParams }) => {
   );
 };
 
-
-
 // export const metadata = {
 //   title: "Sklep - Dobry Bartnik",
 //   description: "OPIS",
 //   keywords: "TAGI",
 // };
-
-
 
 export default function Shop() {
   const pathname = usePathname();
@@ -83,24 +80,26 @@ export default function Shop() {
   return (
     <main>
       <ShopMenu />
-      <section className="page-wrapper mb-sm ">
-        <div className="box-lg  flex flex-col">
-          <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
-            <Breadcrumb
-              // baseDomain={baseDomain}
-              pathname={pathname}
-              category={category}
-              searchParams={searchParams}
-            />
-            <ShopSortBtn onSelect={handleSort} />
-          </div>
-          <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
-            <Items sortType={sortType} category={category} />
-          </div>
+      <PageWrapper>
+        <section>
+          <div className="box-lg flex flex-col">
+            <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
+              <Breadcrumb
+                // baseDomain={baseDomain}
+                pathname={pathname}
+                category={category}
+                searchParams={searchParams}
+              />
+              <ShopSortBtn onSelect={handleSort} />
+            </div>
+            <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
+              <Items sortType={sortType} category={category} />
+            </div>
 
-          <ShopPagination />
-        </div>
-      </section>
+            <Pagination />
+          </div>
+        </section>
+      </PageWrapper>
       <BottomBox />
     </main>
   );

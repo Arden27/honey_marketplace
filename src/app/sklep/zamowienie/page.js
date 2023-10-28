@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import BottomBox from "@/components/box/bottom-box";
+import PageWrapper from "@/components/page-wrapper";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
   title: "Zamówienie nr 1 - Dobry Bartnik",
@@ -11,10 +12,9 @@ export const metadata = {
 export default function Order() {
   return (
     <main>
-      <section className="page-wrapper">
-
-        STATUS ZAMÓWIENIA nr 1
-      </section>
+      <PageWrapper>
+        <section>STATUS ZAMÓWIENIA nr 1</section>
+      </PageWrapper>
 
       <BottomBox />
     </main>

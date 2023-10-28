@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import PageWrapper from "@/components/page-wrapper";
+
 export const metadata = {
   title: "Zmień hasło - Dobry Bartnik",
   description: "OPIS",
@@ -9,9 +11,9 @@ export const metadata = {
 export default function ChangePassword() {
   return (
     <main>
-      <section className="page-wrapper">
-        ZMIANA HASŁA
-      </section>
+      <PageWrapper>
+        <section>ZMIANA HASŁA</section>
+      </PageWrapper>
     </main>
   );
 }

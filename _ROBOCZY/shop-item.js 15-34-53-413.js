@@ -18,7 +18,7 @@ export default function ShopItem() {
 
         <div className="flex">
           {item.sizes.map((sizeObj, index) => (
-            <RadioButton
+            <RadioBtn
               key={index}
               sizeObj={sizeObj}
               item={item}

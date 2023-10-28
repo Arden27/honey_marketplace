@@ -4,9 +4,10 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
+import PageWrapper from "@/components/page-wrapper";
 // Artem - Breadcrumb
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
-import BottomBox from "@/components/box/bottom-box";
+import BottomBox from "@/layout/bottom-box/bottom-box";
 
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, addToCart, setShouldCloseCart } from "@/redux/store";
@@ -17,12 +18,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioButton = dynamic(() => import("@/components/btn/radio-button"), {
+const RadioBtn = dynamic(() => import("@/components/btn/radio-btn"), {
   ssr: false,
 });
-
-
-
 
 // export const metadata = {
 //   title: "Miód Gryczany - Miody - Dobry Bartnik",
@@ -51,9 +49,9 @@ export default function ProductPage({ params }) {
   };
 
   return (
-    <main className="">
-      <div className="page-wrapper mb-sm">
-        <div className="box-lg">
+    <main>
+      <PageWrapper>
+        <div className="box-lg mb-sm">
           {/* <ShopBreadcrumb/> */}
 
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
@@ -62,7 +60,7 @@ export default function ProductPage({ params }) {
 
           <section
             className="grid min-h-[30rem] grid-rows-[1fr_auto]
-          md:grid-cols-[minmax(50%,auto)_minmax(30%,30rem)] "
+          md:grid-cols-[minmax(50%,auto)_minmax(30%,50%)] "
           >
             <div className="overflow-hidden rounded-t-[2rem] md:!rounded-l-[2rem] md:!rounded-tr-none">
               <Image
@@ -128,7 +126,7 @@ export default function ProductPage({ params }) {
 
                 <div className="flex items-center">
                   {item.sizes.map((sizeObj, index) => (
-                    <RadioButton
+                    <RadioBtn
                       key={index}
                       sizeObj={sizeObj}
                       item={item}
@@ -229,7 +227,7 @@ export default function ProductPage({ params }) {
             <p>opis z kategorii</p>
           </section>
         </div>
-      </div>
+      </PageWrapper>
       <BottomBox />
     </main>
   );

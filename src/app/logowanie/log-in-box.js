@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LogInBox() {
   return (
-    <div className="box-sm grid">
+    <section className="box-sm grid">
       <h2 aria-hidden="true">Zaloguj się</h2>
 
       <form className="mb-sm w-full">
@@ -40,6 +40,6 @@ export default function LogInBox() {
       <button className="btn-lg w-fit border-text self-end hover:text-bg" href="/">
         Zaloguj się
       </button>
-    </div>
+    </section>
   );
 }

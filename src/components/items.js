@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import React, { useMemo } from "react";
-import ShopItem from "@/components/box/shop-item";
+import ShopItem from "@/app/sklep/shop-item";
 
 export default function Items({ sortType, category }) {
   const items = useSelector((state) => state.items);

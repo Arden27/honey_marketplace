@@ -7,12 +7,12 @@ import { addToCart } from "@/redux/store";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, setShouldCloseCart } from "@/redux/store";
 
-// import RadioButton from "./radio-button";
+// import RadioBtn from "./radio-btn";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
-const RadioButton = dynamic(() => import("../btn/radio-button"), {
+const RadioBtn = dynamic(() => import("../../components/btn/radio-btn"), {
   ssr: false,
 });
 
@@ -68,7 +68,7 @@ export default function ShopItem({ item }) {
 
         <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
           {item.sizes.map((sizeObj, index) => (
-            <RadioButton
+            <RadioBtn
               key={index}
               sizeObj={sizeObj}
               item={item}
