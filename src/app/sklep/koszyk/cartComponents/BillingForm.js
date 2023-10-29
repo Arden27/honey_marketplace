@@ -129,6 +129,7 @@ export default function BillingForm({
           <div className="flex justify-center">
             <button
               className="btn-sm border-text"
+              type="button"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,

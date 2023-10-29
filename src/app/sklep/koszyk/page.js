@@ -10,10 +10,6 @@ import { useState } from "react";
 
 import PageWrapper from "@/components/page-wrapper";
 
-import EditIcon from "public/icons/edit.svg";
-import FormFieldset from "@/components/forms/form-fieldset";
-import InputLabel from "@/components/forms/input-label";
-
 // export const metadata = {
 //   title: "Koszyk - Dobry Bartnik",
 //   description: "OPIS",
@@ -82,6 +78,7 @@ export default function Cart() {
               <DeliveryForm
                 isEditing={isEditing}
                 formData={formData}
+                setFormData={setFormData}
                 setIsEditing={setIsEditing}
                 handleInputChange={handleInputChange}
               />

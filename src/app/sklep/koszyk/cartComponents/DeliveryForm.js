@@ -2,12 +2,35 @@ import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/form-fieldset";
 import InputLabel from "@/components/forms/input-label";
 
+import { useState } from "react";
+
 export default function DeliveryForm({
   isEditing,
   formData,
+  setFormData,
   setIsEditing,
   handleInputChange,
 }) {
+
+  const [useBillingAddress, setUseBillingAddress] = useState(false);
+
+  const handleUseBillingAddressChange = () => {
+    setUseBillingAddress(prev => !prev);
+    if (!useBillingAddress) {
+      setFormData(prev => ({
+        ...prev,
+        shippingDelivery: {
+          ...prev.shippingDelivery,
+          sendAddressFirstname: prev.personalBillingData.mainAdressFirstname,
+          sendAddressLastname: prev.personalBillingData.mainAdressLastname,
+          sendAddressStreet: prev.personalBillingData.mainAdressStreet,
+          sendAddressZipcode: prev.personalBillingData.mainAdressZipcode,
+          sendAddressCity: prev.personalBillingData.mainAdressCity
+        }
+      }));
+    }
+  };
+
   return (
     <section className="box-sm relative grid gap-md">
       <button
@@ -29,6 +52,8 @@ export default function DeliveryForm({
               type="checkbox"
               id="send-send-address-firstname"
               label="Taki sam jak mój adres rozliczeniowy"
+              checked={useBillingAddress}
+              onChange={handleUseBillingAddressChange}
               // Implement logic if needed for copying address from personalBillingData
             />
             <div className="flex gap-3xs">
@@ -36,7 +61,11 @@ export default function DeliveryForm({
                 type="text"
                 id="send-address-firstname"
                 label="Imię"
-                value={formData.shippingDelivery.sendAddressFirstname}
+                value={
+                  useBillingAddress 
+                    ? formData.personalBillingData.mainAdressFirstname 
+                    : formData.shippingDelivery.sendAddressFirstname
+                }
                 onChange={(e) =>
                   handleInputChange(
                     "shippingDelivery",
@@ -44,12 +73,17 @@ export default function DeliveryForm({
                     e.target.value,
                   )
                 }
+                disabled={useBillingAddress}
               />
               <InputLabel
                 type="text"
                 id="send-address-lastname"
                 label="Nazwisko"
-                value={formData.shippingDelivery.sendAddressLastname}
+                value={
+                  useBillingAddress 
+                    ? formData.personalBillingData.mainAdressLastname 
+                    : formData.shippingDelivery.sendAddressLastname
+                }
                 onChange={(e) =>
                   handleInputChange(
                     "shippingDelivery",
@@ -57,13 +91,18 @@ export default function DeliveryForm({
                     e.target.value,
                   )
                 }
+                disabled={useBillingAddress}
               />
             </div>
             <InputLabel
               type="text"
               id="send-address-street"
               label="Ulica i nr domu"
-              value={formData.shippingDelivery.sendAddressStreet}
+              value={
+                useBillingAddress 
+                  ? formData.personalBillingData.mainAdressStreet 
+                  : formData.shippingDelivery.sendAddressStreet
+              }
               onChange={(e) =>
                 handleInputChange(
                   "shippingDelivery",
@@ -71,13 +110,18 @@ export default function DeliveryForm({
                   e.target.value,
                 )
               }
+              disabled={useBillingAddress}
             />
             <div className="flex gap-3xs">
               <InputLabel
                 type="text"
                 id="send-address-zipcode"
                 label="Kod pocztowy"
-                value={formData.shippingDelivery.sendAddressZipcode}
+                value={
+                  useBillingAddress 
+                    ? formData.personalBillingData.mainAdressZipcode 
+                    : formData.shippingDelivery.sendAddressZipcode
+                }
                 onChange={(e) =>
                   handleInputChange(
                     "shippingDelivery",
@@ -85,12 +129,17 @@ export default function DeliveryForm({
                     e.target.value,
                   )
                 }
+                disabled={useBillingAddress}
               />
               <InputLabel
                 type="text"
                 id="send-address-city"
                 label="Miasto"
-                value={formData.shippingDelivery.sendAddressCity}
+                value={
+                  useBillingAddress 
+                    ? formData.personalBillingData.mainAdressCity 
+                    : formData.shippingDelivery.sendAddressCity
+                }
                 onChange={(e) =>
                   handleInputChange(
                     "shippingDelivery",
@@ -98,6 +147,7 @@ export default function DeliveryForm({
                     e.target.value,
                   )
                 }
+                disabled={useBillingAddress}
               />
             </div>
           </FormFieldset>
@@ -144,6 +194,7 @@ export default function DeliveryForm({
           <div className="flex justify-center">
             <button
               className="btn-sm border-text"
+              type="button"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,

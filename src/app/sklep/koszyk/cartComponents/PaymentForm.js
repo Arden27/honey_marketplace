@@ -54,6 +54,7 @@ export default function PaymentForm({
 
           <div className="flex justify-center">
             <button
+            type="button"
               className="btn-sm border-text"
               onClick={() =>
                 setIsEditing((prev) => ({
