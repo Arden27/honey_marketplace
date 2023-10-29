@@ -14,7 +14,7 @@ export default function Logo() {
       <Link className="flex justify-center" href="/">
         <Image
           className="fixed h-[calc(theme(spacing.2xl)+theme(spacing.md))] w-[calc(theme(spacing.2xl)+theme(spacing.md))] rounded-full "
-          src="/img/logo.png"
+          src="/img/bee_logo.png"
           width={80}
           height={80}
           alt="Logo Pasieki Dobry Bartnik"
