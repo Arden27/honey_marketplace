@@ -32,10 +32,7 @@ export default function ShopItem({ item }) {
 
   return (
     <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
-      <Link
-        href={`/sklep/${item.tag}`}
-        className="relative overflow-hidden"
-      >
+      <Link href={`/sklep/${item.tag}`} className="relative overflow-hidden">
         <Image
           className="object-cover object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
@@ -56,7 +53,11 @@ export default function ShopItem({ item }) {
           <h4 className="mt-xs">IV 2023</h4>
         </div>
 
-        <RadioGroup item={item} handleSizeChange={handleSizeChange} selectedSize={selectedSize}/>
+        <RadioGroup
+          item={item}
+          handleSizeChange={handleSizeChange}
+          selectedSize={selectedSize}
+        />
 
         <div className="mb-sm  [&>*]:font-sans">
           <h3 className="text-warning line-through">
@@ -70,7 +71,9 @@ export default function ShopItem({ item }) {
             id={item.id}
             selectedSize={selectedSize}
             quantity={quantity}
-            className={"btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"}
+            className={
+              "btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+            }
           />
 
           <div
@@ -81,14 +84,26 @@ export default function ShopItem({ item }) {
               quantity={quantity}
               setQuantity={setQuantity}
               direction={"minus"}
+              className={
+                "ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+              }
             />
 
-            <InputQuantity quantity={quantity} setQuantity={setQuantity} />
+            <InputQuantity
+              quantity={quantity}
+              setQuantity={setQuantity}
+              className={
+                "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+              }
+            />
 
             <SetQuantityButton
               quantity={quantity}
               setQuantity={setQuantity}
               direction={"plus"}
+              className={
+                "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+              }
             />
           </div>
         </div>

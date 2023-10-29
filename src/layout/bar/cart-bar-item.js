@@ -20,8 +20,8 @@ const CartItem = ({ item, removeFromCart }) => {
         weight: item.weight,
         quantity: quantity,
       }),
-    ); // Update the cart item in the store
-  }, [quantity])
+    ); 
+  }, [quantity]); // Update the cart item in the store if quantity changes
 
   useEffect(() => {
     setQuantity(item.quantity);
@@ -54,9 +54,30 @@ const CartItem = ({ item, removeFromCart }) => {
 
         <div className="flex w-full items-center justify-between ">
           <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-text">
-            <SetQuantityButton quantity={quantity} setQuantity={setQuantity} direction={"minus"} />
-            <InputQuantity quantity={quantity} setQuantity={setQuantity}/>
-            <SetQuantityButton quantity={quantity} setQuantity={setQuantity} direction={"plus"} />
+
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"minus"}
+              className={
+                "ml-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              }
+            />
+            <InputQuantity
+              quantity={quantity}
+              setQuantity={setQuantity}
+              className={
+                "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+              }
+            />
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"plus"}
+              className={
+                "mr-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              }
+            />
           </div>
 
           <h3 className="font-sans text-lg leading-none">&#215;</h3>

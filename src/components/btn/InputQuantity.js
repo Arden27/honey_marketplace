@@ -1,4 +1,4 @@
-export default function InputQuantity({ quantity, setQuantity }) {
+export default function InputQuantity({ quantity, setQuantity, className }) {
 
   const handleChange = (e) => {
     const value = Math.round(Number(e.target.value));
@@ -13,7 +13,8 @@ export default function InputQuantity({ quantity, setQuantity }) {
 
   return (
     <input
-      className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+      // className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+      className={className}
       type="number"
       value={quantity.toString()}
       min="1"

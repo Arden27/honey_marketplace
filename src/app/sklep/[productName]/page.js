@@ -168,17 +168,20 @@ export default function ProductPage({ params }) {
                       quantity={quantity}
                       setQuantity={setQuantity}
                       direction={"minus"}
+                      className={"mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"}
                     />
 
                     <InputQuantity
                       quantity={quantity}
                       setQuantity={setQuantity}
+                      className={"h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"}
                     />
 
                     <SetQuantityButton
                       quantity={quantity}
                       setQuantity={setQuantity}
                       direction={"plus"}
+                      className={"mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"}
                     />
                   </div>
                   {/* <button
