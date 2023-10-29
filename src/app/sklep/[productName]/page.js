@@ -7,6 +7,7 @@ import InputQuantity from "@/components/btn/InputQuantity";
 import AddToCartButton from "@/components/btn/AddToCartButton";
 import PageWrapper from "@/components/page-wrapper";
 import BottomBox from "@/layout/bottom-box/bottom-box";
+import SelectButton from "@/components/btn/SelectButton";
 // libs
 import React from "react";
 import { useState } from "react";
@@ -45,10 +46,18 @@ export default function ProductPage({ params }) {
   const [selectedSize, setSelectedSize] = useState(defaultSize.size);
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
+  //const sizes = item.sizes.map((sizeObj) => ({ [sizeObj.size]: sizeObj.price }));
+  const sizes = item.sizes.reduce((acc, sizeObj) => {
+    acc[sizeObj.size] = sizeObj.price;
+    return acc;
+  }, {});
+  console.log("sizes: ", sizes)
+  const options = Object.keys(sizes);
 
-  const handleSizeChange = (size, price) => {
-    setSelectedSize(size);
-    setSelectedPrice(price);
+  const handleSizeChange = (option) => {
+    setSelectedSize(option);
+    setSelectedPrice(sizes[option]);
+    console.log("sizes[option]", sizes[option])
   };
 
   return (
@@ -127,12 +136,14 @@ export default function ProductPage({ params }) {
 
                 {/* ARTEM - wklej tutaj proszę listę rozwijaną na wagę */}
 
-                <RadioGroup
+                {/* <RadioGroup
                   item={item}
                   handleSizeChange={handleSizeChange}
                   selectedSize={selectedSize}
                   className={"flex items-center"}
-                />
+                /> */}
+
+                <SelectButton options={options} onSelect={handleSizeChange}/>
 
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 

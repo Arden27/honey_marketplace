@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function SortItemsBtn({ options, onSelect }){
+export default function SelectButton({ options, onSelect }){
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(options[0]);
   const node = useRef();
@@ -34,12 +34,12 @@ export default function SortItemsBtn({ options, onSelect }){
   }, []);
 
   return (
-    <div className="relative w-96 text-end">
+    <div className="">
       <button ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
         {selected} <span>{isOpen ? "▲" : "▼"}</span>
       </button>
       <ul
-        className={`absolute right-0 z-50 rounded-[2rem] bg-bar p-2 text-end
+        className={`absolute z-50 rounded-[2rem] bg-bar p-2
         ${isOpen ? "block" : "hidden"}`}
         ref={node}
       >
