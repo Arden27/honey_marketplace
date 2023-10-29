@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 import PageWrapper from "@/components/page-wrapper";
-
+import Box from "@/components/Box";
 
 import ShopMenu from "@/app/sklep/shop-menu";
 // import Breadcrumb from "@/components/btn/shop-breadcrumb";
@@ -81,8 +81,8 @@ export default function Shop() {
     <main>
       <ShopMenu />
       <PageWrapper>
-        <section>
-          <div className="box-lg flex flex-col">
+        <Box size="lg">
+          <div className="flex flex-col">
             <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
               <Breadcrumb
                 // baseDomain={baseDomain}
@@ -98,7 +98,7 @@ export default function Shop() {
 
             <Pagination />
           </div>
-        </section>
+        </Box>
       </PageWrapper>
       <BottomBox />
     </main>

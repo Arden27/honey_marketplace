@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import PageWrapper from "@/components/page-wrapper";
-
+import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/form-fieldset";
 import InputLabel from "@/components/forms/input-label";
@@ -16,14 +16,15 @@ export default function Cart() {
   return (
     <main>
       <PageWrapper>
-        <section className="box-lg">
+        <Box size="lg">
           <h1>Koszyk</h1>
           <div className="grid gap-sm md:grid-cols-[minmax(50%,1fr)_auto]">
             <div className="flex flex-col gap-sm">
-              <section className="box-sm relative grid gap-md">
+              <Box size="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
+
                 <FormFieldset legend="Moje dane">
                   <div className="flex gap-3xs">
                     <InputLabel
@@ -78,9 +79,9 @@ export default function Cart() {
                 <div className="flex justify-center">
                   <button className="btn-sm border-text">Zapisz</button>
                 </div>
-              </section>
+              </Box>
 
-              <section className="box-sm relative grid gap-sm">
+              <Box size="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
@@ -142,9 +143,9 @@ export default function Cart() {
                 <div className="flex justify-center">
                   <button className="btn-sm border-text">Zapisz</button>
                 </div>
-              </section>
+              </Box>
 
-              <section className="box-sm relative grid gap-sm">
+              <Box size="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
@@ -181,10 +182,10 @@ export default function Cart() {
                 <div className="flex justify-center">
                   <button className="btn-sm border-text">Zapisz</button>
                 </div>
-              </section>
+              </Box>
             </div>
 
-            <section className="box-sm flex flex-col gap-sm md:max-w-[30rem]">
+            <Box size="sm">
               <h2>Produkty</h2>
 
               <h2>Podsumowanie:</h2>
@@ -194,9 +195,9 @@ export default function Cart() {
                   Przejdź do płatności
                 </button>
               </div>
-            </section>
+            </Box>
           </div>
-        </section>
+        </Box>
       </PageWrapper>
     </main>
   );

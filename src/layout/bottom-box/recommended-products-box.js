@@ -1,11 +1,12 @@
 import React from "react";
+
 import Link from "next/link";
+import Box from "@/components/Box";
 
-
-export default function RecommendedProductsBox() {
+export default function RecommendedArticlesBox() {
   return (
-    <section className="box-lg ">
+    <Box size="lg">
       <h2>Polecane produkty:</h2>
-    </section>
+    </Box>
   );
 }

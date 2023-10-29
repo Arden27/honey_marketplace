@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import PageWrapper from "@/components/page-wrapper";
+import Box from "@/components/Box";
 // Artem - Breadcrumb
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
 import BottomBox from "@/layout/bottom-box/bottom-box";
@@ -51,7 +52,7 @@ export default function ProductPage({ params }) {
   return (
     <main>
       <PageWrapper>
-        <div className="box-lg mb-sm">
+        <Box size="lg">
           {/* <ShopBreadcrumb/> */}
 
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
@@ -215,18 +216,18 @@ export default function ProductPage({ params }) {
             </div>
           </section>
 
-          <section className="box-sm">
+          <Box size="sm">
             <h2>{item.type}</h2>
             <p>opis z typu miodu</p>
             <br />
             <h2>Zbiory {item.harvestDate}</h2>
             <p>{item.descriptionLong}</p>
-          </section>
-          <section className="box-sm">
+          </Box>
+          <Box size="sm">
             <h2>Nasze {item.categories}</h2>
             <p>opis z kategorii</p>
-          </section>
-        </div>
+          </Box>
+        </Box>
       </PageWrapper>
       <BottomBox />
     </main>

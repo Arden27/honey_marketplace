@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
+import Box from "@/components/Box";
+
 export default function LogInBox() {
   return (
-    <section className="box-sm grid">
+    <Box size="sm">
       <h2 aria-hidden="true">Zaloguj się</h2>
 
       <form className="mb-sm w-full">
@@ -40,6 +42,6 @@ export default function LogInBox() {
       <button className="btn-lg w-fit border-text self-end hover:text-bg" href="/">
         Zaloguj się
       </button>
-    </section>
+    </Box>
   );
 }

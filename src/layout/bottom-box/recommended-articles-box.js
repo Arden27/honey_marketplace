@@ -1,10 +1,12 @@
 import React from "react";
+
 import Link from "next/link";
+import Box from "@/components/Box";
 
 export default function RecommendedArticlesBox() {
   return (
-    <section className="box-lg col-span-full ">
+    <Box size="lg">
       <h2>Artykuły:</h2>
-    </section>
+    </Box>
   );
 }

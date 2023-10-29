@@ -7,11 +7,11 @@
   /* --- BOXES --- */
 
   .box-sm {
-    @apply w-full overflow-hidden rounded-[2rem] bg-bg3 p-sm;
+    @apply w-full gap-sm overflow-hidden rounded-[2rem] bg-bg3 p-sm;
   }
 
   .box-lg {
-    @apply grid h-full w-full grid-cols-1 gap-sm overflow-hidden rounded-[2rem] bg-bg2 p-sm;
+    @apply grid h-full w-full gap-sm overflow-hidden rounded-[2rem] bg-bg2 p-sm;
   }
 
   /* --- BUTTONS --- */
