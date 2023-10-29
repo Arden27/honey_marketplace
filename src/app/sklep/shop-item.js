@@ -1,20 +1,15 @@
 "use client";
-
+// components
+import RadioGroup from "@/components/btn/RadioGroup";
+import SetQuantityButton from "@/components/btn/SetQuantityButton";
+import InputQuantity from "@/components/btn/InputQuantity";
+import AddToCartButton from "@/components/btn/AddToCartButton";
+// libs
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { addToCart } from "@/redux/store";
-import { formatPrice } from "@/components/formatPrice";
-import { openCart, setShouldCloseCart } from "@/redux/store";
-
-// import RadioBtn from "./radio-btn";
-
-import dynamic from "next/dynamic";
 import Link from "next/link";
-
-const RadioBtn = dynamic(() => import("../../components/btn/radio-btn"), {
-  ssr: false,
-});
+import React, { useEffect, useState } from "react";
+// utils
+import { formatPrice } from "@/components/formatPrice";
 
 export default function ShopItem({ item }) {
   // Find the default size object
@@ -25,11 +20,6 @@ export default function ShopItem({ item }) {
   const [selectedSize, setSelectedSize] = useState(defaultSize.size);
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
-
-  // const isCartOpen = useSelector((state) => state.isCartOpen);
-  // const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
-
-  const dispatch = useDispatch();
 
   const handleSizeChange = (size, price) => {
     setSelectedSize(size);
@@ -43,7 +33,7 @@ export default function ShopItem({ item }) {
   return (
     <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
       <Link
-        href={`/sklep/produkt/${item.tag}`}
+        href={`/sklep/${item.tag}`}
         className="relative overflow-hidden"
       >
         <Image
@@ -66,7 +56,8 @@ export default function ShopItem({ item }) {
           <h4 className="mt-xs">IV 2023</h4>
         </div>
 
-        <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
+
+        {/* <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
           {item.sizes.map((sizeObj, index) => (
             <RadioBtn
               key={index}
@@ -76,7 +67,8 @@ export default function ShopItem({ item }) {
               selectedSize={selectedSize}
             />
           ))}
-        </div>
+        </div> */}
+        <RadioGroup item={item} handleSizeChange={handleSizeChange} selectedSize={selectedSize}/>
 
         <div className="mb-sm  [&>*]:font-sans">
           <h3 className="text-warning line-through">
@@ -86,65 +78,29 @@ export default function ShopItem({ item }) {
         </div>
 
         <div className="relative rounded-[2rem]">
-          <button
-            className="btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
-            onClick={() => {
-              dispatch(setShouldCloseCart(false));
-              // console.log("after click on Dodaj", shouldCloseCart)
-              dispatch(
-                addToCart({ id: item.id, weight: selectedSize, quantity }),
-              );
-              dispatch(openCart());
-
-              setTimeout(() => {
-                dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
-                // console.log("timeout shouldCloseCart set to: ", shouldCloseCart)
-              }, 500);
-            }}
-          >
-            Dodaj do koszyka
-          </button>
+          <AddToCartButton
+            id={item.id}
+            selectedSize={selectedSize}
+            quantity={quantity}
+          />
 
           <div
             className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3
 					"
           >
-            <button
-              className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none 
-							hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-              onClick={() =>
-                quantity > 1 && setQuantity(Math.round(quantity - 1))
-              }
-            >
-              -
-            </button>
-            <input
-              className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
-              type="number"
-              value={quantity.toString()}
-              min="1"
-              max="99"
-              step="1"
-              onChange={(e) => {
-                const value = Math.round(Number(e.target.value));
-                if (value < 1) {
-                  setQuantity(1);
-                } else if (value > 99) {
-                  setQuantity(99);
-                } else {
-                  setQuantity(value);
-                }
-              }}
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"minus"}
             />
-            <button
-              className="mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none 
-							hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-              onClick={() =>
-                quantity < 99 && setQuantity(Math.round(quantity + 1))
-              }
-            >
-              +
-            </button>
+
+            <InputQuantity quantity={quantity} setQuantity={setQuantity} />
+
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"plus"}
+            />
           </div>
         </div>
       </div>
