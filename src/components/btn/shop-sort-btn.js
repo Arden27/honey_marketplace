@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function SortItemsBtn({ onSelect }){
+export default function SortItemsBtn({ options, onSelect }){
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('A-Z');
+  const [selected, setSelected] = useState(options[0]);
   const node = useRef();
   const buttonRef = useRef();
 
-  const options = ['A-Z', 'Z-A', 'By price from lowest', 'By price from highest'];
+  //const options = ['A-Z', 'Z-A', 'By price from lowest', 'By price from highest'];
 
   const handleSelect = (option) => {
     setSelected(option);

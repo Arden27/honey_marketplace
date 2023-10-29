@@ -65,6 +65,8 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
+  const sortOptions = ['A-Z', 'Z-A', 'By price from lowest', 'By price from highest'];
+
   // let baseDomain = "DobryBartnik.pl";
   let displayPath = pathname;
 
@@ -90,7 +92,7 @@ export default function Shop() {
                 category={category}
                 searchParams={searchParams}
               />
-              <ShopSortBtn onSelect={handleSort} />
+              <ShopSortBtn options={sortOptions} onSelect={handleSort} />
             </div>
             <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
               <Items sortType={sortType} category={category} />
