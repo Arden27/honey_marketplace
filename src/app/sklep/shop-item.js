@@ -56,18 +56,6 @@ export default function ShopItem({ item }) {
           <h4 className="mt-xs">IV 2023</h4>
         </div>
 
-
-        {/* <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
-          {item.sizes.map((sizeObj, index) => (
-            <RadioBtn
-              key={index}
-              sizeObj={sizeObj}
-              item={item}
-              handleSizeChange={handleSizeChange}
-              selectedSize={selectedSize}
-            />
-          ))}
-        </div> */}
         <RadioGroup item={item} handleSizeChange={handleSizeChange} selectedSize={selectedSize}/>
 
         <div className="mb-sm  [&>*]:font-sans">
@@ -82,6 +70,7 @@ export default function ShopItem({ item }) {
             id={item.id}
             selectedSize={selectedSize}
             quantity={quantity}
+            className={"btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"}
           />
 
           <div

@@ -1,12 +1,13 @@
 import { addToCart, setShouldCloseCart, openCart } from "@/redux/store";
 import { useDispatch } from "react-redux";
 
-export default function AddToCartButton({id, selectedSize, quantity}) {
+export default function AddToCartButton({id, selectedSize, quantity, className}) {
 	const dispatch = useDispatch();
-	
+
   return (
     <button
-      className="btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+      className={className}
+      //className="btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
       onClick={() => {
         dispatch(setShouldCloseCart(false));
         // console.log("after click on Dodaj", shouldCloseCart)

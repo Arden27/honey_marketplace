@@ -1,13 +1,19 @@
 "use client";
 
+// components
+import RadioGroup from "@/components/btn/RadioGroup";
+import SetQuantityButton from "@/components/btn/SetQuantityButton";
+import InputQuantity from "@/components/btn/InputQuantity";
+import AddToCartButton from "@/components/btn/AddToCartButton";
+import PageWrapper from "@/components/page-wrapper";
+import BottomBox from "@/layout/bottom-box/bottom-box";
+// libs
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-import PageWrapper from "@/components/page-wrapper";
 // Artem - Breadcrumb
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
-import BottomBox from "@/layout/bottom-box/bottom-box";
 
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, addToCart, setShouldCloseCart } from "@/redux/store";
@@ -148,7 +154,34 @@ export default function ProductPage({ params }) {
 
               <div>
                 <div className="relative  flex rounded-[2rem]">
-                  <button
+                  <AddToCartButton
+                    id={item.id}
+                    selectedSize={selectedSize}
+                    quantity={quantity}
+                    className={" btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"}
+                  />
+
+                  <div
+                    className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3"
+                  >
+                    <SetQuantityButton
+                      quantity={quantity}
+                      setQuantity={setQuantity}
+                      direction={"minus"}
+                    />
+
+                    <InputQuantity
+                      quantity={quantity}
+                      setQuantity={setQuantity}
+                    />
+
+                    <SetQuantityButton
+                      quantity={quantity}
+                      setQuantity={setQuantity}
+                      direction={"plus"}
+                    />
+                  </div>
+                  {/* <button
                     className=" btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     onClick={() => {
                       dispatch(setShouldCloseCart(false));
@@ -172,8 +205,7 @@ export default function ProductPage({ params }) {
                   </button>
 
                   <div
-                    className="bg-shop-item absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text
-					"
+                    className="bg-shop-item absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text"
                   >
                     <button
                       className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
@@ -209,7 +241,7 @@ export default function ProductPage({ params }) {
                     >
                       +
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
