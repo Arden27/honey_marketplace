@@ -7,12 +7,11 @@ import { removeFromCart } from "@/redux/store";
 
 import Link from "next/link";
 
-import Image from "next/image";
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
 import CartItem from "./cart-bar-item";
 import { formatPrice } from "@/components/formatPrice";
-import { openCart, closeCart, setShouldCloseCart } from "@/redux/store";
+import { openCart, closeCart } from "@/redux/store";
 
 export default function Cart() {
   const node = useRef();
