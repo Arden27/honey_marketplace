@@ -50,7 +50,7 @@ export default function ShopItem({ item }) {
           className="object-cover object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
           src={item.image}
-          alt={item.name}
+          alt={`${item.name} ${item.name2}`}
           sizes="w-full"
         />
       </Link>
