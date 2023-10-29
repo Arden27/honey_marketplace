@@ -10,13 +10,11 @@ import BottomBox from "@/layout/bottom-box/bottom-box";
 // libs
 import React from "react";
 import { useState } from "react";
-import Link from "next/link";
 
 // Artem - Breadcrumb
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
 
 import { formatPrice } from "@/components/formatPrice";
-import { openCart, addToCart, setShouldCloseCart } from "@/redux/store";
 
 import Image from "next/image";
 
@@ -38,6 +36,7 @@ export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);
   const item = items.find((item) => item.tag === params.productName);
 
+  console.log("item found: ", item);
   // Find the default size object
   const defaultSize =
     item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
@@ -46,8 +45,6 @@ export default function ProductPage({ params }) {
   const [selectedSize, setSelectedSize] = useState(defaultSize.size);
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
   const [quantity, setQuantity] = useState(1);
-
-  const dispatch = useDispatch();
 
   const handleSizeChange = (size, price) => {
     setSelectedSize(size);
@@ -130,17 +127,12 @@ export default function ProductPage({ params }) {
 
                 {/* ARTEM - wklej tutaj proszę listę rozwijaną na wagę */}
 
-                <div className="flex items-center">
-                  {item.sizes.map((sizeObj, index) => (
-                    <RadioBtn
-                      key={index}
-                      sizeObj={sizeObj}
-                      item={item}
-                      handleSizeChange={handleSizeChange}
-                      selectedSize={selectedSize}
-                    />
-                  ))}
-                </div>
+                <RadioGroup
+                  item={item}
+                  handleSizeChange={handleSizeChange}
+                  selectedSize={selectedSize}
+                  className={"flex items-center"}
+                />
 
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 
@@ -158,93 +150,38 @@ export default function ProductPage({ params }) {
                     id={item.id}
                     selectedSize={selectedSize}
                     quantity={quantity}
-                    className={" btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"}
+                    className={
+                      " btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                    }
                   />
 
-                  <div
-                    className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3"
-                  >
+                  <div className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3">
                     <SetQuantityButton
                       quantity={quantity}
                       setQuantity={setQuantity}
                       direction={"minus"}
-                      className={"mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"}
+                      className={
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                      }
                     />
 
                     <InputQuantity
                       quantity={quantity}
                       setQuantity={setQuantity}
-                      className={"h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"}
+                      className={
+                        "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+                      }
                     />
 
                     <SetQuantityButton
                       quantity={quantity}
                       setQuantity={setQuantity}
                       direction={"plus"}
-                      className={"mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"}
+                      className={
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                      }
                     />
                   </div>
-                  {/* <button
-                    className=" btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
-                    onClick={() => {
-                      dispatch(setShouldCloseCart(false));
-                      // console.log("after click on Dodaj", shouldCloseCart)
-                      dispatch(
-                        addToCart({
-                          id: item.id,
-                          weight: selectedSize,
-                          quantity,
-                        }),
-                      );
-                      dispatch(openCart());
-
-                      setTimeout(() => {
-                        dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
-                        // console.log("timeout shouldCloseCart set to: ", shouldCloseCart)
-                      }, 500);
-                    }}
-                  >
-                    Dodaj do koszyka
-                  </button>
-
-                  <div
-                    className="bg-shop-item absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text"
-                  >
-                    <button
-                      className="ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-                      onClick={() =>
-                        quantity > 1 && setQuantity(Math.round(quantity - 1))
-                      }
-                    >
-                      -
-                    </button>
-                    <input
-                      className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
-                      type="number"
-                      value={quantity.toString()}
-                      min="1"
-                      max="99"
-                      step="1"
-                      onChange={(e) => {
-                        const value = Math.round(Number(e.target.value));
-                        if (value < 1) {
-                          setQuantity(1);
-                        } else if (value > 99) {
-                          setQuantity(99);
-                        } else {
-                          setQuantity(value);
-                        }
-                      }}
-                    />
-                    <button
-                      className="mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none	hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-                      onClick={() =>
-                        quantity < 99 && setQuantity(Math.round(quantity + 1))
-                      }
-                    >
-                      +
-                    </button>
-                  </div> */}
                 </div>
               </div>
             </div>

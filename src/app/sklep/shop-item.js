@@ -57,6 +57,7 @@ export default function ShopItem({ item }) {
           item={item}
           handleSizeChange={handleSizeChange}
           selectedSize={selectedSize}
+          className={"h-2xl [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
         />
 
         <div className="mb-sm  [&>*]:font-sans">

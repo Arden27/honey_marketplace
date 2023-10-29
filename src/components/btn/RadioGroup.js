@@ -4,9 +4,9 @@ const RadioBtn = dynamic(() => import("@/components/btn/radio-btn"), {
   ssr: false,
 });
 
-export default function RadioGroup({item, handleSizeChange, selectedSize}) {
+export default function RadioGroup({item, handleSizeChange, selectedSize, className}) {
   return (
-    <div className="h-2xl  [&>*]:mx-[calc(1/2*theme(spacing.3xs))]">
+    <div className={className}>
       {item.sizes.map((sizeObj, index) => (
         <RadioBtn
           key={index}
