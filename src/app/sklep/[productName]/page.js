@@ -11,6 +11,7 @@ import SelectButton from "@/components/btn/SelectButton";
 // libs
 import React from "react";
 import { useState } from "react";
+import Link from "next/link";
 
 // Artem - Breadcrumb
 // import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
@@ -51,23 +52,26 @@ export default function ProductPage({ params }) {
     acc[sizeObj.size] = sizeObj.price;
     return acc;
   }, {});
-  console.log("sizes: ", sizes)
+  console.log("sizes: ", sizes);
   const options = Object.keys(sizes);
 
   const handleSizeChange = (option) => {
     setSelectedSize(option);
     setSelectedPrice(sizes[option]);
-    console.log("sizes[option]", sizes[option])
+    console.log("sizes[option]", sizes[option]);
   };
 
   return (
     <main>
       <PageWrapper>
         <div className="box-lg mb-sm">
-          {/* <ShopBreadcrumb/> */}
-
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
-            BREADCRUMB
+            <span>/</span>
+            <Link className="hover:underline" href="/sklep">
+              sklep
+            </Link>
+            <span>/</span>
+            <>{params.productName}</>
           </div>
 
           <section
@@ -134,16 +138,7 @@ export default function ProductPage({ params }) {
                   </span>
                 </div>
 
-                {/* ARTEM - wklej tutaj proszę listę rozwijaną na wagę */}
-
-                {/* <RadioGroup
-                  item={item}
-                  handleSizeChange={handleSizeChange}
-                  selectedSize={selectedSize}
-                  className={"flex items-center"}
-                /> */}
-
-                <SelectButton options={options} onSelect={handleSizeChange}/>
+                <SelectButton options={options} onSelect={handleSizeChange} />
 
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 

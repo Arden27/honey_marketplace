@@ -53,7 +53,9 @@ export default function Cart() {
   return (
     <React.Fragment>
       <button
-        className="btn-icon fixed [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
+        className={`btn-icon fixed [&>*]:hover:stroke-header [&>*]:focus:stroke-header 
+        ${isCartOpen ? "border-2 border-black" : ""}
+        `}
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);

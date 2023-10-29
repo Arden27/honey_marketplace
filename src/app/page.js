@@ -7,8 +7,6 @@ import HowToBox from "@/app/how-to-box";
 import AboutBox from "@/app/about-box";
 import BottomBox from "@/layout/bottom-box/bottom-box";
 
-
-
 export const metadata = {
   title: "Dobry Bartnik",
   description: "OPIS",
