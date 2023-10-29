@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import useOutsideClick from '@/hooks/useOutsideClick';
 
 export default function SortItemsBtn({ options, onSelect }){
   const [isOpen, setIsOpen] = useState(false);
@@ -14,24 +15,11 @@ export default function SortItemsBtn({ options, onSelect }){
     setIsOpen(false);
   };
 
-  const handleClickOutside = (e) => {
-    if (
-      node.current.contains(e.target) ||
-      buttonRef.current.contains(e.target)
-    ) {
-      return;
-    }
+  const handleOutsideClick = () => {
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mouseup", handleClickOutside);
-    // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mouseup", handleClickOutside);
-    };
-  }, []);
+  useOutsideClick([buttonRef, node], handleOutsideClick);
 
   return (
     <div className="relative w-96 text-end">

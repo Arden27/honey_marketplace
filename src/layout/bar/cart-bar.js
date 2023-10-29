@@ -13,6 +13,8 @@ import CartItem from "./cart-bar-item";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart } from "@/redux/store";
 
+import useOutsideClick from "@/hooks/useOutsideClick";
+
 export default function Cart() {
   const node = useRef();
   const buttonRef = useRef();
@@ -29,26 +31,13 @@ export default function Cart() {
 
   const [wasOpened, setWasOpened] = useState(false);
 
-  const handleClickOutside = (e) => {
-    if (
-      node.current.contains(e.target) ||
-      buttonRef.current.contains(e.target)
-    ) {
-      return;
-    }
+  const handleOutsideClick = () => {
     if (shouldCloseCart) {
       dispatch(closeCart());
     }
   };
 
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mouseup", handleClickOutside);
-    // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mouseup", handleClickOutside);
-    };
-  }, []);
+  useOutsideClick([node, buttonRef], handleOutsideClick);
 
   useEffect(() => {
     // Calculate total price when cartItems or items change
@@ -136,6 +125,7 @@ export default function Cart() {
             <Link
               href="/sklep/koszyk"
               className="btn-lg  self-center border-text  hover:text-bg"
+              onClick={() => dispatch(closeCart())}
             >
               Zamawiam
             </Link>

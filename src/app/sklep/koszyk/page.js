@@ -1,14 +1,13 @@
 "use client";
 
 // components
+import PageWrapper from "@/components/page-wrapper";
 import BillingForm from "./cartComponents/BillingForm";
 import DeliveryForm from "./cartComponents/DeliveryForm";
 import PaymentForm from "./cartComponents/PaymentForm";
+import Cart from "./cartComponents/Cart";
 
-import Link from "next/link";
 import { useState } from "react";
-
-import PageWrapper from "@/components/page-wrapper";
 
 // export const metadata = {
 //   title: "Koszyk - Dobry Bartnik",
@@ -16,7 +15,7 @@ import PageWrapper from "@/components/page-wrapper";
 //   keywords: "TAGI",
 // };
 
-export default function Cart() {
+export default function Order() {
   const [isEditing, setIsEditing] = useState({
     personalBillingData: true,
     shippingDelivery: true,
@@ -91,17 +90,7 @@ export default function Cart() {
               />
             </div>
 
-            <section className="box-sm flex flex-col gap-sm md:max-w-[30rem]">
-              <h2>Produkty</h2>
-
-              <h2>Podsumowanie:</h2>
-
-              <div className="flex justify-center">
-                <button className="btn-lg border-text">
-                  Przejdź do płatności
-                </button>
-              </div>
-            </section>
+            <Cart />
           </div>
         </section>
       </PageWrapper>

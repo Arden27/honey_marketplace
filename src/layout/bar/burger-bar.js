@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import BurgerIcon from "public/icons/menu.svg";
+import useOutsideClick from "@/hooks/useOutsideClick";
 
 export default function BurgerBar() {
   const node = useRef();
@@ -10,15 +11,11 @@ export default function BurgerBar() {
   const [open, setOpen] = useState(false);
   const [wasOpened, setWasOpened] = useState(false);
 
-  const handleClickOutside = (e) => {
-    if (
-      node.current.contains(e.target) ||
-      buttonRef.current.contains(e.target)
-    ) {
-      return;
-    }
+  const handleOutsideClick = () => {
     setOpen(false);
   };
+
+  useOutsideClick([buttonRef, node], handleOutsideClick);
 
   const handleLinkClick = (e) => {
     if (e.target.tagName === "A") {
@@ -26,20 +23,20 @@ export default function BurgerBar() {
     }
   };
 
-  useEffect(() => {
-    // Add when mounted
-    document.addEventListener("mousedown", handleClickOutside);
-    if (node.current) {
-      node.current.addEventListener("click", handleLinkClick);
-    }
-    // Return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      if (node.current) {
-        node.current.removeEventListener("click", handleLinkClick);
-      }
-    };
-  }, []);
+  // useEffect(() => {
+  //   // Add when mounted
+  //   //document.addEventListener("mousedown", handleClickOutside);
+  //   if (node.current) {
+  //     node.current.addEventListener("click", handleLinkClick);
+  //   }
+  //   // Return function to be called when unmounted
+  //   return () => {
+  //     //document.removeEventListener("mousedown", handleClickOutside);
+  //     if (node.current) {
+  //       node.current.removeEventListener("click", handleLinkClick);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <React.Fragment>
@@ -64,6 +61,7 @@ export default function BurgerBar() {
             : "hidden"
         } `}
         ref={node}
+        onClick={handleLinkClick}
       >
         <div className="relative -left-sm w-[calc(100%+theme(spacing.md))] rounded-r-[2rem] bg-bg2 ">
           <ul
