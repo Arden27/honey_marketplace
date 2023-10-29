@@ -4,16 +4,6 @@
     @apply fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20  max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  max-w-[calc(100%-theme(spacing.2xs))] bg-bar p-sm shadow;
   }
 
-  /* --- BOXES --- */
-
-  .box-sm {
-    @apply w-full gap-sm overflow-hidden rounded-[2rem] bg-bg3 p-sm;
-  }
-
-  .box-lg {
-    @apply grid h-full w-full gap-sm overflow-hidden rounded-[2rem] bg-bg2 p-sm;
-  }
-
   /* --- BUTTONS --- */
 
   .btn-sm:hover,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import ShopMenu from "@/app/sklep/shop-menu";
 import HeroBox from "@/app/hero-box";
 import HowToBox from "@/app/how-to-box";

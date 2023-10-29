@@ -23,7 +23,7 @@ export default function ShopItem() {
               sizeObj={sizeObj}
               item={item}
               handleSizeChange={handleSizeChange}
-              selectedSize={selectedSize}
+              selectedtype={selectedSize}
             />
           ))}
         </div>

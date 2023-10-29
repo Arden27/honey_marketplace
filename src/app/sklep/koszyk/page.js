@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/form-fieldset";
@@ -16,11 +16,11 @@ export default function Cart() {
   return (
     <main>
       <PageWrapper>
-        <Box size="lg">
+        <Box type="lg">
           <h1>Koszyk</h1>
           <div className="grid gap-sm md:grid-cols-[minmax(50%,1fr)_auto]">
             <div className="flex flex-col gap-sm">
-              <Box size="sm">
+              <Box type="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
@@ -81,7 +81,7 @@ export default function Cart() {
                 </div>
               </Box>
 
-              <Box size="sm">
+              <Box type="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
@@ -145,7 +145,7 @@ export default function Cart() {
                 </div>
               </Box>
 
-              <Box size="sm">
+              <Box type="sm">
                 <button className="absolute right-0 m-sm">
                   <EditIcon />
                 </button>
@@ -185,7 +185,7 @@ export default function Cart() {
               </Box>
             </div>
 
-            <Box size="sm">
+            <Box type="sm">
               <h2>Produkty</h2>
 
               <h2>Podsumowanie:</h2>

@@ -5,7 +5,7 @@ import Box from "@/components/Box";
 
 export default function LogInBox() {
   return (
-    <Box size="sm">
+    <Box type="sm">
       <h2 aria-hidden="true">Zaloguj się</h2>
 
       <form className="mb-sm w-full">

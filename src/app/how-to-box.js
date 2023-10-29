@@ -19,7 +19,7 @@ export default function HowToBox() {
 
       <Link
         className="btn-lg absolute bottom-sm  
-        hover:text-bg"
+        hover:text-bg bg-bg" 
         href="/sklep"
       >
         Sprawdź już dziś!

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 import FacebookIcon from "public/icons/facebook.svg";
 import InstagramIcon from "public/icons/at.svg";
@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="bg-footer pt-lg">
       <PageWrapper>
         <div className="mb-sm grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
-          <Box size="sm">
+          <Box type="sm">
             <ul>
               <h2 className="mb-2xs">Menu</h2>
 
@@ -33,7 +33,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box size="sm">
+          <Box type="sm">
             <ul>
               <h2 className="mb-2xs">Informacje</h2>
 
@@ -59,7 +59,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box size="sm">
+          <Box type="sm">
             {" "}
             <ul>
               <h2 className="mb-2xs">Moje konto</h2>
@@ -79,7 +79,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box size="sm">
+          <Box type="sm">
             <div>
               <h2 className="mb-2xs">Dane pasieki</h2>
               <address className="not-italic">

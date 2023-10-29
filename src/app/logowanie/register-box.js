@@ -5,7 +5,7 @@ import Box from "@/components/Box";
 
 export default function RegisterBox() {
   return (
-    <Box size="sm">
+    <Box type="sm">
       <h2>Zarejestruj się</h2>
       <Link
         className="btn-lg bottom-sm self-end bg-bg2 hover:text-bg"

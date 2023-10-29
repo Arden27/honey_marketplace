@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Box from "@/components/Box";
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function Articles() {
     <main>
       <PageWrapper>
         <section>ARTYKUŁY</section>
-        <Box size="lg">
+        <Box type="lg">
 
         </Box>
       </PageWrapper>

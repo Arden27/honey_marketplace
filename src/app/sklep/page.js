@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 
 import ShopMenu from "@/app/sklep/shop-menu";
@@ -81,7 +81,7 @@ export default function Shop() {
     <main>
       <ShopMenu />
       <PageWrapper>
-        <Box size="lg">
+        <Box type="lg">
           <div className="flex flex-col">
             <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
               <Breadcrumb
