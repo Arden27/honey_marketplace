@@ -1,11 +1,12 @@
 "use client";
 
 // components
+import Box from "@/components/Box";
 import RadioGroup from "@/components/btn/RadioGroup";
 import SetQuantityButton from "@/components/btn/SetQuantityButton";
 import InputQuantity from "@/components/btn/InputQuantity";
 import AddToCartButton from "@/components/btn/AddToCartButton";
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
 import BottomBox from "@/layout/bottom-box/bottom-box";
 import SelectButton from "@/components/btn/SelectButton";
 // libs
@@ -64,7 +65,7 @@ export default function ProductPage({ params }) {
   return (
     <main>
       <PageWrapper>
-        <div className="box-lg mb-sm">
+        <Box type="lg">
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
             <span>/</span>
             <Link className="hover:underline" href="/sklep">

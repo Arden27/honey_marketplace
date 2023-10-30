@@ -1,7 +1,8 @@
 "use client";
 
 // components
-import PageWrapper from "@/components/page-wrapper";
+import Box from "@/components/Box";
+import PageWrapper from "@/components/PageWrapper";
 import BillingForm from "./cartComponents/BillingForm";
 import DeliveryForm from "./cartComponents/DeliveryForm";
 import PaymentForm from "./cartComponents/PaymentForm";

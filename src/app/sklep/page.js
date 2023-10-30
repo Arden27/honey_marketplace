@@ -1,6 +1,7 @@
 "use client";
 
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/PageWrapper";
+import Box from "@/components/Box";
 
 import ShopMenu from "@/app/sklep/shop-menu";
 import ShopSortBtn from "@/components/btn/shop-sort-btn";
