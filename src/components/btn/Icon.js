@@ -1,4 +1,4 @@
-export default function BtnSm() {
+export default function Icon() {
   return (
     <div>
       <div className={`p-20 

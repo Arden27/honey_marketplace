@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import PageWrapper from "@/components/PageWrapper";
-import ShopMenu from "@/app/sklep/shop-menu";
-import HeroBox from "@/app/hero-box";
-import HowToBox from "@/app/how-to-box";
-import AboutBox from "@/app/about-box";
+import ShopMenu from "@/app/sklep/ShopMenu";
+import HeroBox from "@/app/HeroBox";
+import HowToBox from "@/app/HowToBox";
+import AboutBox from "@/app/AboutBox";
 import BottomBox from "@/layout/bottom-box/bottom-box";
 
 export const metadata = {
@@ -15,16 +15,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <ShopMenu />
-
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <div
-          className="
-          grid h-[calc(100svh-theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.md)-theme(spacing.3xs))] min-h-[30rem] grid-rows-2 gap-sm
-          330px:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.md)-theme(spacing.3xs))] 
-          sm:h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.sm)-theme(spacing.3xs))] 
-          md:grid-cols-[3fr_2fr] md:grid-rows-1 "
+        <ShopMenu />
+        <div className="grid h-[calc(100svh-theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.md)-theme(spacing.3xs))] .min-h-[25rem] grid-rows-2 gap-sm
+        330px:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.md)-theme(spacing.2xs))]
+        sm:h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.2xs))]
+        md:grid-cols-[3fr_2fr] md:grid-rows-1"
         >
           <HeroBox />
 

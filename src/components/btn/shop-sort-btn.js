@@ -22,12 +22,12 @@ export default function SortItemsBtn({ options, onSelect }){
   useOutsideClick([buttonRef, node], handleOutsideClick);
 
   return (
-    <div className="relative w-96 text-end">
+    <div className="relative text-end">
       <button ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
         {selected} <span>{isOpen ? "▲" : "▼"}</span>
       </button>
       <ul
-        className={`absolute right-0 z-50 rounded-[2rem] bg-bar p-2 text-end
+        className={`absolute right-0  rounded-[2rem] bg-bar p-2 text-end
         ${isOpen ? "block" : "hidden"}`}
         ref={node}
       >

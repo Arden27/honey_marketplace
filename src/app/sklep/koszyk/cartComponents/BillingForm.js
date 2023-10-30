@@ -1,5 +1,6 @@
+import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
-import FormFieldset from "@/components/forms/form-fieldset";
+import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/input-label";
 
 export default function BillingForm({
@@ -9,7 +10,7 @@ export default function BillingForm({
   handleInputChange,
 }) {
   return (
-    <section className="box-sm relative grid gap-md">
+    <Box className="relative" type="sm">
       <button
         className="absolute right-0 m-sm"
         onClick={() =>
@@ -159,6 +160,6 @@ export default function BillingForm({
           </ul>
         </div>
       )}
-    </section>
+    </Box>
   );
 }

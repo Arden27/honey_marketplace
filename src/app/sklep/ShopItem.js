@@ -31,10 +31,14 @@ export default function ShopItem({ item }) {
   });
 
   return (
-    <section className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3 330px:h-[calc(100svh-2*theme(spacing.3xl))] sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.md))]">
+    <section
+      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] w-full grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3
+      330px:h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.3xs))]
+      sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.xs))]"
+    >
       <Link href={`/sklep/${item.tag}`} className="relative overflow-hidden">
         <Image
-          className="object-cover object-center duration-300 ease-in-out hover:scale-110"
+          className="object-cover  object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
           src={item.image}
           alt={`${item.name} ${item.name2}`}
@@ -42,25 +46,23 @@ export default function ShopItem({ item }) {
         />
       </Link>
 
-      <div className="flex flex-col items-center justify-between p-sm  [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
-        <div className="h-[calc(theme(spacing.2xl)+theme(spacing.sm))] flex-col !justify-start  ">
-          <h2 className=" min-w-[calc(100%+theme(spacing.lg))] !items-start justify-start">
-            {item.name}
-          </h2>
+      <div className="flex flex-col items-center justify-between gap-sm  p-sm [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
+        <div className=" h-[calc(theme(spacing.2xl)+theme(spacing.xs))] flex-col !justify-start  ">
+          <h2 className="">{item.name}</h2>
 
           <h3 className="">{item.name2}</h3>
 
-          <h4 className="mt-xs">IV 2023</h4>
+          <h4 className="mt-3xs">{item.harvestDate}</h4>
         </div>
 
         <RadioGroup
           item={item}
           handleSizeChange={handleSizeChange}
           selectedSize={selectedSize}
-          className={"h-2xl [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
+          className={" [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
         />
 
-        <div className="mb-sm  [&>*]:font-sans">
+        <div className="[&>*]:font-sans">
           <h3 className="text-warning line-through">
             {formatPrice(selectedPrice, 1.1)} zł
           </h3>

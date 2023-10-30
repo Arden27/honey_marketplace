@@ -1,5 +1,7 @@
+
+import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
-import FormFieldset from "@/components/forms/form-fieldset";
+import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/input-label";
 
 export default function PaymentForm({
@@ -9,7 +11,7 @@ export default function PaymentForm({
   handleInputChange,
 }) {
   return (
-    <section className="box-sm relative grid gap-sm">
+    <Box className="relative" type="sm">
       <button
         className="absolute right-0 m-sm"
         onClick={() =>
@@ -54,7 +56,7 @@ export default function PaymentForm({
 
           <div className="flex justify-center">
             <button
-            type="button"
+              type="button"
               className="btn-sm border-text"
               onClick={() =>
                 setIsEditing((prev) => ({
@@ -73,6 +75,6 @@ export default function PaymentForm({
           <p>{formData.paymentMethod.paymentChoice}</p>
         </div>
       )}
-    </section>
+    </Box>
   );
 }

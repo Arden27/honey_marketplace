@@ -16,9 +16,11 @@ export default function RootLayout({ children }) {
         <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] ">
           <Providers>
             <LoadDB />
-            <Header />
-            {children}
-            <Footer />
+            <div className="flex flex-col gap-lg">
+              <Header />
+              {children}
+              <Footer />
+            </div>
           </Providers>
         </div>
       </body>

@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function ShopMenu() {
   return (
     <section
-      className=" page-wrapper my-sm hidden h-[calc(theme(spacing.3xl)+theme(spacing.md))] grid-cols-4 sm:grid
+      className="hidden mb-sm h-[calc(theme(spacing.3xl)+theme(spacing.md))] grid-cols-4 sm:grid
       [&>*]:grid [&>*]:justify-items-center
-      [&_ch2]:h-xl [&_h2]:pt-sm [&_h2]:text-center [&_h2]:text-md [&_h2]:uppercase
+      [&_h2]:pt-sm [&_h2]:text-center [&_h2]:text-md [&_h2]:uppercase
       [&_img]:h-2xl [&_img]:w-2xl [&_img]:rounded-full "
     >
       <div>

@@ -11,7 +11,7 @@ import TelegramIcon from "public/icons/at.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer pt-lg">
+    <footer className="bg-footer pt-lg pb-sm">
       <PageWrapper>
         <div className="mb-sm grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
           <Box type="sm">

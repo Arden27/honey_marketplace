@@ -16,7 +16,7 @@ const CartBar = dynamic(() => import("@/layout/bar/cart-bar"), {
 
 export default function Header() {
   return (
-    <header className="z-50 mb-[calc(theme(spacing.3xl))] h-[calc(theme(spacing.2xl)+theme(spacing.2xs)+theme(spacing.3xs))] w-full 330px:mb-lg">
+    <header className="z-50 mb-[calc(theme(spacing.lg)+theme(spacing.xs)+theme(spacing.sm))] w-full 330px:mb-0">
       <div className="mx-sm grid h-[calc(theme(spacing.2xl)+theme(spacing.sm))] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
         <div className="fixed left-0 -z-10 h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-full bg-header shadow"></div>
 

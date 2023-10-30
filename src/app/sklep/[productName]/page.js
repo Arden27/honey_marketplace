@@ -14,8 +14,6 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-// Artem - Breadcrumb
-// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
 
 import { formatPrice } from "@/components/formatPrice";
 
@@ -29,11 +27,7 @@ const RadioBtn = dynamic(() => import("@/components/btn/radio-btn"), {
   ssr: false,
 });
 
-// export const metadata = {
-//   title: "Miód Gryczany - Miody - Dobry Bartnik",
-//   description: "OPIS",
-//   keywords: "TAGI",
-// };
+
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);

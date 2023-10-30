@@ -3,7 +3,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 
-import ShopMenu from "@/app/sklep/shop-menu";
+import ShopMenu from "@/app/sklep/ShopMenu";
 import ShopSortBtn from "@/components/btn/shop-sort-btn";
 import Pagination from "@/components/btn/pagination";
 import BottomBox from "@/layout/bottom-box/bottom-box";
@@ -31,18 +31,23 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
-  const sortOptions = ['A-Z', 'Z-A', 'By price from lowest', 'By price from highest'];
+  const sortOptions = [
+    "A-Z",
+    "Z-A",
+    "By price from lowest",
+    "By price from highest",
+  ];
 
   const handleSort = (type) => {
     setSortType(type);
   };
 
   return (
-    <main>
-      <ShopMenu />
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
+        <ShopMenu />
         <Box type="lg">
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-sm ">
             <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
               <Breadcrumb
                 // baseDomain={baseDomain}

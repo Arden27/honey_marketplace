@@ -1,5 +1,6 @@
+import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
-import FormFieldset from "@/components/forms/form-fieldset";
+import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/input-label";
 
 import { useState } from "react";
@@ -11,13 +12,12 @@ export default function DeliveryForm({
   setIsEditing,
   handleInputChange,
 }) {
-
   const [useBillingAddress, setUseBillingAddress] = useState(false);
 
   const handleUseBillingAddressChange = () => {
-    setUseBillingAddress(prev => !prev);
+    setUseBillingAddress((prev) => !prev);
     if (!useBillingAddress) {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
         shippingDelivery: {
           ...prev.shippingDelivery,
@@ -25,14 +25,14 @@ export default function DeliveryForm({
           sendAddressLastname: prev.personalBillingData.mainAdressLastname,
           sendAddressStreet: prev.personalBillingData.mainAdressStreet,
           sendAddressZipcode: prev.personalBillingData.mainAdressZipcode,
-          sendAddressCity: prev.personalBillingData.mainAdressCity
-        }
+          sendAddressCity: prev.personalBillingData.mainAdressCity,
+        },
       }));
     }
   };
 
   return (
-    <section className="box-sm relative grid gap-md">
+    <Box className="relative" type="sm">
       <button
         className="absolute right-0 m-sm"
         onClick={() =>
@@ -62,8 +62,8 @@ export default function DeliveryForm({
                 id="send-address-firstname"
                 label="Imię"
                 value={
-                  useBillingAddress 
-                    ? formData.personalBillingData.mainAdressFirstname 
+                  useBillingAddress
+                    ? formData.personalBillingData.mainAdressFirstname
                     : formData.shippingDelivery.sendAddressFirstname
                 }
                 onChange={(e) =>
@@ -80,8 +80,8 @@ export default function DeliveryForm({
                 id="send-address-lastname"
                 label="Nazwisko"
                 value={
-                  useBillingAddress 
-                    ? formData.personalBillingData.mainAdressLastname 
+                  useBillingAddress
+                    ? formData.personalBillingData.mainAdressLastname
                     : formData.shippingDelivery.sendAddressLastname
                 }
                 onChange={(e) =>
@@ -99,8 +99,8 @@ export default function DeliveryForm({
               id="send-address-street"
               label="Ulica i nr domu"
               value={
-                useBillingAddress 
-                  ? formData.personalBillingData.mainAdressStreet 
+                useBillingAddress
+                  ? formData.personalBillingData.mainAdressStreet
                   : formData.shippingDelivery.sendAddressStreet
               }
               onChange={(e) =>
@@ -118,8 +118,8 @@ export default function DeliveryForm({
                 id="send-address-zipcode"
                 label="Kod pocztowy"
                 value={
-                  useBillingAddress 
-                    ? formData.personalBillingData.mainAdressZipcode 
+                  useBillingAddress
+                    ? formData.personalBillingData.mainAdressZipcode
                     : formData.shippingDelivery.sendAddressZipcode
                 }
                 onChange={(e) =>
@@ -136,8 +136,8 @@ export default function DeliveryForm({
                 id="send-address-city"
                 label="Miasto"
                 value={
-                  useBillingAddress 
-                    ? formData.personalBillingData.mainAdressCity 
+                  useBillingAddress
+                    ? formData.personalBillingData.mainAdressCity
                     : formData.shippingDelivery.sendAddressCity
                 }
                 onChange={(e) =>
@@ -220,6 +220,6 @@ export default function DeliveryForm({
           <p>{formData.shippingDelivery.deliveryMethodChoice}</p>
         </div>
       )}
-    </section>
+    </Box>
   );
 }

@@ -77,11 +77,11 @@ export default function SearchBar() {
             </button>
           </div>
           <button
-            className="absolute right-0 h-full w-[calc(theme(spacing.xl)+theme(spacing.xs))] min-w-0 rounded-r-[2rem] transition-colors duration-300 ease-in-out 
+            className="absolute right-0 h-full w-[calc(theme(spacing.xl)+theme(spacing.xs))] rounded-r-[2rem] transition-colors duration-300 ease-in-out 
           hover:bg-text 
           [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
           >
-            <SearchIcon className="mx-sm h-[25px] w-[25px] stroke-2 transition-colors duration-300  ease-in-out" />
+            <SearchIcon className="mx-sm h-[25px] w-[25px] stroke-2 transition-colors duration-300 ease-in-out" />
           </button>
         </form>
       </div>

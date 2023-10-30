@@ -1,8 +1,10 @@
 "use client";
 
 // components
-import Box from "@/components/Box";
+
+import Btn from "@/components/btn/Btn";
 import PageWrapper from "@/components/PageWrapper";
+import Box from "@/components/Box";
 import BillingForm from "./cartComponents/BillingForm";
 import DeliveryForm from "./cartComponents/DeliveryForm";
 import PaymentForm from "./cartComponents/PaymentForm";
@@ -65,8 +67,13 @@ export default function Order() {
     <main>
       <PageWrapper>
         <Box type="lg">
+          <Btn fhref="sklep" type="sm icon" hoverColor="bg2" svg="">
+            dupa
+          </Btn>
+
           <h1>Koszyk</h1>
-          <div className="grid gap-sm md:grid-cols-[minmax(50%,1fr)_auto]">
+
+          <div className="grid gap-sm lg:grid-cols-[minmax(50%,1fr)_auto]">
             <div className="flex flex-col gap-sm">
               <BillingForm
                 isEditing={isEditing}
@@ -90,8 +97,9 @@ export default function Order() {
                 handleInputChange={handleInputChange}
               />
             </div>
-
-            <Cart />
+            <div>
+              <Cart />
+            </div>
           </div>
         </Box>
       </PageWrapper>

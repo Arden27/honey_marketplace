@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Breadcrumb({ pathname, category, searchParams }) {
   return (
-    <div className="w-full ">
-      <span>/</span>
+    <div className="w-full">
+      
       {pathname === "sklep" && !category ? (
         "sklep"
       ) : (
