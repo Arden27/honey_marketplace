@@ -1,7 +1,11 @@
 export default function BtnSm() {
   return (
     <div>
-      <div>BtnSm</div>
+      <div className={`p-20 
+      ${type === "button" ? "hidden" :""}    
+      ${type === "submit" ? "flex" : ""}  `}>
+        BtnSm
+      </div>
     </div>
   );
 }

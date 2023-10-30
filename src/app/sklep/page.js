@@ -1,14 +1,12 @@
 "use client";
-import Link from "next/link";
 
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
+import PageWrapper from "@/components/page-wrapper";
 
 import ShopMenu from "@/app/sklep/shop-menu";
-// import Breadcrumb from "@/components/btn/shop-breadcrumb";
 import ShopSortBtn from "@/components/btn/shop-sort-btn";
 import Pagination from "@/components/btn/pagination";
 import BottomBox from "@/layout/bottom-box/bottom-box";
+import Breadcrumb from "./Breadcrumb";
 
 import { useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -18,39 +16,6 @@ import dynamic from "next/dynamic";
 const Items = dynamic(() => import("@/components/items"), {
   ssr: false,
 });
-
-const Breadcrumb = ({ pathname, category, searchParams }) => {
-  return (
-    <div className="w-full ">
-      <Link className="hover:underline" href="">
-        {/* {baseDomain} */}
-      </Link>
-      <span>/</span>
-      {pathname === "sklep" && !category ? (
-        "sklep"
-      ) : (
-        <Link className="hover:underline" href="sklep">
-          sklep
-        </Link>
-      )}
-      {category && (
-        <>
-          <span>/</span>
-          {category === searchParams.get("kategoria") ? (
-            category
-          ) : (
-            <Link
-              className="hover:underline"
-              href={`sklep?kategoria=${category}`}
-            >
-              {category}
-            </Link>
-          )}
-        </>
-      )}
-    </div>
-  );
-};
 
 // export const metadata = {
 //   title: "Sklep - Dobry Bartnik",
@@ -65,13 +30,7 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
-  // let baseDomain = "DobryBartnik.pl";
-  let displayPath = pathname;
-
-  // append the category if it exists
-  if (category) {
-    displayPath += "/" + category;
-  }
+  const sortOptions = ['A-Z', 'Z-A', 'By price from lowest', 'By price from highest'];
 
   const handleSort = (type) => {
     setSortType(type);
@@ -90,7 +49,7 @@ export default function Shop() {
                 category={category}
                 searchParams={searchParams}
               />
-              <ShopSortBtn onSelect={handleSort} />
+              <ShopSortBtn options={sortOptions} onSelect={handleSort} />
             </div>
             <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
               <Items sortType={sortType} category={category} />

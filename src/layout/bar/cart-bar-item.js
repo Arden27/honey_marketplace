@@ -1,3 +1,6 @@
+import SetQuantityButton from "@/components/btn/SetQuantityButton";
+import InputQuantity from "@/components/btn/InputQuantity";
+
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateCartItem } from "@/redux/store";
@@ -10,25 +13,15 @@ const CartItem = ({ item, removeFromCart }) => {
   const [quantity, setQuantity] = useState(item.quantity); // Initial quantity is from props
   const dispatch = useDispatch();
 
-  const handleQuantityChange = (value) => {
-    // const value = Math.round(Number(e.target.value));
-    let clampedValue = value;
-
-    if (clampedValue < 1) {
-      clampedValue = 1;
-    } else if (clampedValue > 99) {
-      clampedValue = 99;
-    }
-
-    setQuantity(clampedValue);
+  useEffect(() => {
     dispatch(
       updateCartItem({
         id: item.id,
         weight: item.weight,
-        quantity: clampedValue,
+        quantity: quantity,
       }),
-    ); // Update the cart item in the store
-  };
+    ); 
+  }, [quantity]); // Update the cart item in the store if quantity changes
 
   useEffect(() => {
     setQuantity(item.quantity);
@@ -61,31 +54,30 @@ const CartItem = ({ item, removeFromCart }) => {
 
         <div className="flex w-full items-center justify-between ">
           <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-text">
-            <button
-              className="ml-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
-              onClick={() => handleQuantityChange(quantity - 1)}
-            >
-              -
-            </button>
 
-            <input
-              className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
-              type="number"
-              value={quantity.toString()}
-              min="1"
-              max="99"
-              step="1"
-              onChange={(e) =>
-                handleQuantityChange(Math.round(Number(e.target.value)))
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"minus"}
+              className={
+                "ml-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
               }
             />
-
-            <button
-              className="mr-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
-              onClick={() => handleQuantityChange(quantity + 1)}
-            >
-              +
-            </button>
+            <InputQuantity
+              quantity={quantity}
+              setQuantity={setQuantity}
+              className={
+                "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
+              }
+            />
+            <SetQuantityButton
+              quantity={quantity}
+              setQuantity={setQuantity}
+              direction={"plus"}
+              className={
+                "mr-3xs h-sm w-sm justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg"
+              }
+            />
           </div>
 
           <h3 className="font-sans text-lg leading-none">&#215;</h3>
