@@ -1,49 +1,50 @@
 import React from "react";
-import Link from "next/link";
+
+import Btn from "@/components/btn/Btn";
 
 export default function Nav() {
   return (
     <nav className="fixed left-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] z-20 lg:left-sm">
       <ul className="flex">
         <li className="mr-3xs hidden 380px:!flex lg:flex">
-          <Link
+          <Btn
+            className=""
             href="/sklep"
-            className=" btn-sm !border-text hover:text-header focus:text-header"
+            type="sm"
+            hoverColor="header"
           >
             Sklep
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:!hidden xl:!flex">
-          <Link
+          <Btn
+            className=""
             href="/"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
+            hoverColor="header"
           >
             Główna
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
+          <Btn
+            className=""
             href="/artykuly/o-nas"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
+            hoverColor="header"
           >
             O nas
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
-            href="/artykuly"
-            className=" btn-sm hover:text-header focus:text-header"
-          >
+          <Btn className="" href="/artykuly" type="sm" hoverColor="header">
             Artykuły
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
-            href="/kontakt"
-            className=" btn-sm hover:text-header focus:text-header"
-          >
+          <Btn className="" href="/kontakt" type="sm" hoverColor="header">
             Kontakt
-          </Link>
+          </Btn>
         </li>
       </ul>
     </nav>

@@ -1,19 +1,19 @@
 "use client";
 
 // components
+import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 import RadioGroup from "@/components/btn/RadioGroup";
 import SetQuantityButton from "@/components/btn/SetQuantityButton";
 import InputQuantity from "@/components/btn/InputQuantity";
 import AddToCartButton from "@/components/btn/AddToCartButton";
-import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
 import SelectButton from "@/components/btn/SelectButton";
+import BottomBox from "@/layout/bottom-box/BottomBox";
+
 // libs
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-
 
 import { formatPrice } from "@/components/formatPrice";
 
@@ -23,11 +23,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/components/btn/radio-btn"), {
+const RadioBtn = dynamic(() => import("@/components/btn/RadioBtn"), {
   ssr: false,
 });
-
-
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);

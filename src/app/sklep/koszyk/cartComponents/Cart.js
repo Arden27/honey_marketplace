@@ -1,7 +1,7 @@
 import Box from "@/components/Box";
-import CartItem from "@/layout/bar/cart-bar-item";
+import CartItem from "@/app/sklep/koszyk/cartComponents/CartItem";
+import Btn from "@/components/btn/Btn";
 
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
@@ -27,15 +27,15 @@ export default function Cart({}) {
   }, [cartItems, items]);
 
   return (
-    <Box className="bg-bar" type="sm">
+    <Box className="sticky top-[calc(theme(spacing.2xl)+2*theme(spacing.sm))] bg-bar">
       <h2>Produkty</h2>
 
       <div
-        className={`min-h-[calc(3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]`}
+        className={`min-h-[calc(3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] flex-col rounded-bl-[2rem]`}
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-md  min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-md min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -57,15 +57,15 @@ export default function Cart({}) {
               })}
             </div>
             <div
-              className=" mb-2xs flex items-end justify-between whitespace-nowrap
-             text-warning [&>*]:font-sans"
+              className=" mb-2xs flex items-end justify-between whitespace-nowrap text-warning
+              [&>*]:font-sans"
             >
               <h3 className="text-end">Wyprzedaż:</h3>
               <h3 className="">-{formatPrice(totalPrice, 0.05)} zł</h3>
             </div>
             <div
               className=" mb-2xs flex items-end justify-between text-warning
-             [&>*]:font-sans"
+              [&>*]:font-sans"
             >
               <h3 className="text-end">Rabat:</h3>
               <h3 className="">-{formatPrice(totalPrice, 0.1)} zł</h3>
@@ -87,9 +87,14 @@ export default function Cart({}) {
         )}
       </div>
 
-      <div className="flex justify-center">
-        <button className="btn-lg border-text">Przejdź do płatności</button>
-      </div>
+      <Btn
+        className="justify-self-center"
+        href=""
+        type="lg hover"
+        hoverColor="bg"
+      >
+        Sprawdź już dziś!
+      </Btn>
     </Box>
   );
 }

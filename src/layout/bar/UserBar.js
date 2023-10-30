@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import UserIcon from "public/icons/user.svg";
+
+import React, { useState, useEffect, useRef } from "react";
 
 export default function UserBar() {
   const node = useRef();

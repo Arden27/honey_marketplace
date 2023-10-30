@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 import Box from "@/components/Box";
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Artykuły - Dobry Bartnik",

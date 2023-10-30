@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 import PageWrapper from "@/components/PageWrapper";
-import ShopMenu from "@/app/sklep/ShopMenu";
-import HeroBox from "@/app/HeroBox";
-import HowToBox from "@/app/HowToBox";
-import AboutBox from "@/app/AboutBox";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import ShopMenu from "@/app/sklep/shopComponents/ShopMenu";
+import HeroBox from "@/components/HeroBox";
+import HowToBox from "@/components/HowToBox";
+import AboutBox from "@/components/AboutBox";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Dobry Bartnik",

@@ -5,8 +5,8 @@ import Providers from "@/redux/provider";
 import "@/style/index.css";
 
 import LoadDB from "@/components/load-db";
-import Header from "../layout/header";
-import Footer from "../layout/footer";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 
 
 export default function RootLayout({ children }) {

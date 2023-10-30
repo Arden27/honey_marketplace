@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import SearchIcon from "public/icons/search.svg";
 import DeleteIcon from "public/icons/x.svg";
+
+import React, { useState, useEffect, useRef } from "react";
 
 export default function SearchBar() {
   const node = useRef();

@@ -5,11 +5,13 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
 
+
+import Btn from "@/components/btn/Btn";
 import Link from "next/link";
 
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
-import CartItem from "./cart-bar-item";
+import CartItem from "../../app/sklep/koszyk/cartComponents/CartItem";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart } from "@/redux/store";
 
@@ -66,7 +68,7 @@ export default function Cart() {
       </button>
 
       <div
-        className={`bar right-0 min-h-[calc(3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]
+        className={`bar right-0 min-h-[calc(90vh-3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]
         ${
           isCartOpen
             ? "slide-in-right flex"
@@ -78,7 +80,7 @@ export default function Cart() {
       >
         {cartItems.length > 0 ? (
           <React.Fragment>
-            <div className="cart-items-scrollbar mb-md  min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text pr-3xs">
+            <div className="cart-items-scrollbar mb-md  min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text ">
               {cartItems.map((cartItem, index) => {
                 const item = items.find((item) => item.id === cartItem.id);
                 const size = item.sizes.find(
@@ -124,13 +126,22 @@ export default function Cart() {
                 </h2>
               </div>
             </div>
-            <Link
+            {/* <Link
               href="/sklep/koszyk"
               className="btn-lg  self-center border-text  hover:text-bg"
               onClick={() => dispatch(closeCart())}
             >
               Zamawiam
-            </Link>
+            </Link> */}
+            <Btn
+              className="self-center"
+              href="/sklep/koszyk"
+              type="lg"
+              hoverColor="bar"
+              onClick={() => dispatch(closeCart())}
+            >
+              Zaloguj się
+            </Btn>
           </React.Fragment>
         ) : (
           <p>Koszyk jest pusty</p>

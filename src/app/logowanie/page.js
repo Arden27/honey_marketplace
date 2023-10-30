@@ -1,10 +1,8 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
-import LogInBox from "@/app/logowanie/log-in-box";
-import RegisterBox from "@/app/logowanie/register-box";
-import NoRegisterBox from "@/app/logowanie/no-register-box";
+import LogInBox from "@/app/logowanie/loginComponents/LogInBox";
+import RegisterBox from "@/app/logowanie/loginComponents/RegisterBox";
+import NoRegisterBox from "@/app/logowanie/loginComponents/NoRegisterBox";
 
 export const metadata = {
   title: "Zaloguj się bądź zarejestruj i zyskaj 5% rabatu - Dobry Bartnik",

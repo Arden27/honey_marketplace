@@ -1,7 +1,6 @@
-import React from "react";
-import Link from "next/link";
-
 import Box from "@/components/Box";
+import Link from "next/link";
+import Btn from "@/components/btn/Btn";
 
 export default function LogInBox() {
   return (
@@ -39,9 +38,9 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <button className="btn-lg w-fit border-text self-end hover:text-bg" href="/">
+      <Btn className="self-end" href="" type="lg" hoverColor="bg3">
         Zaloguj się
-      </button>
+      </Btn>
     </Box>
   );
 }

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
 
 export const metadata = {

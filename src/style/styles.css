@@ -32,16 +32,18 @@
 
   /* --- SCROLLBAR --- */
 
+
+
   .cart-items-scrollbar::-webkit-scrollbar {
-    @apply left-[5px] w-xs;
+    @apply w-[22px];
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-track {
-    @apply w-[20px] bg-bar;
+    @apply bg-bar;
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-[2rem] border-[3px]  border-solid border-bar bg-text;
+    @apply rounded-[2rem] border-[8px] border-solid border-bar bg-text;
   }
 
   /* --- FORMS --- */

@@ -2,7 +2,7 @@
 import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
-import InputLabel from "@/components/forms/input-label";
+import InputLabel from "@/components/forms/InputLabel";
 
 export default function PaymentForm({
   isEditing,

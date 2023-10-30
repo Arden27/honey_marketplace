@@ -1,16 +1,16 @@
 import React from "react";
 
-import Nav from "./nav";
-import BurgerBar from "./bar/burger-bar";
-import Logo from "./logo";
-import UserBar from "@/layout/bar/user-bar";
-import SearchBar from "@/layout/bar/search-bar";
+import Nav from "./Nav";
+import BurgerBar from "./bar/BurgerBar";
+import Logo from "./Logo";
+import UserBar from "@/layout/bar/UserBar";
+import SearchBar from "@/layout/bar/SearchBar";
 // import CartBar from "@/layout/bar/cart-bar";
 
 // ARTEM - Tego chyba tutaj nie powinno być, a w @/layout/bar/cart-bar
 import dynamic from "next/dynamic";
 
-const CartBar = dynamic(() => import("@/layout/bar/cart-bar"), {
+const CartBar = dynamic(() => import("@/layout/bar/CartBar"), {
   ssr: false,
 });
 

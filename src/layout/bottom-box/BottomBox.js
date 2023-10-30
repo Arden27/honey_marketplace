@@ -1,10 +1,7 @@
-import React from "react";
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import PromoBox from "@/layout/bottom-box/promo-box";
-import RecommendedProductsBox from "@/layout/bottom-box/recommended-products-box";
-import RecommendedArticlesBox from "@/layout/bottom-box/recommended-articles-box";
+import PromoBox from "@/layout/bottom-box/PromoBox";
+import RecommendedProductsBox from "@/layout/bottom-box/RecommendedProductsBox";
+import RecommendedArticlesBox from "@/layout/bottom-box/RecommendedArticlesBox";
 
 export default function BottomBox() {
   return (
