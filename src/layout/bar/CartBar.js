@@ -11,7 +11,7 @@ import Link from "next/link";
 
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
-import CartItem from "../../app/sklep/koszyk/cartComponents/CartItem";
+import CartItem from "../../app/sklep/koszyk/_cartComponents/CartItem";
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart } from "@/redux/store";
 

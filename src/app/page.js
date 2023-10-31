@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import PageWrapper from "@/components/PageWrapper";
-import ShopMenu from "@/app/sklep/shopComponents/ShopMenu";
-import HeroBox from "@/components/HeroBox";
-import HowToBox from "@/components/HowToBox";
-import AboutBox from "@/components/AboutBox";
+import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
+import HeroBox from "@/app/_homeComponents/HeroBox";
+import HowToBox from "@/app/_homeComponents/HowToBox";
+import AboutBox from "@/app/_homeComponents/AboutBox";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {

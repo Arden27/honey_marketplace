@@ -1,5 +1,5 @@
 import Box from "@/components/Box";
-import CartItem from "@/app/sklep/koszyk/cartComponents/CartItem";
+import CartItem from "@/app/sklep/koszyk/_cartComponents/CartItem";
 import Btn from "@/components/btn/Btn";
 
 import React, { useState, useEffect } from "react";

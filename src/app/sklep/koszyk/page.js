@@ -5,10 +5,10 @@
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 import Btn from "@/components/btn/Btn";
-import BillingForm from "./cartComponents/BillingForm";
-import DeliveryForm from "./cartComponents/DeliveryForm";
-import PaymentForm from "./cartComponents/PaymentForm";
-import Cart from "./cartComponents/Cart";
+import BillingForm from "./_cartComponents/BillingForm";
+import DeliveryForm from "./_cartComponents/DeliveryForm";
+import PaymentForm from "./_cartComponents/PaymentForm";
+import Cart from "./_cartComponents/Cart";
 
 import { useState } from "react";
 

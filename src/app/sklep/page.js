@@ -3,11 +3,11 @@
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 
-import ShopMenu from "@/app/sklep/shopComponents/ShopMenu";
-import ShopSortBtn from "@/components/btn/shop-sort-btn";
+import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
+import ShopSortBtn from "@/components/btn/ShopSortBtn";
 import Pagination from "@/components/btn/Pagination";
 import BottomBox from "@/layout/bottom-box/BottomBox";
-import Breadcrumb from "./shopComponents/Breadcrumb";
+import Breadcrumb from "./_shopComponents/Breadcrumb";
 
 import { useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
