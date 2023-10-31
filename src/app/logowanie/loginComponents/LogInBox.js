@@ -1,6 +1,6 @@
 import Box from "@/components/Box";
 import Link from "next/link";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function LogInBox() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function HeroBox() {
   return (

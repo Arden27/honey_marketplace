@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/components/btn/RadioBtn"), {
+const RadioBtn = dynamic(() => import("@/components/btns/RadioBtn"), {
   ssr: false,
 });
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function AboutBox() {
   return (

@@ -2,7 +2,7 @@ import Box from "@/components/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function BillingForm({
   isEditing,

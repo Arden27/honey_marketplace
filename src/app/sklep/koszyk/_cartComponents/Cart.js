@@ -1,6 +1,6 @@
 import Box from "@/components/Box";
 import CartItem from "@/app/sklep/koszyk/_cartComponents/CartItem";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";

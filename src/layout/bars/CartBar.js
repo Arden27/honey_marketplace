@@ -1,15 +1,12 @@
 "use client";
 
+import Btn from "@/components/btns/Btn";
+import ShoppingCartIcon from "public/icons/shopping-cart.svg";
+
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
-
-
-import Btn from "@/components/btn/Btn";
-import Link from "next/link";
-
-import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
 import CartItem from "../../app/sklep/koszyk/_cartComponents/CartItem";
 import { formatPrice } from "@/components/formatPrice";
@@ -126,22 +123,15 @@ export default function Cart() {
                 </h2>
               </div>
             </div>
-            <Link
+
+            <Btn
+              className="self-center hover:text-bar"
               href="/sklep/koszyk"
-              className="btn-lg  self-center border-text  hover:text-bg"
+              type="lg"
+              hoverColor="bar"
               onClick={() => dispatch(closeCart())}
             >
               Zamawiam
-            </Link>
-            <Btn
-              className="self-center"
-              href="/sklep/koszyk"
-              type="lg"
-              hoverColor="red-500"
-              onClick={() => dispatch(closeCart())}
-              
-            >
-              Zaloguj się
             </Btn>
           </React.Fragment>
         ) : (

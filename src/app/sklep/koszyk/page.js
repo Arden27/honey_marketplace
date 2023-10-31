@@ -4,7 +4,7 @@
 
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 import BillingForm from "./_cartComponents/BillingForm";
 import DeliveryForm from "./_cartComponents/DeliveryForm";
 import PaymentForm from "./_cartComponents/PaymentForm";

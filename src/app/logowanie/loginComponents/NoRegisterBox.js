@@ -1,5 +1,5 @@
 import Box from "@/components/Box";
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function NoRegisterBox() {
   return (

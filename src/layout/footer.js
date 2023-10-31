@@ -1,17 +1,18 @@
-import React from "react";
-import Link from "next/link";
+
 
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
+import Btn from "@/components/btns/Btn";
 import FacebookIcon from "public/icons/facebook.svg";
 import InstagramIcon from "public/icons/at.svg";
 import YouTubeIcon from "public/icons/youtube.svg";
 import SignalIcon from "public/icons/at.svg";
 import TelegramIcon from "public/icons/at.svg";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer pt-lg pb-sm">
+    <footer className="bg-footer pb-sm pt-lg">
       <PageWrapper>
         <div className="mb-sm grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
           <Box type="sm">
@@ -97,50 +98,66 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-[auto,auto] [&>*]:flex [&>*]:items-center">
           <ul className="mb-sm flex-wrap sm:col-start-2 sm:mb-0 sm:!justify-end sm:text-right">
             <li>
-              <Link
+              {/* <Link
                 href="/"
                 className="btn-icon ml-3xs [&>*]:hover:stroke-footer [&>*]:focus:stroke-footer"
+              ></Link> */}
+
+              <Btn
+                className="ml-3xs self-center hover:text-footer"
+                href="http://facebook.com/"
+                target="_blank"
+                type="icon"
               >
                 <FacebookIcon className="h-[25px] w-[25px]" />
-              </Link>
+              </Btn>
             </li>
             <li>
-              <Link
-                href="/"
-                className="btn-icon ml-3xs [&>*]:hover:stroke-footer [&>*]:focus:stroke-footer"
+              <Btn
+                className="ml-3xs self-center hover:text-footer"
+                href="http://facebook.com/"
+                target="_blank"
+                type="icon"
               >
                 <InstagramIcon className="h-[25px] w-[25px]" />
-              </Link>
+              </Btn>
             </li>
             <li>
-              <Link
-                href="/"
-                className="btn-icon ml-3xs [&>*]:hover:stroke-footer [&>*]:focus:stroke-footer"
+              <Btn
+                className="ml-3xs self-center hover:text-footer"
+                href="http://facebook.com/"
+                target="_blank"
+                type="icon"
               >
                 <YouTubeIcon className="h-[25px] w-[25px]" />
-              </Link>
+              </Btn>
             </li>
             <li>
-              <Link
-                href="/"
-                className="btn-icon ml-3xs [&>*]:hover:stroke-footer [&>*]:focus:stroke-footer"
+              <Btn
+                className="ml-3xs self-center hover:text-footer"
+                href="http://facebook.com/"
+                target="_blank"
+                type="icon"
               >
                 <SignalIcon className="h-[25px] w-[25px]" />
-              </Link>
+              </Btn>
             </li>
             <li>
-              <Link
-                href="/"
-                className="btn-icon ml-3xs [&>*]:hover:stroke-footer [&>*]:focus:stroke-footer"
+              <Btn
+                className="ml-3xs self-center hover:text-footer"
+                href="http://facebook.com/"
+                target="_blank"
+                type="icon"
               >
-                <TelegramIcon className="h-[25px] w-[25px] stroke-text" />
-              </Link>
+                <TelegramIcon className="h-[25px] w-[25px]" />
+              </Btn>
             </li>
           </ul>
 
-          <div className="col-span-full rounded-[3rem] border-2 border-transparent px-2xs sm:col-span-1 sm:col-start-1 sm:row-start-1">
-            <Link href="/" className="font-btn text-sm uppercase">
-              Copyright &copy; 2023 Dobry Bartnik
+          <div className="col-span-full rounded-[3rem] border-2 border-transparent px-2xs sm:col-span-1 sm:col-start-1 sm:row-start-1 font-btn text-sm uppercase">
+            Copyright &copy; 2023&nbsp;
+            <Link href="/" className="">
+              Dobry Bartnik
             </Link>
           </div>
         </div>

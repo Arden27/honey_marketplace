@@ -1,6 +1,6 @@
 import React from "react";
 
-import Btn from "@/components/btn/Btn";
+import Btn from "@/components/btns/Btn";
 
 export default function Nav() {
   return (

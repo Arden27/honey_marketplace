@@ -3,11 +3,11 @@
 // components
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
-import RadioGroup from "@/components/btn/RadioGroup";
-import SetQuantityButton from "@/components/btn/SetQuantityButton";
-import InputQuantity from "@/components/btn/InputQuantity";
-import AddToCartButton from "@/components/btn/AddToCartButton";
-import SelectButton from "@/components/btn/SelectButton";
+import RadioGroup from "@/components/btns/RadioGroup";
+import SetQuantityButton from "@/components/btns/SetQuantityButton";
+import InputQuantity from "@/components/btns/InputQuantity";
+import AddToCartButton from "@/components/btns/AddToCartButton";
+import SelectButton from "@/components/btns/SelectButton";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 
 // libs
@@ -23,7 +23,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/components/btn/RadioBtn"), {
+const RadioBtn = dynamic(() => import("@/components/btns/RadioBtn"), {
   ssr: false,
 });
 

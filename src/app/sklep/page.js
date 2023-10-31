@@ -4,8 +4,8 @@ import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
-import ShopSortBtn from "@/components/btn/ShopSortBtn";
-import Pagination from "@/components/btn/Pagination";
+import ShopSortBtn from "@/components/btns/ShopSortBtn";
+import Pagination from "@/components/btns/Pagination";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 import Breadcrumb from "./_shopComponents/Breadcrumb";
 
