@@ -1,11 +1,12 @@
 import Link from "next/link";
 
-export default function Btn({ href, type, hoverColor, className, children }) {
+export default function Btn({ href, type, hoverColor, className, children, ...props }) {
   return (
     // ARTEM - tutaj zawiera a nie czy jest:
 
     <Link href={href ? href : ""}>
       <button
+        {...props}
         className={`flex w-fit items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out 
         hover:bg-text hover:ring-0 hover:text-${hoverColor}
         focus:bg-text focus:ring-0 

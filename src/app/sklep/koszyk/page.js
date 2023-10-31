@@ -66,10 +66,14 @@ export default function Order() {
   return (
     <main>
       <PageWrapper>
-        <Box className="bg-red-500" type="lg">
-          <Btn href="sklep" type="sm" hoverColor="bg3">
+        <Box className=" " type="lg">
+          <Btn type="sm border" hoverColor="bg3">
             dupa
           </Btn>
+
+
+
+
 
           <h1>Koszyk</h1>
 

@@ -126,19 +126,20 @@ export default function Cart() {
                 </h2>
               </div>
             </div>
-            {/* <Link
+            <Link
               href="/sklep/koszyk"
               className="btn-lg  self-center border-text  hover:text-bg"
               onClick={() => dispatch(closeCart())}
             >
               Zamawiam
-            </Link> */}
+            </Link>
             <Btn
               className="self-center"
               href="/sklep/koszyk"
               type="lg"
               hoverColor="red-500"
               onClick={() => dispatch(closeCart())}
+              
             >
               Zaloguj się
             </Btn>
