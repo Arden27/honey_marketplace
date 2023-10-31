@@ -137,7 +137,7 @@ export default function Cart() {
               className="self-center"
               href="/sklep/koszyk"
               type="lg"
-              hoverColor="bar"
+              hoverColor="red-500"
               onClick={() => dispatch(closeCart())}
             >
               Zaloguj się

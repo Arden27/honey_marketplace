@@ -66,8 +66,8 @@ export default function Order() {
   return (
     <main>
       <PageWrapper>
-        <Box type="lg">
-          <Btn ahref="sklep" type="sm icon" hoverColor="bg2">
+        <Box className="bg-red-500" type="lg">
+          <Btn href="sklep" type="sm" hoverColor="bg3">
             dupa
           </Btn>
 
