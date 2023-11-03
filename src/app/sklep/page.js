@@ -2,9 +2,9 @@
 
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
+import DropdownMenu from "@/components/btn/DropdownMenu";
 
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
-import ShopSortBtn from "@/components/btns/ShopSortBtn";
 import Pagination from "@/components/btns/Pagination";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 import Breadcrumb from "./_shopComponents/Breadcrumb";
@@ -31,13 +31,6 @@ export default function Shop() {
 
   const [sortType, setSortType] = useState("A-Z");
 
-  const sortOptions = [
-    "A-Z",
-    "Z-A",
-    "By price from lowest",
-    "By price from highest",
-  ];
-
   const handleSort = (type) => {
     setSortType(type);
   };
@@ -55,7 +48,14 @@ export default function Shop() {
                 category={category}
                 searchParams={searchParams}
               />
-              <ShopSortBtn options={sortOptions} onSelect={handleSort} />
+              <DropdownMenu onSelect={handleSort}>
+                {/* <DropdownMenu.Button></DropdownMenu.Button> */}
+
+                <DropdownMenu.Option>A-Z</DropdownMenu.Option>
+                <DropdownMenu.Option>Z-A</DropdownMenu.Option>
+                <DropdownMenu.Option>By price from lowest</DropdownMenu.Option>
+                <DropdownMenu.Option>By price from highest</DropdownMenu.Option>
+              </DropdownMenu>
             </div>
             <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
               <Items sortType={sortType} category={category} />

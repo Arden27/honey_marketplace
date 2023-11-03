@@ -5,8 +5,9 @@ import Providers from "@/redux/provider";
 import "@/style/index.css";
 
 import LoadDB from "@/components/load-db";
-import Header from "../layout/Header";
-import Footer from "../layout/Footer";
+import Header from "../layout/header";
+import Footer from "../layout/footer";
+import Dimmer from "@/components/Dimmer";
 
 
 export default function RootLayout({ children }) {
@@ -16,11 +17,10 @@ export default function RootLayout({ children }) {
         <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] ">
           <Providers>
             <LoadDB />
-            <div className="flex flex-col gap-lg">
-              <Header />
-              {children}
-              <Footer />
-            </div>
+            <Header />
+            <Dimmer />
+            {children}
+            <Footer />
           </Providers>
         </div>
       </body>
