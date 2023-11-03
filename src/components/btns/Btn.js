@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 
 function getButtonStyles(type) {
@@ -23,11 +24,12 @@ function getButtonStyles(type) {
   return styles.trim();
 }
 
-export default function Btn({ href, type, className, children, ...props }) {
+function Btn({ href, type, className, children, ...props }, ref) {
   const buttonStyles = getButtonStyles(type);
 
   const ButtonContent = (
     <button
+      ref={ref}
       className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
       active:top-[1px] active:opacity-90
       ${buttonStyles}
@@ -43,3 +45,5 @@ export default function Btn({ href, type, className, children, ...props }) {
 
   return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
 }
+
+export default React.forwardRef(Btn);

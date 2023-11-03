@@ -30,13 +30,11 @@ export default function Cart() {
 
   const [wasOpened, setWasOpened] = useState(false);
 
-  const handleOutsideClick = () => {
+  useOutsideClick([node, buttonRef], () => {
     if (shouldCloseCart) {
       dispatch(closeCart());
     }
-  };
-
-  useOutsideClick([node, buttonRef], handleOutsideClick);
+  });
 
   useEffect(() => {
     // Calculate total price when cartItems or items change
