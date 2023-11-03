@@ -1,17 +1,17 @@
 import React from "react";
 
 import Nav from "./Nav";
-import BurgerBar from "./bars/BurgerBar";
+import BurgerMenu from "./menu/BurgerMenu.js";
 import Logo from "./Logo";
-import UserBar from "@/layout/bars/UserBar";
-import SearchBar from "@/layout/bars/SearchBar";
-// import CartBar from "@/layout/bar/cart-bar";
+import UserMenu from "@/layout/menu/UserMenu";
+import SearchMenu from "@/layout/menu/SearchMenu";
+// import CartMenu from "@/layout/Menu/CartMenu";
 
-// ARTEM - Tego chyba tutaj nie powinno być, a w @/layout/bar/cart-bar
+// ARTEM - Tego chyba tutaj nie powinno być, a w @/layout/Menu/CartMenu
 import dynamic from "next/dynamic";
 import PageWrapper from "@/components/PageWrapper";
 
-const CartBar = dynamic(() => import("@/layout/bars/CartBar"), {
+const CartMenu = dynamic(() => import("@/layout/menu/CartMenu"), {
   ssr: false,
 });
 
@@ -22,18 +22,18 @@ export default function Header() {
         <div className="fixed left-0 -z-10 h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-full bg-header shadow"></div>
 
         <div className=" top-0 flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))] grid-cols-[]  items-center ">
-          <BurgerBar />
+          <BurgerMenu />
           <Nav />
         </div>
 
         <Logo />
 
         <div className="flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))] items-center justify-end">
-          <SearchBar />
+          <SearchMenu />
 
-          <UserBar />
+          <UserMenu />
 
-          <CartBar />
+          <CartMenu />
         </div>
       </div>
     </header>
