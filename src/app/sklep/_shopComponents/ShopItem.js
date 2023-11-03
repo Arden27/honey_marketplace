@@ -46,13 +46,13 @@ export default function ShopItem({ item }) {
         />
       </Link>
 
-      <div className="flex flex-col items-center justify-between gap-sm  p-sm [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
-        <div className=" h-[calc(theme(spacing.2xl)+theme(spacing.xs))] flex-col !justify-start  ">
-          <h2 className="">{item.name}</h2>
+      <div className="flex flex-col items-center justify-between gap-sm  p-sm ">
+        <div className="h-[calc(theme(spacing.2xl)+theme(spacing.xs))] !justify-start  ">
+          <h2 className="text-center">{item.name}</h2>
 
-          <h3 className="">{item.name2}</h3>
+          <h3 className="text-center">{item.name2}</h3>
 
-          <h4 className="mt-3xs">{item.harvestDate}</h4>
+          <h4 className="mt-3xs text-center">{item.harvestDate}</h4>
         </div>
 
         <RadioGroup
@@ -62,25 +62,31 @@ export default function ShopItem({ item }) {
           className={" [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
         />
 
-        <div className="[&>*]:font-sans">
-          <h3 className="text-warning line-through">
+        <div className="flex">
+          <h3 className="font-sans text-warning line-through">
             {formatPrice(selectedPrice, 1.1)} zł
           </h3>
-          <h3 className="mx-xs text-lg">{formatPrice(selectedPrice)} zł</h3>
+          <h3 className="mx-xs font-sans text-lg">
+            {formatPrice(selectedPrice)} zł
+          </h3>
         </div>
 
-        <div className="relative rounded-[2rem]">
+
+{/* 
+        ARTEM - Przestawić to wszystko do AddToCartbutton */}
+
+        <div className="relative">
           <AddToCartButton
             id={item.id}
             selectedSize={selectedSize}
             quantity={quantity}
             className={
-              "btn-lg hover:text-shop-item overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+              "h-[calc(theme(spacing.lg)+theme(spacing.xs))] flex rounded-[2rem]  border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text hover:text-bg3  315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md items-center"
             }
           />
 
           <div
-            className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3
+            className="h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center absolute left-0 top-0 flex justify-items-center rounded-[2rem] border-2 border-text bg-bg3
 					"
           >
             <SetQuantityButton

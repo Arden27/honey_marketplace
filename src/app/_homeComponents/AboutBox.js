@@ -19,7 +19,7 @@ export default function AboutBox() {
         </p>
 
         <Btn
-          className="mt-md self-end hover:text-about-box"
+          className="mt-md self-end hover:text-about-box active:text-about-box"
           href="/sklep/o-nas"
           type="sm"
         >

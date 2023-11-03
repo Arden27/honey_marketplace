@@ -35,7 +35,7 @@ export default function SearchMenu() {
   return (
     <React.Fragment>
       <Btn
-        className="ml-3xs hidden hover:text-header focus:text-header 330px:flex"
+        className="ml-3xs hidden hover:text-header  330px:flex"
         type="icon"
         ref={buttonRef}
         onClick={() => {

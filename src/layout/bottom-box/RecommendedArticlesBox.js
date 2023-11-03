@@ -6,7 +6,7 @@ import Box from "@/components/Box";
 export default function RecommendedArticlesBox() {
   return (
     <Box type="lg">
-      <h2>Artykuły:</h2>
+      <h2>Polecane artykuły:</h2>
     </Box>
   );
 }

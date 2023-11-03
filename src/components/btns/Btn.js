@@ -14,7 +14,7 @@ function getButtonStyles(type) {
   }
   if (types.includes("icon")) {
     styles +=
-      "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] border-transparent stroke-2 [&>*]:h-[25px] [&>*]:w-[25px]";
+      "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] border-transparent stroke-2 [&>svg]:h-[25px] [&>svg]:w-[25px] [&>*]:stroke-2";
   }
   if (types.includes("border")) {
     styles += "border-text ";
@@ -29,8 +29,7 @@ export default function Btn({ href, type, className, children, ...props }) {
   const ButtonContent = (
     <button
       className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
-      hover:ring-0 focus:bg-text 
-      focus:ring-0 active:top-[1px]
+      active:top-[1px] active:opacity-90
       ${buttonStyles}
       ${className}
       `}

@@ -43,7 +43,7 @@ export default function BurgerBar() {
   return (
     <React.Fragment>
       <Btn
-        className=" mr-3xs hover:text-header focus:text-header lg:hidden"
+        className=" mr-3xs hover:text-header lg:hidden"
         type="icon"
         ref={buttonRef}
         onClick={() => {

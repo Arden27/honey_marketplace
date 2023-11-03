@@ -93,14 +93,11 @@ export default function Footer() {
           </Box>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-[auto,auto] [&>*]:flex [&>*]:items-center">
-          <ul className="mb-sm flex-wrap sm:col-start-2 sm:mb-0 sm:!justify-end sm:text-right">
+        <div className="grid grid-cols-1 items-center  sm:grid-cols-[auto,auto]">
+          <ul className="mb-sm flex flex-wrap sm:col-start-2 sm:mb-0 sm:!justify-end sm:text-right">
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn
-                  className=" self-center hover:text-footer focus:text-footer"
-                  type="icon"
-                >
+                <Btn className=" self-center hover:text-footer" type="icon">
                   <FacebookIcon />
                 </Btn>
               </Link>
@@ -108,7 +105,7 @@ export default function Footer() {
             <li>
               <Link href="http://facebook.com/" target="_blank">
                 <Btn
-                  className="ml-3xs self-center hover:text-footer focus:text-footer"
+                  className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <InstagramIcon />
@@ -118,7 +115,7 @@ export default function Footer() {
             <li>
               <Link href="http://facebook.com/" target="_blank">
                 <Btn
-                  className="ml-3xs self-center hover:text-footer focus:text-footer"
+                  className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <YouTubeIcon />
@@ -128,7 +125,7 @@ export default function Footer() {
             <li>
               <Link href="http://facebook.com/" target="_blank">
                 <Btn
-                  className="ml-3xs self-center hover:text-footer focus:text-footer"
+                  className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <SignalIcon />
@@ -147,7 +144,7 @@ export default function Footer() {
             </li>
           </ul>
 
-          <div className="col-span-full rounded-[3rem] border-2 border-transparent px-2xs font-btn text-sm uppercase sm:col-span-1 sm:col-start-1 sm:row-start-1">
+          <div className="col-span-full rounded-[3rem] border-2 border-transparent px-xs font-btn text-sm uppercase sm:col-span-1 sm:col-start-1 sm:row-start-1">
             Copyright &copy; 2023&nbsp;
             <Link href="/" className="">
               Dobry Bartnik

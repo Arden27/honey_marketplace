@@ -56,24 +56,18 @@ export default function Cart({}) {
                 );
               })}
             </div>
-            <div
-              className=" mb-2xs flex items-end justify-between whitespace-nowrap text-warning
-              [&>*]:font-sans"
-            >
-              <h3 className="text-end">Wyprzedaż:</h3>
-              <h3 className="">-{formatPrice(totalPrice, 0.05)} zł</h3>
+            <div className=" mb-2xs flex items-end justify-between whitespace-nowrap text-warning">
+              <h3 className="text-end font-sans">Wyprzedaż:</h3>
+              <h3 className="font-sans">-{formatPrice(totalPrice, 0.05)} zł</h3>
             </div>
-            <div
-              className=" mb-2xs flex items-end justify-between text-warning
-              [&>*]:font-sans"
-            >
-              <h3 className="text-end">Rabat:</h3>
-              <h3 className="">-{formatPrice(totalPrice, 0.1)} zł</h3>
+            <div className=" mb-2xs flex items-end justify-between text-warning">
+              <h3 className="text-end font-sans">Rabat:</h3>
+              <h3 className="font-sans">-{formatPrice(totalPrice, 0.1)} zł</h3>
             </div>
             <div className="mb-sm flex items-end justify-between [&_*]:whitespace-nowrap">
               <h2 className="text-end font-sans">Razem:</h2>
-              <div className="flex items-center justify-center [&>*]:font-sans ">
-                <h3 className="mx-xs text-warning line-through">
+              <div className="flex items-center justify-center ">
+                <h3 className="mx-xs font-sans text-warning line-through">
                   {formatPrice(totalPrice, 1.1)} zł
                 </h3>
                 <h2 className="border-b-2 border-text font-sans text-lg">

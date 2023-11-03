@@ -2,7 +2,7 @@ import Btn from "@/components/btns/Btn";
 
 export default function PromoBox() {
   return (
-    <section className=".min-h-[30rem] grid items-center justify-items-center overflow-hidden rounded-[2rem] bg-warning p-sm [&>*]:text-center ">
+    <section className=".min-h-[30rem] grid items-center justify-items-center overflow-hidden rounded-[2rem] bg-warning p-sm text-center">
       <h2 className="p-sm text-3xl font-bold leading-none">
         Załóż konto
         <br />

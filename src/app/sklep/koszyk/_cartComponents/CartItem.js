@@ -33,7 +33,7 @@ const CartItem = ({ item, removeFromCart }) => {
 
   return (
     <div
-      className="relative mb-sm grid h-[calc(theme(spacing.3xl)+theme(spacing.xl))] overflow-hidden rounded-[2rem] grid-rows-1
+      className="relative mb-sm grid h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-rows-1 overflow-hidden rounded-[2rem]
       bg-bg3 315px:grid-cols-[3fr,7fr]"
     >
       <Image
@@ -50,10 +50,10 @@ const CartItem = ({ item, removeFromCart }) => {
             <h4 className="">{item.name2}</h4>
           </div>
           <button
-            className="[&>*]:hover:stroke-shop-item [&>*]:focus:stroke-shop-item  right-xs top-xs flex h-md w-md items-center  justify-center rounded-[2rem] text-center font-btn hover:bg-text hover:text-bg 380px:static"
+            className="flex h-md w-md items-center  justify-center rounded-[2rem] text-center font-btn hover:bg-text hover:text-bg3"
             onClick={handleRemove}
           >
-            <TrashIcon className="h-[16px] w-[16px] stroke-text stroke-2 " />
+            <TrashIcon className="h-[16px] w-[16px] stroke-2 " />
           </button>
         </div>
 
@@ -92,11 +92,13 @@ const CartItem = ({ item, removeFromCart }) => {
 
           <h3 className="font-sans text-lg leading-none">&#215;</h3>
 
-          <div className="relative flex [&>*]:whitespace-nowrap  [&>*]:font-sans [&>*]:leading-none ">
-            <h3 className=" absolute -top-sm min-w-full text-sm text-warning line-through">
+          <div className="relative flex">
+            <h3 className="absolute -top-sm whitespace-nowrap font-sans text-sm text-warning line-through">
               {formatPrice(item.price, 1.1)} zł
             </h3>
-            <h3>{formatPrice(item.price)} zł</h3>
+            <h3 className="whitespace-nowrap font-sans">
+              {formatPrice(item.price)} zł
+            </h3>
           </div>
         </div>
       </div>

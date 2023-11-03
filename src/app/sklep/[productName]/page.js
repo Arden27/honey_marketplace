@@ -150,7 +150,7 @@ export default function ProductPage({ params }) {
                     selectedSize={selectedSize}
                     quantity={quantity}
                     className={
-                      " btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                      "hover:bg-text w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     }
                   />
 
@@ -160,7 +160,7 @@ export default function ProductPage({ params }) {
                       setQuantity={setQuantity}
                       direction={"minus"}
                       className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
                       }
                     />
 
@@ -177,7 +177,7 @@ export default function ProductPage({ params }) {
                       setQuantity={setQuantity}
                       direction={"plus"}
                       className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
                       }
                     />
                   </div>

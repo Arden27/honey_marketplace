@@ -18,16 +18,13 @@ export default function SearchBar() {
               <SearchIcon className="h-[20px] w-[20px] stroke-text stroke-2" />
             </div> */}
         <button
-          className="flex h-md w-md items-center justify-center rounded-[2rem] opacity-50
-             hover:bg-text  hover:text-bar
-            hover:opacity-100 focus:bg-text focus:text-bar"
+          className="flex h-md w-md items-center justify-center rounded-[2rem] opacity-50 hover:bg-text  hover:text-bar hover:opacity-100"
         >
           <DeleteIcon className=" h-[20px] w-[20px]  stroke-2" />
         </button>
       </div>
       <button
-        className="absolute right-0 h-full w-[calc(theme(spacing.xl)+theme(spacing.xs))] rounded-r-[2rem] transition-colors duration-300 ease-in-out 
-          hover:bg-text hover:text-bar focus:text-bar"
+        className="absolute right-0 h-full w-[calc(theme(spacing.xl)+theme(spacing.xs))] rounded-r-[2rem] transition-colors duration-300 ease-in-out hover:bg-text hover:text-bar"
       >
         <SearchIcon className="mx-sm h-[25px] w-[25px] stroke-2" />
       </button>
