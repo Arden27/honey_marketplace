@@ -5,8 +5,8 @@ import Providers from "@/redux/provider";
 import "@/style/index.css";
 
 import LoadDB from "@/components/LoadDB";
-import Header from "../layout/header";
-import Footer from "../layout/footer";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 import Dimmer from "@/components/Dimmer";
 
 
