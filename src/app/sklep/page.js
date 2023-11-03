@@ -3,6 +3,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
 import DropdownWrapper from "@/components/btn/DropdownWrapper";
+import DropdownMenu from "@/components/btn/DropdownMenu";
 
 import ShopMenu from "@/app/sklep/shop-menu";
 import Pagination from "@/components/btn/pagination";
@@ -48,7 +49,7 @@ export default function Shop() {
                 searchParams={searchParams}
               />
 
-              <DropdownWrapper onSelect={handleSort}>
+              {/* <DropdownWrapper onSelect={handleSort}>
                 <div className="cursor-pointer hover:bg-bg3">
                   A-Z
                 </div>
@@ -61,7 +62,15 @@ export default function Shop() {
                 <div className="cursor-pointer hover:bg-bg3">
                   By price from highest
                 </div>
-              </DropdownWrapper>
+              </DropdownWrapper> */}
+              <DropdownMenu onSelect={handleSort}>
+                {/* <DropdownMenu.Button></DropdownMenu.Button> */}
+
+                <DropdownMenu.Option>A-Z</DropdownMenu.Option>
+                <DropdownMenu.Option>Z-A</DropdownMenu.Option>
+                <DropdownMenu.Option>By price from lowest</DropdownMenu.Option>
+                <DropdownMenu.Option>By price from highest</DropdownMenu.Option>
+              </DropdownMenu>
             </div>
             <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
               <Items sortType={sortType} category={category} />
