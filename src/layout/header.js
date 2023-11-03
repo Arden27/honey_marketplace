@@ -1,13 +1,7 @@
 import React from "react";
 
-//import Nav from "./Nav.js";
-//import Nav from "./NavT.js";
-import Nav from "./Nav.js";
+import Nav from "./NavT.js";
 import BurgerMenu from "./menu/BurgerMenu.js";
-//import Logo from "./logo.js";
-//import Logo from "./Logo.js";
-//import Logo from "./LogoT.js";
-//import Logo from "./Logo.js";
 import Logo from "./LogoT.js";
 import UserMenu from "@/layout/menu/UserMenu";
 import SearchMenu from "@/layout/menu/SearchMenu";
