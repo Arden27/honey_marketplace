@@ -88,10 +88,9 @@ export default function Cart({}) {
       </div>
 
       <Btn
-        className="justify-self-center"
+        className="justify-self-center hover:text-bg"
         href=""
         type="lg hover"
-        hoverColor="bg"
       >
         Sprawdź już dziś!
       </Btn>

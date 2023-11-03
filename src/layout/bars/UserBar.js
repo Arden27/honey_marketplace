@@ -1,5 +1,6 @@
 "use client";
 
+import Btn from "@/components/btns/Btn";
 import UserIcon from "public/icons/user.svg";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -31,16 +32,17 @@ export default function UserBar() {
 
   return (
     <React.Fragment>
-      <button
-        className="btn-icon fixed right-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] hidden 430px:flex  [&>*]:hover:stroke-header [&>*]:focus:stroke-header "
+      <Btn
+        className="ml-3xs hidden hover:text-header focus:text-header 430px:flex "
+        type="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
           setOpen(!open);
         }}
       >
-        <UserIcon className="h-[25px] w-[25px]" />
-      </button>
+        <UserIcon />
+      </Btn>
 
       <div
         className={`bar right-0 flex-col rounded-bl-[2rem] bg-bar p-sm shadow

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Btn from "@/components/btns/Btn";
 
 export default function HowToBox() {
@@ -16,15 +17,14 @@ export default function HowToBox() {
         Jak poznać <strong>prawdziwy</strong> miód?
       </h2>
 
-
-      <Btn
-        className="absolute bottom-sm bg-bg border-transparent"
+      <Link
+        className="absolute bottom-sm"
         href="/artykuly/jak-rozpoznac-prawdziwy-miod"
-        type="lg"
-        hoverColor="bg"
       >
-        Sprawdź już dziś!
-      </Btn>
+        <Btn className="border-transparent bg-bg hover:text-bg" type="lg">
+          Sprawdź już dziś!
+        </Btn>
+      </Link>
     </section>
   );
 }

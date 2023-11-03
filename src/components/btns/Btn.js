@@ -1,44 +1,46 @@
 import Link from "next/link";
 
-export default function Btn({
-  href,
-  target,
-  type,
-  className,
-  children,
-  ...props
-}) {
-  return (
-    // ARTEM - tutaj zawiera a nie czy jest:
+function getButtonStyles(type) {
+  const types = type ? type.split(" ") : [];
 
-    <Link href={href ? href : ""} target={target}>
-      <button
-        {...props}
-        className={`flex w-fit items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out 
-        hover:bg-text hover:ring-0 
-        focus:bg-text focus:ring-0 
-        
-        ${
-          type === "sm"
-            ? "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] p-xs "
-            : ""
-        }    
-        ${
-          type === "lg"
-            ? "h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] p-sm px-md "
-            : ""
-        }
-        ${
-          type === "icon"
-            ? "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.3xs))] border-transparent stroke-2"
-            : ""
-        }
+  let styles = "";
 
-        ${className}
-        `}
-      >
-        {children}
-      </button>
-    </Link>
+  if (types.includes("sm")) {
+    styles += "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-fit p-xs ";
+  }
+  if (types.includes("lg")) {
+    styles +=
+      "h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-fit min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] p-sm px-md ";
+  }
+  if (types.includes("icon")) {
+    styles +=
+      "h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] border-transparent stroke-2 [&>*]:h-[25px] [&>*]:w-[25px]";
+  }
+  if (types.includes("border")) {
+    styles += "border-text ";
+  }
+
+  return styles.trim();
+}
+
+export default function Btn({ href, type, className, children, ...props }) {
+  const buttonStyles = getButtonStyles(type);
+
+  const ButtonContent = (
+    <button
+      className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
+      hover:ring-0 focus:bg-text 
+      focus:ring-0 active:top-[1px]
+      ${buttonStyles}
+      ${className}
+      `}
+      {...props}
+    >
+      {children}
+    </button>
   );
+
+  // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute
+
+  return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
 }

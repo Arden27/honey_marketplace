@@ -51,8 +51,10 @@ export default function Cart() {
 
   return (
     <React.Fragment>
+      {/* ARTEM - Tutaj coś nie moge podmienić buttona na Btn, poniżej jak chcę */}
+
       <button
-        className={`btn-icon fixed [&>*]:hover:stroke-header [&>*]:focus:stroke-header 
+        className={`btn-icon [&>*]:hover:stroke-header [&>*]:focus:stroke-header ml-3xs
         ${isCartOpen ? "border-2 border-black" : ""}
         `}
         ref={buttonRef}
@@ -63,6 +65,20 @@ export default function Cart() {
       >
         <ShoppingCartIcon className="h-[25px] w-[25px]" />
       </button>
+
+      {/* <Btn
+        className={` hover:text-header focus:text-header ml-3xs
+        ${isCartOpen ? "bg-text text-header" : ""}
+        `}
+        type="icon"
+        ref={buttonRef}
+        onClick={() => {
+          setWasOpened(true);
+          isCartOpen ? dispatch(closeCart()) : dispatch(openCart());
+        }}
+      >
+        <ShoppingCartIcon />
+      </Btn> */}
 
       <div
         className={`bar right-0 min-h-[calc(90vh-3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]
@@ -128,7 +144,6 @@ export default function Cart() {
               className="self-center hover:text-bar"
               href="/sklep/koszyk"
               type="lg"
-              hoverColor="bar"
               onClick={() => dispatch(closeCart())}
             >
               Zamawiam

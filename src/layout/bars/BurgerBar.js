@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Btn from "@/components/btns/Btn";
 import BurgerIcon from "public/icons/menu.svg";
+
+import React, { useState, useEffect, useRef } from "react";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
 export default function BurgerBar() {
@@ -40,16 +42,17 @@ export default function BurgerBar() {
 
   return (
     <React.Fragment>
-      <button
+      <Btn
+        className=" hover:text-header focus:text-header lg:hidden mr-3xs"
+        type="icon"
         ref={buttonRef}
-        className="btn-icon fixed lg:hidden [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
         onClick={() => {
           setWasOpened(true);
           setOpen(!open);
         }}
       >
-        <BurgerIcon className="h-[25px] w-[25px]" />
-      </button>
+        <BurgerIcon />
+      </Btn>
 
       <nav
         className={`bar left-0 w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]
@@ -74,7 +77,7 @@ export default function BurgerBar() {
 
             <li>
               <Link href="/sklep">Sklep</Link>
-              <ul className="[&>li>a]:btn-svm box">
+              <ul className="box">
                 <li>
                   <Link href="/sklep?kategoria=promocje">Promocje</Link>
                 </li>

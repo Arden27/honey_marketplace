@@ -1,5 +1,6 @@
 "use client";
 
+import Btn from "@/components/btns/Btn";
 import SearchIcon from "public/icons/search.svg";
 import DeleteIcon from "public/icons/x.svg";
 
@@ -32,16 +33,17 @@ export default function SearchBar() {
 
   return (
     <React.Fragment>
-      <button
-        className="btn-icon fixed right-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] hidden 330px:flex 430px:right-[calc(theme(spacing.sm)+2*theme(spacing.lg)+2*theme(spacing.xs)+2*theme(spacing.3xs))] [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
+      <Btn
+        className="ml-3xs hidden hover:text-header focus:text-header 330px:flex"
+        type="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
           setOpen(!open);
         }}
       >
-        <SearchIcon className="h-[25px] w-[25px]" />
-      </button>
+        <SearchIcon />
+      </Btn>
 
       <div
         className={` bar absolute left-1/2 -z-[21] w-[calc(100%-theme(spacing.xs))] max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 self-center  rounded-b-[2rem] 330px:fixed

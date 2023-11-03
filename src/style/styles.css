@@ -6,7 +6,7 @@
 
   /* --- BUTTONS --- */
 
-  .btn-sm:hover,
+  /* .btn-sm:hover,
   .btn-sm:focus,
   .btn-lg:hover,
   .btn-lg:focus,
@@ -28,7 +28,7 @@
   .btn-icon {
     @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out
     [&>*]:transition-colors [&>*]:duration-300 [&>*]:ease-in-out;
-  }
+  } */
 
   /* --- SCROLLBAR --- */
 
@@ -49,7 +49,7 @@
   /* --- FORMS --- */
 
   :focus {
-    @apply rounded-[2] outline-none ring-2 ring-accent duration-300 ease-in-out;
+    @apply  outline-none ring-2 ring-accent duration-300 ease-in-out;
   }
 
   input[type="search"]::-webkit-search-cancel-button {

@@ -1,7 +1,7 @@
-export default function Pagination() {
+export default function DropDown() {
   return (
     <div>
-      <div>Pagination</div>
+      <div>DropDown</div>
     </div>
   );
 }

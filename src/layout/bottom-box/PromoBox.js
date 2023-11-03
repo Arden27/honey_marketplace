@@ -15,10 +15,9 @@ export default function PromoBox() {
       </h2>
 
       <Btn
-        className="border-transparent bg-bg self-end"
+        className="self-end border-transparent bg-bg hover:text-bg"
         href="/sklep"
         type="lg"
-        hoverColor="bg"
       >
         Przejdź do sklepu
       </Btn>

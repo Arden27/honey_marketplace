@@ -38,7 +38,7 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <Btn className="self-end" href="" type="lg" hoverColor="bg3">
+      <Btn className="self-end hover:text-bg3" href="" type="lg">
         Zaloguj się
       </Btn>
     </Box>

@@ -6,7 +6,12 @@ export default function NoRegisterBox() {
     <Box type="sm">
       <h2>Zamówienie bez rejestracji</h2>
 
-      <Btn className="self-end" href="" type="lg" hoverColor="bg3">
+      <Btn
+        className="self-end hover:text-bg3"
+        href=""
+        type="lg"
+
+      >
         Kontynuuj
       </Btn>
     </Box>

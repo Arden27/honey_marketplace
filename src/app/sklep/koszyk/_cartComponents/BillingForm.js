@@ -24,6 +24,11 @@ export default function BillingForm({
         <EditIcon />
       </button>
 
+      <label>
+
+        <input></input>
+      </label>
+
       {isEditing.personalBillingData ? (
         // Input fields for editing mode
         <form onSubmit={(e) => e.preventDefault()}>
