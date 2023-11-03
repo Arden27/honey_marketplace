@@ -14,7 +14,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 import dynamic from "next/dynamic";
 
-const Items = dynamic(() => import("@/components/items"), {
+const Items = dynamic(() => import("@/components/Items"), {
   ssr: false,
 });
 
