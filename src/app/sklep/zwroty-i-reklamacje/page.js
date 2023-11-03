@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Zwroty i reklamacje - Dobry Bartnik",
@@ -11,11 +10,11 @@ export const metadata = {
 
 export default function ReturnsAndComplaints() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section className="mx-auto w-[calc(100%-2*theme(spacing.md))]">
+        <Box type="lg">
           ZWROTY I REKLAMACJE
-        </section>
+        </Box>
       </PageWrapper>
 
       <BottomBox />

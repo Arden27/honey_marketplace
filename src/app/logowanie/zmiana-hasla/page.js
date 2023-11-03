@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
+import Box from "@/components/Box";
 
 export const metadata = {
   title: "Zmień hasło - Dobry Bartnik",
@@ -10,9 +9,9 @@ export const metadata = {
 
 export default function ChangePassword() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>ZMIANA HASŁA</section>
+        <Box type="lg">ZMIANA HASŁA</Box>
       </PageWrapper>
     </main>
   );

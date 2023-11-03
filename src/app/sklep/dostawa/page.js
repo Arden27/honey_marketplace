@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Dostawa - Dobry Bartnik",
@@ -11,9 +10,9 @@ export const metadata = {
 
 export default function Delivery() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>Dostawa</section>
+        <Box type="lg">Dostawa</Box>
       </PageWrapper>
 
       <BottomBox />

@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "O nas - Dobry Bartnik",
@@ -11,9 +10,9 @@ export const metadata = {
 
 export default function AboutUs() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>O NAS</section>
+        <Box type="lg">O NAS</Box>
       </PageWrapper>
 
       <BottomBox />

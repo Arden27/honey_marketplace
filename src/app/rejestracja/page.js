@@ -1,7 +1,5 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
 
 export const metadata = {
   title: "Rejestracja - Dobry Bartnik",
@@ -11,9 +9,9 @@ export const metadata = {
 
 export default function Register() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>Rejestracja</section>
+        <Box type="lg">Rejestracja</Box>
       </PageWrapper>
     </main>
   );

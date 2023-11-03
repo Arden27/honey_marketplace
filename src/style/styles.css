@@ -1,54 +1,24 @@
 @layer base {
-  /* --- BARS --- */
-  .bar {
-    @apply fixed top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20  max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  max-w-[calc(100%-theme(spacing.2xs))] bg-bar p-sm shadow;
-  }
-
-  /* --- BUTTONS --- */
-
-  .btn-sm:hover,
-  .btn-sm:focus,
-  .btn-lg:hover,
-  .btn-lg:focus,
-  .btn-icon:hover,
-  .btn-icon:focus {
-    @apply bg-text ring-0;
-  }
-
-  .btn-sm {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out
-    [&>*]:duration-300 [&>*]:ease-in-out;
-  }
-
-  .btn-lg {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] min-w-[calc(theme(spacing.3xl)+theme(spacing.2xl))] items-center justify-center  rounded-[2rem] border-2 border-solid border-transparent p-sm px-md font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out
-    [&>*]:duration-300 [&>*]:ease-in-out;
-  }
-
-  .btn-icon {
-    @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent stroke-2 text-text transition-colors duration-300 ease-in-out
-    [&>*]:transition-colors [&>*]:duration-300 [&>*]:ease-in-out;
+  
+  :focus-visible {
+    @apply rounded-[2rem] outline outline-2 outline-offset-2 outline-accent2;
   }
 
   /* --- SCROLLBAR --- */
 
   .cart-items-scrollbar::-webkit-scrollbar {
-    @apply left-[5px] w-xs;
+    @apply w-[22px];
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-track {
-    @apply w-[20px] bg-bar;
+    @apply bg-bar;
   }
 
   .cart-items-scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-[2rem] border-[3px]  border-solid border-bar bg-text;
+    @apply rounded-[2rem] border-[8px] border-solid border-bar bg-text;
   }
 
   /* --- FORMS --- */
-
-  :focus {
-    @apply rounded-[2] outline-none ring-2 ring-accent duration-300 ease-in-out;
-  }
 
   input[type="search"]::-webkit-search-cancel-button {
     @apply pointer-events-none;

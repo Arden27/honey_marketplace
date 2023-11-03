@@ -1,12 +1,14 @@
 "use client";
 
 // components
-import Box from "@/components/Box";
+
 import PageWrapper from "@/components/PageWrapper";
-import BillingForm from "./cartComponents/BillingForm";
-import DeliveryForm from "./cartComponents/DeliveryForm";
-import PaymentForm from "./cartComponents/PaymentForm";
-import Cart from "./cartComponents/Cart";
+import Box from "@/components/Box";
+import Btn from "@/components/btns/Btn";
+import BillingForm from "./_cartComponents/BillingForm";
+import DeliveryForm from "./_cartComponents/DeliveryForm";
+import PaymentForm from "./_cartComponents/PaymentForm";
+import Cart from "./_cartComponents/Cart";
 
 import { useState } from "react";
 
@@ -62,11 +64,16 @@ export default function Order() {
   };
 
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
+          <Btn className="hover:text-bg3" type="sm">
+            dupa
+          </Btn>
+
           <h1>Koszyk</h1>
-          <div className="grid gap-sm md:grid-cols-[minmax(50%,1fr)_auto]">
+
+          <div className="grid grid-rows-1 gap-sm sm:grid-cols-[minmax(calc(50%-theme(spacing.2xs)),auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
             <div className="flex flex-col gap-sm">
               <BillingForm
                 isEditing={isEditing}
@@ -90,8 +97,9 @@ export default function Order() {
                 handleInputChange={handleInputChange}
               />
             </div>
-
-            <Cart />
+            <div>
+              <Cart />
+            </div>
           </div>
         </Box>
       </PageWrapper>

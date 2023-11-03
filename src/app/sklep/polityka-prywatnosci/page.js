@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Polityka prywatności - Dobry Bartnik",
@@ -11,9 +10,9 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>POLITYKA PRYWATNOŚCI</section>
+        <Box type="lg">POLITYKA PRYWATNOŚCI</Box>
       </PageWrapper>
 
       <BottomBox />

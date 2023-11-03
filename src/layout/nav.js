@@ -1,49 +1,55 @@
 import React from "react";
-import Link from "next/link";
+
+import Btn from "@/components/btns/Btn";
 
 export default function Nav() {
   return (
-    <nav className="fixed left-[calc(theme(spacing.sm)+theme(spacing.lg)+theme(spacing.xs)+theme(spacing.3xs))] z-20 lg:left-sm">
+    <nav className="">
       <ul className="flex">
         <li className="mr-3xs hidden 380px:!flex lg:flex">
-          <Link
+          <Btn
+            className="hover:text-header"
             href="/sklep"
-            className=" btn-sm !border-text hover:text-header focus:text-header"
+            type="sm"
           >
             Sklep
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:!hidden xl:!flex">
-          <Link
+          <Btn
+            className="border-transparent hover:text-header "
             href="/"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
           >
             Główna
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
+          <Btn
+            className="border-transparent hover:text-header"
             href="/artykuly/o-nas"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
           >
             O nas
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
+          <Btn
+            className="border-transparent hover:text-header"
             href="/artykuly"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
           >
             Artykuły
-          </Link>
+          </Btn>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Link
+          <Btn
+            className="border-transparent hover:text-header"
             href="/kontakt"
-            className=" btn-sm hover:text-header focus:text-header"
+            type="sm"
           >
             Kontakt
-          </Link>
+          </Btn>
         </li>
       </ul>
     </nav>

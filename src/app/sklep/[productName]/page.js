@@ -1,21 +1,19 @@
 "use client";
 
 // components
-import Box from "@/components/Box";
-import RadioGroup from "@/components/btn/RadioGroup";
-import SetQuantityButton from "@/components/btn/SetQuantityButton";
-import InputQuantity from "@/components/btn/InputQuantity";
-import AddToCartButton from "@/components/btn/AddToCartButton";
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
-import SelectButton from "@/components/btn/SelectButton";
+import Box from "@/components/Box";
+import RadioGroup from "@/components/btns/RadioGroup";
+import SetQuantityButton from "@/components/btns/SetQuantityButton";
+import InputQuantity from "@/components/btns/InputQuantity";
+import AddToCartButton from "@/components/btns/AddToCartButton";
+import SelectButton from "@/components/btns/SelectButton";
+import BottomBox from "@/layout/bottom-box/BottomBox";
+
 // libs
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-
-// Artem - Breadcrumb
-// import ShopBreadcrumb from "@/components/btn/shop-breadcrumb";
 
 import { formatPrice } from "@/components/formatPrice";
 
@@ -25,15 +23,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/components/btn/radio-btn"), {
+const RadioBtn = dynamic(() => import("@/components/btns/RadioBtn"), {
   ssr: false,
 });
-
-// export const metadata = {
-//   title: "Miód Gryczany - Miody - Dobry Bartnik",
-//   description: "OPIS",
-//   keywords: "TAGI",
-// };
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);
@@ -63,7 +55,7 @@ export default function ProductPage({ params }) {
   };
 
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
@@ -158,7 +150,7 @@ export default function ProductPage({ params }) {
                     selectedSize={selectedSize}
                     quantity={quantity}
                     className={
-                      " btn-lg hover:text-shop-item w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 focus:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                      "hover:bg-text w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     }
                   />
 
@@ -168,7 +160,7 @@ export default function ProductPage({ params }) {
                       setQuantity={setQuantity}
                       direction={"minus"}
                       className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
                       }
                     />
 
@@ -185,7 +177,7 @@ export default function ProductPage({ params }) {
                       setQuantity={setQuantity}
                       direction={"plus"}
                       className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
+                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
                       }
                     />
                   </div>

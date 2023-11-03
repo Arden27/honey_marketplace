@@ -1,8 +1,6 @@
-import Link from "next/link";
-
-import Box from "@/components/Box";
 import PageWrapper from "@/components/PageWrapper";
-import BottomBox from "@/layout/bottom-box/bottom-box";
+import Box from "@/components/Box";
+import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
   title: "Artykuły - Dobry Bartnik",
@@ -12,12 +10,9 @@ export const metadata = {
 
 export default function Articles() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>ARTYKUŁY</section>
-        <Box type="lg">
-
-        </Box>
+        <Box type="lg">ARTYKUŁY</Box>
       </PageWrapper>
 
       <BottomBox />

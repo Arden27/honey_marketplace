@@ -1,5 +1,5 @@
-import FormFieldset from "@/components/forms/form-fieldset";
-import InputLabel from "@/components/forms/input-label";
+import FormFieldset from "@/components/forms/FormFieldset";
+import InputLabel from "@/components/forms/InputLabel";
 
 export default function LoginFieldset(){
     return (
