@@ -46,7 +46,7 @@ export default function SearchBar() {
       </Btn>
 
       <div
-        className={` bar absolute left-1/2 -z-[21] w-[calc(100%-theme(spacing.xs))] max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 self-center  rounded-b-[2rem] 330px:fixed
+        className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 self-center rounded-b-[2rem] bg-bar p-sm  shadow 330px:fixed
         ${
           open
             ? "slide-in-top  flex"

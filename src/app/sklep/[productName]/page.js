@@ -55,7 +55,7 @@ export default function ProductPage({ params }) {
   };
 
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">

@@ -43,7 +43,7 @@ export default function BurgerBar() {
   return (
     <React.Fragment>
       <Btn
-        className=" hover:text-header focus:text-header lg:hidden mr-3xs"
+        className=" mr-3xs hover:text-header focus:text-header lg:hidden"
         type="icon"
         ref={buttonRef}
         onClick={() => {
@@ -55,7 +55,7 @@ export default function BurgerBar() {
       </Btn>
 
       <nav
-        className={`bar left-0 w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]
+        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]  bg-bar p-sm shadow 
         ${
           open
             ? "slide-in-left flex"

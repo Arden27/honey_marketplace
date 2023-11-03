@@ -1,4 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
+import Box from "@/components/Box";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
@@ -9,9 +10,9 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>KONTAKT</section>
+        <Box type="lg">KONTAKT</Box>
       </PageWrapper>
 
       <BottomBox />

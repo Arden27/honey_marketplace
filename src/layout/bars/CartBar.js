@@ -54,7 +54,7 @@ export default function Cart() {
       {/* ARTEM - Tutaj coś nie moge podmienić buttona na Btn, poniżej jak chcę */}
 
       <button
-        className={`btn-icon [&>*]:hover:stroke-header [&>*]:focus:stroke-header ml-3xs
+        className={`btn-icon ml-3xs [&>*]:hover:stroke-header [&>*]:focus:stroke-header
         ${isCartOpen ? "border-2 border-black" : ""}
         `}
         ref={buttonRef}
@@ -81,7 +81,7 @@ export default function Cart() {
       </Btn> */}
 
       <div
-        className={`bar right-0 min-h-[calc(90vh-3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] flex-col rounded-bl-[2rem]
+        className={`fixed right-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20  max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] min-h-[calc(90vh-3*theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.md))] w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] flex-col rounded-bl-[2rem] bg-bar p-sm shadow
         ${
           isCartOpen
             ? "slide-in-right flex"

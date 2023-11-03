@@ -1,4 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
+import Box from "@/components/Box";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 
 export const metadata = {
@@ -9,9 +10,9 @@ export const metadata = {
 
 export default function Order() {
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <section>STATUS ZAMÓWIENIA nr 1</section>
+        <Box type="lg">STATUS ZAMÓWIENIA nr 1</Box>
       </PageWrapper>
 
       <BottomBox />

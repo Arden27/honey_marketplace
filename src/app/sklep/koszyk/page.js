@@ -64,7 +64,7 @@ export default function Order() {
   };
 
   return (
-    <main>
+    <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
           <Btn className="hover:text-bg3" type="sm">
