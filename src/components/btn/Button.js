@@ -21,7 +21,7 @@ function getButtonStyles(type) {
   return styles.trim();
 }
 
-export default function Btn({ href, type, hoverColor = "white", className, children, ...props }) {
+export default function Button({ href, type, hoverColor = "white", className, children, ...props }) {
   const buttonStyles = getButtonStyles(type);
 
   const ButtonContent = (
