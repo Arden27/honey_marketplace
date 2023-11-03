@@ -3,7 +3,7 @@ import React from "react";
 
 import Nav from "./Nav.js";
 import BurgerMenu from "./menu/BurgerMenu.js";
-//import Logo from "./LogoT.js";
+import Logo from "./Logo.js";
 import UserMenu from "@/layout/menu/UserMenu";
 import SearchMenu from "@/layout/menu/SearchMenu";
 // import CartMenu from "@/layout/Menu/CartMenu";
@@ -23,11 +23,11 @@ export default function Header() {
         <div className="fixed left-0 -z-10 h-[calc(theme(spacing.2xl)+theme(spacing.sm))] w-full bg-header shadow"></div>
 
         <div className=" top-0 flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))] grid-cols-[]  items-center ">
-          {/* <BurgerMenu /> */}
-          {/* <Nav /> */}
+          <BurgerMenu />
+          <Nav />
         </div>
 
-        {/* <Logo /> */}
+        <Logo />
 
         <div className="flex h-[calc(theme(spacing.2xl)+theme(spacing.sm))] items-center justify-end">
           <SearchMenu />
