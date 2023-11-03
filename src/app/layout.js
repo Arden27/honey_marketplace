@@ -7,6 +7,7 @@ import "@/style/index.css";
 import LoadDB from "@/components/load-db";
 import Header from "../layout/header";
 import Footer from "../layout/footer";
+import Dimmer from "@/components/Dimmer";
 
 
 export default function RootLayout({ children }) {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <LoadDB />
             <Header />
+            <Dimmer />
             {children}
             <Footer />
           </Providers>

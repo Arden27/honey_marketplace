@@ -10,6 +10,8 @@ import Link from "next/link";
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
 import CartItem from "./cart-bar-item";
+import Button from "@/components/btn/Button";
+
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart } from "@/redux/store";
 
@@ -133,7 +135,16 @@ export default function Cart() {
             </Link>
           </React.Fragment>
         ) : (
-          <p>Koszyk jest pusty</p>
+          <div className="flex flex-col items-center justify-center">
+            <p>Koszyk jest pusty</p>
+            <Button
+              types="lg"
+              href="/sklep/"
+              onClick={() => dispatch(closeCart())}
+            >
+              Przejdź do Sklepu
+            </Button>
+          </div>
         )}
       </div>
     </React.Fragment>
