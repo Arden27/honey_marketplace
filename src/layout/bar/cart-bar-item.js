@@ -1,5 +1,5 @@
-import SetQuantityButton from "@/components/btn/SetQuantityButton";
-import InputQuantity from "@/components/btn/InputQuantity";
+import SetQuantityButton from "@/components/btns/SetQuantityButton";
+import InputQuantity from "@/components/btns/InputQuantity";
 
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";

@@ -2,10 +2,10 @@
 
 import PageWrapper from "@/components/PageWrapper";
 import Box from "@/components/Box";
-import DropdownMenu from "@/components/btn/DropdownMenu";
+import DropdownMenu from "@/components/btns/DropdownMenu";
 
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
-import Pagination from "@/components/btns/Pagination";
+import Pagination from "@/components/btns/paginationy";
 import BottomBox from "@/layout/bottom-box/BottomBox";
 import Breadcrumb from "./_shopComponents/Breadcrumb";
 
