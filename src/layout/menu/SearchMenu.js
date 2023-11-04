@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import { useSelector } from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
 import Btn from "@/components/btns/Btn";
 import SearchBar from "@/components/btns/SearchBar";
+import SearchResult from "@/components/SearchResult";
 import SearchIcon from "public/icons/search.svg";
-import DeleteIcon from "public/icons/x.svg";
 
 export default function SearchMenu() {
   const node = useRef();
@@ -16,11 +17,45 @@ export default function SearchMenu() {
 
   useOutsideClick([node, buttonRef], () => {
     setIsOpen(false);
-  })
+  });
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Access items from Redux store
+  const items = useSelector((state) => state.items);
+
+  // A utility function that removes diacritics
+  function normalizeText(text) {
+    return text
+      .normalize("NFD") // Normalize to NFD Unicode form
+      .replace(/[\u0300-\u036f]/g, ""); // Remove diacritics
+  }
+
+  // Filter items by name, accounting for Polish letters
+  const filteredItems = searchTerm
+    ? items.filter((item) =>
+        normalizeText(item.name)
+          .toLowerCase()
+          .includes(normalizeText(searchTerm).toLowerCase()),
+      )
+    : [];
+
+  // Handler for input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const onSearchClear = () => {
+    setSearchTerm("");
+  };
+
+  const onResultClick = () => {
+    setIsOpen(false);
+    setSearchTerm("");
+  }
 
   return (
     <React.Fragment>
-
       <Btn
         className="ml-3xs hidden hover:text-header  330px:flex"
         type="icon"
@@ -44,7 +79,12 @@ export default function SearchMenu() {
         } `}
         ref={node}
       >
-        <SearchBar />
+        <SearchBar
+          searchTerm={searchTerm}
+          onSearchChange={handleSearchChange}
+          onSearchClear={onSearchClear}
+        />
+        <SearchResult items={filteredItems} onResultClick={onResultClick} />
       </div>
     </React.Fragment>
   );
