@@ -18,17 +18,26 @@ export default function SearchMenu() {
 
   useOutsideClick([node, buttonRef], () => {
     setIsOpen(false);
-  })
+  });
 
   const [searchTerm, setSearchTerm] = useState("");
 
   // Access items from Redux store
   const items = useSelector((state) => state.items);
 
-  // Filter items by name
+  // A utility function that removes diacritics
+  function normalizeText(text) {
+    return text
+      .normalize("NFD") // Normalize to NFD Unicode form
+      .replace(/[\u0300-\u036f]/g, ""); // Remove diacritics
+  }
+
+  // Filter items by name, accounting for Polish letters
   const filteredItems = searchTerm
     ? items.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        normalizeText(item.name)
+          .toLowerCase()
+          .includes(normalizeText(searchTerm).toLowerCase()),
       )
     : [];
 
@@ -38,12 +47,11 @@ export default function SearchMenu() {
   };
 
   const onSearchClear = () => {
-    setSearchTerm("")
-  }
+    setSearchTerm("");
+  };
 
   return (
     <React.Fragment>
-
       <Btn
         className="ml-3xs hidden hover:text-header  330px:flex"
         type="icon"
@@ -67,7 +75,11 @@ export default function SearchMenu() {
         } `}
         ref={node}
       >
-        <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} onSearchClear={onSearchClear}/>
+        <SearchBar
+          searchTerm={searchTerm}
+          onSearchChange={handleSearchChange}
+          onSearchClear={onSearchClear}
+        />
         <SearchResult items={filteredItems} />
       </div>
     </React.Fragment>
