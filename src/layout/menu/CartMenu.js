@@ -19,7 +19,7 @@ export default function Cart() {
   const buttonRef = useRef();
 
   const isCartOpen = useSelector((state) => state.isCartOpen);
-  const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
+  //const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
 
   const cartItems = useSelector((state) => state.cart);
   const [cartItemsCount, setCartItemsCount] = useState(0)
@@ -32,9 +32,10 @@ export default function Cart() {
   const [wasOpened, setWasOpened] = useState(false);
 
   useOutsideClick([node, buttonRef], () => {
-    if (shouldCloseCart) {
-      dispatch(closeCart());
-    }
+    // if (shouldCloseCart) {
+    //   dispatch(closeCart());
+    // }
+    dispatch(closeCart());
   });
 
   useEffect(() => {
@@ -80,9 +81,10 @@ export default function Cart() {
         }}
       >
         <ShoppingCartIcon />
+        {cartItemsCount != 0 && 
         <div className="absolute -right-[9px] -top-[8px] flex h-[19px] w-[19px] items-center justify-center rounded-full bg-text text-xs text-header">
           {cartItemsCount}
-        </div>
+        </div>}
       </Btn>
 
       <div
