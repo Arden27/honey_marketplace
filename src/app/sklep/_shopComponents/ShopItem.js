@@ -1,6 +1,6 @@
 "use client";
 // components
-import RadioGroup from "@/components/RadioGroup";
+import ShopRadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
@@ -55,7 +55,7 @@ export default function ShopItem({ item }) {
           <h4 className="mt-3xs text-center">{item.harvestDate}</h4>
         </div>
 
-        <RadioGroup
+        <ShopRadioGroup
           item={item}
           handleSizeChange={handleSizeChange}
           selectedSize={selectedSize}
