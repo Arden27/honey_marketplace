@@ -10,7 +10,7 @@ import Link from "next/link";
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
 import CartItem from "./cart-bar-item";
-import Button from "@/components/btn/Button";
+import Button from "@/components/btns/Button";
 
 import { formatPrice } from "@/components/formatPrice";
 import { openCart, closeCart } from "@/redux/store";

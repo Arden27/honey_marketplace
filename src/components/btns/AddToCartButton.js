@@ -1,4 +1,4 @@
-import { addToCart } from "@/redux/store";
+import { addToCart, setShouldCloseCart, openCart } from "@/redux/store";
 import { useDispatch } from "react-redux";
 
 export default function AddToCartButton({id, selectedSize, quantity, className}) {
@@ -8,15 +8,15 @@ export default function AddToCartButton({id, selectedSize, quantity, className})
     <button
       className={className}
       onClick={() => {
-        //dispatch(setShouldCloseCart(false));
+        dispatch(setShouldCloseCart(false));
         
         dispatch(addToCart({ id: id, weight: selectedSize, quantity }));
-        // dispatch(openCart());
+        dispatch(openCart());
 
-        // setTimeout(() => {
-        //   dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
+        setTimeout(() => {
+          dispatch(setShouldCloseCart(true)); // allow cart to close after a short delay
           
-        // }, 500);
+        }, 500);
       }}
     >
       Dodaj do koszyka
