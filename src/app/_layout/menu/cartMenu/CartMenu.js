@@ -54,21 +54,6 @@ export default function Cart() {
 
   return (
     <React.Fragment>
-      {/* ARTEM - Tutaj coś nie moge podmienić buttona na Btn, poniżej jak chcę */}
-
-      {/* <button
-        className={`btn-icon ml-3xs [&>*]:hover:stroke-header
-        ${isCartOpen ? "border-2 border-black" : ""}
-        `}
-        ref={buttonRef}
-        onClick={() => {
-          setWasOpened(true);
-          isCartOpen ? dispatch(closeCart()) : dispatch(openCart());
-        }}
-      >
-        <ShoppingCartIcon className="h-[25px] w-[25px]" />
-      </button> */}
-
       <Button
         className={`ml-3xs hover:text-header text-header
         ${isCartOpen ? "bg-text [&>*]:text-header " : ""}

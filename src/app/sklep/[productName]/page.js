@@ -3,7 +3,7 @@
 // components
 import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
-import RadioGroup from "@/components/RadioGroup";
+import RadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
