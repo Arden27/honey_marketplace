@@ -8,7 +8,6 @@ import Btn from "@/components/btns/Btn";
 import SearchBar from "@/components/btns/SearchBar";
 import SearchResult from "@/components/SearchResult";
 import SearchIcon from "public/icons/search.svg";
-import DeleteIcon from "public/icons/x.svg";
 
 export default function SearchMenu() {
   const node = useRef();
@@ -50,6 +49,11 @@ export default function SearchMenu() {
     setSearchTerm("");
   };
 
+  const onResultClick = () => {
+    setIsOpen(false);
+    setSearchTerm("");
+  }
+
   return (
     <React.Fragment>
       <Btn
@@ -80,7 +84,7 @@ export default function SearchMenu() {
           onSearchChange={handleSearchChange}
           onSearchClear={onSearchClear}
         />
-        <SearchResult items={filteredItems} />
+        <SearchResult items={filteredItems} onResultClick={onResultClick} />
       </div>
     </React.Fragment>
   );
