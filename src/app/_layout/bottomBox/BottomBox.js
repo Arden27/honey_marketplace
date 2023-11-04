@@ -1,7 +1,7 @@
-import PageWrapper from "@/components/PageWrapper";
-import PromoBox from "@/layout/bottom-box/PromoBox";
-import RecommendedProductsBox from "@/layout/bottom-box/RecommendedProductsBox";
-import RecommendedArticlesBox from "@/layout/bottom-box/RecommendedArticlesBox";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import PromoBox from "@/app/_layout/bottomBox/PromoBox";
+import RecommendedProductsBox from "@/app/_layout/bottomBox/RecommendedProductsBox";
+import RecommendedArticlesBox from "@/app/_layout/bottomBox/RecommendedArticlesBox";
 
 export default function BottomBox() {
   return (

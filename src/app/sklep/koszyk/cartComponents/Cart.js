@@ -1,10 +1,10 @@
-import CartItem from "@/layout/bar/cart-bar-item";
+import CartItem from "@/app/_homeComponents/bar/cart-bar-item";
 
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
-import { formatPrice } from "@/components/formatPrice";
+import { formatPrice } from "@/utils/formatPrice";
 
 export default function Cart({}){
   const [totalPrice, setTotalPrice] = useState(0);

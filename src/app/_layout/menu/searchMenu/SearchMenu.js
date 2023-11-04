@@ -4,9 +4,9 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
-import Btn from "@/components/btns/Btn";
-import SearchBar from "@/components/btns/SearchBar";
-import SearchResult from "@/components/SearchResult";
+import Button from "@/components/Button";
+import SearchBar from "@/app/_layout/menu/searchMenu/SearchBar";
+import SearchResult from "@/app/_layout/menu/searchMenu/SearchResult";
 import SearchIcon from "public/icons/search.svg";
 
 export default function SearchMenu() {
@@ -56,7 +56,7 @@ export default function SearchMenu() {
 
   return (
     <React.Fragment>
-      <Btn
+      <Button
         className="ml-3xs hidden hover:text-header  330px:flex"
         type="icon"
         ref={buttonRef}
@@ -66,7 +66,7 @@ export default function SearchMenu() {
         }}
       >
         <SearchIcon />
-      </Btn>
+      </Button>
 
       <div
         className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 self-center rounded-b-[2rem] bg-bar p-sm  shadow 330px:fixed

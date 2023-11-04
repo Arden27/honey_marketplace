@@ -1,13 +1,13 @@
-import Box from "@/components/Box";
-import Btn from "@/components/btns/Btn";
+import Box from "@/app/_layout/Box";
+import Button from "@/components/Button";
 
 export default function RegisterBox() {
   return (
     <Box type="sm">
       <h2>Zarejestruj się</h2>
-      <Btn className="self-end hover:text-bg3" href="" type="lg">
+      <Button className="self-end hover:text-bg3" href="" type="lg">
         Kontynuuj
-      </Btn>
+      </Button>
     </Box>
   );
 }

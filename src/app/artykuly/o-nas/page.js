@@ -1,6 +1,6 @@
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
-import BottomBox from "@/layout/bottom-box/BottomBox";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
+import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
 export const metadata = {
   title: "O nas - Dobry Bartnik",

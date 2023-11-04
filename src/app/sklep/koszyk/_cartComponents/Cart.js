@@ -1,11 +1,11 @@
-import Box from "@/components/Box";
+import Box from "@/app/_layout/Box";
 import CartItem from "@/app/sklep/koszyk/_cartComponents/CartItem";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
-import { formatPrice } from "@/components/formatPrice";
+import { formatPrice } from "@/utils/formatPrice";
 
 export default function Cart({}) {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -81,13 +81,13 @@ export default function Cart({}) {
         )}
       </div>
 
-      <Btn
+      <Button
         className="justify-self-center hover:text-bg"
         href=""
         type="lg hover"
       >
         Sprawdź już dziś!
-      </Btn>
+      </Button>
     </Box>
   );
 }

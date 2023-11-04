@@ -24,7 +24,7 @@ function getButtonStyles(type) {
   return styles.trim();
 }
 
-function Btn({ href, type, className, children, ...props }, ref) {
+function Button({ href, type, className, children, ...props }, ref) {
   const buttonStyles = getButtonStyles(type);
 
   const ButtonContent = (
@@ -46,4 +46,4 @@ function Btn({ href, type, className, children, ...props }, ref) {
   return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
 }
 
-export default React.forwardRef(Btn);
+export default React.forwardRef(Button);

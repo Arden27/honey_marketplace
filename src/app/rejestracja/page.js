@@ -1,5 +1,5 @@
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
 
 export const metadata = {
   title: "Rejestracja - Dobry Bartnik",

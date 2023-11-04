@@ -1,6 +1,6 @@
 "use client";
 
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 import ShoppingCartIcon from "public/icons/shopping-cart.svg";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -8,8 +8,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "@/redux/store";
 
-import CartItem from "../../app/sklep/koszyk/_cartComponents/CartItem";
-import { formatPrice } from "@/components/formatPrice";
+import CartItem from "../../../sklep/koszyk/_cartComponents/CartItem";
+import { formatPrice } from "@/utils/formatPrice";
 import { openCart, closeCart } from "@/redux/store";
 
 import useOutsideClick from "@/hooks/useOutsideClick";
@@ -69,7 +69,7 @@ export default function Cart() {
         <ShoppingCartIcon className="h-[25px] w-[25px]" />
       </button> */}
 
-      <Btn
+      <Button
         className={`ml-3xs hover:text-header text-header
         ${isCartOpen ? "bg-text [&>*]:text-header " : ""}
         `}
@@ -85,7 +85,7 @@ export default function Cart() {
         <div className="absolute -right-[9px] -top-[8px] flex h-[19px] w-[19px] items-center justify-center rounded-full bg-text text-xs text-header">
           {cartItemsCount}
         </div>}
-      </Btn>
+      </Button>
 
       <div
         className={`cart-items-scrollbar fixed right-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))]  -z-20  max-h-[calc(100%-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))] w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] flex-col gap-sm overflow-auto rounded-bl-[2rem] bg-bar p-sm shadow
@@ -148,14 +148,14 @@ export default function Cart() {
               </div>
             </div>
             <div className="flex justify-center">
-              <Btn
+              <Button
                 className=" hover:text-bar "
                 href="/sklep/koszyk"
                 type="lg"
                 onClick={() => dispatch(closeCart())}
               >
                 Zamawiam
-              </Btn>
+              </Button>
             </div>
           </React.Fragment>
         ) : (

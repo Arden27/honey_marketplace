@@ -1,12 +1,13 @@
 "use client";
 
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
-import DropdownMenu from "@/components/btns/DropdownMenu";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
+
+import DropdownMenu from "@/components/DropdownMenu";
 
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
-import Pagination from "@/components/btns/paginationy";
-import BottomBox from "@/layout/bottom-box/BottomBox";
+import Pagination from "@/components/paginationy";
+import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 import Breadcrumb from "./_shopComponents/Breadcrumb";
 
 import { useState } from "react";
@@ -14,7 +15,8 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 import dynamic from "next/dynamic";
 
-const Items = dynamic(() => import("@/components/Items"), {
+
+const Items = dynamic(() => import("@/app/sklep/_shopComponents/Items"), {
   ssr: false,
 });
 
@@ -49,7 +51,7 @@ export default function Shop() {
                 searchParams={searchParams}
               />
               <DropdownMenu onSelect={handleSort}>
-                {/* <DropdownMenu.Button></DropdownMenu.Button> */}
+                <DropdownMenu.Button>dupa</DropdownMenu.Button>
 
                 <DropdownMenu.Option>A-Z</DropdownMenu.Option>
                 <DropdownMenu.Option>Z-A</DropdownMenu.Option>

@@ -2,9 +2,9 @@
 
 // components
 
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
-import Btn from "@/components/btns/Btn";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
+import Button from "@/components/Button";
 import BillingForm from "./_cartComponents/BillingForm";
 import DeliveryForm from "./_cartComponents/DeliveryForm";
 import PaymentForm from "./_cartComponents/PaymentForm";
@@ -67,9 +67,9 @@ export default function Order() {
     <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
-          <Btn className="hover:text-bg3" type="sm">
+          <Button className="hover:text-bg3" type="sm">
             dupa
-          </Btn>
+          </Button>
 
           <h1>Koszyk</h1>
 

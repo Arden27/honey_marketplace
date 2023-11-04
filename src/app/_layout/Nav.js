@@ -1,55 +1,55 @@
 import React from "react";
 
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function Nav() {
   return (
     <nav className="">
       <ul className="flex">
         <li className="mr-3xs hidden 380px:!flex lg:flex">
-          <Btn
+          <Button
             className="hover:text-header"
             href="/sklep"
             type="sm"
           >
             Sklep
-          </Btn>
+          </Button>
         </li>
         <li className="mr-3xs hidden lg:!hidden xl:!flex">
-          <Btn
+          <Button
             className="border-transparent hover:text-header "
             href="/"
             type="sm"
           >
             Główna
-          </Btn>
+          </Button>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Btn
+          <Button
             className="border-transparent hover:text-header"
             href="/artykuly/o-nas"
             type="sm"
           >
             O nas
-          </Btn>
+          </Button>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Btn
+          <Button
             className="border-transparent hover:text-header"
             href="/artykuly"
             type="sm"
           >
             Artykuły
-          </Btn>
+          </Button>
         </li>
         <li className="mr-3xs hidden lg:flex ">
-          <Btn
+          <Button
             className="border-transparent hover:text-header"
             href="/kontakt"
             type="sm"
           >
             Kontakt
-          </Btn>
+          </Button>
         </li>
       </ul>
     </nav>
