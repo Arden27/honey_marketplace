@@ -1,6 +1,6 @@
-import Box from "@/components/Box";
+import Box from "@/app/_layout/Box";
 import Link from "next/link";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function LogInBox() {
   return (
@@ -38,9 +38,9 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <Btn className="self-end hover:text-bg3" href="" type="lg">
+      <Button className="self-end hover:text-bg3" href="" type="lg">
         Zaloguj się
-      </Btn>
+      </Button>
     </Box>
   );
 }

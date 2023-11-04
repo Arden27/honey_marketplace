@@ -1,4 +1,4 @@
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function PromoBox() {
   return (
@@ -14,13 +14,13 @@ export default function PromoBox() {
         rabatu
       </h2>
 
-      <Btn
+      <Button
         className="self-end border-transparent bg-bg hover:text-bg"
         href="/sklep"
         type="lg"
       >
         Przejdź do sklepu
-      </Btn>
+      </Button>
     </section>
   );
 }

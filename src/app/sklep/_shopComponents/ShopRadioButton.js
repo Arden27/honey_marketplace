@@ -1,6 +1,6 @@
 import React from "react";
 
-function RadioBtn({ sizeObj, item, handleSizeChange, selectedSize }) {
+function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
 	return (
 		<React.Fragment>
 			<input
@@ -26,4 +26,4 @@ function RadioBtn({ sizeObj, item, handleSizeChange, selectedSize }) {
 	);
 }
 
-export default RadioBtn;
+export default ShopRadioButton;

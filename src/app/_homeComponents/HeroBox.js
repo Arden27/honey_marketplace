@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function HeroBox() {
   return (
@@ -16,9 +16,9 @@ export default function HeroBox() {
       <h2 className="absolute p-sm">Zobacz nasze najnowsze zbiory!</h2>
 
       <Link className="absolute bottom-sm" href="/sklep">
-        <Btn className="border-transparent bg-bg hover:text-bg" type="lg">
+        <Button className="border-transparent bg-bg hover:text-bg" type="lg">
           Przejdź do sklepu
-        </Btn>
+        </Button>
       </Link>
     </section>
   );

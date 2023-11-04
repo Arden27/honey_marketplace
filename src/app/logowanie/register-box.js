@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import Box from "@/components/Box";
+import Box from "@/app/_layout/Box";
 
 export default function RegisterBox() {
   return (

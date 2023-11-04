@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function HowToBox() {
   return (
@@ -21,9 +21,9 @@ export default function HowToBox() {
         className="absolute bottom-sm"
         href="/artykuly/jak-rozpoznac-prawdziwy-miod"
       >
-        <Btn className="border-transparent bg-bg hover:text-bg" type="lg">
+        <Button className="border-transparent bg-bg hover:text-bg" type="lg">
           Sprawdź już dziś!
-        </Btn>
+        </Button>
       </Link>
     </section>
   );

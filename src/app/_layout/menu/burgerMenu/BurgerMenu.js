@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Button from "@/components/Button";
 import BurgerIcon from "public/icons/menu.svg";
+
+import React, { useState, useEffect, useRef } from "react";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
 export default function BurgerBar() {
@@ -40,19 +42,20 @@ export default function BurgerBar() {
 
   return (
     <React.Fragment>
-      <button
+      <Button
+        className=" mr-3xs hover:text-header lg:hidden"
+        type="icon"
         ref={buttonRef}
-        className="btn-icon fixed lg:hidden [&>*]:hover:stroke-header [&>*]:focus:stroke-header"
         onClick={() => {
           setWasOpened(true);
           setOpen(!open);
         }}
       >
-        <BurgerIcon className="h-[25px] w-[25px]" />
-      </button>
+        <BurgerIcon />
+      </Button>
 
       <nav
-        className={`bar left-0 w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]
+        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]  bg-bar p-sm shadow 
         ${
           open
             ? "slide-in-left flex"
@@ -65,7 +68,7 @@ export default function BurgerBar() {
       >
         <div className="relative -left-sm w-[calc(100%+theme(spacing.md))] rounded-r-[2rem] bg-bg2 ">
           <ul
-            className="[&_ul]:btnsm [&>li>a]:btn-lg [&>li]: [&>li>a]:bg- flex flex-col  [&>li>a]:mb-3xs 
+            className="[&_ul]:btnsm [&>li]: [&>li>a]:bg- flex flex-col  [&>li>a]:mb-3xs 
         [&>li>a]:border-text"
           >
             <li>
@@ -74,7 +77,7 @@ export default function BurgerBar() {
 
             <li>
               <Link href="/sklep">Sklep</Link>
-              <ul className="[&>li>a]:btn-svm box">
+              <ul className="box">
                 <li>
                   <Link href="/sklep?kategoria=promocje">Promocje</Link>
                 </li>

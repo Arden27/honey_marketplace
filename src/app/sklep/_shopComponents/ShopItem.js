@@ -1,15 +1,15 @@
 "use client";
 // components
-import RadioGroup from "@/components/btns/RadioGroup";
-import SetQuantityButton from "@/components/btns/SetQuantityButton";
-import InputQuantity from "@/components/btns/InputQuantity";
-import AddToCartButton from "@/components/btns/AddToCartButton";
+import RadioGroup from "@/components/RadioGroup";
+import SetQuantityButton from "@/components/SetQuantityButton";
+import InputQuantity from "@/components/InputQuantity";
+import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
 // libs
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // utils
-import { formatPrice } from "@/components/formatPrice";
+import { formatPrice } from "@/utils/formatPrice";
 
 export default function ShopItem({ item }) {
   // Find the default size object

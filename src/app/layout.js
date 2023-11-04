@@ -4,9 +4,9 @@ import Providers from "@/redux/provider";
 
 import "@/style/index.css";
 
-import LoadDB from "@/components/LoadDB";
-import Header from "../layout/Header";
-import Footer from "../layout/Footer";
+import LoadDB from "@/utils/LoadDB";
+import Header from "./_layout/Header";
+import Footer from "./_layout/Footer";
 import Dimmer from "@/components/Dimmer";
 
 

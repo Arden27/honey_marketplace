@@ -1,21 +1,21 @@
 "use client";
 
 // components
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
-import RadioGroup from "@/components/btns/RadioGroup";
-import SetQuantityButton from "@/components/btns/SetQuantityButton";
-import InputQuantity from "@/components/btns/InputQuantity";
-import AddToCartButton from "@/components/btns/AddToCartButton";
-import SelectButton from "@/components/btns/SelectButton";
-import BottomBox from "@/layout/bottom-box/BottomBox";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
+import RadioGroup from "@/components/RadioGroup";
+import SetQuantityButton from "@/components/SetQuantityButton";
+import InputQuantity from "@/components/InputQuantity";
+import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
+import SelectButton from "@/components/SelectButton";
+import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
 // libs
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-import { formatPrice } from "@/components/formatPrice";
+import { formatPrice } from "@/utils/formatPrice";
 
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/components/btns/RadioBtn"), {
+const RadioBtn = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
   ssr: false,
 });
 

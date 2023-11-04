@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 
 export default function AboutBox() {
   return (
@@ -18,13 +18,13 @@ export default function AboutBox() {
           blanditiis, odit corporis quos ipsa fugit, aliquam
         </p>
 
-        <Btn
+        <Button
           className="mt-md self-end hover:text-about-box active:text-about-box"
           href="/sklep/o-nas"
           type="sm"
         >
           Czytaj dalej
-        </Btn>
+        </Button>
       </article>
     </section>
   );

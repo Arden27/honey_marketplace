@@ -1,10 +1,10 @@
-import SetQuantityButton from "@/components/btns/SetQuantityButton";
-import InputQuantity from "@/components/btns/InputQuantity";
+import SetQuantityButton from "@/components/SetQuantityButton";
+import InputQuantity from "@/components/InputQuantity";
 
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateCartItem } from "@/redux/store";
-import { formatPrice } from "@/components/formatPrice";
+import { formatPrice } from "@/utils/formatPrice";
 
 import Image from "next/image";
 import TrashIcon from "public/icons/trash.svg";

@@ -1,5 +1,5 @@
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
 import LogInBox from "@/app/logowanie/loginComponents/LogInBox";
 import RegisterBox from "@/app/logowanie/loginComponents/RegisterBox";
 import NoRegisterBox from "@/app/logowanie/loginComponents/NoRegisterBox";

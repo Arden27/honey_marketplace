@@ -1,7 +1,7 @@
-import PageWrapper from "@/components/PageWrapper";
-import Box from "@/components/Box";
+import PageWrapper from "@/app/_layout/PageWrapper";
+import Box from "@/app/_layout/Box";
 import Link from "next/link";
-import Btn from "@/components/btns/Btn";
+import Button from "@/components/Button";
 import FacebookIcon from "public/icons/facebook.svg";
 import InstagramIcon from "public/icons/at.svg";
 import YouTubeIcon from "public/icons/youtube.svg";
@@ -97,49 +97,49 @@ export default function Footer() {
           <ul className="mb-sm flex flex-wrap sm:col-start-2 sm:mb-0 sm:!justify-end sm:text-right">
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn className=" self-center hover:text-footer" type="icon">
+                <Button className=" self-center hover:text-footer" type="icon">
                   <FacebookIcon />
-                </Btn>
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn
+                <Button
                   className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <InstagramIcon />
-                </Btn>
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn
+                <Button
                   className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <YouTubeIcon />
-                </Btn>
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn
+                <Button
                   className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <SignalIcon />
-                </Btn>
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Btn
+                <Button
                   className="ml-3xs self-center hover:text-footer"
                   type="icon"
                 >
                   <TelegramIcon />
-                </Btn>
+                </Button>
               </Link>
             </li>
           </ul>

@@ -34,7 +34,7 @@ export default function DropdownMenu({ children, onSelect }) {
 
   return (
     <DropdownContext.Provider value={{ selected, handleSelect }}>
-      <div className="relative w-96 text-end cursor-pointer">
+      <div className="relative text-end cursor-pointer">
         <div ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
           {selected} <span>{isOpen ? "▲" : "▼"}</span>
         </div>
