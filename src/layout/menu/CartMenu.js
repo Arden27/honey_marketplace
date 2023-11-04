@@ -22,6 +22,7 @@ export default function Cart() {
   const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
 
   const cartItems = useSelector((state) => state.cart);
+  const [cartItemsCount, setCartItemsCount] = useState(0)
   const items = useSelector((state) => state.items);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -39,11 +40,14 @@ export default function Cart() {
   useEffect(() => {
     // Calculate total price when cartItems or items change
     let total = 0;
+    let count = 0;
     for (let cartItem of cartItems) {
       const item = items.find((item) => item.id === cartItem.id);
       const size = item.sizes.find((size) => size.size === cartItem.weight);
       total += size.price * cartItem.quantity;
+      count += cartItem.quantity;
     }
+    setCartItemsCount(count)
     setTotalPrice(total);
   }, [cartItems, items]);
 
@@ -77,7 +81,7 @@ export default function Cart() {
       >
         <ShoppingCartIcon />
         <div className="absolute -right-[9px] -top-[8px] flex h-[19px] w-[19px] items-center justify-center rounded-full bg-text text-xs text-header">
-          99
+          {cartItemsCount}
         </div>
       </Btn>
 
