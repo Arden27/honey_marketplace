@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import { useSelector } from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
 import Btn from "@/components/btns/Btn";
 import SearchBar from "@/components/btns/SearchBar";
+import SearchResult from "@/components/SearchResult";
 import SearchIcon from "public/icons/search.svg";
 import DeleteIcon from "public/icons/x.svg";
 
@@ -17,6 +19,27 @@ export default function SearchMenu() {
   useOutsideClick([node, buttonRef], () => {
     setIsOpen(false);
   })
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Access items from Redux store
+  const items = useSelector((state) => state.items);
+
+  // Filter items by name
+  const filteredItems = searchTerm
+    ? items.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      )
+    : [];
+
+  // Handler for input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const onSearchClear = () => {
+    setSearchTerm("")
+  }
 
   return (
     <React.Fragment>
@@ -44,7 +67,8 @@ export default function SearchMenu() {
         } `}
         ref={node}
       >
-        <SearchBar />
+        <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} onSearchClear={onSearchClear}/>
+        <SearchResult items={filteredItems} />
       </div>
     </React.Fragment>
   );
