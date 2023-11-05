@@ -55,7 +55,7 @@ export default function Cart() {
   return (
     <React.Fragment>
       <Button
-        className={`ml-3xs hover:text-header text-header
+        className={`relative ml-3xs hover:text-header text-header
         ${isCartOpen ? "bg-text [&>*]:text-header " : ""}
         `}
         type="icon"
@@ -67,7 +67,7 @@ export default function Cart() {
       >
         <ShoppingCartIcon />
         {cartItemsCount != 0 && 
-        <div className="absolute -right-[9px] -top-[8px] flex h-[19px] w-[19px] items-center justify-center rounded-full bg-text text-xs text-header">
+        <div className="absolute -right-[8px] -top-[7px] flex h-[18px] min-w-[18px] p-[3px] items-center justify-center rounded-full bg-text text-xs text-header">
           {cartItemsCount}
         </div>}
       </Button>
