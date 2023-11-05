@@ -7,7 +7,7 @@ export default function Dimmer() {
 
   return (
     <div
-      className={`fixed z-40 inset-0 bg-black transition-opacity duration-500 ease-in-out ${
+      className={`fixed z-40 inset-0 bg-black transition-opacity duration-300 ease-in-out ${
         isCartOpen ? "opacity-50" : "opacity-0 pointer-events-none"
       }`}
     ></div>

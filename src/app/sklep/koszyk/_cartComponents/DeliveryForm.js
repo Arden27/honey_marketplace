@@ -2,6 +2,7 @@ import Box from "@/app/_layout/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
+import Button from "@/components/Button";
 
 import { useState } from "react";
 
@@ -192,9 +193,9 @@ export default function DeliveryForm({
           </FormFieldset>
 
           <div className="flex justify-center">
-            <button
-              className="btn-sm border-text"
-              type="button"
+            <Button
+              className="hover:text-bg3"
+              type="sm"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,
@@ -203,7 +204,7 @@ export default function DeliveryForm({
               }
             >
               Zapisz
-            </button>
+            </Button>
           </div>
         </form>
       ) : (

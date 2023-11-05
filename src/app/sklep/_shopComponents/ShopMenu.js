@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import PageWrapper from "@/app/_layout/PageWrapper";
 
 export default function ShopMenu() {
   return (

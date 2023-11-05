@@ -13,6 +13,8 @@ export default function InputQuantity({ quantity, setQuantity, className }) {
 
   return (
     <input
+
+    // ARTEM ??
       // className="h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
       className={className}
       type="number"
