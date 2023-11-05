@@ -9,6 +9,7 @@ import BillingForm from "./_cartComponents/BillingForm";
 import DeliveryForm from "./_cartComponents/DeliveryForm";
 import PaymentForm from "./_cartComponents/PaymentForm";
 import Cart from "./_cartComponents/Cart";
+import Checkbox from "@/components/Checkbox";
 
 import { useState } from "react";
 
@@ -70,6 +71,8 @@ export default function Order() {
           <Button className="hover:text-bg3" type="sm">
             dupa
           </Button>
+
+          <Checkbox>dupa</Checkbox>
 
           <h1>Koszyk</h1>
 

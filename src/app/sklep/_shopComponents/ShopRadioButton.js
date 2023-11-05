@@ -15,14 +15,13 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
       />
       <label
         htmlFor={`weight-${sizeObj.size}-${item.id}`}
-        className={`hover:text-shop-item ${
+        className={` h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid  font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out ${
           sizeObj.size === selectedSize
-            ? "text-text [&>*]:border-text"
-            : "text-text [&>*]:border-transparent"
+            ? "border-text"
+            : "border-transparent"
         }`}
       >
-
-{/* ARTEM - Przy próbie implementacji buttona, przestaje działać funkcja. Czy to powinno być na inpututach i labelach na pewno? Jakoś mi to nie pasuje. No komponentu głupiego brakuje */}
+        {/* ARTEM - Nadal jest schrzanione, nie moge ustawić wysokości labela, chociaż wcześniej mogłem.. no dziwne coś tu jest i nie wiem co */}
 
         {/* <Button className="" type="sm">
           {sizeObj.size}
@@ -35,3 +34,9 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
 }
 
 export default ShopRadioButton;
+
+
+
+// na tych starych stylach niby dzialało, a teraz nie działa: .btn-sm {
+//     @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out;
+//   }

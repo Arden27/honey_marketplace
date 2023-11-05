@@ -6,7 +6,7 @@ import Box from "@/app/_layout/Box";
 import DropdownMenu from "@/components/DropdownMenu";
 
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
-import Pagination from "@/components/paginationy";
+import Pagination from "@/components/Pagination";
 import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 import Breadcrumb from "./_shopComponents/Breadcrumb";
 

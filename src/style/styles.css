@@ -39,16 +39,16 @@
     before:content-["*"];
   }
 
-  /* input[type="checkbox"] {
-    @apply inline-block h-sm w-sm rounded-[2rem] border-2 border-text bg-transparent text-center  checked:after:absolute checked:after:content-['\2714'];
-    -webkit-appearance: none;
+  input[type="checkbox"] {
+    /* @apply inline-block h-sm w-sm rounded-[2rem] border-2 border-text bg-transparent text-center  checked:after:absolute checked:after:content-['\2714']; */
+
   }
   input[type="checkbox"]:checked,
   input[type="checkbox"]:active {
-    @apply bg-[#e9ecee];
+    /* @apply bg-[#e9ecee]; */
   }
 
-  label[type="checkbox"] {
+  /* label[type="checkbox"] {
     @apply ml-3xs inline-block bg-red-100;
   } */
 
