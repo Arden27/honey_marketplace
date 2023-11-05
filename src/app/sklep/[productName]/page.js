@@ -3,7 +3,7 @@
 // components
 import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
-import RadioGroup from "@/components/RadioGroup";
+import ShopRadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
@@ -23,7 +23,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const RadioBtn = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
+const ShopRadioButton = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
   ssr: false,
 });
 

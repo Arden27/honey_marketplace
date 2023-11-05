@@ -68,7 +68,7 @@ export default function BurgerBar() {
       >
         <div className="relative -left-sm w-[calc(100%+theme(spacing.md))] rounded-r-[2rem] bg-bg2 ">
           <ul
-            className="[&_ul]:btnsm [&>li]: [&>li>a]:bg- flex flex-col  [&>li>a]:mb-3xs 
+            className="flex flex-col  [&>li>a]:mb-3xs 
         [&>li>a]:border-text"
           >
             <li>

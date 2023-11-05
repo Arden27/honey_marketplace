@@ -1,8 +1,8 @@
-
 import Box from "@/app/_layout/Box";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
+import Button from "@/components/Button";
 
 export default function PaymentForm({
   isEditing,
@@ -55,9 +55,9 @@ export default function PaymentForm({
           </FormFieldset>
 
           <div className="flex justify-center">
-            <button
-              type="button"
-              className="btn-sm border-text"
+            <Button
+              type="sm"
+              className="hover:text-bg3"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,
@@ -66,7 +66,7 @@ export default function PaymentForm({
               }
             >
               Zapisz
-            </button>
+            </Button>
           </div>
         </form>
       ) : (
