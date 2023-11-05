@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ConsentsForm() {
   return (
-    <div>
+    <div className="mb-sm">
       <Checkbox>
         Potwierdzam, że zapoznałem się i akceptuję{" "}
         <Link className="whitespace-nowrap underline" href="/">
@@ -17,9 +17,11 @@ export default function ConsentsForm() {
       </Checkbox>
       <Checkbox>Chcę się zapisać do newslettera.</Checkbox>
 
-      <span className="flex text-xs items-center mt-sm">
-        <span className="text-lg text-warning mt-[8px]">*</span> &nbsp;-
-        Pola wymagane
+      {/* Artem - Jeżeli is Required to dodawać * - Pola wymagane */}
+
+      <span className="flex mt-2xs items-center text-xs h-sm">
+        <span className="mt-[8px] text-lg text-warning">*</span> &nbsp;- Pola
+        wymagane
       </span>
     </div>
   );

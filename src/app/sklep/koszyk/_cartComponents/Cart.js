@@ -28,10 +28,7 @@ export default function Cart({}) {
   }, [cartItems, items]);
 
   return (
-    <Box
-      className="sticky top-[calc(theme(spacing.2xl)+2*theme(spacing.sm))] !flex max-h-[calc(100svh-2*theme(spacing.3xl))]  flex-col rounded-bl-[2rem] !bg-bar"
-      type="sm"
-    >
+    <Box className="sticky top-[calc(theme(spacing.2xl)+2*theme(spacing.sm))] !flex max-h-[calc(100svh-2*theme(spacing.3xl))] flex-col  rounded-bl-[2rem] bg-bar">
       {cartItems.length > 0 ? (
         <React.Fragment>
           <div className="cart-items-scrollbar min-h-[calc(theme(spacing.3xl)+theme(spacing.xl)+theme(spacing.sm))] overflow-auto rounded-tl-[2rem] rounded-tr-[2rem] border-b-2 border-text">
@@ -55,7 +52,7 @@ export default function Cart({}) {
               );
             })}
           </div>
-          <div className="mb-sm">
+          <div className="">
             <div className=" mb-2xs flex items-end justify-between whitespace-nowrap text-warning">
               <h3 className="text-end font-sans">Wyprzedaż:</h3>
               <h3 className="font-sans">-{formatPrice(totalPrice, 0.05)} zł</h3>
@@ -81,13 +78,12 @@ export default function Cart({}) {
         <p>Koszyk jest pusty</p>
       )}
 
-      <ConsentsForm />
-
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center ">
+        <ConsentsForm />
         <Button
-          className="justify-items-center hover:text-bg"
+          className=" hover:text-bg"
           href=""
-          type="lg hover"
+          type="lg"
         >
           Przejdź do płatności
         </Button>
