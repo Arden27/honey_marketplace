@@ -1,8 +1,8 @@
 import Box from "@/app/_layout/Box";
+import Button from "@/components/Button";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
-import Button from "@/components/Button";
 
 export default function BillingForm({
   isEditing,
@@ -12,8 +12,9 @@ export default function BillingForm({
 }) {
   return (
     <Box className="relative" type="sm">
-      <button
-        className="absolute right-0 m-sm"
+      <Button
+        className="absolute right-0 m-2xs hover:text-bg3"
+        type="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -22,18 +23,15 @@ export default function BillingForm({
         }
       >
         <EditIcon />
-      </button>
+      </Button>
 
-      <label>
-
-        <input></input>
-      </label>
+      {/* ARTEM - problem z wyśrodkowaniem buttona i tytułu labela */}
 
       {isEditing.personalBillingData ? (
         // Input fields for editing mode
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className="grid gap-sm" onSubmit={(e) => e.preventDefault()}>
           <FormFieldset legend="Moje dane">
-            <div className="flex gap-3xs">
+            <div className="flex gap-3xs md:flex-col lg:flex-row">
               <InputLabel
                 type="text"
                 id="main-adress-firstname"
@@ -102,7 +100,7 @@ export default function BillingForm({
                 )
               }
             />
-            <div className="flex gap-3xs">
+            <div className="flex gap-3xs md:flex-col lg:flex-row">
               <InputLabel
                 type="text"
                 id="main-adress-zipcode"

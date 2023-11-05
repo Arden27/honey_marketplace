@@ -68,15 +68,9 @@ export default function Order() {
     <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
-          <Button className="hover:text-bg3" type="sm">
-            dupa
-          </Button>
-
-          <Checkbox>dupa</Checkbox>
-
           <h1>Koszyk</h1>
 
-          <div className="grid grid-rows-1 gap-sm sm:grid-cols-[minmax(calc(50%-theme(spacing.2xs)),auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
+          <div className="grid grid-rows-1 gap-sm md:grid-cols-[minmax(40%,auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
             <div className="flex flex-col gap-sm">
               <BillingForm
                 isEditing={isEditing}
@@ -100,7 +94,7 @@ export default function Order() {
                 handleInputChange={handleInputChange}
               />
             </div>
-            <div>
+            <div className="">
               <Cart />
             </div>
           </div>

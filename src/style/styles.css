@@ -1,7 +1,11 @@
 @layer base {
+
+    :focus {
+    @apply outline-none;
+  }
   
   :focus-visible {
-    @apply rounded-[2rem] outline outline-2 outline-offset-2 outline-accent2;
+    @apply rounded-[2rem] outline outline-2 outline-offset-2 outline-yellow-800;
   }
 
   /* --- SCROLLBAR --- */
@@ -28,8 +32,8 @@
   input[type="phone"],
   input[type="text"],
   input[type="email"] {
-    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-full rounded-[2rem] border-2 border-solid border-text   bg-transparent p-sm text-text transition-colors duration-300 ease-in-out
-    placeholder:text-text placeholder:opacity-50;
+    @apply mt-md h-[calc(theme(spacing.lg)+theme(spacing.xs))] w-full rounded-[2rem] border-2 border-solid border-text   bg-transparent p-sm text-text transition-colors duration-300 ease-in-out border-opacity-50 focus:border-opacity-100
+    placeholder:text-text placeholder:opacity-50 ;
   }
 
   label[type="phone"],
