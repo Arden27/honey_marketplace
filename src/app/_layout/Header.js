@@ -1,6 +1,3 @@
-import React from "react";
-
-
 import Nav from "./Nav.js";
 import BurgerMenu from "./menu/burgerMenu/BurgerMenu.js";
 import Logo from "./Logo.js";
@@ -10,7 +7,6 @@ import SearchMenu from "@/app/_layout/menu/searchMenu/SearchMenu.js";
 
 // ARTEM - Tego chyba tutaj nie powinno być, a w @/layout/Menu/CartMenu
 import dynamic from "next/dynamic";
-import PageWrapper from "@/app/_layout/PageWrapper.js";
 
 const CartMenu = dynamic(() => import("@/app/_layout/menu/cartMenu/CartMenu.js"), {
   ssr: false,
