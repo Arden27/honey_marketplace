@@ -25,13 +25,11 @@ export default function Home() {
         md:grid-cols-[3fr_2fr] md:grid-rows-1"
         >
           <HeroBox />
-
           <HowToBox />
         </div>
       </PageWrapper>
 
       <AboutBox />
-
       <BottomBox />
     </main>
   );
