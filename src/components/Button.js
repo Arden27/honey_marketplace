@@ -30,8 +30,8 @@ function Button({ href, type, className, children, ...props }, ref) {
   const ButtonContent = (
     <button
       ref={ref}
-      className={`flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
-      active:top-[1px] active:opacity-90 
+      className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
+      active:top-[2px] active:opacity-90 
       ${buttonStyles}
       ${className}
       `}

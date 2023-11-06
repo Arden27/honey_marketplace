@@ -1,6 +1,8 @@
 import Box from "@/app/_layout/Box";
 import Button from "@/components/Button";
 import EditIcon from "public/icons/edit.svg";
+import AtIcon from "public/icons/at.svg";
+import PhoneIcon from "public/icons/phone.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
 
@@ -13,7 +15,7 @@ export default function BillingForm({
   return (
     <Box className="relative" type="sm">
       <Button
-        className="absolute right-0 m-2xs hover:text-bg3"
+        className="!absolute right-0 m-2xs hover:text-bg3"
         type="icon"
         onClick={() =>
           setIsEditing((prev) => ({
@@ -148,19 +150,29 @@ export default function BillingForm({
         </form>
       ) : (
         // Display data in list format for non-editing mode
-        <div>
+        <div className="  ">
           <h2>Moje dane:</h2>
-          <ul>
-            <li>Imię: {formData.personalBillingData.mainAdressFirstname}</li>
-            <li>Nazwisko: {formData.personalBillingData.mainAdressLastname}</li>
-            <li>Email: {formData.personalBillingData.logInEmail}</li>
-            <li>Telefon: {formData.personalBillingData.mainAdressPhone}</li>
+          <ul className=" ml-3xs ">
+            <li className=" font-serif ">
+              {formData.personalBillingData.mainAdressFirstname}{" "}
+              {formData.personalBillingData.mainAdressLastname}
+            </li>
+
+            <li className="flex items-center">
+              <AtIcon />: {formData.personalBillingData.logInEmail}
+            </li>
+            <li className="flex items-center">
+              <PhoneIcon />: {formData.personalBillingData.mainAdressPhone}
+            </li>
           </ul>
           <h2>Adres rozliczeniowy:</h2>
-          <ul>
-            <li>Ulica: {formData.personalBillingData.mainAdressStreet}</li>
-            <li>Kod: {formData.personalBillingData.mainAdressZipcode}</li>
-            <li>Miasto: {formData.personalBillingData.mainAdressCity}</li>
+          <ul className="ml-3xs">
+            <li>{formData.personalBillingData.mainAdressStreet}</li>
+
+            <li>
+              {formData.personalBillingData.mainAdressZipcode}{" "}
+              {formData.personalBillingData.mainAdressCity}
+            </li>
           </ul>
         </div>
       )}

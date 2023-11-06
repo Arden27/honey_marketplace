@@ -14,7 +14,7 @@ export default function PaymentForm({
   return (
     <Box className="relative" type="sm">
       <Button
-        className="!absolute right-0 m-sm hover:text-bg3"
+        className="!absolute right-0 m-2xs hover:text-bg3"
         type="icon"
         onClick={() =>
           setIsEditing((prev) => ({
