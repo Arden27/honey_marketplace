@@ -50,7 +50,7 @@ export default function DropdownMenu({ children, onSelect }) {
       <div className="relative cursor-pointer text-end z-40">
         <Button
           className={`w-fit whitespace-nowrap hover:text-bg2 ${
-            isOpen ? " bg-text !text-bg hover:!text-bg" : ""
+            isOpen ? " bg-text !text-bar hover:!text-bar" : ""
           }`}
           type="sm"
           ref={buttonRef}
@@ -62,7 +62,7 @@ export default function DropdownMenu({ children, onSelect }) {
           </span>
         </Button>
         <ul
-          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bg p-3xs text-end font-btn text-sm shadow 
+          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bar p-3xs text-end font-btn text-sm shadow 
           ${isOpen ? "block" : "hidden"}`}
           ref={node}
         >
@@ -90,7 +90,7 @@ DropdownMenu.Option = function DropdownOption({ children }) {
   return (
     <li
       onClick={() => handleSelect(children)}
-      className="flex cursor-pointer m-3xs items-center justify-end rounded-[2rem] [&>*]:hover:text-bg hover:bg-text"
+      className="flex cursor-pointer m-3xs items-center justify-end rounded-[2rem] [&>*]:hover:text-bar hover:bg-text"
     >
       <Button className="border-transparent " type="sm">
         {children}
