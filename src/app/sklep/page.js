@@ -43,7 +43,7 @@ export default function Shop() {
         <ShopMenu />
         <Box type="lg">
           <div className="flex flex-col gap-sm ">
-            <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between bg-red-600">
+            <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between">
               <Breadcrumb
                 // baseDomain={baseDomain}
                 pathname={pathname}
