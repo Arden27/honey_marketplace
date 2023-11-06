@@ -47,10 +47,10 @@ export default function DropdownMenu({ children, onSelect }) {
 
   return (
     <DropdownContext.Provider value={{ selected, handleSelect }}>
-      <div className="relative cursor-pointer text-end z-40">
+      <div className="relative z-40 cursor-pointer text-end">
         <Button
-          className={`w-fit whitespace-nowrap hover:text-bg2 ${
-            isOpen ? " bg-text !text-bar hover:!text-bar" : ""
+          className={`whitespace-nowrap hover:text-bg2  ${
+            isOpen ? "  bg-text text-bar hover:!text-bar" : ""
           }`}
           type="sm"
           ref={buttonRef}
@@ -62,8 +62,12 @@ export default function DropdownMenu({ children, onSelect }) {
           </span>
         </Button>
         <ul
-          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bar p-3xs text-end font-btn text-sm shadow 
-          ${isOpen ? "block" : "hidden"}`}
+          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bar p-3xs text-end font-btn text-sm shadow transition duration-[1000] ease-in-out
+          ${
+            isOpen
+              ? ".slide-out-left block duration-[1000] ease-in-out"
+              : ".slide-out-left hidden transition-colors duration-[1000] ease-in-out"
+          }`}
           ref={node}
         >
           {React.Children.map(
@@ -90,9 +94,12 @@ DropdownMenu.Option = function DropdownOption({ children }) {
   return (
     <li
       onClick={() => handleSelect(children)}
-      className="flex cursor-pointer m-3xs items-center justify-end rounded-[2rem] [&>*]:hover:text-bar hover:bg-text"
+      className="m-3xs"
     >
-      <Button className="border-transparent " type="sm">
+      <Button
+        className="!hover:bg-inherit w-full !justify-end border-transparent hover:bg-none hover:text-bar "
+        type="sm"
+      >
         {children}
       </Button>
     </li>
