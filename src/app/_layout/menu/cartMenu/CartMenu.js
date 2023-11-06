@@ -19,7 +19,6 @@ export default function Cart() {
   const buttonRef = useRef();
 
   const isCartOpen = useSelector((state) => state.isCartOpen);
-  //const shouldCloseCart = useSelector((state) => state.shouldCloseCart);
 
   const cartItems = useSelector((state) => state.cart);
   const [cartItemsCount, setCartItemsCount] = useState(0)
@@ -32,9 +31,6 @@ export default function Cart() {
   const [wasOpened, setWasOpened] = useState(false);
 
   useOutsideClick([node, buttonRef], () => {
-    // if (shouldCloseCart) {
-    //   dispatch(closeCart());
-    // }
     dispatch(closeCart());
   });
 
