@@ -1,5 +1,9 @@
-import React, { useState, useRef, useContext } from 'react';
-import useOutsideClick from '@/hooks/useOutsideClick';
+import Button from "@/components/Button";
+import ChevronUp from "../../public/icons/chevron-up.svg";
+import ChevronDown from "../../public/icons/chevron-down.svg";
+
+import React, { useState, useRef, useContext } from "react";
+import useOutsideClick from "@/hooks/useOutsideClick";
 
 // Context to provide selected value and handleSelect function to children
 const DropdownContext = React.createContext();
@@ -9,14 +13,23 @@ export default function DropdownMenu({ children, onSelect }) {
   const buttonRef = useRef();
 
   // Get default button label from DropdownMenu.Button child if exists
-  const defaultButtonLabel = React.Children.toArray(children).find(child => child.type === DropdownMenu.Button)?.props.children;
+  const defaultButtonLabel = React.Children.toArray(children).find(
+    (child) => child.type === DropdownMenu.Button,
+  )?.props.children;
 
   // Get default option label from DropdownMenu.Option with default prop or first DropdownMenu.Option child
-  const defaultOptionLabel = React.Children.toArray(children).find(child => child.type === DropdownMenu.Option && child.props.default)?.props.children 
-    || React.Children.toArray(children).find(child => child.type === DropdownMenu.Option)?.props.children;
+  const defaultOptionLabel =
+    React.Children.toArray(children).find(
+      (child) => child.type === DropdownMenu.Option && child.props.default,
+    )?.props.children ||
+    React.Children.toArray(children).find(
+      (child) => child.type === DropdownMenu.Option,
+    )?.props.children;
 
   // Set initial selected value based on defaultButtonLabel or defaultOptionLabel
-  const [selected, setSelected] = useState(defaultButtonLabel || defaultOptionLabel);
+  const [selected, setSelected] = useState(
+    defaultButtonLabel || defaultOptionLabel,
+  );
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,17 +47,30 @@ export default function DropdownMenu({ children, onSelect }) {
 
   return (
     <DropdownContext.Provider value={{ selected, handleSelect }}>
-      <div className="relative text-end cursor-pointer">
-        <div ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
-          {selected} <span>{isOpen ? "▲" : "▼"}</span>
-        </div>
+      <div className="relative cursor-pointer text-end z-40">
+        <Button
+          className={`w-fit whitespace-nowrap hover:text-bg2 ${
+            isOpen ? " bg-text text-bar hover:!text-bar" : ""
+          }`}
+          type="sm"
+          ref={buttonRef}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {selected}
+          <span className="ml-3xs">
+            {isOpen ? <ChevronUp /> : <ChevronDown />}
+          </span>
+        </Button>
         <ul
-          className={`absolute right-0 z-50 rounded-[2rem] bg-bar p-2 text-end
+          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bar p-3xs text-end font-btn text-sm shadow 
           ${isOpen ? "block" : "hidden"}`}
           ref={node}
         >
-          {React.Children.map(children, (child, index) =>
-            child.type === DropdownMenu.Option && React.cloneElement(child, { key: index })
+          {React.Children.map(
+            children,
+            (child, index) =>
+              child.type === DropdownMenu.Option &&
+              React.cloneElement(child, { key: index }),
           )}
         </ul>
       </div>
@@ -62,8 +88,13 @@ DropdownMenu.Option = function DropdownOption({ children }) {
   const { handleSelect } = useContext(DropdownContext);
 
   return (
-    <li onClick={() => handleSelect(children)} className="cursor-pointer hover:bg-bg3">
-      {children}
+    <li
+      onClick={() => handleSelect(children)}
+      className="flex cursor-pointer m-3xs items-center justify-end rounded-[2rem] [&>*]:hover:text-bar hover:bg-text"
+    >
+      <Button className="border-transparent " type="sm">
+        {children}
+      </Button>
     </li>
   );
 };
