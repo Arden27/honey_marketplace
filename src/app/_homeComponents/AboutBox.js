@@ -4,9 +4,9 @@ import Button from "@/components/Button";
 
 export default function AboutBox() {
   return (
-    <section className=" my-2xl w-full bg-about-box py-2xl">
-      <article className="w-100 m-auto flex w-[calc(100%-4*theme(spacing.sm))] max-w-[70ch] flex-col">
-        <h1 className=" font-serif">Pasieka Brydak</h1>
+    <section className="my-2xl w-full bg-about-box py-2xl">
+      <article className="w-100 m-auto grid w-[calc(100%-4*theme(spacing.sm))] max-w-[70ch] grid-cols-1">
+        <h1 className="font-serif">Miodem płynąca</h1>
         <p className="font-sans">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
           temporibus tenetur nostrum eligendi rerum, et deserunt at minus
@@ -18,13 +18,15 @@ export default function AboutBox() {
           blanditiis, odit corporis quos ipsa fugit, aliquam
         </p>
 
-        <Button
-          className="mt-md self-end hover:text-about-box active:text-about-box"
-          href="/sklep/o-nas"
-          type="sm"
-        >
-          Czytaj dalej
-        </Button>
+        <div className="mt-md flex justify-end">
+          <Button
+            className="hover:text-about-box "
+            href="/sklep/o-nas"
+            type="sm"
+          >
+            Czytaj dalej
+          </Button>
+        </div>
       </article>
     </section>
   );

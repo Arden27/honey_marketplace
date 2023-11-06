@@ -38,8 +38,9 @@ module.exports = {
         bar: "hsl(34, 53%, 70%)",
 
         "about-box": "theme(colors.bg2)",
+        "about-box": "hsl(25, 38%, 60%)",
 
-        footer: "theme('colors.secondary')",
+        footer: "hsl(25, 38%, 60%)",
         primary: "hsl(33, 55%, 60%)",
         secondary: "hsl(33, 55%, 70%)",
       },
