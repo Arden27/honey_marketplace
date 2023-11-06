@@ -41,7 +41,7 @@ function Button({ href, type, className, children, ...props }, ref) {
     </button>
   );
 
-  // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute
+  // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute - jeszcze do przemyślenia
 
   return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
 }

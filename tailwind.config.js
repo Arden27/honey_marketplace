@@ -22,17 +22,20 @@ module.exports = {
         warning: "hsl(9, 50%, 50%)",
 
         bg: "hsl(40, 85%, 80%)",
-        bg2: "hsl(33, 55%, 70%)",
+        bg: "hsl(40, 80%, 76%)",
+        // bg2: "hsl(33, 55%, 70%)",
         bg2: "hsl(36, 76%, 75%)",
+        bg2: "hsl(30, 48%, 60%)",
 
         bg3: "hsl(40, 100%, 86%)",
 
         header: "hsl(34, 57%, 58%)",
-        header: "hsl(33, 65%, 65%)",
+        // header: "hsl(33, 65%, 65%)",
+        header: "hsl(34, 53%, 59%)",
 
         bar: "hsl(30, 52%, 70%)",
         //  header: "hsl(29, 45%, 63%)",
-        // bar: "hsl(33, 65%, 70%)",
+        bar: "hsl(34, 53%, 70%)",
 
         "about-box": "theme(colors.bg2)",
 
