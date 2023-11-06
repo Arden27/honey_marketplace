@@ -53,17 +53,21 @@ export default function Cart({}) {
             })}
           </div>
           <div className="">
-            <div className=" mb-2xs flex items-end justify-between whitespace-nowrap text-warning">
+            <div className=" mb-3xs flex items-end justify-between whitespace-nowrap text-warning">
               <h3 className="text-end font-sans">Wyprzedaż:</h3>
               <h3 className="font-sans">-{formatPrice(totalPrice, 0.05)} zł</h3>
             </div>
-            <div className=" mb-2xs flex items-end justify-between text-warning">
+            <div className=" mb-3xs flex items-end justify-between text-warning">
               <h3 className="text-end font-sans">Rabat:</h3>
               <h3 className="font-sans">-{formatPrice(totalPrice, 0.1)} zł</h3>
             </div>
+            <div className=" mb-sm flex items-end justify-between">
+              <h3 className="text-end font-sans">Wysyłka:</h3>
+              <h3 className="font-sans">+15 zł</h3>
+            </div>
             <div className="flex items-end justify-between [&_*]:whitespace-nowrap">
               <h2 className="text-end font-sans">Razem:</h2>
-              <div className="flex items-center justify-center ">
+              <div className="flex items-center justify-center">
                 <h3 className="mx-xs font-sans text-warning line-through">
                   {formatPrice(totalPrice, 1.1)} zł
                 </h3>
@@ -78,13 +82,9 @@ export default function Cart({}) {
         <p>Koszyk jest pusty</p>
       )}
 
-      <div className="flex flex-col items-center ">
         <ConsentsForm />
-        <Button
-          className=" hover:text-bg"
-          href=""
-          type="lg"
-        >
+      <div className="flex justify-center ">
+        <Button className=" hover:text-bg" href="" type="lg">
           Przejdź do płatności
         </Button>
       </div>

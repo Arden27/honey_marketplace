@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ConsentsForm() {
   return (
-    <div className="mb-sm">
+    <div>
       <Checkbox>
         Potwierdzam, że zapoznałem się i akceptuję{" "}
         <Link className="whitespace-nowrap underline" href="/">
