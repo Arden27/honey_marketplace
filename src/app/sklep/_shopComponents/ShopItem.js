@@ -38,7 +38,7 @@ export default function ShopItem({ item }) {
     >
       <Link href={`/sklep/${item.tag}`} className="relative overflow-hidden">
         <Image
-          className="object-cover  object-center duration-300 ease-in-out hover:scale-110"
+          className="object-cover object-center duration-300 ease-in-out hover:scale-110"
           fill={true}
           src={item.image}
           alt={`${item.name} ${item.name2}`}
@@ -71,8 +71,7 @@ export default function ShopItem({ item }) {
           </h3>
         </div>
 
-
-{/* 
+        {/* 
         ARTEM - Przestawić to wszystko do AddToCartbutton */}
 
         <div className="relative">
@@ -81,12 +80,12 @@ export default function ShopItem({ item }) {
             selectedSize={selectedSize}
             quantity={quantity}
             className={
-              "h-[calc(theme(spacing.lg)+theme(spacing.xs))] flex rounded-[2rem]  border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text hover:text-bg3  315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md items-center"
+              "flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
             }
           />
 
           <div
-            className="h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center absolute left-0 top-0 flex justify-items-center rounded-[2rem] border-2 border-text bg-bg3
+            className="absolute left-0 top-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3
 					"
           >
             <SetQuantityButton

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 
@@ -36,13 +37,15 @@ const CartItem = ({ item, removeFromCart }) => {
       className="relative mb-sm grid h-[calc(theme(spacing.3xl)+theme(spacing.xl))] grid-rows-1 overflow-hidden rounded-[2rem]
       bg-bg3 315px:grid-cols-[3fr,7fr]"
     >
-      <Image
-        className="hidden h-full w-full object-cover object-center 315px:block"
-        src={item.image}
-        width={50}
-        height={50}
-        alt={item.name}
-      />
+      <Link href={`/sklep/${item.tag}`} className="relative overflow-hidden">
+        <Image
+          className="hidden h-full w-full object-cover object-center duration-300 ease-in-out hover:scale-110 315px:block"
+          src={item.image}
+          width={50}
+          height={50}
+          alt={item.name}
+        />
+      </Link>
       <div className="m-xs flex flex-col justify-between">
         <div className="flex justify-between">
           <div className="">
