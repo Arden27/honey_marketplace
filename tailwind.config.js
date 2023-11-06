@@ -30,7 +30,7 @@ module.exports = {
         header: "hsl(34, 57%, 58%)",
         header: "hsl(33, 65%, 65%)",
 
-        bar: "hsl(31, 48%, 67%)",
+        bar: "hsl(30, 52%, 70%)",
         //  header: "hsl(29, 45%, 63%)",
         // bar: "hsl(33, 65%, 70%)",
 
