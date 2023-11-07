@@ -18,6 +18,8 @@ module.exports = {
         text: "hsl(30, 70%, 18%)",
 
         accent: "hsl(22, 40%, 70%)",
+        accent: "hsl(22, 40%, 70%)",
+        accent: "#854d0e",
         accent2: "hsl(20, 50%, 65%)",
         warning: "hsl(9, 50%, 50%)",
 

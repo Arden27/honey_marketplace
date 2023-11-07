@@ -1,7 +1,7 @@
 export default function FormFieldset({ children, legend }) {
   return (
     <fieldset className="">
-      <legend className="mb-3xs">
+      <legend className="">
         <h2>{legend}</h2>
       </legend>
 

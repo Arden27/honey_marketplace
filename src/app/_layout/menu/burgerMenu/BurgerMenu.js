@@ -55,7 +55,7 @@ export default function BurgerBar() {
       </Button>
 
       <nav
-        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  w-[30rem] max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]  bg-bar p-sm shadow 
+        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]  bg-bar p-sm shadow w-[30svw]
         ${
           open
             ? "slide-in-left flex"
@@ -66,18 +66,15 @@ export default function BurgerBar() {
         ref={node}
         onClick={handleLinkClick}
       >
-        <div className="relative -left-sm w-[calc(100%+theme(spacing.md))] rounded-r-[2rem] bg-bg2 ">
-          <ul
-            className="flex flex-col  [&>li>a]:mb-3xs 
-        [&>li>a]:border-text"
-          >
-            <li>
-              <Link href="/">Główna</Link>
+        <div className="relative rounded-r-[2rem] font-btn text-sm uppercase flex justify-center w-full">
+          <ul className="flex flex-col gap-3xs">
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
+              <Link className="hover:text-bar" href="/">Główna</Link>
             </li>
 
-            <li>
-              <Link href="/sklep">Sklep</Link>
-              <ul className="box">
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent p-xs hover:bg-text hover:text-bar  justify-center">
+              <Link className="hover:text-bar" href="/sklep">Sklep</Link>
+              {/* <ul className="box">
                 <li>
                   <Link href="/sklep?kategoria=promocje">Promocje</Link>
                 </li>
@@ -89,28 +86,19 @@ export default function BurgerBar() {
                     Produkty pszczele
                   </Link>
                 </li>
-                <li className="!hidden">
-                  <Link href="/sklep?kategoria=miody-pitne">Miody Pitne</Link>
-                </li>
-                <li className="!hidden">
-                  <Link href="/sklep?kategoria=swiece">Świece</Link>
-                </li>
                 <li>
                   <Link href="/sklep?kategoria=zestawy">Zestawy</Link>
                 </li>
-              </ul>
+              </ul> */}
             </li>
-            <li>
-              <Link href="/o-nas">O nas</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
+              <Link className="hover:text-bar" href="/o-nas">O nas</Link>
             </li>
-            <li>
-              <Link href="/artykuly">Artykuły</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
+              <Link className="hover:text-bar" href="/artykuly">Artykuły</Link>
             </li>
-            <li className="!hidden">
-              <Link href="/matki">Matki</Link>
-            </li>
-            <li>
-              <Link href="/kontakt">Kontakt</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar justify-center">
+              <Link className="hover:text-bar" href="/kontakt">Kontakt</Link>
             </li>
           </ul>
         </div>

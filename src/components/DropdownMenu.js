@@ -50,7 +50,7 @@ export default function DropdownMenu({ children, onSelect }) {
       <div className="relative z-40 cursor-pointer text-end">
         <Button
           className={`whitespace-nowrap hover:text-bg2  ${
-            isOpen ? "  bg-text text-bar hover:!text-bar" : ""
+            isOpen ? "  bg-text !text-bg2 " : ""
           }`}
           type="sm"
           ref={buttonRef}
@@ -62,12 +62,10 @@ export default function DropdownMenu({ children, onSelect }) {
           </span>
         </Button>
         <ul
-          className={` borer-2 absolute -right-2xs z-50 mt-3xs  whitespace-nowrap rounded-[2rem] bg-bar p-3xs text-end font-btn text-sm shadow transition duration-[1000] ease-in-out
-          ${
-            isOpen
-              ? ".slide-out-left block duration-[1000] ease-in-out"
-              : ".slide-out-left hidden transition-colors duration-[1000] ease-in-out"
-          }`}
+          className={` absolute -right-2xs z-50   mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
+          p-xs text-end font-btn text-sm shadow
+
+          ${isOpen ? ".slide-out-left block" : ".slide-out-left hidden"}`}
           ref={node}
         >
           {React.Children.map(
@@ -92,12 +90,9 @@ DropdownMenu.Option = function DropdownOption({ children }) {
   const { handleSelect } = useContext(DropdownContext);
 
   return (
-    <li
-      onClick={() => handleSelect(children)}
-      className="m-3xs"
-    >
+    <li className="" onClick={() => handleSelect(children)}>
       <Button
-        className="!hover:bg-inherit w-full !justify-end border-transparent hover:bg-none hover:text-bar "
+        className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar"
         type="sm"
       >
         {children}
