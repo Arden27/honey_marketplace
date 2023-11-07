@@ -29,18 +29,19 @@ module.exports = {
 
         bg3: "hsl(40, 100%, 86%)",
 
-        header: "hsl(34, 57%, 58%)",
+        // header: "hsl(34, 57%, 58%)",
         // header: "hsl(33, 65%, 65%)",
-        header: "hsl(34, 53%, 59%)",
+        header: "hsl(34, 63%, 66%)",
 
         bar: "hsl(30, 52%, 70%)",
         //  header: "hsl(29, 45%, 63%)",
         bar: "hsl(34, 53%, 70%)",
 
         "about-box": "theme(colors.bg2)",
-        "about-box": "hsl(25, 38%, 60%)",
+        "about-box": "hsl(28, 38%, 60%)",
+        "about-box": "hsl(28, 41%, 63%)",
 
-        footer: "hsl(25, 38%, 60%)",
+        footer: "hsl(28, 41%, 63%)",
         primary: "hsl(33, 55%, 60%)",
         secondary: "hsl(33, 55%, 70%)",
       },
