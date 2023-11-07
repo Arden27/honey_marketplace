@@ -51,7 +51,7 @@ export default function Shop() {
                 searchParams={searchParams}
               />
               <DropdownMenu onSelect={handleSort}>
-                <DropdownMenu.Button>dupa</DropdownMenu.Button>
+                {/* <DropdownMenu.Button>sortuj</DropdownMenu.Button> */}
 
                 <DropdownMenu.Option>A-Z</DropdownMenu.Option>
                 <DropdownMenu.Option>Z-A</DropdownMenu.Option>
