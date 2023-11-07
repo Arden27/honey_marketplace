@@ -7,7 +7,7 @@ import "@/style/index.css";
 import LoadDB from "@/utils/LoadDB";
 import Header from "./_layout/Header";
 import Footer from "./_layout/Footer";
-import Dimmer from "@/components/Dimmer";
+import Dimmer from "@/app/_layout/Dimmer";
 
 
 export default function RootLayout({ children }) {
