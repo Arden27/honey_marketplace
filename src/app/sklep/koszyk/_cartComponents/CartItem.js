@@ -48,10 +48,10 @@ const CartItem = ({ item, removeFromCart }) => {
       </Link>
       <div className="m-xs flex flex-col justify-between">
         <div className="flex justify-between">
-          <div className="">
+          <Link href={`/sklep/${item.tag}`}>
             <h3 className="">{item.name}</h3>
             <h4 className="">{item.name2}</h4>
-          </div>
+          </Link>
           <button
             className="flex h-md w-md items-center  justify-center rounded-[2rem] text-center font-btn hover:bg-text hover:text-bg3"
             onClick={handleRemove}
