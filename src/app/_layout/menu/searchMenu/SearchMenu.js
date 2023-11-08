@@ -1,14 +1,15 @@
 "use client";
 
+import React, { useState, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { openSearch, closeSearch } from "@/redux/store";
+import useOutsideClick from "@/hooks/useOutsideClick";
+
 import Button from "@/components/Button";
 import SearchBar from "@/app/_layout/menu/searchMenu/SearchBar";
 import SearchResult from "@/app/_layout/menu/searchMenu/SearchResult";
 import SearchIcon from "public/icons/search.svg";
 import Box from "@/app/_layout/Box";
-
-import React, { useState, useRef } from "react";
-import { useSelector } from "react-redux";
-import useOutsideClick from "@/hooks/useOutsideClick";
 
 export default function SearchMenu() {
   
@@ -91,9 +92,11 @@ export default function SearchMenu() {
 
         {/* ARTEM - Ma się pojawiać dopiero wraz z wynikami wyszukiwania: */}
 
-        {/* <Box className="absolute left-0 top-[calc(theme(spacing.lg)+3*theme(spacing.sm))] w-full rounded-[3rem] bg-bar">
-          <SearchResult items={filteredItems} onResultClick={onResultClick} />
-        </Box> */}
+        {searchTerm && (
+          <Box className="absolute left-0 top-[calc(theme(spacing.lg)+3*theme(spacing.sm))] w-full rounded-[3rem] bg-bar">
+            <SearchResult items={filteredItems} onResultClick={onResultClick} />
+          </Box>
+        )}
       </div>
     </React.Fragment>
   );
