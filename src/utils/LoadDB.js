@@ -11,8 +11,8 @@ export default function LoadDB() {
     {
       id: 1,
       position: 34,
-      recommended: 1,
-      promotion: 1,
+      recommended: true,
+      promotion: true,
       name: "Miód rzepakowy",
       name2: "z nutką gryki",
       tag: "miod-rzepakowy-z-nutka-gryki",

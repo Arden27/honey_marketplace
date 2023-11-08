@@ -15,7 +15,7 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
       />
       <label
         htmlFor={`weight-${sizeObj.size}-${item.id}`}
-        className={` h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid  font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out ${
+        className={` ${
           sizeObj.size === selectedSize
             ? "border-text"
             : "border-transparent"
@@ -23,11 +23,11 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
       >
         {/* ARTEM - Nadal jest schrzanione, nie moge ustawić wysokości labela, chociaż wcześniej mogłem.. no dziwne coś tu jest i nie wiem co */}
 
-        {/* <Button className="" type="sm">
+        <Button className="" type="sm">
           {sizeObj.size}
-        </Button> */}
+        </Button>
 
-        {sizeObj.size}
+
       </label>
     </React.Fragment>
   );
@@ -37,6 +37,6 @@ export default ShopRadioButton;
 
 
 
-// na tych starych stylach niby dzialało, a teraz nie działa: .btn-sm {
+// na tych starych stylach niby dzialało, a teraz nie działa:.btn-sm {
 //     @apply flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-solid border-transparent p-xs font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out [&>*]:duration-300 [&>*]:ease-in-out;
 //   }

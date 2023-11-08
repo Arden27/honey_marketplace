@@ -42,26 +42,3 @@ export default function SearchBar({
     </form>
   );
 }
-{
-  /* ARTEM - Tutaj chciałbym aby ikonka była lupą kiedy jeszcze nie kliknięte, a dopiero potem buttonem gdy kliknięte w input
-            
-            <div className="text-center opacity-50">
-              <SearchIcon className="h-[20px] w-[20px] stroke-text stroke-2" />
-            </div> */
-}
-{
-  /* {searchTerm && (
-          <button
-            type="button"
-            className="flex h-md w-md items-center justify-center rounded-[2rem] opacity-50 hover:bg-text hover:text-bar hover:opacity-100"
-            onClick={onSearchClear}
-          >
-            <DeleteIcon className="h-[20px] w-[20px] stroke-2" />
-          </button>
-        )} */
-}
-{
-  /* <button className="absolute right-0 h-full w-[calc(theme(spacing.xl)+theme(spacing.xs))] rounded-r-[2rem] transition-colors duration-300 ease-in-out hover:bg-text hover:text-bar">
-        <SearchIcon className="mx-sm h-[25px] w-[25px] stroke-2" />
-      </button> */
-}

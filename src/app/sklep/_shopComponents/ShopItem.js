@@ -59,7 +59,7 @@ export default function ShopItem({ item }) {
           item={item}
           handleSizeChange={handleSizeChange}
           selectedSize={selectedSize}
-          className={" [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
+          className={"flex [&>*]:mx-[calc(1/2*theme(spacing.3xs))]"}
         />
 
         <div className="flex">
