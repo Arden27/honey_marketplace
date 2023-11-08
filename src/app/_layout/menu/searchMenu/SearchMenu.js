@@ -1,13 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-import React, { useState, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { openSearch, closeSearch } from "@/redux/store";
-import useOutsideClick from "@/hooks/useOutsideClick";
-
-=======
->>>>>>> Maciek
 import Button from "@/components/Button";
 import SearchBar from "@/app/_layout/menu/searchMenu/SearchBar";
 import SearchResult from "@/app/_layout/menu/searchMenu/SearchResult";

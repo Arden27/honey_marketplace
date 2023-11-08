@@ -47,12 +47,6 @@ export default function DropdownMenu({ children, onSelect }) {
 
   return (
     <DropdownContext.Provider value={{ selected, handleSelect }}>
-<<<<<<< HEAD
-      <div className="relative text-end cursor-pointer w-64">
-        <div ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
-          {selected} <span>{isOpen ? "▲" : "▼"}</span>
-        </div>
-=======
       <div className="relative z-40 cursor-pointer text-end">
         <Button
           className={`whitespace-nowrap hover:text-bg2  ${
@@ -67,7 +61,6 @@ export default function DropdownMenu({ children, onSelect }) {
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </span>
         </Button>
->>>>>>> Maciek
         <ul
           className={` absolute -right-2xs z-50   mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
           p-xs text-end font-btn text-sm shadow
