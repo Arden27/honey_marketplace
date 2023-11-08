@@ -5,41 +5,29 @@ import BurgerIcon from "public/icons/menu.svg";
 import Link from "next/link";
 import DropdownMenu from "@/components/DropdownMenu";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { openBurgerMenu, closeBurgerMenu } from "@/redux/store";
 import useOutsideClick from "@/hooks/useOutsideClick";
+
 
 export default function BurgerBar() {
   const node = useRef();
   const buttonRef = useRef(null);
-  const [open, setOpen] = useState(false);
+  const isBurgerMenuOpen = useSelector((state) => state.isBurgerMenuOpen)
   const [wasOpened, setWasOpened] = useState(false);
 
-  const handleOutsideClick = () => {
-    setOpen(false);
-  };
+  const dispatch = useDispatch();
 
-  useOutsideClick([buttonRef, node], handleOutsideClick);
+  useOutsideClick([buttonRef, node], () => {
+    dispatch(closeBurgerMenu())
+  });
 
   const handleLinkClick = (e) => {
     if (e.target.tagName === "A") {
-      setOpen(false);
+      dispatch(closeBurgerMenu());
     }
   };
-
-  // useEffect(() => {
-  //   // Add when mounted
-  //   //document.addEventListener("mousedown", handleClickOutside);
-  //   if (node.current) {
-  //     node.current.addEventListener("click", handleLinkClick);
-  //   }
-  //   // Return function to be called when unmounted
-  //   return () => {
-  //     //document.removeEventListener("mousedown", handleClickOutside);
-  //     if (node.current) {
-  //       node.current.removeEventListener("click", handleLinkClick);
-  //     }
-  //   };
-  // }, []);
 
   return (
     <React.Fragment>
@@ -49,7 +37,7 @@ export default function BurgerBar() {
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
-          setOpen(!open);
+          isBurgerMenuOpen ? dispatch(closeBurgerMenu()) : dispatch(openBurgerMenu())
         }}
       >
         <BurgerIcon />
@@ -58,7 +46,7 @@ export default function BurgerBar() {
       <nav
         className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  w-[30svw] max-w-[calc(100%-theme(spacing.2xs))]  rounded-br-[2rem] bg-bar p-sm shadow
         ${
-          open
+          isBurgerMenuOpen
             ? "slide-in-left flex"
             : wasOpened
             ? "slide-out-left flex"

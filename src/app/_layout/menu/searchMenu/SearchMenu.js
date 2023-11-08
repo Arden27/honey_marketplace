@@ -1,23 +1,27 @@
 "use client";
 
+import React, { useState, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { openSearch, closeSearch } from "@/redux/store";
+import useOutsideClick from "@/hooks/useOutsideClick";
+
 import Button from "@/components/Button";
 import SearchBar from "@/app/_layout/menu/searchMenu/SearchBar";
 import SearchResult from "@/app/_layout/menu/searchMenu/SearchResult";
 import SearchIcon from "public/icons/search.svg";
 import Box from "@/app/_layout/Box";
 
-import React, { useState, useRef } from "react";
-import { useSelector } from "react-redux";
-import useOutsideClick from "@/hooks/useOutsideClick";
-
 export default function SearchMenu() {
+  
   const node = useRef();
   const buttonRef = useRef();
-  const [isOpen, setIsOpen] = useState(false);
+  const isSearchOpen = useSelector((state) => state.isSearchOpen)
   const [wasOpened, setWasOpened] = useState(false);
 
+  const dispatch = useDispatch();
+
   useOutsideClick([node, buttonRef], () => {
-    setIsOpen(false);
+    dispatch(closeSearch());
   });
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,7 +55,7 @@ export default function SearchMenu() {
   };
 
   const onResultClick = () => {
-    setIsOpen(false);
+    dispatch(closeSearch())
     setSearchTerm("");
   };
 
@@ -63,7 +67,7 @@ export default function SearchMenu() {
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
-          setIsOpen(!isOpen);
+          isSearchOpen ? dispatch(closeSearch()) : dispatch(openSearch())
         }}
       >
         <SearchIcon />
@@ -72,7 +76,7 @@ export default function SearchMenu() {
       <div
         className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 flex-col self-center rounded-b-[2rem] bg-bar  p-sm shadow 330px:fixed
         ${
-          isOpen
+          isSearchOpen
             ? "slide-in-top  flex"
             : wasOpened
             ? "slide-in-top 330px:slide-out-top flex"
