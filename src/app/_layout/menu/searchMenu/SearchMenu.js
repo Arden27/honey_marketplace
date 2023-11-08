@@ -88,9 +88,11 @@ export default function SearchMenu() {
 
         {/* ARTEM - Ma się pojawiać dopiero wraz z wynikami wyszukiwania: */}
 
-        {/* <Box className="absolute left-0 top-[calc(theme(spacing.lg)+3*theme(spacing.sm))] w-full rounded-[3rem] bg-bar">
-          <SearchResult items={filteredItems} onResultClick={onResultClick} />
-        </Box> */}
+        {searchTerm && (
+          <Box className="absolute left-0 top-[calc(theme(spacing.lg)+3*theme(spacing.sm))] w-full rounded-[3rem] bg-bar">
+            <SearchResult items={filteredItems} onResultClick={onResultClick} />
+          </Box>
+        )}
       </div>
     </React.Fragment>
   );
