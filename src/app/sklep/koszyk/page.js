@@ -9,6 +9,7 @@ import BillingForm from "./_cartComponents/BillingForm";
 import DeliveryForm from "./_cartComponents/DeliveryForm";
 import PaymentForm from "./_cartComponents/PaymentForm";
 import Cart from "./_cartComponents/Cart";
+import Checkbox from "@/components/Checkbox";
 
 import { useState } from "react";
 
@@ -67,13 +68,9 @@ export default function Order() {
     <main className="flex flex-col gap-sm">
       <PageWrapper>
         <Box type="lg">
-          <Button className="hover:text-bg3" type="sm">
-            dupa
-          </Button>
-
           <h1>Koszyk</h1>
 
-          <div className="grid grid-rows-1 gap-sm sm:grid-cols-[minmax(calc(50%-theme(spacing.2xs)),auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
+          <div className="grid grid-rows-1 gap-sm md:grid-cols-[minmax(40%,auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
             <div className="flex flex-col gap-sm">
               <BillingForm
                 isEditing={isEditing}
@@ -97,7 +94,7 @@ export default function Order() {
                 handleInputChange={handleInputChange}
               />
             </div>
-            <div>
+            <div className="">
               <Cart />
             </div>
           </div>

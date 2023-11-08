@@ -1,8 +1,9 @@
 import Box from "@/app/_layout/Box";
+import Button from "@/components/Button";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
-import Button from "@/components/Button";
+
 
 import { useState } from "react";
 
@@ -34,8 +35,9 @@ export default function DeliveryForm({
 
   return (
     <Box className="relative" type="sm">
-      <button
-        className="absolute right-0 m-sm"
+      <Button
+        className="!absolute right-0 m-2xs hover:text-bg3"
+        type="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -44,7 +46,7 @@ export default function DeliveryForm({
         }
       >
         <EditIcon />
-      </button>
+      </Button>
 
       {isEditing.shippingDelivery ? (
         <form onSubmit={(e) => e.preventDefault()}>
@@ -57,7 +59,7 @@ export default function DeliveryForm({
               onChange={handleUseBillingAddressChange}
               // Implement logic if needed for copying address from personalBillingData
             />
-            <div className="flex gap-3xs">
+            <div className="flex gap-3xs md:flex-col lg:flex-row">
               <InputLabel
                 type="text"
                 id="send-address-firstname"
@@ -113,7 +115,7 @@ export default function DeliveryForm({
               }
               disabled={useBillingAddress}
             />
-            <div className="flex gap-3xs">
+            <div className="flex gap-3xs md:flex-col lg:flex-row">
               <InputLabel
                 type="text"
                 id="send-address-zipcode"

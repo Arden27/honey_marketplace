@@ -31,7 +31,7 @@ function Button({ href, type, className, children, ...props }, ref) {
     <button
       ref={ref}
       className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
-      active:top-[1px] active:opacity-90 
+      active:top-[2px] active:opacity-90 
       ${buttonStyles}
       ${className}
       `}
@@ -41,7 +41,7 @@ function Button({ href, type, className, children, ...props }, ref) {
     </button>
   );
 
-  // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute
+  // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute - jeszcze do przemyślenia
 
   return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
 }
