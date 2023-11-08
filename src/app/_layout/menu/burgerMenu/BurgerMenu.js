@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Button from "@/components/Button";
 import BurgerIcon from "public/icons/menu.svg";
+import Link from "next/link";
+import DropdownMenu from "@/components/DropdownMenu";
 
 import React, { useState, useEffect, useRef } from "react";
 import useOutsideClick from "@/hooks/useOutsideClick";
@@ -55,7 +56,7 @@ export default function BurgerBar() {
       </Button>
 
       <nav
-        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  max-w-[calc(100%-theme(spacing.2xs))] rounded-br-[2rem]  bg-bar p-sm shadow w-[30svw]
+        className={`fixed left-0 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-20 max-h-[calc(100svh-theme(spacing.3xl)-theme(spacing.sm)-theme(spacing.lg))]  w-[30svw] max-w-[calc(100%-theme(spacing.2xs))]  rounded-br-[2rem] bg-bar p-sm shadow
         ${
           open
             ? "slide-in-left flex"
@@ -66,14 +67,25 @@ export default function BurgerBar() {
         ref={node}
         onClick={handleLinkClick}
       >
-        <div className="relative rounded-r-[2rem] font-btn text-sm uppercase flex justify-center w-full">
+        <div className="relative flex w-full justify-center rounded-r-[2rem] font-btn text-sm uppercase">
           <ul className="flex flex-col gap-3xs">
-            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
-              <Link className="hover:text-bar" href="/">Główna</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2  border-transparent p-xs hover:bg-text  hover:text-bar">
+              <Link className="hover:text-bar" href="/">
+                Główna
+              </Link>
             </li>
 
-            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent p-xs hover:bg-text hover:text-bar  justify-center">
-              <Link className="hover:text-bar" href="/sklep">Sklep</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2 border-transparent p-xs hover:bg-text  hover:text-bar">
+              {/* <DropdownMenu>
+                <DropdownMenu.Button> */}
+
+              <Link className="hover:text-bar" href="/sklep">
+                Sklep
+              </Link>
+              {/* </DropdownMenu.Button>
+                <DropdownMenu.Option>Domyślne</DropdownMenu.Option>
+              </DropdownMenu> */}
+
               {/* <ul className="box">
                 <li>
                   <Link href="/sklep?kategoria=promocje">Promocje</Link>
@@ -91,14 +103,20 @@ export default function BurgerBar() {
                 </li>
               </ul> */}
             </li>
-            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
-              <Link className="hover:text-bar" href="/o-nas">O nas</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2  border-transparent p-xs hover:bg-text  hover:text-bar">
+              <Link className="hover:text-bar" href="/o-nas">
+                O nas
+              </Link>
             </li>
-            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar  justify-center">
-              <Link className="hover:text-bar" href="/artykuly">Artykuły</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2  border-transparent p-xs hover:bg-text  hover:text-bar">
+              <Link className="hover:text-bar" href="/artykuly">
+                Artykuły
+              </Link>
             </li>
-            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center rounded-[2rem] border-2 border-transparent  p-xs hover:bg-text hover:text-bar justify-center">
-              <Link className="hover:text-bar" href="/kontakt">Kontakt</Link>
+            <li className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-center rounded-[2rem] border-2  border-transparent p-xs hover:bg-text hover:text-bar">
+              <Link className="hover:text-bar" href="/kontakt">
+                Kontakt
+              </Link>
             </li>
           </ul>
         </div>

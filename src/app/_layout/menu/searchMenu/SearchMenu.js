@@ -70,7 +70,7 @@ export default function SearchMenu() {
       </Button>
 
       <div
-        className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21]  w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 flex-col self-center rounded-b-[2rem] bg-bar  p-sm shadow 330px:fixed
+        className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 flex-col self-center rounded-b-[2rem] bg-bar  p-sm shadow 330px:fixed
         ${
           isOpen
             ? "slide-in-top  flex"
