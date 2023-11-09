@@ -37,12 +37,15 @@ export default function SearchMenu() {
 
   // Filter items by name, accounting for Polish letters
   const filteredItems = searchTerm
-    ? items.filter((item) =>
-        normalizeText(item.name)
-          .toLowerCase()
-          .includes(normalizeText(searchTerm).toLowerCase()),
-      )
-    : [];
+  ? items.filter((item) => {
+      // Normalize and split the search term into words
+      const searchWords = normalizeText(searchTerm).toLowerCase().split(' ');
+      // Normalize the item's name just once for efficiency
+      const normalizedItemName = normalizeText(item.name).toLowerCase();
+      // Check if every word is included in the item's name
+      return searchWords.every((word) => normalizedItemName.includes(word));
+    })
+  : [];
 
   // Handler for input change
   const handleSearchChange = (event) => {
