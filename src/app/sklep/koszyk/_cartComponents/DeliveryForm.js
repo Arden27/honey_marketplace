@@ -4,7 +4,6 @@ import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
 
-
 import { useState } from "react";
 
 export default function DeliveryForm({
@@ -34,10 +33,10 @@ export default function DeliveryForm({
   };
 
   return (
-    <Box className="relative" type="sm">
+    <Box className="relative" format="sm">
       <Button
         className="!absolute right-0 m-2xs hover:text-bg3"
-        type="icon"
+        format="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -197,7 +196,7 @@ export default function DeliveryForm({
           <div className="flex justify-center">
             <Button
               className="hover:text-bg3"
-              type="sm"
+              format="sm"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,

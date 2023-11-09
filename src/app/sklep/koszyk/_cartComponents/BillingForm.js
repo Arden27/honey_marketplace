@@ -13,10 +13,10 @@ export default function BillingForm({
   handleInputChange,
 }) {
   return (
-    <Box className="relative" type="sm">
+    <Box className="relative" format="sm">
       <Button
         className="!absolute right-0 m-2xs hover:text-bg3"
-        type="icon"
+        format="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -136,7 +136,7 @@ export default function BillingForm({
           <div className="flex justify-center">
             <Button
               className="hover:text-bg3"
-              type="sm"
+              format="sm"
               onClick={() =>
                 setIsEditing((prev) => ({
                   ...prev,

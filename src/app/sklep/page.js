@@ -40,7 +40,7 @@ export default function Shop() {
     <main className="flex flex-col gap-sm">
       <PageWrapper>
         <ShopMenu />
-        <Box type="lg">
+        <Box format="lg">
           <div className="flex flex-col gap-sm ">
             <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between">
               <Breadcrumb

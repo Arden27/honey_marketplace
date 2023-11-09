@@ -23,9 +23,12 @@ import { useSelector, useDispatch } from "react-redux";
 
 import dynamic from "next/dynamic";
 
-const ShopRadioButton = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
-  ssr: false,
-});
+const ShopRadioButton = dynamic(
+  () => import("@/app/sklep/_shopComponents/ShopRadioButton"),
+  {
+    ssr: false,
+  },
+);
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);
@@ -57,7 +60,7 @@ export default function ProductPage({ params }) {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">
+        <Box format="lg">
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
             <span>/</span>
             <Link className="hover:underline" href="/sklep">
@@ -150,7 +153,7 @@ export default function ProductPage({ params }) {
                     selectedSize={selectedSize}
                     quantity={quantity}
                     className={
-                      "hover:bg-text w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                      "w-full overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:bg-text hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     }
                   />
 
@@ -186,14 +189,14 @@ export default function ProductPage({ params }) {
             </div>
           </section>
 
-          <Box type="sm">
+          <Box format="sm">
             <h2>{item.type}</h2>
             <p>opis z typu miodu</p>
             <br />
             <h2>Zbiory {item.harvestDate}</h2>
             <p>{item.descriptionLong}</p>
           </Box>
-          <Box type="sm">
+          <Box format="sm">
             <h2>Nasze {item.categories}</h2>
             <p>opis z kategorii</p>
           </Box>

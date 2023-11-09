@@ -52,7 +52,7 @@ export default function DropdownMenu({ children, onSelect }) {
           className={`whitespace-nowrap hover:text-bg2  ${
             isOpen ? "  bg-text !text-bg2 " : ""
           }`}
-          type="sm"
+          format="sm"
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -93,7 +93,7 @@ DropdownMenu.Option = function DropdownOption({ children }) {
     <li className="" onClick={() => handleSelect(children)}>
       <Button
         className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar"
-        type="sm"
+        format="sm"
       >
         {children}
       </Button>

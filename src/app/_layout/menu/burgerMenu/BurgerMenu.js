@@ -10,17 +10,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { openBurgerMenu, closeBurgerMenu } from "@/redux/store";
 import useOutsideClick from "@/hooks/useOutsideClick";
 
-
 export default function BurgerBar() {
   const node = useRef();
   const buttonRef = useRef(null);
-  const isBurgerMenuOpen = useSelector((state) => state.isBurgerMenuOpen)
+  const isBurgerMenuOpen = useSelector((state) => state.isBurgerMenuOpen);
   const [wasOpened, setWasOpened] = useState(false);
 
   const dispatch = useDispatch();
 
   useOutsideClick([buttonRef, node], () => {
-    dispatch(closeBurgerMenu())
+    dispatch(closeBurgerMenu());
   });
 
   const handleLinkClick = (e) => {
@@ -33,11 +32,13 @@ export default function BurgerBar() {
     <React.Fragment>
       <Button
         className=" mr-3xs hover:text-header lg:hidden"
-        type="icon"
+        format="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
-          isBurgerMenuOpen ? dispatch(closeBurgerMenu()) : dispatch(openBurgerMenu())
+          isBurgerMenuOpen
+            ? dispatch(closeBurgerMenu())
+            : dispatch(openBurgerMenu());
         }}
       >
         <BurgerIcon />

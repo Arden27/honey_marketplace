@@ -12,7 +12,7 @@ export default function AboutUs() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">O NAS</Box>
+        <Box format="lg">O NAS</Box>
       </PageWrapper>
 
       <BottomBox />

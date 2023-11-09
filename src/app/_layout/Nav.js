@@ -7,11 +7,7 @@ export default function Nav() {
     <nav className="">
       <ul className="flex">
         <li className="mr-3xs hidden 380px:!flex lg:flex">
-          <Button
-            className="hover:text-header"
-            href="/sklep"
-            type="sm"
-          >
+          <Button className="hover:text-header" href="/sklep" format="sm">
             Sklep
           </Button>
         </li>
@@ -19,7 +15,7 @@ export default function Nav() {
           <Button
             className="border-transparent hover:text-header "
             href="/"
-            type="sm"
+            format="sm"
           >
             Główna
           </Button>
@@ -28,7 +24,7 @@ export default function Nav() {
           <Button
             className="border-transparent hover:text-header"
             href="/artykuly/o-nas"
-            type="sm"
+            format="sm"
           >
             O nas
           </Button>
@@ -37,7 +33,7 @@ export default function Nav() {
           <Button
             className="border-transparent hover:text-header"
             href="/artykuly"
-            type="sm"
+            format="sm"
           >
             Artykuły
           </Button>
@@ -46,7 +42,7 @@ export default function Nav() {
           <Button
             className="border-transparent hover:text-header"
             href="/kontakt"
-            type="sm"
+            format="sm"
           >
             Kontakt
           </Button>

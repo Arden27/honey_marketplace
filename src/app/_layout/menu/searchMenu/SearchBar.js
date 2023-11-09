@@ -7,8 +7,14 @@ export default function SearchBar({
   onSearchChange,
   onSearchClear,
 }) {
+
+  const handleSubmit = (event) => {
+    // Prevents the default form submit action when pressing Enter
+    event.preventDefault();
+  };
+
   return (
-    <form className="relative flex w-full ">
+    <form className="relative flex w-full " onSubmit={handleSubmit}>
       <input
         type="search"
         id="search"
@@ -20,7 +26,7 @@ export default function SearchBar({
 
       {searchTerm && (
         <Button
-          type="icon"
+          type="button"
           className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
           onClick={onSearchClear}
         >
@@ -32,13 +38,13 @@ export default function SearchBar({
       {/* Artem - tutaj ma button z lupą znikać gdy jest tekst
       kliknięcie "enter" nie powinno usuwać tekstu */}
 
-      <Button
-        type="icon"
+      {/* <Button
+        type="button"
         className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
         onClick={onSearchClear}
       >
         <SearchIcon />
-      </Button>
+      </Button> */}
     </form>
   );
 }

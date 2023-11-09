@@ -4,7 +4,6 @@ import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
 
-
 export default function PaymentForm({
   isEditing,
   formData,
@@ -12,10 +11,10 @@ export default function PaymentForm({
   handleInputChange,
 }) {
   return (
-    <Box className="relative" type="sm">
+    <Box className="relative" format="sm">
       <Button
         className="!absolute right-0 m-2xs hover:text-bg3"
-        type="icon"
+        format="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -58,7 +57,7 @@ export default function PaymentForm({
 
           <div className="flex justify-center">
             <Button
-              type="sm"
+              format="sm"
               className="hover:text-bg3"
               onClick={() =>
                 setIsEditing((prev) => ({

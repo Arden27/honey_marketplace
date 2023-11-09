@@ -12,7 +12,7 @@ export default function Statute() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">REGULAMIN</Box>
+        <Box format="lg">REGULAMIN</Box>
       </PageWrapper>
 
       <BottomBox />
