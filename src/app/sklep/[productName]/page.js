@@ -3,11 +3,10 @@
 // components
 import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
-import ShopRadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
-import SelectButton from "@/components/SelectButton";
+import DropdownMenu from "@/components/DropdownMenu";
 import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
 // libs
@@ -19,16 +18,7 @@ import { formatPrice } from "@/utils/formatPrice";
 
 import Image from "next/image";
 
-import { useSelector, useDispatch } from "react-redux";
-
-import dynamic from "next/dynamic";
-
-const ShopRadioButton = dynamic(
-  () => import("@/app/sklep/_shopComponents/ShopRadioButton"),
-  {
-    ssr: false,
-  },
-);
+import { useSelector } from "react-redux";
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);
@@ -50,6 +40,7 @@ export default function ProductPage({ params }) {
   }, {});
   console.log("sizes: ", sizes);
   const options = Object.keys(sizes);
+  console.log("options:", options);
 
   const handleSizeChange = (option) => {
     setSelectedSize(option);
@@ -133,9 +124,13 @@ export default function ProductPage({ params }) {
                     Waga:&nbsp;
                   </span>
                 </div>
-
-                <SelectButton options={options} onSelect={handleSizeChange} />
-
+                
+                <DropdownMenu onSelect={handleSizeChange}>
+                  {options.map((option, index) => (
+                    <DropdownMenu.Option key={index}>{option}</DropdownMenu.Option>
+                  ))}
+                </DropdownMenu>
+                
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 
                 <div className="mt-sm">
