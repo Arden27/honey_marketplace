@@ -1,8 +1,9 @@
 import Box from "@/app/_layout/Box";
+import Button from "@/components/Button";
 import EditIcon from "public/icons/edit.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
-import Button from "@/components/Button";
+
 
 export default function PaymentForm({
   isEditing,
@@ -12,8 +13,9 @@ export default function PaymentForm({
 }) {
   return (
     <Box className="relative" type="sm">
-      <button
-        className="absolute right-0 m-sm"
+      <Button
+        className="!absolute right-0 m-2xs hover:text-bg3"
+        type="icon"
         onClick={() =>
           setIsEditing((prev) => ({
             ...prev,
@@ -22,7 +24,7 @@ export default function PaymentForm({
         }
       >
         <EditIcon />
-      </button>
+      </Button>
 
       {isEditing.paymentMethod ? (
         <form onSubmit={(e) => e.preventDefault()}>

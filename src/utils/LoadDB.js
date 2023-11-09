@@ -10,6 +10,9 @@ export default function LoadDB() {
   const items = [
     {
       id: 1,
+      position: 34,
+      recommended: true,
+      promotion: true,
       name: "Miód rzepakowy",
       name2: "z nutką gryki",
       tag: "miod-rzepakowy-z-nutka-gryki",
