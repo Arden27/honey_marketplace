@@ -30,7 +30,7 @@ export default function Shop() {
   const searchParams = new URLSearchParams(useSearchParams());
   const category = searchParams.get("kategoria");
 
-  const [sortType, setSortType] = useState("A-Z");
+  const [sortType, setSortType] = useState("Od A do Z");
 
   const handleSort = (type) => {
     setSortType(type);
@@ -53,8 +53,8 @@ export default function Shop() {
               {/* Artem - Sortowanie jest schrzanione */}
 
               <DropdownMenu onSelect={handleSort}>
-                <DropdownMenu.Button>Sortuj</DropdownMenu.Button>
-                <DropdownMenu.Option>Domyślne</DropdownMenu.Option>
+                {/* <DropdownMenu.Button>Sortuj</DropdownMenu.Button>
+                <DropdownMenu.Option>Domyślne</DropdownMenu.Option> */}
                 <DropdownMenu.Option>Od A do Z</DropdownMenu.Option>
                 <DropdownMenu.Option>Od Z do A</DropdownMenu.Option>
                 <DropdownMenu.Option>Od najniższej ceny</DropdownMenu.Option>
