@@ -7,14 +7,11 @@ export default function SearchBar({
   onSearchChange,
   onSearchClear,
 }) {
-
-  const handleSubmit = (event) => {
-    // Prevents the default form submit action when pressing Enter
-    event.preventDefault();
-  };
-
   return (
-    <form className="relative flex w-full " onSubmit={handleSubmit}>
+    <form
+      className="relative flex w-full "
+      onSubmit={(e) => e.preventDefault()}
+    >
       <input
         type="search"
         id="search"
@@ -24,27 +21,25 @@ export default function SearchBar({
         onChange={onSearchChange}
       />
 
-      {searchTerm && (
+      {searchTerm ? (
         <Button
-          type="button"
+          format="icon"
           className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
+          type="button"
           onClick={onSearchClear}
         >
           <DeleteIcon className="" />
         </Button>
+      ) : (
+        <Button
+          format="icon"
+          className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
+          type="button"
+          onClick={onSearchClear}
+        >
+          <SearchIcon />
+        </Button>
       )}
-
-      
-      {/* Artem - tutaj ma button z lupą znikać gdy jest tekst
-      kliknięcie "enter" nie powinno usuwać tekstu */}
-
-      {/* <Button
-        type="button"
-        className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
-        onClick={onSearchClear}
-      >
-        <SearchIcon />
-      </Button> */}
     </form>
   );
 }
