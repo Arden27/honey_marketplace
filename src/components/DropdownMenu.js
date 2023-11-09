@@ -1,9 +1,8 @@
-import Button from "@/components/Button";
-import ChevronUp from "../../public/icons/chevron-up.svg";
-import ChevronDown from "../../public/icons/chevron-down.svg";
-
-import React, { useState, useRef, useContext } from "react";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import React, { useState, useRef, useContext, useEffect } from 'react';
+import Button from '@/components/Button';
+import ChevronUp from '../../public/icons/chevron-up.svg';
+import ChevronDown from '../../public/icons/chevron-down.svg';
+import useOutsideClick from '@/hooks/useOutsideClick';
 
 // Context to provide selected value and handleSelect function to children
 const DropdownContext = React.createContext();
@@ -12,25 +11,7 @@ export default function DropdownMenu({ children, onSelect }) {
   const node = useRef();
   const buttonRef = useRef();
 
-  // Get default button label from DropdownMenu.Button child if exists
-  const defaultButtonLabel = React.Children.toArray(children).find(
-    (child) => child.type === DropdownMenu.Button,
-  )?.props.children;
-
-  // Get default option label from DropdownMenu.Option with default prop or first DropdownMenu.Option child
-  const defaultOptionLabel =
-    React.Children.toArray(children).find(
-      (child) => child.type === DropdownMenu.Option && child.props.default,
-    )?.props.children ||
-    React.Children.toArray(children).find(
-      (child) => child.type === DropdownMenu.Option,
-    )?.props.children;
-
-  // Set initial selected value based on defaultButtonLabel or defaultOptionLabel
-  const [selected, setSelected] = useState(
-    defaultButtonLabel || defaultOptionLabel,
-  );
-
+  const [selected, setSelected] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (value) => {
@@ -45,13 +26,37 @@ export default function DropdownMenu({ children, onSelect }) {
 
   useOutsideClick([buttonRef, node], handleOutsideClick);
 
+  // useEffect to set the default value
+  useEffect(() => {
+    const buttonChild = React.Children.toArray(children).find(
+      (child) => child.type === DropdownMenu.Button,
+    );
+
+    if(buttonChild){
+      setSelected(buttonChild.props.children)
+    } else {
+      const listChild = React.Children.toArray(children).find(
+        (child) => child.type === DropdownMenu.List,
+      );
+  
+      if (listChild) {
+        const defaultItem = React.Children.toArray(listChild.props.children).find(
+          (child) => child.props.isDefault,
+        );
+  
+        if (defaultItem) {
+          setSelected(defaultItem.props.children);
+        }
+      }
+    }
+    
+  }, []);
+
   return (
     <DropdownContext.Provider value={{ selected, handleSelect }}>
-      <div className="relative z-40 cursor-pointer text-end">
+      <div className="relative z-40 cursor-pointer text-end" ref={node}>
         <Button
-          className={`whitespace-nowrap hover:text-bg2  ${
-            isOpen ? "  bg-text !text-bg2 " : ""
-          }`}
+          className={`whitespace-nowrap hover:text-bg2 ${isOpen ? 'bg-text !text-bg2' : ''}`}
           format="sm"
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
@@ -61,42 +66,47 @@ export default function DropdownMenu({ children, onSelect }) {
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </span>
         </Button>
-        <ul
-          className={` absolute -right-2xs z-50   mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
-          p-xs text-end font-btn text-sm shadow
-
-          ${isOpen ? ".slide-out-left block" : ".slide-out-left hidden"}`}
-          ref={node}
-        >
-          {React.Children.map(
-            children,
-            (child, index) =>
-              child.type === DropdownMenu.Option &&
-              React.cloneElement(child, { key: index }),
-          )}
-        </ul>
+        {isOpen && React.Children.map(children, (child) => {
+          if (child.type === DropdownMenu.List) {
+            return React.cloneElement(child);
+          }
+          return child;
+        })}
       </div>
     </DropdownContext.Provider>
   );
 }
 
-// Sub-component to render a custom default button label
-DropdownMenu.Button = function DropdownButton({ children }) {
-  return <>{children}</>;
-};
-
-// Sub-component to render selectable options
-DropdownMenu.Option = function DropdownOption({ children }) {
+DropdownMenu.List = function DropdownList({ className, children }) {
   const { handleSelect } = useContext(DropdownContext);
 
   return (
-    <li className="" onClick={() => handleSelect(children)}>
+    <ul className={className}>
+      {React.Children.map(children, (child, index) => {
+        if (child.type === DropdownMenu.Item) {
+          return React.cloneElement(child, { key: index, onSelect: handleSelect });
+        }
+        return child;
+      })}
+    </ul>
+  );
+};
+
+// Sub-component to render selectable Items
+DropdownMenu.Item = function DropdownItem({ children, onSelect, className, isDefault }) {
+  return (
+    <li onClick={() => onSelect(children)}>
       <Button
-        className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar"
+        className={className}
         format="sm"
       >
         {children}
       </Button>
     </li>
   );
+};
+
+// Sub-component to render a custom default button label
+DropdownMenu.Button = function DropdownButton({ children }) {
+  return <></>;
 };

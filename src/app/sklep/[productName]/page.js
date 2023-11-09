@@ -28,7 +28,7 @@ export default function ProductPage({ params }) {
   // Find the default size object
   const defaultSize =
     item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
-
+  
   // Initialize state to store the currently selected size and price
   const [selectedSize, setSelectedSize] = useState(defaultSize.size);
   const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
@@ -39,8 +39,8 @@ export default function ProductPage({ params }) {
     return acc;
   }, {});
   console.log("sizes: ", sizes);
-  const options = Object.keys(sizes);
-  console.log("options:", options);
+  // const options = Object.keys(sizes);
+  // console.log("options:", options);
 
   const handleSizeChange = (option) => {
     setSelectedSize(option);
@@ -124,13 +124,21 @@ export default function ProductPage({ params }) {
                     Waga:&nbsp;
                   </span>
                 </div>
-                
+
                 <DropdownMenu onSelect={handleSizeChange}>
-                  {options.map((option, index) => (
-                    <DropdownMenu.Option key={index}>{option}</DropdownMenu.Option>
-                  ))}
+                  <DropdownMenu.List className="">
+                    {item.sizes.map((option, index) => (
+                      <DropdownMenu.Item
+                        className=""
+                        isDefault={option.default}
+                        key={index}
+                      >
+                        {option.size}
+                      </DropdownMenu.Item>
+                    ))}
+                  </DropdownMenu.List>
                 </DropdownMenu>
-                
+
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 
                 <div className="mt-sm">
