@@ -7,15 +7,21 @@ import useOutsideClick from '@/hooks/useOutsideClick';
 // Context to provide selected value and handleSelect function to children
 const DropdownContext = React.createContext();
 
-export default function DropdownMenu({ children, onSelect }) {
+export default function DropdownMenu({ children, onSelect, selected, setSelected: externalSetSelected }) {
   const node = useRef();
   const buttonRef = useRef();
 
-  const [selected, setSelected] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
+  // Internal state, used only if externalSetSelected is not provided
+  const [internalSelected, internalSetSelected] = useState('');
+
+  const isSelectedControlled = externalSetSelected !== undefined;
+  const currentSelected = isSelectedControlled ? selected : internalSelected;
+  const currentSetSelected = isSelectedControlled ? externalSetSelected : internalSetSelected;
+
   const handleSelect = (value) => {
-    setSelected(value);
+    currentSetSelected(value);
     onSelect(value);
     setIsOpen(false);
   };
@@ -33,7 +39,7 @@ export default function DropdownMenu({ children, onSelect }) {
     );
 
     if(buttonChild){
-      setSelected(buttonChild.props.children)
+      currentSetSelected(buttonChild.props.children)
     } else {
       const listChild = React.Children.toArray(children).find(
         (child) => child.type === DropdownMenu.List,
@@ -45,7 +51,7 @@ export default function DropdownMenu({ children, onSelect }) {
         );
   
         if (defaultItem) {
-          setSelected(defaultItem.props.children);
+          currentSetSelected(defaultItem.props.children);
         }
       }
     }
@@ -53,7 +59,7 @@ export default function DropdownMenu({ children, onSelect }) {
   }, []);
 
   return (
-    <DropdownContext.Provider value={{ selected, handleSelect }}>
+    <DropdownContext.Provider value={{ selected: currentSelected, handleSelect }}>
       <div className="relative z-40 cursor-pointer text-end" ref={node}>
         <Button
           className={`whitespace-nowrap hover:text-bg2 ${isOpen ? 'bg-text !text-bg2' : ''}`}
@@ -61,7 +67,7 @@ export default function DropdownMenu({ children, onSelect }) {
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {selected}
+          {currentSelected} {/* Use currentSelected instead of selected */}
           <span className="ml-3xs">
             {isOpen ? <ChevronUp /> : <ChevronDown />}
           </span>
