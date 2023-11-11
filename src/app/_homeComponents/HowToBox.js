@@ -21,7 +21,7 @@ export default function HowToBox() {
         className="absolute bottom-sm"
         href="/artykuly/jak-rozpoznac-prawdziwy-miod"
       >
-        <Button className="border-transparent bg-bg hover:text-bg" type="lg">
+        <Button className="border-transparent bg-bg hover:text-bg" format="lg">
           Sprawdź już dziś!
         </Button>
       </Link>

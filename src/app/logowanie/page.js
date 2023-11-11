@@ -14,7 +14,7 @@ export default function LogIn() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">
+        <Box format="lg">
           <div className=" grid gap-sm md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr]">
             <LogInBox />
 

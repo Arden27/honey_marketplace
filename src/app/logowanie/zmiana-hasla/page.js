@@ -11,7 +11,7 @@ export default function ChangePassword() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">ZMIANA HASŁA</Box>
+        <Box format="lg">ZMIANA HASŁA</Box>
       </PageWrapper>
     </main>
   );

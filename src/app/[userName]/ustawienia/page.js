@@ -12,7 +12,7 @@ export default function Settings() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">Ustawienia konta</Box>
+        <Box format="lg">Ustawienia konta</Box>
       </PageWrapper>
 
       <BottomBox />

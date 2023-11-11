@@ -12,7 +12,7 @@ export default function Articles() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">ARTYKUŁY</Box>
+        <Box format="lg">ARTYKUŁY</Box>
       </PageWrapper>
 
       <BottomBox />

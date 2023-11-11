@@ -30,7 +30,13 @@ export default function Shop() {
   const searchParams = new URLSearchParams(useSearchParams());
   const category = searchParams.get("kategoria");
 
-  const [sortType, setSortType] = useState("A-Z");
+  const [sortType, setSortType] = useState("Od A do Z");
+  const sortOptions = [
+    "Od A do Z",
+    "Od Z do A",
+    "Od najniższej ceny",
+    "Od najwyższej ceny",
+  ];
 
   const handleSort = (type) => {
     setSortType(type);
@@ -40,7 +46,7 @@ export default function Shop() {
     <main className="flex flex-col gap-sm">
       <PageWrapper>
         <ShopMenu />
-        <Box type="lg">
+        <Box format="lg">
           <div className="flex flex-col gap-sm ">
             <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between">
               <Breadcrumb
@@ -54,11 +60,16 @@ export default function Shop() {
 
               <DropdownMenu onSelect={handleSort}>
                 <DropdownMenu.Button>Sortuj</DropdownMenu.Button>
-                <DropdownMenu.Option>Domyślne</DropdownMenu.Option>
-                <DropdownMenu.Option>Od A do Z</DropdownMenu.Option>
-                <DropdownMenu.Option>Od Z do A</DropdownMenu.Option>
-                <DropdownMenu.Option>Od najniższej ceny</DropdownMenu.Option>
-                <DropdownMenu.Option>Od najwyższej ceny</DropdownMenu.Option>
+                <DropdownMenu.List
+                  className="absolute -right-2xs z-50 mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
+                  p-xs text-end font-btn text-sm shadow"
+                >
+                  {sortOptions.map((option, index) => (
+                    <DropdownMenu.Item key={index} className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar">
+                      {option}
+                    </DropdownMenu.Item>
+                  ))}
+                </DropdownMenu.List>
               </DropdownMenu>
             </div>
             <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">

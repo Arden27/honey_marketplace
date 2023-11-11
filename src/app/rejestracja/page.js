@@ -11,7 +11,7 @@ export default function Register() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">Rejestracja</Box>
+        <Box format="lg">Rejestracja</Box>
       </PageWrapper>
     </main>
   );

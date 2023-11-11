@@ -8,7 +8,10 @@ export default function SearchBar({
   onSearchClear,
 }) {
   return (
-    <form className="relative flex w-full ">
+    <form
+      className="relative flex w-full "
+      onSubmit={(e) => e.preventDefault()}
+    >
       <input
         type="search"
         id="search"
@@ -18,27 +21,25 @@ export default function SearchBar({
         onChange={onSearchChange}
       />
 
-      {searchTerm && (
+      {searchTerm ? (
         <Button
-          type="icon"
+          format="icon"
           className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
+          type="button"
           onClick={onSearchClear}
         >
           <DeleteIcon className="" />
         </Button>
+      ) : (
+        <Button
+          format="icon"
+          className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
+          type="button"
+          onClick={onSearchClear}
+        >
+          <SearchIcon />
+        </Button>
       )}
-
-      
-      {/* Artem - tutaj ma button z lupą znikać gdy jest tekst
-      kliknięcie "enter" nie powinno usuwać tekstu */}
-
-      <Button
-        type="icon"
-        className="!absolute right-0 h-full w-[calc(theme(spacing.lg)+2*theme(spacing.xs))] rounded-l-none transition-colors duration-300 ease-in-out hover:text-bar active:!top-0"
-        onClick={onSearchClear}
-      >
-        <SearchIcon />
-      </Button>
     </form>
   );
 }

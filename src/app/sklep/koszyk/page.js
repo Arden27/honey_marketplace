@@ -67,7 +67,7 @@ export default function Order() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">
+        <Box format="lg">
           <h1>Koszyk</h1>
 
           <div className="grid grid-rows-1 gap-sm md:grid-cols-[minmax(40%,auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
