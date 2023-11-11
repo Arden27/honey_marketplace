@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ShopMenu() {
   return (
-    <section className="mb-sm hidden h-[calc(theme(spacing.3xl)+theme(spacing.md))] grid-cols-4 sm:grid">
+    <section className="hidden h-[calc(theme(spacing.3xl)+theme(spacing.md))] grid-cols-4 sm:grid">
       <div className="grid justify-items-center">
         <Link href="/sklep?kategoria=promocje" aria-hidden="true" tabIndex={-1}>
           <Image

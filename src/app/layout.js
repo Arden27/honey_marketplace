@@ -1,20 +1,18 @@
 import React from "react";
-
 import Providers from "@/redux/provider";
+import LoadDB from "@/utils/LoadDB";
 
 import "@/style/index.css";
 
-import LoadDB from "@/utils/LoadDB";
 import Header from "./_layout/Header";
-import Footer from "./_layout/Footer";
 import Dimmer from "./_layout/Dimmer";
-
+import Footer from "./_layout/Footer";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body className="bg-bg ">
-        <div className="grid min-h-screen grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] gap-lg">
+      <body className="bg-bg">
+        <div className="grid grid-rows-[auto-fit_1fr_auto] gap-y-lg [&>*>*]:col-start-2  [&>*>*]:col-end-3 [&>*]:grid [&>*]:grid-cols-[minmax(theme(spacing.2xs),auto)_minmax(auto,1200px)_minmax(theme(spacing.2xs),auto)] [&>*]:gap-y-sm sm:[&>*]:grid-cols-[minmax(theme(spacing.sm),auto)_minmax(auto,1200px)_minmax(theme(spacing.sm),auto)]">
           <Providers>
             <LoadDB />
             <Header />

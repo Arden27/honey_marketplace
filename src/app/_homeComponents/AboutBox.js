@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 export default function AboutBox() {
   return (
-    <section className="my-2xl w-full bg-about-box py-2xl">
+    <section className="!col-span-full my-2xl w-full bg-about-box py-2xl">
       <article className="w-100 m-auto grid w-[calc(100%-4*theme(spacing.sm))] max-w-[70ch] grid-cols-1">
         <h1 className="font-serif">Miodem płynąca</h1>
         <p className="font-sans">

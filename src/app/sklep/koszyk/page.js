@@ -2,7 +2,6 @@
 
 // components
 
-import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
 import Button from "@/components/Button";
 import BillingForm from "./_cartComponents/BillingForm";
@@ -65,41 +64,39 @@ export default function Order() {
   };
 
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
-        <Box format="lg">
-          <h1>Koszyk</h1>
+    <main className="">
+      <Box format="lg">
+        <h1>Koszyk</h1>
 
-          <div className="grid grid-rows-1 gap-sm md:grid-cols-[minmax(40%,auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
-            <div className="flex flex-col gap-sm">
-              <BillingForm
-                isEditing={isEditing}
-                formData={formData}
-                setIsEditing={setIsEditing}
-                handleInputChange={handleInputChange}
-              />
+        <div className="grid grid-rows-1 gap-sm md:grid-cols-[minmax(40%,auto),minmax(auto,calc(30rem-theme(spacing.sm)))]">
+          <div className="flex flex-col gap-sm">
+            <BillingForm
+              isEditing={isEditing}
+              formData={formData}
+              setIsEditing={setIsEditing}
+              handleInputChange={handleInputChange}
+            />
 
-              <DeliveryForm
-                isEditing={isEditing}
-                formData={formData}
-                setFormData={setFormData}
-                setIsEditing={setIsEditing}
-                handleInputChange={handleInputChange}
-              />
+            <DeliveryForm
+              isEditing={isEditing}
+              formData={formData}
+              setFormData={setFormData}
+              setIsEditing={setIsEditing}
+              handleInputChange={handleInputChange}
+            />
 
-              <PaymentForm
-                isEditing={isEditing}
-                formData={formData}
-                setIsEditing={setIsEditing}
-                handleInputChange={handleInputChange}
-              />
-            </div>
-            <div className="">
-              <Cart />
-            </div>
+            <PaymentForm
+              isEditing={isEditing}
+              formData={formData}
+              setIsEditing={setIsEditing}
+              handleInputChange={handleInputChange}
+            />
           </div>
-        </Box>
-      </PageWrapper>
+          <div className="">
+            <Cart />
+          </div>
+        </div>
+      </Box>
     </main>
   );
 }
