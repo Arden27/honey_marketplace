@@ -126,14 +126,14 @@ export default function MyOrders() {
         </table>
       </Box>
       <Box type="sm">
-        <div className="grid grid-cols-4  border border-text" type="">
-          <div>
+        <div className="grid  border border-text bg-second" type="">
+          <div className="col-span-4 grid grid-flow-col grid-cols-[subgrid] ">
             <div className="border border-text">Numer</div>
             <div className="border border-text">Data</div>
             <div className="border border-text">Cena końcowa</div>
             <div className="border border-text">Status</div>
           </div>
-          <div>
+          <div className="col-span-4 grid grid-flow-col grid-cols-[subgrid] ">
             <div className="border border-text">231109/001</div>
             <div className="border border-text">09.11.2023 12:00</div>
             <div className="border border-text">2235,50zł</div>
