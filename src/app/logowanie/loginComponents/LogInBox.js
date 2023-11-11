@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 export default function LogInBox() {
   return (
-    <Box type="sm">
+    <Box format="sm">
       <h2 aria-hidden="true">Zaloguj się</h2>
 
       <form className="mb-sm w-full">
@@ -38,7 +38,7 @@ export default function LogInBox() {
         </fieldset>
       </form>
 
-      <Button className="self-end hover:text-bg3" href="" type="lg">
+      <Button className="self-end hover:text-bg3" href="" format="lg">
         Zaloguj się
       </Button>
     </Box>

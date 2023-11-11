@@ -12,7 +12,7 @@ export default function Order() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">STATUS ZAMÓWIENIA nr 1</Box>
+        <Box format="lg">STATUS ZAMÓWIENIA nr 1</Box>
       </PageWrapper>
 
       <BottomBox />

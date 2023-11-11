@@ -12,7 +12,7 @@ export default function Delivery() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">Dostawa</Box>
+        <Box format="lg">Dostawa</Box>
       </PageWrapper>
 
       <BottomBox />

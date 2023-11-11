@@ -82,9 +82,9 @@ export default function Cart({}) {
         <p>Koszyk jest pusty</p>
       )}
 
-        <ConsentsForm />
+      <ConsentsForm />
       <div className="flex justify-center ">
-        <Button className=" hover:text-bg" href="" type="lg">
+        <Button className=" hover:text-bg" href="" format="lg">
           Przejdź do płatności
         </Button>
       </div>

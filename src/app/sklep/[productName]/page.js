@@ -3,15 +3,14 @@
 // components
 import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
-import ShopRadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
 import SetQuantityButton from "@/components/SetQuantityButton";
 import InputQuantity from "@/components/InputQuantity";
 import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
-import SelectButton from "@/components/SelectButton";
+import DropdownMenu from "@/components/DropdownMenu";
 import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
 // libs
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -19,45 +18,67 @@ import { formatPrice } from "@/utils/formatPrice";
 
 import Image from "next/image";
 
-import { useSelector, useDispatch } from "react-redux";
-
-import dynamic from "next/dynamic";
-
-const ShopRadioButton = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
-  ssr: false,
-});
+import { useSelector } from "react-redux";
+import { setShouldRefresh } from "@/redux/store";
 
 export default function ProductPage({ params }) {
   const items = useSelector((state) => state.items);
-  const item = items.find((item) => item.tag === params.productName);
-
-  console.log("item found: ", item);
-  // Find the default size object
-  const defaultSize =
-    item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
-
-  // Initialize state to store the currently selected size and price
-  const [selectedSize, setSelectedSize] = useState(defaultSize.size);
-  const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
+  //const item = items.find((item) => item.tag === params.productName);
+  const [item, setItem] = useState({
+    id: 0,
+    position: 0,
+    recommended: true,
+    promotion: true,
+    name: "",
+    name2: "",
+    tag: "",
+    image: "/img/logo.png",
+    sizes: [],
+    categories: [],
+    type: "",
+    harvestDate: "",
+    terminationDate: "",
+    consistency: "",
+    color: "",
+    descriptionShort: "",
+    descriptionLong: "",
+    metadataTitle: "",
+    metadataDescription: "",
+    metadataKeywords: "",
+  })
+  const [defaultSize, setDefaultSize] = useState();
+  const [sizes, setSizes] = useState();
+  const [selectedSize, setSelectedSize] = useState();
+  const [selectedPrice, setSelectedPrice] = useState();
   const [quantity, setQuantity] = useState(1);
-  //const sizes = item.sizes.map((sizeObj) => ({ [sizeObj.size]: sizeObj.price }));
-  const sizes = item.sizes.reduce((acc, sizeObj) => {
-    acc[sizeObj.size] = sizeObj.price;
-    return acc;
-  }, {});
-  console.log("sizes: ", sizes);
-  const options = Object.keys(sizes);
+  const [dropdownSelected, setDropdownSelected] = useState('');
+
+
+  useEffect(() => {
+    const foundItem = items.find((item) => item.tag === params.productName);
+    const foundDefaultSize =
+    foundItem.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
+    const foundSizes = foundItem.sizes.reduce((acc, sizeObj) => {
+      acc[sizeObj.size] = sizeObj.price;
+      return acc;
+    }, {});
+    setItem(foundItem);
+    setDefaultSize(foundDefaultSize);
+    setSizes(foundSizes);
+    setSelectedPrice(foundDefaultSize.price);
+    setSelectedSize(foundDefaultSize.size);
+    setDropdownSelected(foundDefaultSize.size);
+  }, [])
 
   const handleSizeChange = (option) => {
     setSelectedSize(option);
     setSelectedPrice(sizes[option]);
-    console.log("sizes[option]", sizes[option]);
   };
 
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">
+        <Box format="lg">
           <div className="h-[calc(theme(spacing.lg)+theme(spacing.3xs))] w-full rounded-[2rem] bg-red-500">
             <span>/</span>
             <Link className="hover:underline" href="/sklep">
@@ -131,7 +152,19 @@ export default function ProductPage({ params }) {
                   </span>
                 </div>
 
-                <SelectButton options={options} onSelect={handleSizeChange} />
+                <DropdownMenu onSelect={handleSizeChange} selected={dropdownSelected} setSelected={setDropdownSelected}>
+                  <DropdownMenu.List className="">
+                    {item.sizes.map((option, index) => (
+                      <DropdownMenu.Item
+                        className=""
+                        isDefault={option.default}
+                        key={index}
+                      >
+                        {option.size}
+                      </DropdownMenu.Item>
+                    ))}
+                  </DropdownMenu.List>
+                </DropdownMenu>
 
                 {/* ARTEM - tutaj dostępność towaru. Jak poniżej 20 słoików. Jak powyżej to wpisać: dostępny. Jak powyżej 50słoików to dużo a jak powyżej 100 to bardzo dużo  */}
 
@@ -150,7 +183,7 @@ export default function ProductPage({ params }) {
                     selectedSize={selectedSize}
                     quantity={quantity}
                     className={
-                      "hover:bg-text w-full overflow-ellipsis whitespace-break-spaces  border-text pl-[calc(theme(spacing.3xl))] pr-2xs hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
+                      "w-full overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:bg-text hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
                     }
                   />
 
@@ -186,14 +219,14 @@ export default function ProductPage({ params }) {
             </div>
           </section>
 
-          <Box type="sm">
+          <Box format="sm">
             <h2>{item.type}</h2>
             <p>opis z typu miodu</p>
             <br />
             <h2>Zbiory {item.harvestDate}</h2>
             <p>{item.descriptionLong}</p>
           </Box>
-          <Box type="sm">
+          <Box format="sm">
             <h2>Nasze {item.categories}</h2>
             <p>opis z kategorii</p>
           </Box>
