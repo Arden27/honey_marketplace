@@ -22,7 +22,7 @@ export default function AboutBox() {
           <Button
             className="hover:text-about-box "
             href="/sklep/o-nas"
-            type="sm"
+            format="sm"
           >
             Czytaj dalej
           </Button>

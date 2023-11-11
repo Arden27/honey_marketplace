@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">KONTAKT</Box>
+        <Box format="lg">KONTAKT</Box>
       </PageWrapper>
 
       <BottomBox />

@@ -5,7 +5,7 @@ import Box from "@/app/_layout/Box";
 
 export default function RecommendedArticlesBox() {
   return (
-    <Box type="lg">
+    <Box format="lg">
       <h2>Polecane produkty: </h2>
     </Box>
   );

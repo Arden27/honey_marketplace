@@ -1,9 +1,9 @@
-export default function Box({ type, className, children }) {
+export default function Box({ format, className, children }) {
   return (
     <section
       className={`grid gap-sm rounded-[2rem] p-sm 
-        ${type === "sm" ? "bg-bg3" : ""}    
-        ${type === "lg" ? "bg-bg2" : ""}
+        ${format === "sm" ? "bg-bg3" : ""}    
+        ${format === "lg" ? "bg-bg2" : ""}
         ${className}
         `}
     >

@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-function getButtonStyles(type) {
-  const types = type ? type.split(" ") : [];
+function getButtonStyles(format) {
+  const types = format ? format.split(" ") : [];
 
   let styles = "";
 
@@ -24,8 +24,8 @@ function getButtonStyles(type) {
   return styles.trim();
 }
 
-function Button({ href, type, className, children, ...props }, ref) {
-  const buttonStyles = getButtonStyles(type);
+function Button({ href, format, className, children, ...props }, ref) {
+  const buttonStyles = getButtonStyles(format);
 
   const ButtonContent = (
     <button

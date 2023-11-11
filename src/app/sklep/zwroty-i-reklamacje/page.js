@@ -12,9 +12,7 @@ export default function ReturnsAndComplaints() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">
-          ZWROTY I REKLAMACJE
-        </Box>
+        <Box format="lg">ZWROTY I REKLAMACJE</Box>
       </PageWrapper>
 
       <BottomBox />

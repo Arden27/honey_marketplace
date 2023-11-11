@@ -12,10 +12,9 @@ import SearchIcon from "public/icons/search.svg";
 import Box from "@/app/_layout/Box";
 
 export default function SearchMenu() {
-  
   const node = useRef();
   const buttonRef = useRef();
-  const isSearchOpen = useSelector((state) => state.isSearchOpen)
+  const isSearchOpen = useSelector((state) => state.isSearchOpen);
   const [wasOpened, setWasOpened] = useState(false);
 
   const dispatch = useDispatch();
@@ -38,12 +37,15 @@ export default function SearchMenu() {
 
   // Filter items by name, accounting for Polish letters
   const filteredItems = searchTerm
-    ? items.filter((item) =>
-        normalizeText(item.name)
-          .toLowerCase()
-          .includes(normalizeText(searchTerm).toLowerCase()),
-      )
-    : [];
+  ? items.filter((item) => {
+      // Normalize and split the search term into words
+      const searchWords = normalizeText(searchTerm).toLowerCase().split(' ');
+      // Normalize the item's name just once for efficiency
+      const normalizedItemName = normalizeText(item.name).toLowerCase();
+      // Check if every word is included in the item's name
+      return searchWords.every((word) => normalizedItemName.includes(word));
+    })
+  : [];
 
   // Handler for input change
   const handleSearchChange = (event) => {
@@ -55,7 +57,7 @@ export default function SearchMenu() {
   };
 
   const onResultClick = () => {
-    dispatch(closeSearch())
+    dispatch(closeSearch());
     setSearchTerm("");
   };
 
@@ -63,11 +65,11 @@ export default function SearchMenu() {
     <React.Fragment>
       <Button
         className="ml-3xs hidden hover:text-header  330px:flex"
-        type="icon"
+        format="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
-          isSearchOpen ? dispatch(closeSearch()) : dispatch(openSearch())
+          isSearchOpen ? dispatch(closeSearch()) : dispatch(openSearch());
         }}
       >
         <SearchIcon />

@@ -12,7 +12,7 @@ export default function Privacy() {
   return (
     <main className="flex flex-col gap-sm">
       <PageWrapper>
-        <Box type="lg">POLITYKA PRYWATNOŚCI</Box>
+        <Box format="lg">POLITYKA PRYWATNOŚCI</Box>
       </PageWrapper>
 
       <BottomBox />

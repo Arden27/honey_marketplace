@@ -16,7 +16,7 @@ export default function HeroBox() {
       <h2 className="absolute p-sm">Zobacz nasze najnowsze zbiory!</h2>
 
       <Link className="absolute bottom-sm" href="/sklep">
-        <Button className="border-transparent bg-bg hover:text-bg" type="lg">
+        <Button className="border-transparent bg-bg hover:text-bg" format="lg">
           Przejdź do sklepu
         </Button>
       </Link>

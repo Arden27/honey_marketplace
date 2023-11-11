@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="bg-footer pb-sm pt-lg">
       <PageWrapper>
         <div className="mb-sm grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
-          <Box type="sm">
+          <Box format="sm">
             <ul>
               <h2 className="mb-2xs">Menu</h2>
 
@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box type="sm">
+          <Box format="sm">
             <ul>
               <h2 className="mb-2xs">Informacje</h2>
 
@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box type="sm">
+          <Box format="sm">
             {" "}
             <ul>
               <h2 className="mb-2xs">Moje konto</h2>
@@ -78,7 +78,7 @@ export default function Footer() {
             </ul>
           </Box>
 
-          <Box type="sm">
+          <Box format="sm">
             <div>
               <h2 className="mb-2xs">Dane pasieki</h2>
               <address className="not-italic">
@@ -97,7 +97,10 @@ export default function Footer() {
           <ul className="mb-sm flex flex-wrap sm:col-start-2 sm:mb-0 sm:!justify-end sm:text-right">
             <li>
               <Link href="http://facebook.com/" target="_blank">
-                <Button className=" self-center hover:text-footer" type="icon">
+                <Button
+                  className=" self-center hover:text-footer"
+                  format="icon"
+                >
                   <FacebookIcon />
                 </Button>
               </Link>
@@ -106,7 +109,7 @@ export default function Footer() {
               <Link href="http://facebook.com/" target="_blank">
                 <Button
                   className="ml-3xs self-center hover:text-footer"
-                  type="icon"
+                  format="icon"
                 >
                   <InstagramIcon />
                 </Button>
@@ -116,7 +119,7 @@ export default function Footer() {
               <Link href="http://facebook.com/" target="_blank">
                 <Button
                   className="ml-3xs self-center hover:text-footer"
-                  type="icon"
+                  format="icon"
                 >
                   <YouTubeIcon />
                 </Button>
@@ -126,7 +129,7 @@ export default function Footer() {
               <Link href="http://facebook.com/" target="_blank">
                 <Button
                   className="ml-3xs self-center hover:text-footer"
-                  type="icon"
+                  format="icon"
                 >
                   <SignalIcon />
                 </Button>
@@ -136,7 +139,7 @@ export default function Footer() {
               <Link href="http://facebook.com/" target="_blank">
                 <Button
                   className="ml-3xs self-center hover:text-footer"
-                  type="icon"
+                  format="icon"
                 >
                   <TelegramIcon />
                 </Button>

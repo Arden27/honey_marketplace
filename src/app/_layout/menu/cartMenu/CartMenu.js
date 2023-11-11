@@ -21,7 +21,7 @@ export default function Cart() {
   const isCartOpen = useSelector((state) => state.isCartOpen);
 
   const cartItems = useSelector((state) => state.cart);
-  const [cartItemsCount, setCartItemsCount] = useState(0)
+  const [cartItemsCount, setCartItemsCount] = useState(0);
   const items = useSelector((state) => state.items);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -44,17 +44,17 @@ export default function Cart() {
       total += size.price * cartItem.quantity;
       count += cartItem.quantity;
     }
-    setCartItemsCount(count)
+    setCartItemsCount(count);
     setTotalPrice(total);
   }, [cartItems, items]);
 
   return (
     <React.Fragment>
       <Button
-        className={`relative ml-3xs hover:text-header text-header
+        className={`relative ml-3xs text-header hover:text-header
         ${isCartOpen ? "bg-text [&>*]:text-header " : ""}
         `}
-        type="icon"
+        format="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);
@@ -62,10 +62,11 @@ export default function Cart() {
         }}
       >
         <ShoppingCartIcon />
-        {cartItemsCount != 0 && 
-        <div className="absolute -right-[8px] -top-[7px] flex h-[18px] min-w-[18px] p-[3px] items-center justify-center rounded-full bg-text text-xs text-header">
-          {cartItemsCount}
-        </div>}
+        {cartItemsCount != 0 && (
+          <div className="absolute -right-[8px] -top-[7px] flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-text p-[3px] text-xs text-header">
+            {cartItemsCount}
+          </div>
+        )}
       </Button>
 
       <div
@@ -132,7 +133,7 @@ export default function Cart() {
               <Button
                 className=" hover:text-bar "
                 href="/sklep/koszyk"
-                type="lg"
+                format="lg"
                 onClick={() => dispatch(closeCart())}
               >
                 Zamawiam

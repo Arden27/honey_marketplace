@@ -18,13 +18,13 @@ export default function UserBar() {
 
   useOutsideClick([node, buttonRef], () => {
     dispatch(closeUserMenu());
-  })
+  });
 
   return (
     <React.Fragment>
       <Button
         className="ml-3xs hidden hover:text-header 430px:flex "
-        type="icon"
+        format="icon"
         ref={buttonRef}
         onClick={() => {
           setWasOpened(true);

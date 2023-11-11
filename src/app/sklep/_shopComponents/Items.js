@@ -16,16 +16,16 @@ export default function Items({ sortType, category }) {
   let sortedItems;
 
   switch (sortType) {
-    case 'A-Z':
+    case 'Od A do Z':
       sortedItems = [...filteredItems].sort((a, b) => a.name.localeCompare(b.name));
       break;
-    case 'Z-A':
+    case 'Od Z do A':
       sortedItems = [...filteredItems].sort((a, b) => b.name.localeCompare(a.name));
       break;
-    case 'By price from lowest':
+    case 'Od najniższej ceny':
       sortedItems = [...filteredItems].sort((a, b) => a.sizes[0].price - b.sizes[0].price);
       break;
-    case 'By price from highest':
+    case 'Od najwyższej ceny':
       sortedItems = [...filteredItems].sort((a, b) => b.sizes[0].price - a.sizes[0].price);
       break;
     default:

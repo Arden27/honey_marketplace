@@ -17,7 +17,7 @@ export default function PromoBox() {
       <Button
         className="self-end border-transparent bg-bg hover:text-bg"
         href="/sklep"
-        type="lg"
+        format="lg"
       >
         Przejdź do sklepu
       </Button>
