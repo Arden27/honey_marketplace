@@ -24,21 +24,24 @@ function getButtonStyles(format) {
   return styles.trim();
 }
 
-function Button({ href, format, className, children, ...props }, ref) {
+function Button({ href, format, label, className, children, ...props }, ref) {
   const buttonStyles = getButtonStyles(format);
 
+  const Tag = href || label ? 'div' : 'button';
+
+  const commonProps = {
+    ref: ref,
+    className: `relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
+                active:top-[2px] active:opacity-90 
+                ${buttonStyles}
+                ${className}`,
+    ...props,
+  };
+
   const ButtonContent = (
-    <button
-      ref={ref}
-      className={`relative flex items-center justify-center rounded-[2rem] border-2 border-solid border-text font-btn text-sm uppercase text-text transition-colors duration-300 ease-in-out hover:bg-text
-      active:top-[2px] active:opacity-90 
-      ${buttonStyles}
-      ${className}
-      `}
-      {...props}
-    >
+    <Tag {...commonProps}>
       {children}
-    </button>
+    </Tag>
   );
 
   // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute - jeszcze do przemyślenia

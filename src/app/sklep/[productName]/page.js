@@ -3,9 +3,7 @@
 // components
 import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
-import SetQuantityButton from "@/components/SetQuantityButton";
-import InputQuantity from "@/components/InputQuantity";
-import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
+import AddToCartGroup from "@/components/AddToCartGroup";
 import DropdownMenu from "@/components/DropdownMenu";
 import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
@@ -45,30 +43,27 @@ export default function ProductPage({ params }) {
     metadataTitle: "",
     metadataDescription: "",
     metadataKeywords: "",
-  })
-  const [defaultSize, setDefaultSize] = useState();
+  });
   const [sizes, setSizes] = useState();
   const [selectedSize, setSelectedSize] = useState();
   const [selectedPrice, setSelectedPrice] = useState();
   const [quantity, setQuantity] = useState(1);
-  const [dropdownSelected, setDropdownSelected] = useState('');
-
+  const [dropdownSelected, setDropdownSelected] = useState("");
 
   useEffect(() => {
     const foundItem = items.find((item) => item.tag === params.productName);
     const foundDefaultSize =
-    foundItem.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
+      foundItem.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
     const foundSizes = foundItem.sizes.reduce((acc, sizeObj) => {
       acc[sizeObj.size] = sizeObj.price;
       return acc;
     }, {});
     setItem(foundItem);
-    setDefaultSize(foundDefaultSize);
     setSizes(foundSizes);
     setSelectedPrice(foundDefaultSize.price);
     setSelectedSize(foundDefaultSize.size);
     setDropdownSelected(foundDefaultSize.size);
-  }, [])
+  }, []);
 
   const handleSizeChange = (option) => {
     setSelectedSize(option);
@@ -152,7 +147,11 @@ export default function ProductPage({ params }) {
                   </span>
                 </div>
 
-                <DropdownMenu onSelect={handleSizeChange} selected={dropdownSelected} setSelected={setDropdownSelected}>
+                <DropdownMenu
+                  onSelect={handleSizeChange}
+                  selected={dropdownSelected}
+                  setSelected={setDropdownSelected}
+                >
                   <DropdownMenu.List className="">
                     {item.sizes.map((option, index) => (
                       <DropdownMenu.Item
@@ -177,44 +176,13 @@ export default function ProductPage({ params }) {
               </div>
 
               <div>
-                <div className="relative  flex rounded-[2rem]">
-                  <AddToCartButton
-                    id={item.id}
-                    selectedSize={selectedSize}
-                    quantity={quantity}
-                    className={
-                      "w-full overflow-ellipsis whitespace-break-spaces border-text  pl-[calc(theme(spacing.3xl))] pr-2xs hover:bg-text hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))]  315px:pr-md"
-                    }
-                  />
-
-                  <div className="absolute left-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3">
-                    <SetQuantityButton
-                      quantity={quantity}
-                      setQuantity={setQuantity}
-                      direction={"minus"}
-                      className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
-                      }
-                    />
-
-                    <InputQuantity
-                      quantity={quantity}
-                      setQuantity={setQuantity}
-                      className={
-                        "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
-                      }
-                    />
-
-                    <SetQuantityButton
-                      quantity={quantity}
-                      setQuantity={setQuantity}
-                      direction={"plus"}
-                      className={
-                        "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3"
-                      }
-                    />
-                  </div>
-                </div>
+                <AddToCartGroup
+                  item={item}
+                  quantity={quantity}
+                  setQuantity={setQuantity}
+                  selectedSize={selectedSize}
+                  className="flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
+                />
               </div>
             </div>
           </section>
