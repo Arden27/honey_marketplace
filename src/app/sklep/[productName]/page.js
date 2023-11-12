@@ -149,7 +149,7 @@ export default function ProductPage({ params }) {
                   Waga:&nbsp;
                 </span>
               </div>
-              ARTEM - Tutaj powinno być coś takiego:
+              {/* ARTEM - Tutaj powinno być coś takiego:
               <DropdownMenu
                 onSelect={handleSizeChange}
                 selected={dropdownSelected}
@@ -172,7 +172,7 @@ export default function ProductPage({ params }) {
                     </DropdownMenu.Item>
                   ))}
                 </DropdownMenu.List>
-              </DropdownMenu>
+              </DropdownMenu> */}
               <DropdownMenu
                 onSelect={handleSizeChange}
                 selected={dropdownSelected}
