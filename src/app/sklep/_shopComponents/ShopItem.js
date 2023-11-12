@@ -1,9 +1,7 @@
 "use client";
 // components
 import ShopRadioGroup from "@/app/sklep/_shopComponents/ShopRadioGroup";
-import SetQuantityButton from "@/components/SetQuantityButton";
-import InputQuantity from "@/components/InputQuantity";
-import AddToCartButton from "@/app/sklep/_shopComponents/AddToCartButton";
+import AddToCartGroup from "@/components/AddToCartGroup";
 // libs
 import Image from "next/image";
 import Link from "next/link";
@@ -23,14 +21,14 @@ export default function ShopItem({ item }) {
 
   useEffect(() => {
     const defaultSize =
-    item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
+      item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
 
     setSelectedSize(defaultSize.size);
     setSelectedPrice(defaultSize.price);
-  }, [])
+  }, []);
 
   const handleSizeChange = (size, price) => {
-    console.log("handleSizeChange triggered")
+    console.log("handleSizeChange triggered");
     setSelectedSize(size);
     setSelectedPrice(price);
   };
@@ -83,47 +81,13 @@ export default function ShopItem({ item }) {
         {/* 
         ARTEM - Przestawić to wszystko do AddToCartbutton */}
 
-        <div className="relative">
-          <AddToCartButton
-            id={item.id}
-            selectedSize={selectedSize}
-            quantity={quantity}
-            className={
-              "flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
-            }
-          />
-
-          <div
-            className="absolute left-0 top-0 flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center justify-items-center rounded-[2rem] border-2 border-text bg-bg3
-					"
-          >
-            <SetQuantityButton
-              quantity={quantity}
-              setQuantity={setQuantity}
-              direction={"minus"}
-              className={
-                "ml-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-              }
-            />
-
-            <InputQuantity
-              quantity={quantity}
-              setQuantity={setQuantity}
-              className={
-                "h-lg w-lg rounded-[2rem] bg-transparent text-center font-btn text-sm"
-              }
-            />
-
-            <SetQuantityButton
-              quantity={quantity}
-              setQuantity={setQuantity}
-              direction={"plus"}
-              className={
-                "mr-3xs h-md w-md justify-center rounded-[2rem] text-center font-btn leading-none hover:bg-text hover:text-bg3 focus:bg-text focus:text-bg3"
-              }
-            />
-          </div>
-        </div>
+        <AddToCartGroup
+          item={item}
+          quantity={quantity}
+          setQuantity={setQuantity}
+          selectedSize={selectedSize}
+          className="flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
+        />
       </div>
     </section>
   );
