@@ -178,7 +178,8 @@ export default function ProductPage({ params }) {
                 selected={dropdownSelected}
                 setSelected={setDropdownSelected}
               >
-                <DropdownMenu.Button>sdfs</DropdownMenu.Button>
+
+
                 <DropdownMenu.List className="">
                   {item.sizes.map((option, index) => (
                     <DropdownMenu.Item

@@ -9,9 +9,7 @@ export const metadata = {
 export default function MyOrders() {
   return (
     <main className="">
-      <Box type="lg">
-        <h2>Moje zamówienia</h2>
-
+      <Box format="lg">
         <table className="w-full border-separate border-spacing-0 ">
           <caption className="sr-only">Moje zamówienia</caption>
           <thead
@@ -98,46 +96,65 @@ export default function MyOrders() {
                 Oczekiwanie na płatność
               </td>
             </tr>
-            <tr>
-              <td>231109/003</td>
-              <td>09.11.2023 12:10</td>
-              <td>2235,50zł</td>
-              <td>Przyjęte do realizacji</td>
-            </tr>
-            <tr>
-              <td>231109/002</td>
-              <td>09.11.2023 12:05</td>
-              <td>2235,50zł</td>
-              <td>Spakowano</td>
-            </tr>
-            <tr>
-              <td>231109/001</td>
-              <td>09.11.2023 12:00</td>
-              <td>2235,50zł</td>
-              <td>Wysłano</td>
-            </tr>
-            <tr>
-              <td>231109/001</td>
-              <td>09.11.2023 12:00</td>
-              <td>2235,50zł</td>
-              <td>Zakończono</td>
-            </tr>
           </tbody>
         </table>
       </Box>
-      <Box type="sm">
-        <div className="grid  border border-text bg-second" type="">
-          <div className="col-span-4 grid grid-flow-col grid-cols-[subgrid] ">
-            <div className="border border-text">Numer</div>
-            <div className="border border-text">Data</div>
-            <div className="border border-text">Cena końcowa</div>
-            <div className="border border-text">Status</div>
+      <Box format="lg">
+        <h2>Moje zamówienia</h2>
+        <div className="[&>*>*]:grid [&>*>*]:grid-cols-4 [&>*>*>*]:bg-bg3 ">
+          <div
+            className="[&>*>*]:bg-text
+            [&>*>*]:text-bg3
+            [&>*>*]:flex
+            [&>*>*]:items-center
+            [&>*>*]:justify-center
+            [&>*>*]:border-t-2
+            [&>*>*]:border-text
+            [&>*>*]:p-2xs
+            [&>*>*]:text-center
+            [&>*>*]:font-btn
+            [&>*>*]:text-sm
+            [&>*>*]:uppercase
+            first-of-type:[&>*>*]:border-l-2
+            last-of-type:[&>*>*]:border-r-2
+            first-of-type:[&>*]:first-of-type:[&>*]:rounded-tl-[2rem]
+            last-of-type:[&>*]:first-of-type:[&>*]:rounded-tr-[2rem]"
+          >
+            <div>
+              <div>Numer</div>
+              <div>Data</div>
+              <div>Cena końcowa</div>
+              <div>Status</div>
+            </div>
+
           </div>
-          <div className="col-span-4 grid grid-flow-col grid-cols-[subgrid] ">
-            <div className="border border-text">231109/001</div>
-            <div className="border border-text">09.11.2023 12:00</div>
-            <div className="border border-text">2235,50zł</div>
-            <div className="border border-text">Zakończono</div>
+
+          <div
+            className="
+            [&>*>*]:flex
+            [&>*>*]:items-center
+            [&>*>*]:justify-center
+            [&>*]:last-of-type:[&>*]:border-b-2
+            [&>*>*]:border-t-2
+            [&>*>*]:border-l-2
+            [&>*>*]:border-text
+            [&>*>*]:p-2xs
+            [&>*>*]:text-center
+            first-of-type:[&>*>*]:border-l-2
+            last-of-type:[&>*>*]:border-r-2"
+          >
+            <div className="grid grid-cols-4">
+              <div>231109/001</div>
+              <div>09.11.2023 12:00</div>
+              <div>2235,50zł</div>
+              <div>Zakończono</div>
+            </div>
+            <div className="grid grid-cols-4">
+              <div>231109/001</div>
+              <div>09.11.2023 12:00</div>
+              <div>2235,50zł</div>
+              <div>Zakończono</div>
+            </div>
           </div>
         </div>
       </Box>
