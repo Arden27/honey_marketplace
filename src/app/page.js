@@ -1,7 +1,3 @@
-import Link from "next/link";
-
-import PageWrapper from "@/app/_layout/PageWrapper";
-import Box from "@/app/_layout/Box";
 import ShopMenu from "@/app/sklep/_shopComponents/ShopMenu";
 import HeroBox from "@/app/_homeComponents/HeroBox";
 import HowToBox from "@/app/_homeComponents/HowToBox";
@@ -16,8 +12,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
+    <main className="">
+
         <ShopMenu />
         <div className="grid h-[calc(100svh-theme(spacing.3xl)-theme(spacing.2xl)-theme(spacing.md)-theme(spacing.3xs))] .min-h-[25rem] grid-rows-2 gap-sm
         330px:h-[calc(100svh-theme(spacing.3xl)-theme(spacing.md)-theme(spacing.2xs))]
@@ -28,7 +24,7 @@ export default function Home() {
 
           <HowToBox />
         </div>
-      </PageWrapper>
+
 
       <AboutBox />
 
