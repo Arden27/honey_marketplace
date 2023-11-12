@@ -22,6 +22,7 @@ export default function ShopItem({ item }) {
   const [quantity, setQuantity] = useState(1);
 
   const handleSizeChange = (size, price) => {
+    console.log("handleSizeChange triggered")
     setSelectedSize(size);
     setSelectedPrice(price);
   };
