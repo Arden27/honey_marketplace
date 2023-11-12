@@ -1,4 +1,3 @@
-import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
 import BottomBox from "@/app/_layout/bottomBox/BottomBox";
 
@@ -10,10 +9,8 @@ export const metadata = {
 
 export default function Statute() {
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
-        <Box format="lg">REGULAMIN</Box>
-      </PageWrapper>
+    <main className="">
+      <Box format="lg">REGULAMIN</Box>
 
       <BottomBox />
     </main>

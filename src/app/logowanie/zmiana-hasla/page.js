@@ -1,4 +1,3 @@
-import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
 
 export const metadata = {
@@ -9,10 +8,8 @@ export const metadata = {
 
 export default function ChangePassword() {
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
-        <Box format="lg">ZMIANA HASŁA</Box>
-      </PageWrapper>
+    <main className="">
+      <Box format="lg">ZMIANA HASŁA</Box>
     </main>
   );
 }

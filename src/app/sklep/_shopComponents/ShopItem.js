@@ -39,7 +39,7 @@ export default function ShopItem({ item }) {
 
   return (
     <section
-      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] w-full grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3
+      className="grid h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.2xl))] min-h-[30rem] grid-cols-1 grid-rows-[1fr_auto] overflow-hidden rounded-[2rem] bg-bg3
       330px:h-[calc(100svh-2*theme(spacing.3xl)-theme(spacing.3xs))]
       sm:h-[calc(100svh-3*theme(spacing.3xl)-theme(spacing.lg)-theme(spacing.xs))]"
     >
@@ -53,7 +53,7 @@ export default function ShopItem({ item }) {
         />
       </Link>
 
-      <div className="flex flex-col items-center justify-between gap-sm  p-sm ">
+      <div className="flex flex-col items-center justify-between gap-sm p-sm">
         <div className="h-[calc(theme(spacing.2xl)+theme(spacing.xs))] !justify-start  ">
           <h2 className="text-center">{item.name}</h2>
 
