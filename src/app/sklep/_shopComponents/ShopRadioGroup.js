@@ -1,8 +1,4 @@
-import dynamic from "next/dynamic";
-
-const ShopRadioButton = dynamic(() => import("@/app/sklep/_shopComponents/ShopRadioButton"), {
-  ssr: false,
-});
+import ShopRadioButton from "./ShopRadioButton";
 
 export default function ShopRadioGroup({item, handleSizeChange, selectedSize, className}) {
   return (

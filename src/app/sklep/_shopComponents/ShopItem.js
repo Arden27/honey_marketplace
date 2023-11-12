@@ -13,13 +13,21 @@ import { formatPrice } from "@/utils/formatPrice";
 
 export default function ShopItem({ item }) {
   // Find the default size object
-  const defaultSize =
-    item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
+  // const defaultSize =
+  //   item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1]; // Fallback to first size if no default found
 
   // Initialize state to store the currently selected size and price
-  const [selectedSize, setSelectedSize] = useState(defaultSize.size);
-  const [selectedPrice, setSelectedPrice] = useState(defaultSize.price);
+  const [selectedSize, setSelectedSize] = useState();
+  const [selectedPrice, setSelectedPrice] = useState();
   const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    const defaultSize =
+    item.sizes.find((sizeObj) => sizeObj.default) || item.sizes[1];
+
+    setSelectedSize(defaultSize.size);
+    setSelectedPrice(defaultSize.price);
+  }, [])
 
   const handleSizeChange = (size, price) => {
     console.log("handleSizeChange triggered")
