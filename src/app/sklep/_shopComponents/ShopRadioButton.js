@@ -15,13 +15,10 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
       />
       <label
         htmlFor={`weight-${sizeObj.size}-${item.id}`}
-        className={` ${
-          sizeObj.size === selectedSize ? "border-text" : "border-transparent"
-        }`}
       >
         <Button
           className={`cursor-pointer hover:text-bg3 ${
-            sizeObj.size === selectedSize ? "bg-text text-bg3" : ""
+            sizeObj.size === selectedSize ? "" : "border-transparent"
           }`}
           format="sm"
           label
