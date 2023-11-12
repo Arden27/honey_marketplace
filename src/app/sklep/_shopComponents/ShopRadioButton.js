@@ -19,7 +19,6 @@ function ShopRadioButton({ sizeObj, item, handleSizeChange, selectedSize }) {
           sizeObj.size === selectedSize ? "border-text" : "border-transparent"
         }`}
       >
-        {/* cursor-pointer i */}
         <Button
           className={`cursor-pointer hover:text-bg3 ${
             sizeObj.size === selectedSize ? "bg-text text-bg3" : ""
