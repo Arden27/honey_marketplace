@@ -73,7 +73,7 @@ export default function Shop() {
               </DropdownMenu.List>
             </DropdownMenu>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-sm grid-rows-2">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] grid-rows-2 gap-sm">
             <Items sortType={sortType} category={category} />
           </div>
 
