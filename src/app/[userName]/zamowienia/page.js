@@ -101,20 +101,20 @@ export default function MyOrders() {
       </Box>
       <Box format="lg">
         <h2>Moje zamówienia</h2>
-        <div className="[&>*>*]:grid [&>*>*]:grid-cols-4 [&>*>*>*]:bg-bg3 ">
+        <div className="[&>*>*>*]:bg-bg3 [&>*>*]:grid [&>*>*]:grid-cols-4 ">
           <div
-            className="[&>*>*]:bg-text
-            [&>*>*]:text-bg3
-            [&>*>*]:flex
+            className="[&>*>*]:flex
             [&>*>*]:items-center
             [&>*>*]:justify-center
             [&>*>*]:border-t-2
             [&>*>*]:border-text
+            [&>*>*]:bg-text
             [&>*>*]:p-2xs
             [&>*>*]:text-center
             [&>*>*]:font-btn
             [&>*>*]:text-sm
             [&>*>*]:uppercase
+            [&>*>*]:text-bg3
             first-of-type:[&>*>*]:border-l-2
             last-of-type:[&>*>*]:border-r-2
             first-of-type:[&>*]:first-of-type:[&>*]:rounded-tl-[2rem]
@@ -126,7 +126,6 @@ export default function MyOrders() {
               <div>Cena końcowa</div>
               <div>Status</div>
             </div>
-
           </div>
 
           <div
@@ -134,14 +133,14 @@ export default function MyOrders() {
             [&>*>*]:flex
             [&>*>*]:items-center
             [&>*>*]:justify-center
-            [&>*]:last-of-type:[&>*]:border-b-2
-            [&>*>*]:border-t-2
             [&>*>*]:border-l-2
+            [&>*>*]:border-t-2
             [&>*>*]:border-text
             [&>*>*]:p-2xs
             [&>*>*]:text-center
             first-of-type:[&>*>*]:border-l-2
-            last-of-type:[&>*>*]:border-r-2"
+            last-of-type:[&>*>*]:border-r-2
+            [&>*]:last-of-type:[&>*]:border-b-2"
           >
             <div className="grid grid-cols-4">
               <div>231109/001</div>

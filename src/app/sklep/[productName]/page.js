@@ -174,8 +174,6 @@ export default function ProductPage({ params }) {
                 selected={dropdownSelected}
                 setSelected={setDropdownSelected}
               >
-
-
                 <DropdownMenu.List className="">
                   {item.sizes.map((option, index) => (
                     <DropdownMenu.Item
@@ -197,16 +195,15 @@ export default function ProductPage({ params }) {
               </div>
             </div>
 
-              <div>
-                <AddToCartGroup
-                  item={item}
-                  quantity={quantity}
-                  setQuantity={setQuantity}
-                  selectedSize={selectedSize}
-                  className="flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
-                />
-              </div>
-            
+            <div>
+              <AddToCartGroup
+                item={item}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                selectedSize={selectedSize}
+                className="flex h-[calc(theme(spacing.lg)+theme(spacing.xs))] items-center  rounded-[2rem] border-2 border-text pl-[calc(theme(spacing.3xl))] pr-2xs font-btn text-sm uppercase hover:bg-text  hover:text-bg3 315px:pl-[calc(theme(spacing.3xl)+theme(spacing.sm))] 315px:pr-md"
+              />
+            </div>
           </div>
         </section>
 
