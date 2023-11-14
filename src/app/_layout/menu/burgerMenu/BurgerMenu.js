@@ -31,7 +31,9 @@ export default function BurgerBar() {
   return (
     <React.Fragment>
       <Button
-        className=" mr-3xs hover:text-header lg:hidden"
+        className={`mr-3xs hover:text-header lg:hidden ${
+          isBurgerMenuOpen ? "bg-text [&>*]:text-header " : ""
+        }`}
         format="icon"
         ref={buttonRef}
         onClick={() => {

@@ -1,7 +1,5 @@
 import Link from "next/link";
-import SetQuantityButton from "@/components/SetQuantityButton";
-import InputQuantity from "@/components/InputQuantity";
-
+import { SetQuantityButton, InputQuantity } from "@/components/AddToCartGroup";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateCartItem } from "@/redux/store";

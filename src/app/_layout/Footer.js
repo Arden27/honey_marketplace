@@ -1,4 +1,4 @@
-import PageWrapper from "@/app/_layout/PageWrapper";
+
 import Box from "@/app/_layout/Box";
 import Link from "next/link";
 import Button from "@/components/Button";
@@ -10,9 +10,9 @@ import TelegramIcon from "public/icons/at.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer pb-sm pt-lg">
-      <PageWrapper>
-        <div className="mb-sm grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-footer pb-sm pt-lg !col-span-full">
+
+        <div className=" grid w-full grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-4">
           <Box format="sm">
             <ul>
               <h2 className="mb-2xs">Menu</h2>
@@ -147,14 +147,14 @@ export default function Footer() {
             </li>
           </ul>
 
-          <div className="col-span-full rounded-[3rem] border-2 border-transparent px-xs font-btn text-sm uppercase sm:col-span-1 sm:col-start-1 sm:row-start-1">
+          <div className="col-span-full rounded-[2rem] border-2 border-transparent px-xs font-btn text-sm uppercase sm:col-span-1 sm:col-start-1 sm:row-start-1">
             Copyright &copy; 2023&nbsp;
             <Link href="/" className="">
               Dobry Bartnik
             </Link>
           </div>
         </div>
-      </PageWrapper>
+
     </footer>
   );
 }

@@ -5,6 +5,7 @@ import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
 
 import { useState } from "react";
+import Checkbox from "@/components/Checkbox";
 
 export default function DeliveryForm({
   isEditing,
@@ -50,14 +51,16 @@ export default function DeliveryForm({
       {isEditing.shippingDelivery ? (
         <form onSubmit={(e) => e.preventDefault()}>
           <FormFieldset legend="Adres dostawy">
-            <InputLabel
+            {/* ARTEM - kliknięcie w Checkbox powinno rozwijać listę */}
+            <Checkbox
               type="checkbox"
               id="send-send-address-firstname"
-              label="Taki sam jak mój adres rozliczeniowy"
               checked={useBillingAddress}
               onChange={handleUseBillingAddressChange}
               // Implement logic if needed for copying address from personalBillingData
-            />
+            >
+              Taki sam jak mój adres rozliczeniowy
+            </Checkbox>
             <div className="flex gap-3xs md:flex-col lg:flex-row">
               <InputLabel
                 type="text"
@@ -152,6 +155,7 @@ export default function DeliveryForm({
                 disabled={useBillingAddress}
               />
             </div>
+            ARTEM - Tutaj jeszcze numer telefonu. Czemu ten form wygląda inaczej
           </FormFieldset>
 
           <FormFieldset legend="Sposób dostawy">

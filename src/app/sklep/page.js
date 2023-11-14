@@ -1,6 +1,5 @@
 "use client";
 
-import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
 
 import DropdownMenu from "@/components/DropdownMenu";
@@ -43,43 +42,45 @@ export default function Shop() {
   };
 
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
-        <ShopMenu />
-        <Box format="lg">
-          <div className="flex flex-col gap-sm ">
-            <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between">
-              <Breadcrumb
-                // baseDomain={baseDomain}
-                pathname={pathname}
-                category={category}
-                searchParams={searchParams}
-              />
+    <main className="">
+      <ShopMenu />
+      <Box format="lg">
+        <div className="flex flex-col gap-sm ">
+          <div className="flex h-[calc(theme(spacing.lg)+theme(spacing.3xs))] items-center justify-between">
+            <Breadcrumb
+              // baseDomain={baseDomain}
+              pathname={pathname}
+              category={category}
+              searchParams={searchParams}
+            />
 
-              {/* Artem - Sortowanie jest schrzanione */}
+            {/* Artem - Sortowanie jest schrzanione */}
 
-              <DropdownMenu onSelect={handleSort}>
-                <DropdownMenu.Button>Sortuj</DropdownMenu.Button>
-                <DropdownMenu.List
-                  className="absolute -right-2xs z-50 mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
+            <DropdownMenu onSelect={handleSort}>
+              <DropdownMenu.Button>Sortuj</DropdownMenu.Button>
+              <DropdownMenu.List
+                className="absolute -right-2xs z-50 mt-3xs flex flex-col justify-center gap-3xs whitespace-nowrap rounded-[2rem] bg-bar
                   p-xs text-end font-btn text-sm shadow"
-                >
-                  {sortOptions.map((option, index) => (
-                    <DropdownMenu.Item key={index} className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar">
-                      {option}
-                    </DropdownMenu.Item>
-                  ))}
-                </DropdownMenu.List>
-              </DropdownMenu>
-            </div>
-            <div className="grid grid-cols-1 gap-sm sm:grid-cols-2 lg:grid-cols-3 ">
-              <Items sortType={sortType} category={category} />
-            </div>
-
-            <Pagination />
+              >
+                {sortOptions.map((option, index) => (
+                  <DropdownMenu.Item
+                    key={index}
+                    className="!hover:bg-inherit w-full !justify-end border-transparent hover:text-bar"
+                  >
+                    {option}
+                  </DropdownMenu.Item>
+                ))}
+              </DropdownMenu.List>
+            </DropdownMenu>
           </div>
-        </Box>
-      </PageWrapper>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-sm grid-rows-2">
+            <Items sortType={sortType} category={category} />
+          </div>
+
+          <Pagination />
+        </div>
+      </Box>
+
       <BottomBox />
     </main>
   );

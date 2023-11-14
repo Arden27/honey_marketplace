@@ -1,4 +1,3 @@
-import PageWrapper from "@/app/_layout/PageWrapper";
 import Box from "@/app/_layout/Box";
 import LogInBox from "@/app/logowanie/loginComponents/LogInBox";
 import RegisterBox from "@/app/logowanie/loginComponents/RegisterBox";
@@ -12,18 +11,16 @@ export const metadata = {
 
 export default function LogIn() {
   return (
-    <main className="flex flex-col gap-sm">
-      <PageWrapper>
-        <Box format="lg">
-          <div className=" grid gap-sm md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr]">
-            <LogInBox />
+    <main className="">
+      <Box format="lg">
+        <div className=" grid gap-sm md:grid-cols-2 xl:grid-cols-[1.5fr,1fr,1.5fr]">
+          <LogInBox />
 
-            <RegisterBox />
+          <RegisterBox />
 
-            <NoRegisterBox />
-          </div>
-        </Box>
-      </PageWrapper>
+          <NoRegisterBox />
+        </div>
+      </Box>
     </main>
   );
 }

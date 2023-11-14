@@ -23,7 +23,9 @@ export default function UserBar() {
   return (
     <React.Fragment>
       <Button
-        className="ml-3xs hidden hover:text-header 430px:flex "
+        className={`ml-3xs hidden hover:text-header 430px:flex ${
+          isUserMenuOpen ? "bg-text [&>*]:text-header " : ""
+        }`}
         format="icon"
         ref={buttonRef}
         onClick={() => {
