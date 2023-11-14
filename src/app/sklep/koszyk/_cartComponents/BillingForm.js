@@ -5,6 +5,7 @@ import AtIcon from "public/icons/at.svg";
 import PhoneIcon from "public/icons/phone.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
+import Input from "@/components/forms/Input";
 
 export default function BillingForm({
   isEditing,
@@ -34,10 +35,9 @@ export default function BillingForm({
         <form className="grid gap-sm" onSubmit={(e) => e.preventDefault()}>
           <FormFieldset legend="Moje dane">
             <div className="flex gap-3xs md:flex-col lg:flex-row">
-              <InputLabel
+              <Input
                 type="text"
                 id="main-adress-firstname"
-                label="Imię"
                 value={formData.personalBillingData.mainAdressFirstname}
                 onChange={(e) =>
                   handleInputChange(
@@ -46,11 +46,17 @@ export default function BillingForm({
                     e.target.value,
                   )
                 }
-              />
-              <InputLabel
+              >
+                <Input.Label
+                  type=""
+                  className={`absolute left-0 mx-md mt-sm items-center justify-center self-center bg-bg3 px-3xs text-center font-btn text-sm uppercase text-text before:content-["*"]`}
+                >
+                  Imię
+                </Input.Label>
+              </Input>
+              <Input
                 type="text"
-                id="main-adress-lastname"
-                label="Nazwisko"
+                id="main-adress-Lastname"
                 value={formData.personalBillingData.mainAdressLastname}
                 onChange={(e) =>
                   handleInputChange(
@@ -59,7 +65,14 @@ export default function BillingForm({
                     e.target.value,
                   )
                 }
-              />
+              >
+                <Input.Label
+                  type="text"
+                  className=""
+                >
+                  Nazwisko
+                </Input.Label>
+              </Input>
             </div>
             <InputLabel
               type="email"
