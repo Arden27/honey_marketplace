@@ -35,19 +35,6 @@ export default function BillingForm({
         <form className="grid gap-sm" onSubmit={(e) => e.preventDefault()}>
           <FormFieldset legend="Moje dane">
             <div className="flex gap-3xs md:flex-col lg:flex-row">
-              {/* <InputLabel
-                type="text"
-                id="main-adress-firstname"
-                label="Imię"
-                value={formData.personalBillingData.mainAdressFirstname}
-                onChange={(e) =>
-                  handleInputChange(
-                    "personalBillingData",
-                    "mainAdressFirstname",
-                    e.target.value,
-                  )
-                }
-              /> */}
               <Input
                 type="text"
                 id="main-adress-firstname"
@@ -60,12 +47,16 @@ export default function BillingForm({
                   )
                 }
               >
-                <Input.Label type="" className={`absolute left-0 mx-md mt-sm items-center justify-center self-center bg-bg3 px-3xs text-center font-btn text-sm uppercase text-text before:content-["*"]`}>HELLO</Input.Label>
+                <Input.Label
+                  type=""
+                  className={`absolute left-0 mx-md mt-sm items-center justify-center self-center bg-bg3 px-3xs text-center font-btn text-sm uppercase text-text before:content-["*"]`}
+                >
+                  Imię
+                </Input.Label>
               </Input>
-              <InputLabel
+              <Input
                 type="text"
-                id="main-adress-lastname"
-                label="Nazwisko"
+                id="main-adress-Lastname"
                 value={formData.personalBillingData.mainAdressLastname}
                 onChange={(e) =>
                   handleInputChange(
@@ -74,7 +65,14 @@ export default function BillingForm({
                     e.target.value,
                   )
                 }
-              />
+              >
+                <Input.Label
+                  type="text"
+                  className=""
+                >
+                  Nazwisko
+                </Input.Label>
+              </Input>
             </div>
             <InputLabel
               type="email"
