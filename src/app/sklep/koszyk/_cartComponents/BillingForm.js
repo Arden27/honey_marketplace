@@ -5,6 +5,7 @@ import AtIcon from "public/icons/at.svg";
 import PhoneIcon from "public/icons/phone.svg";
 import FormFieldset from "@/components/forms/FormFieldset";
 import InputLabel from "@/components/forms/InputLabel";
+import Input from "@/components/forms/Input";
 
 export default function BillingForm({
   isEditing,
@@ -34,7 +35,7 @@ export default function BillingForm({
         <form className="grid gap-sm" onSubmit={(e) => e.preventDefault()}>
           <FormFieldset legend="Moje dane">
             <div className="flex gap-3xs md:flex-col lg:flex-row">
-              <InputLabel
+              {/* <InputLabel
                 type="text"
                 id="main-adress-firstname"
                 label="Imię"
@@ -46,7 +47,21 @@ export default function BillingForm({
                     e.target.value,
                   )
                 }
-              />
+              /> */}
+              <Input
+                type="text"
+                id="main-adress-firstname"
+                value={formData.personalBillingData.mainAdressFirstname}
+                onChange={(e) =>
+                  handleInputChange(
+                    "personalBillingData",
+                    "mainAdressFirstname",
+                    e.target.value,
+                  )
+                }
+              >
+                <Input.Label type="" className={`absolute left-0 mx-md mt-sm items-center justify-center self-center bg-bg3 px-3xs text-center font-btn text-sm uppercase text-text before:content-["*"]`}>HELLO</Input.Label>
+              </Input>
               <InputLabel
                 type="text"
                 id="main-adress-lastname"

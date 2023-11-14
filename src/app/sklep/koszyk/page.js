@@ -93,7 +93,7 @@ export default function Order() {
             />
           </div>
           <div className="">
-            <Cart />
+            {/* <Cart /> */}
           </div>
         </div>
       </Box>
