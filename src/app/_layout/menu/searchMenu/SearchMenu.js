@@ -37,15 +37,15 @@ export default function SearchMenu() {
 
   // Filter items by name, accounting for Polish letters
   const filteredItems = searchTerm
-  ? items.filter((item) => {
-      // Normalize and split the search term into words
-      const searchWords = normalizeText(searchTerm).toLowerCase().split(' ');
-      // Normalize the item's name just once for efficiency
-      const normalizedItemName = normalizeText(item.name).toLowerCase();
-      // Check if every word is included in the item's name
-      return searchWords.every((word) => normalizedItemName.includes(word));
-    })
-  : [];
+    ? items.filter((item) => {
+        // Normalize and split the search term into words
+        const searchWords = normalizeText(searchTerm).toLowerCase().split(" ");
+        // Normalize the item's name just once for efficiency
+        const normalizedItemName = normalizeText(item.name).toLowerCase();
+        // Check if every word is included in the item's name
+        return searchWords.every((word) => normalizedItemName.includes(word));
+      })
+    : [];
 
   // Handler for input change
   const handleSearchChange = (event) => {
@@ -78,10 +78,10 @@ export default function SearchMenu() {
       </Button>
 
       <div
-        className={`fixed left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] w-[calc(100%-theme(spacing.xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 flex-col self-center rounded-b-[2rem] bg-bar  p-sm shadow 330px:fixed
+        className={`absolute left-1/2 top-[calc(theme(spacing.2xl)+theme(spacing.sm))] -z-[21] w-[calc(100%-theme(spacing.2xs))]  max-w-[calc(theme(screens.xl)+theme(spacing.sm))] -translate-x-1/2 flex-col self-center rounded-b-[2rem] bg-bar p-sm shadow
         ${
           isSearchOpen
-            ? "slide-in-top  flex"
+            ? "slide-in-top d flex"
             : wasOpened
             ? "slide-in-top 330px:slide-out-top flex"
             : "slide-in-top  flex 330px:hidden"
@@ -93,15 +93,10 @@ export default function SearchMenu() {
           onSearchChange={handleSearchChange}
           onSearchClear={onSearchClear}
         />
-
-        {/* ARTEM - Ma się pojawiać dopiero wraz z wynikami wyszukiwania: */}
-
-        {searchTerm && isSearchOpen && (
-          <Box className="absolute left-0 top-[calc(theme(spacing.lg)+3*theme(spacing.sm))] w-full rounded-[3rem] bg-bar">
-            <SearchResult items={filteredItems} onResultClick={onResultClick} />
-          </Box>
-        )}
       </div>
+      {searchTerm && isSearchOpen && (
+        <SearchResult items={filteredItems} onResultClick={onResultClick} />
+      )}
     </React.Fragment>
   );
 }

@@ -91,15 +91,17 @@ const CartItem = ({ item, removeFromCart }) => {
             />
           </div>
 
-          <h3 className="font-sans text-lg leading-none">&#215;</h3>
+          <span className="text-lg font-bold leading-none">
+            &#215;
+          </span>
 
-          <div className="relative flex">
-            <h3 className="absolute -top-sm whitespace-nowrap font-sans text-sm text-warning line-through">
+          <div className="relative mr-2xs flex">
+            <span className="absolute -top-sm whitespace-nowrap  text-sm font-bold text-warning line-through">
               {formatPrice(item.price, 1.1)} zł
-            </h3>
-            <h3 className="whitespace-nowrap font-sans">
+            </span>
+            <span className="whitespace-nowrap  font-bold">
               {formatPrice(item.price)} zł
-            </h3>
+            </span>
           </div>
         </div>
       </div>

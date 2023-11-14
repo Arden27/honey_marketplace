@@ -27,7 +27,7 @@ function getButtonStyles(format) {
 function Button({ href, format, label, className, children, ...props }, ref) {
   const buttonStyles = getButtonStyles(format);
 
-  const Tag = href || label ? 'div' : 'button';
+  const Tag = href || label ? "div" : "button";
 
   const commonProps = {
     ref: ref,
@@ -38,11 +38,7 @@ function Button({ href, format, label, className, children, ...props }, ref) {
     ...props,
   };
 
-  const ButtonContent = (
-    <Tag {...commonProps}>
-      {children}
-    </Tag>
-  );
+  const ButtonContent = <Tag {...commonProps}>{children}</Tag>;
 
   // ARTEM - Trzeba jednak usunąć tę funkcję z linkiem i tak jej nie żywam i nie dzial gdy chcę dawać position:absolute - jeszcze do przemyślenia
 

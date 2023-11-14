@@ -16,7 +16,7 @@ export default function LoadDB() {
       name: "Miód rzepakowy",
       name2: "z nutką gryki",
       tag: "miod-rzepakowy-z-nutka-gryki",
-      image: "/img/boxes/jak-rozpoznac.jpg",
+      image: "/img/products/honey/honey3.webp",
 
       //   images: [
       //     { image: "/img/boxes/jak-rozpoznac.jpg", default: true },
